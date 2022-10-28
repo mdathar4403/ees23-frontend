@@ -18,7 +18,6 @@ function App() {
       </div>
       <div className="title"></div>
       <ComingSoonComp />
-      
       <div className="image"></div>
       <div className="events"></div>
     </div>

@@ -1,6 +1,10 @@
-:root{
-  
+@font-face {
+font-family: "Fontspring";
+src: local("Fontspring"),
+ url("./fonts/Fontspring-DEMO-viata-extrabold.otf") format("truetype");
+font-weight: bold;
 }
+
 
 .landing-page-images{
   object-fit: fill;
@@ -33,25 +37,6 @@
 
 
 
-.comingsoon{
-  position: fixed;
-  top: 70%;
-  left: 70%;
-  height: 100px;
-}
-
-
-
-
-.comingsoon  h1{
-  color: white;
-  position: relative;
-  top: 12%;
-  font-family: "Fontspring";
-  font-size: 2.7rem;
-  font-weight: bold;
-  text-shadow: 2px 2px red;
-}
 
 
 
@@ -66,18 +51,7 @@
   }
 }
 
-@font-face {
-font-family: "Fontspring";
-src: local("Fontspring"),
- url("./fonts/Fontspring-DEMO-viata-extrabold.otf") format("truetype");
-font-weight: bold;
-}
-.css-1wqgwi1-MuiLinearProgress-bar1{
-  box-shadow: 0.4rem 0.4px red;
-}
 
 
 
-.css-4gv7hv-MuiLinearProgress-root::before{
-  background-color: transparent !important;
-}
+

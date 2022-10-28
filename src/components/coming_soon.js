@@ -6,7 +6,7 @@ import { height } from "@mui/system";
 // import LinearProgress, {
 //   linearProgressClasses,
 // } from "@mui/material/LinearProgress";
-
+import './coming_soon.css'
 const ComingSoonComp = () => {
   const [progress, setProgress] = React.useState(0);
 
