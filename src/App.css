@@ -1,21 +1,21 @@
 .landing-page-images{
   object-fit: fill;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   z-index: -1;
 }
 .characters-image{
   
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   z-index: -1;
+  align-items: stretch;
 }
 
 .characters-image img{
-  width: 90%;
-  /* height: 98%; */
+  width: 100vw;
 }
 
 
@@ -39,9 +39,9 @@
 
 
 .loading  h1{
-  color: azure;
+  color: white;
   position: relative;
-  top: 70px;
+  top: 0px;
   font-family: "Fontspring";
   font-size: 2.7rem;
   font-weight: bold;
@@ -50,13 +50,6 @@
 
 
 
-.progress {
-  background-color: white;
-  height: 10px;
-  border-radius: 1rem;
-  transition: 1s ease;
-  transition-delay: 0.5s;
-}
 
 
 @media screen and (max-width: 768px) {
