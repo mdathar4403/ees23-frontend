@@ -44,7 +44,7 @@ th {
   padding: 0px 28px;
 }
 
-.tbody {
+.table-body {
   font-family: first-font;
   border-radius: 10px;
   /* background-color:red; */
@@ -62,13 +62,13 @@ th {
   margin-left: 7%;
   position: fixed;
 }
-a {
+.table-body a {
   display: block;
   text-decoration: none;
   color: #fd4556;
   padding: 0.6vw 0.8vw;
 }
-a:hover {
+.table-body a:hover {
   /* background-color: #3e4652; */
   color: #fd4556;
 }
@@ -97,4 +97,39 @@ a:hover {
   /* margin: 0 auto; */
   left: 24vw;
   background-color: white;
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 6vw;
+    line-height: 6vw;
+  }
+  .line {
+    background-color: transparent !important;
+  }
+  .underline {
+    background-color: transparent !important;
+  }
+  .upperline {
+    background-color: transparent !important;
+  }
+  .events {
+    width: 50%;
+    margin: 0 auto;
+    top: 15%;
+    margin-left: 15%;
+  }
+  .table-body a {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  .table-body{
+    width: 50vw;
+    left: 20%;
+  }
+  .events .table th{
+    font-size: 1.7rem;
+    text-shadow: 2px 2px #fd4556;
+  }
 }

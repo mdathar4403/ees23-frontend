@@ -8,7 +8,7 @@ function Event() {
           <th>EVENTS</th>
         </thead>
         <tbody>
-          <div className="tbody">
+          <div className="table-body">
             <a href="#">UDYAM</a>
             <a href="#" id="event-dark">
               UDGAM

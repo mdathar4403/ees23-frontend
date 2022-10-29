@@ -27,6 +27,7 @@ const ComingSoonComp = () => {
   return (
     <div className="comingsoon">
       <div
+        className="comingsoon__text_lines"
         style={{
           height: "2px",
           backgroundColor: "#fd4556",
@@ -38,6 +39,7 @@ const ComingSoonComp = () => {
         }}
       ></div>
       <div
+        className="comingsoon__text_lines"
         style={{
           height: "3px",
           backgroundColor: "#43c8a3",
@@ -49,6 +51,7 @@ const ComingSoonComp = () => {
         }}
       ></div>
       <div
+        className="comingsoon__text_lines"
         style={{
           height: "2px",
           backgroundColor: "#fd4556",
@@ -60,6 +63,7 @@ const ComingSoonComp = () => {
         }}
       ></div>
       <div
+        className="comingsoon__text_lines"
         style={{
           height: "2px",
           backgroundColor: "#43c8a3",
@@ -71,6 +75,7 @@ const ComingSoonComp = () => {
         }}
       ></div>
       <div
+        className="comingsoon__text_lines"
         style={{
           height: "2px",
           backgroundColor: "#fd4556",
@@ -82,6 +87,7 @@ const ComingSoonComp = () => {
         }}
       ></div>
       <div
+        className="comingsoon__text_lines"
         style={{
           height: "2px",
           backgroundColor: "#43c8a3",
@@ -93,6 +99,7 @@ const ComingSoonComp = () => {
         }}
       ></div>
       <div
+        className="comingsoon__text_lines"
         style={{
           height: "3px",
           backgroundColor: "#43c8a3",
@@ -104,6 +111,7 @@ const ComingSoonComp = () => {
         }}
       ></div>
       <div
+        className="comingsoon__text_lines"
         style={{
           height: "4px",
           backgroundColor: "#fd4556",

@@ -2,7 +2,7 @@
   position: fixed;
   top: 70%;
   left: 70%;
-  height: 10%;
+  height: 100px;
 }
 
 
@@ -13,7 +13,7 @@
   position: relative;
   top: 12%;
   font-family: "Fontspring";
-  font-size: 250%;
+  font-size: 2.8rem;
   font-weight: bold;
   text-shadow: 2px 2px #fd4556;
 }
@@ -22,3 +22,39 @@
 .css-4gv7hv-MuiLinearProgress-root::before{
   background-color: transparent !important;
 }
+
+
+
+@media (max-width: 600px){
+  .comingsoon{
+    position: fixed;
+    top: 80%;
+    left: 20%;
+    height: 50px;
+    width: 55%;
+  }
+  
+  
+  
+  .comingsoon  h1{
+    font-size: 1.2rem;
+    
+  }
+  
+  
+  .css-4gv7hv-MuiLinearProgress-root::before{
+    background-color: transparent !important;
+    
+  }
+  .css-4gv7hv-MuiLinearProgress-root{
+    height: 10px !important;
+    width: 200px !important;
+  }
+  .css-9ft9jb{
+    width: 150px !important;
+  }
+  .comingsoon__text_lines{
+    background-color: transparent !important;
+  }
+}
+  
