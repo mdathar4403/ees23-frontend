@@ -1,5 +1,4 @@
 import React from "react";
-import ProgressBar from "react-animated-progress-bar";
 import Box from "@mui/material/Box";
 import LinearProgress from "@mui/material/LinearProgress";
 import { height } from "@mui/system";
