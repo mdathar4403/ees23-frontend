@@ -30,7 +30,7 @@ font-weight: bold;
   max-width: 30%;
   bottom: 10%;
   position: fixed;
-  left:30%;
+  left:35%;
 }
 
 
@@ -40,13 +40,12 @@ font-weight: bold;
 
 @media (max-width:600px){
   .characters-image img{
-    height: 50vh;
+    height: 48vh;
     position: fixed;
     max-width: 150%;
-    width: 50%;
-
+    width: 55%;
     left:20%;
-    bottom: 10%;
+    bottom: 12%;
   }
 }
 

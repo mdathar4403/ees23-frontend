@@ -28,8 +28,8 @@
 @media (max-width: 600px){
   .comingsoon{
     position: fixed;
-    top: 80%;
-    left: 20%;
+    top: 82%;
+    left: 28%;
     height: 50px;
     width: 55%;
   }
@@ -38,7 +38,6 @@
   
   .comingsoon  h1{
     font-size: 1.2rem;
-    
   }
   
   
@@ -48,7 +47,7 @@
   }
   .css-4gv7hv-MuiLinearProgress-root{
     height: 10px !important;
-    width: 200px !important;
+    width: 150px !important;
   }
   .css-9ft9jb{
     width: 150px !important;
