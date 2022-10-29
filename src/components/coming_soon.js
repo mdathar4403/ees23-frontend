@@ -13,11 +13,11 @@ const ComingSoonComp = () => {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
-        if (oldProgress === 100) {
+        if (oldProgress === 80) {
           return 0;
         }
         const diff = Math.random() * 10;
-        return Math.min(oldProgress + diff, 100);
+        return Math.min(oldProgress + diff, 80);
       });
     }, 500);
 
