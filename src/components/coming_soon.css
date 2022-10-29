@@ -19,7 +19,8 @@
 }
 
 
-.css-4gv7hv-MuiLinearProgress-root::before{
+
+.MuiLinearProgress-root::before{
   background-color: transparent !important;
 }
 
@@ -41,11 +42,11 @@
   }
   
   
-  .css-4gv7hv-MuiLinearProgress-root::before{
+  .MuiLinearProgress-root::before{
     background-color: transparent !important;
     
   }
-  .css-4gv7hv-MuiLinearProgress-root{
+  .MuiLinearProgress-root{
     height: 10px !important;
     width: 150px !important;
   }

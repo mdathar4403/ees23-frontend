@@ -1,11 +1,8 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import LinearProgress from "@mui/material/LinearProgress";
-import { height } from "@mui/system";
-// import LinearProgress, {
-//   linearProgressClasses,
-// } from "@mui/material/LinearProgress";
-import './coming_soon.css'
+
+import "./coming_soon.css";
 const ComingSoonComp = () => {
   const [progress, setProgress] = React.useState(0);
 
@@ -130,7 +127,6 @@ const ComingSoonComp = () => {
       <div
         className="progress-bar-container"
         style={{
-          // boxShadow: "3px 3px red",
           position: "relative",
           color: "white",
         }}
@@ -142,16 +138,13 @@ const ComingSoonComp = () => {
           }}
         >
           <LinearProgress
+            className="progress-linear"
             color="inherit"
             variant="determinate"
             value={progress}
             sx={{
               height: "20px",
               border: "2px solid white",
-              backgroundColor: "black",
-            }}
-            style={{
-              backgroundColor: "#1C242F",
             }}
           />
         </Box>
