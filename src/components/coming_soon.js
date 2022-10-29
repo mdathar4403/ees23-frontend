@@ -30,12 +30,12 @@ const ComingSoonComp = () => {
       <div
         style={{
           height: "2px",
-          backgroundColor: "red",
+          backgroundColor: "#fd4556",
           top: "84%",
           position: "relative",
           width: "140px",
           left: "55%",
-          zIndex:"1"
+          zIndex: "1",
         }}
       ></div>
       <div
@@ -52,7 +52,7 @@ const ComingSoonComp = () => {
       <div
         style={{
           height: "2px",
-          backgroundColor: "red",
+          backgroundColor: "#fd4556",
           top: "88%",
           position: "relative",
           width: "22%",
@@ -74,7 +74,7 @@ const ComingSoonComp = () => {
       <div
         style={{
           height: "2px",
-          backgroundColor: "red",
+          backgroundColor: "#fd4556",
           top: "96%",
           position: "relative",
           width: "10%",
@@ -107,15 +107,14 @@ const ComingSoonComp = () => {
       <div
         style={{
           height: "4px",
-          backgroundColor: "red",
+          backgroundColor: "#fd4556",
           top: "106%",
           position: "relative",
           width: "170px",
           left: "0%",
           zIndex: "1",
         }}
-      >
-      </div>
+      ></div>
       <h1> COMING SOON..</h1>
       {/* <div
             style={{ width: `${200}px`, top: "60px", position: "relative" }}
@@ -132,7 +131,7 @@ const ComingSoonComp = () => {
         <Box
           sx={{
             width: "100%",
-            boxShadow: "3px 3px red",
+            boxShadow: "3px 3px #fd4556",
           }}
         >
           <LinearProgress
@@ -150,7 +149,7 @@ const ComingSoonComp = () => {
           />
         </Box>
       </div>
-      
+
       {/* <ProgressBar
             width="400px"
             height="30px"
