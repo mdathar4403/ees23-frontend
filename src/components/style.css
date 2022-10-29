@@ -58,7 +58,7 @@ th {
 .events {
   /* position: relative; */
   /* bottom: 30%; */
-  top: 52%;
+  top: 40vh;
   margin-left: 7%;
   position: fixed;
 }
