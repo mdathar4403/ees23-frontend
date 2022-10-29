@@ -41,7 +41,7 @@ const ComingSoonComp = () => {
       <div
         style={{
           height: "3px",
-          backgroundColor: "#0CF400",
+          backgroundColor: "#43c8a3",
           top: "82%",
           position: "relative",
           width: "180px",
@@ -63,7 +63,7 @@ const ComingSoonComp = () => {
       <div
         style={{
           height: "2px",
-          backgroundColor: "#0CF400",
+          backgroundColor: "#43c8a3",
           top: "98%",
           position: "relative",
           width: "30%",
@@ -85,7 +85,7 @@ const ComingSoonComp = () => {
       <div
         style={{
           height: "2px",
-          backgroundColor: "#0CF400",
+          backgroundColor: "#43c8a3",
           top: "68%",
           position: "relative",
           width: "150px",
@@ -96,7 +96,7 @@ const ComingSoonComp = () => {
       <div
         style={{
           height: "3px",
-          backgroundColor: "#0CF400",
+          backgroundColor: "#43c8a3",
           top: "82%",
           position: "relative",
           width: "100px",
