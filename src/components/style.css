@@ -1,0 +1,99 @@
+@font-face {
+  font-family: first-font;
+  src: url(../fonts/viata-extrabold-1.otf);
+}
+
+.title-container {
+  position: fixed;
+  width: 100%;
+}
+
+.main-title {
+  text-align: center;
+  padding: 2.5vw;
+
+  font-size: 3vw;
+  line-height: 3vw;
+  margin: 0 auto;
+}
+.title-image1 {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.title {
+  color: #fd4556;
+  font-family: first-font;
+}
+
+body {
+  color: white;
+}
+th {
+  text-shadow: 6px 0px #fd4556;
+  font-size: 3.5vw;
+}
+.table {
+  /* text-shadow: 2px 2px; */
+  /* background-color: red; */
+  font-family: first-font;
+  color: white;
+
+  font-size: 2.5vw;
+  padding: 0px 28px;
+}
+
+.tbody {
+  font-family: first-font;
+  border-radius: 10px;
+  /* background-color:red; */
+  width: 14vw;
+  background-color: rgba(52, 59, 71, 60);
+  font-weight: 600;
+  text-decoration: none;
+  list-style: none;
+  box-shadow: 2px 2px #fd4556;
+}
+.events {
+  /* position: relative; */
+  /* bottom: 30%; */
+  top: 52%;
+  margin-left: 7%;
+  position: fixed;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #fd4556;
+  padding: 0.6vw 0.8vw;
+}
+a:hover {
+  /* background-color: #3e4652; */
+  color: #fd4556;
+}
+#event-dark {
+  background-color: rgba(62, 70, 82, 60);
+}
+.upperline {
+  height: 0.6vw;
+  width: 13vw;
+  top: 1vw;
+
+  transform: skewX(60deg);
+  position: absolute;
+  /* text-align: center; */
+  /* margin: 0 auto; */
+  left: 24vw;
+  background-color: white;
+}
+.underline {
+  height: 0.6vw;
+  width: 39vw;
+  top: 6vw;
+  transform: skewX(60deg);
+  position: absolute;
+  /* text-align: center; */
+  /* margin: 0 auto; */
+  left: 24vw;
+  background-color: white;
+}

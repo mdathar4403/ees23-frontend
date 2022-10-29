@@ -31,31 +31,21 @@ const ComingSoonComp = () => {
         style={{
           height: "2px",
           backgroundColor: "red",
-          top: "74%",
+          top: "84%",
           position: "relative",
           width: "140px",
-          left: "5%",
-        }}
-      ></div>
-      <div
-        style={{
-          height: "2px",
-          backgroundColor: "red",
-          top: "48%",
-          position: "relative",
-          width: "72%",
-          left: "2%",
-          // zIndex: "",
+          left: "55%",
+          zIndex:"1"
         }}
       ></div>
       <div
         style={{
           height: "3px",
           backgroundColor: "#0CF400",
-          top: "52%",
+          top: "82%",
           position: "relative",
           width: "180px",
-          left: "40%",
+          left: "-5%",
           // zIndex: "",
         }}
       ></div>
@@ -63,21 +53,32 @@ const ComingSoonComp = () => {
         style={{
           height: "2px",
           backgroundColor: "red",
-          top: "58%",
+          top: "88%",
           position: "relative",
-          width: "70%",
-          left: "120px",
-          zIndex: "1",
+          width: "22%",
+          left: "12%",
+          zIndex: "-1",
+        }}
+      ></div>
+      <div
+        style={{
+          height: "2px",
+          backgroundColor: "#0CF400",
+          top: "98%",
+          position: "relative",
+          width: "30%",
+          left: "25%",
+          zIndex: "-1",
         }}
       ></div>
       <div
         style={{
           height: "2px",
           backgroundColor: "red",
-          top: "76%",
+          top: "96%",
           position: "relative",
-          width: "170px",
-          left: "5%",
+          width: "10%",
+          left: "",
           zIndex: "1",
         }}
       ></div>
@@ -89,20 +90,32 @@ const ComingSoonComp = () => {
           position: "relative",
           width: "150px",
           left: "40%",
-          zIndex: "1",
+          zIndex: "-1",
         }}
       ></div>
       <div
         style={{
-          height: "2px",
+          height: "3px",
           backgroundColor: "#0CF400",
-          top: "52%",
+          top: "82%",
           position: "relative",
-          width: "70px",
-          left: "00%",
-          zIndex: "1",
+          width: "100px",
+          left: "80%",
+          zIndex: "-1",
         }}
       ></div>
+      <div
+        style={{
+          height: "4px",
+          backgroundColor: "red",
+          top: "106%",
+          position: "relative",
+          width: "170px",
+          left: "0%",
+          zIndex: "1",
+        }}
+      >
+      </div>
       <h1> COMING SOON..</h1>
       {/* <div
             style={{ width: `${200}px`, top: "60px", position: "relative" }}
@@ -137,7 +150,7 @@ const ComingSoonComp = () => {
           />
         </Box>
       </div>
-      //
+      
       {/* <ProgressBar
             width="400px"
             height="30px"
