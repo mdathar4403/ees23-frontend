@@ -1,5 +1,5 @@
 import React from "react";
-import './EventFab.css'
+import "./EventFab.css";
 const EventFAB = () => {
   function ani(e) {
     //   e.currentTarget.classList.toggle("fab-button-active");
@@ -19,6 +19,8 @@ const EventFAB = () => {
     document
       .getElementsByClassName("fab-circular-ring-off")[0]
       .classList.toggle("fab-circular-ring");
+
+      // document.getElementsByClassName("fab-button-text").innerHTML = "X";
   }
   return (
     <>
@@ -38,27 +40,82 @@ const EventFAB = () => {
             ani(e);
             console.log("clicked");
           }}
-        ></div>
+        >
+          <h2
+          className="fab-button-text"
+            style={{
+              position: "relative",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "auto 0",
+            }}
+          >
+            EVENT
+          </h2>
+          <h3
+          className="fab-button-textX"
+            style={{
+              position: "relative",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "auto 0",
+            }}
+          >
+            X
+          </h3>
+        </div>
         <div
           className="fab-item1"
           onClick={(e) => {
             console.log("clicked1");
           }}
-        ></div>
+        >
+          <h2
+            style={{
+              position: "relative",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "auto 0",
+            }}
+          >
+            UDYAM
+          </h2>
+        </div>
         <div
           className="fab-item2"
           onClick={(e) => {
-            ani(e);
             console.log("clicked2");
           }}
-        ></div>
+        >
+          <h2
+            style={{
+              position: "relative",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "auto 0",
+            }}
+          >
+            MASHAL
+          </h2>
+        </div>
         <div
           className="fab-item3"
           onClick={(e) => {
             console.log("clicked3");
           }}
-        ></div>
-        <div className="fab-circular-ring-off"></div>
+        >
+          <h2
+            style={{
+              position: "relative",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "auto 0",
+            }}
+          >
+            UDGAM
+          </h2>
+        </div>
+        {/* <div className="fab-circular-ring-off"></div> */}
       </div>
     </>
   );

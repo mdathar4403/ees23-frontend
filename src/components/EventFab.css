@@ -1,3 +1,13 @@
+@font-face {
+  font-family: first-font;
+  src: url(../fonts/viata-extrabold-1.otf);
+}
+
+h2,h3{
+  font-family: first-font;
+  text-shadow: 2px 2px #fd4556;
+}
+
 .fab-item1 {
   position: fixed;
   bottom: 2%;
@@ -8,18 +18,25 @@
   border-radius: 150px;
   z-index: -2;
   transition: all 1s ease-in-out;
+  color: transparent;
+  display: flex;
+  justify-content: center;
 }
 .fab-item1-active {
   position: fixed;
+  color: white;
   bottom: 1.5%;
-  right: 40%;
-  height: 80px;
-  width: 80px;
-  background-color: rgb(85, 0, 255);
+  right: 40vw;
+  height: 20vw;
+  width: 20vw;
+  background-color: rgba(62, 70, 82, 60);
   border-radius: 150px;
   z-index: 1;
   transform: translate(0, -70px);
   transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 20px 2px   #fd4556;
 }
 .fab-item2 {
   position: fixed;
@@ -27,45 +44,59 @@
   right: 40%;
   height: 80px;
   width: 80px;
+  color: transparent;
   background-color: transparent;
   border-radius: 150px;
   z-index: -2;
   transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: center;
 }
 .fab-item2-active {
   position: fixed;
   bottom: 1.5%;
-  right: 40%;
-  height: 80px;
-  width: 80px;
-  background-color: rgb(85, 0, 255);
+  color: white;
+  right: 40vw;
+  height: 20vw;
+  width: 20vw;
+  background-color: rgba(62, 70, 82, 60);
   border-radius: 150px;
   z-index: 1;
   transform: translate(100px, 0);
   transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+    box-shadow: 0 0 20px 2px #fd4556;
 }
 .fab-item3 {
   position: fixed;
   bottom: 2%;
   right: 40%;
-  height: 80px;
-  width: 80px;
+  color: transparent;
+  height: 20vw;
+  width: 20vw;
   background-color: transparent;
   border-radius: 150px;
   z-index: -2;
   transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: center;
 }
 .fab-item3-active {
   position: fixed;
   bottom: 1.5%;
-  right: 40%;
-  height: 80px;
-  width: 80px;
-  background-color: rgb(85, 0, 255);
+  right: 40vw;
+  color: white;
+  height: 20vw;
+  width: 20vw;
+  background-color: rgba(62, 70, 82, 60);
   border-radius: 150px;
   z-index: 1;
   transform: translate(-100px, 0);
   transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+    box-shadow: 0 0 20px 2px #fd4556;
 }
 
 .fab-button-active {
@@ -80,7 +111,24 @@
   animation-duration: 1s;
   transform: scale(0.5);
   transition: all 1s ease-in-out;
+    box-shadow: 0 0 20px 2px #43c8a3;
 }
+
+.fab-button h3 {
+  display: none;
+  transition: all 1s ease-in-out;
+}
+
+.fab-button-active h2 {
+  display: none;
+  transition: all 1s ease-in-out;
+}
+.fab-button-active h3{
+  display: block;
+  transition: all 1s ease-in-out;
+
+}
+
 
 .fab-circular-ring {
   width: 300px;
@@ -93,12 +141,9 @@
   box-sizing: border-box;
   z-index: -10;
   /* position: fixed; */
-  transition:  1s ease-in-out;
+  transition: 1s ease-in-out;
   margin: 0px auto;
 }
-
-
-
 
 @media (max-width: 600px) {
   .fab-button {
@@ -107,9 +152,12 @@
     right: 40%;
     height: 80px;
     width: 80px;
-    background-color: rgb(85, 0, 255);
+    background-color: rgba(62, 70, 82, 60);
     border-radius: 150px;
     z-index: 1;
     transition: all 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 20px 2px #43c8a3;
   }
 }
