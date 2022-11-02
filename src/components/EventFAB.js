@@ -1,6 +1,11 @@
 import React from "react";
-import './EventFab.css'
+import "./EventFab.css";
+import { useState } from "react";
+import EventCard from "./EventCard";
+
+import "./style.css";
 const EventFAB = () => {
+  const [content, setContent] = useState(0);
   function ani(e) {
     //   e.currentTarget.classList.toggle("fab-button-active");
     console.log(e);
@@ -19,7 +24,14 @@ const EventFAB = () => {
     document
       .getElementsByClassName("fab-circular-ring-off")[0]
       .classList.toggle("fab-circular-ring");
+
+    // document.getElementsByClassName("fab-button-text").innerHTML = "X";
   }
+  const toggle = () => {
+    // document.getElementsByClassName("event-detais-card-off")[0].classList.toggle("event-detais-card");
+    console.log("Single G clicked");
+  };
+
   return (
     <>
       <div
@@ -31,6 +43,7 @@ const EventFAB = () => {
           marginBottom: "40px",
           height: "10%",
         }}
+        className="fab-container"
       >
         <div
           className="fab-button"
@@ -38,28 +51,89 @@ const EventFAB = () => {
             ani(e);
             console.log("clicked");
           }}
-        ></div>
+        >
+          <h2
+            className="fab-button-text"
+            style={{
+              position: "relative",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "auto 0",
+            }}
+          >
+            EVENT
+          </h2>
+          <h3
+            className="fab-button-textX"
+            style={{
+              position: "relative",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "auto 0",
+            }}
+          >
+            X
+          </h3>
+        </div>
         <div
           className="fab-item1"
-          onClick={(e) => {
-            console.log("clicked1");
+          onClick={() => {
+            setContent(0);
+            toggle();
+
+            console.log("clicked UDYAM");
           }}
-        ></div>
+        >
+          <h2
+            style={{
+              position: "relative",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "auto 0",
+            }}
+          >
+            UDYAM
+          </h2>
+        </div>
         <div
           className="fab-item2"
-          onClick={(e) => {
-            ani(e);
-            console.log("clicked2");
+          onClick={() => {
+            setContent(2);
+            toggle();
           }}
-        ></div>
+        >
+          <h2
+            style={{
+              position: "relative",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "auto 0",
+            }}
+          >
+            MASHAL
+          </h2>
+        </div>
         <div
           className="fab-item3"
-          onClick={(e) => {
-            console.log("clicked3");
+          onClick={() => {
+            setContent(1);
+            toggle();
           }}
-        ></div>
-        <div className="fab-circular-ring-off"></div>
+        >
+          <h2
+            style={{
+              position: "relative",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "auto 0",
+            }}
+          >
+            UDGAM
+          </h2>
+        </div>
+        {/* <div className="fab-circular-ring-off"></div> */}
       </div>
+      <EventCard data={content}/>
     </>
   );
 };
