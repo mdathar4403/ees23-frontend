@@ -3,9 +3,14 @@
   src: url(../fonts/viata-extrabold-1.otf);
 }
 
-h2,h3{
+h2,
+h3 {
   font-family: first-font;
   text-shadow: 2px 2px #fd4556;
+}
+
+.fab-container {
+  display: none;
 }
 
 .fab-item1 {
@@ -36,7 +41,7 @@ h2,h3{
   transition: all 1s ease-in-out;
   display: flex;
   justify-content: center;
-  box-shadow: 0 0 20px 2px   #fd4556;
+  box-shadow: 0 0 20px 2px #fd4556;
 }
 .fab-item2 {
   position: fixed;
@@ -66,7 +71,7 @@ h2,h3{
   transition: all 1s ease-in-out;
   display: flex;
   justify-content: center;
-    box-shadow: 0 0 20px 2px #fd4556;
+  box-shadow: 0 0 20px 2px #fd4556;
 }
 .fab-item3 {
   position: fixed;
@@ -96,7 +101,7 @@ h2,h3{
   transition: all 1s ease-in-out;
   display: flex;
   justify-content: center;
-    box-shadow: 0 0 20px 2px #fd4556;
+  box-shadow: 0 0 20px 2px #fd4556;
 }
 
 .fab-button-active {
@@ -111,7 +116,7 @@ h2,h3{
   animation-duration: 1s;
   transform: scale(0.5);
   transition: all 1s ease-in-out;
-    box-shadow: 0 0 20px 2px #43c8a3;
+  box-shadow: 0 0 20px 2px #43c8a3;
 }
 
 .fab-button h3 {
@@ -123,12 +128,10 @@ h2,h3{
   display: none;
   transition: all 1s ease-in-out;
 }
-.fab-button-active h3{
+.fab-button-active h3 {
   display: block;
   transition: all 1s ease-in-out;
-
 }
-
 
 .fab-circular-ring {
   width: 300px;
@@ -159,5 +162,8 @@ h2,h3{
     display: flex;
     justify-content: center;
     box-shadow: 0 0 20px 2px #43c8a3;
+  }
+  .fab-container {
+    display: block;
   }
 }

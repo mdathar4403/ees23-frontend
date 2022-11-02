@@ -125,11 +125,11 @@ th {
     text-align: center;
     padding: 0.5rem 0;
   }
-  .table-body{
+  .table-body {
     width: 50vw;
     left: 20%;
   }
-  .events .table th{
+  .events .table th {
     font-size: 1.7rem;
     text-shadow: 2px 2px #fd4556;
   }

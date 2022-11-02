@@ -1,6 +1,11 @@
 import React from "react";
 import "./EventFab.css";
+import { useState } from "react";
+import EventCard from "./EventCard";
+
+import "./style.css";
 const EventFAB = () => {
+  const [content, setContent] = useState(0);
   function ani(e) {
     //   e.currentTarget.classList.toggle("fab-button-active");
     console.log(e);
@@ -20,8 +25,13 @@ const EventFAB = () => {
       .getElementsByClassName("fab-circular-ring-off")[0]
       .classList.toggle("fab-circular-ring");
 
-      // document.getElementsByClassName("fab-button-text").innerHTML = "X";
+    // document.getElementsByClassName("fab-button-text").innerHTML = "X";
   }
+  const toggle = () => {
+    // document.getElementsByClassName("event-detais-card-off")[0].classList.toggle("event-detais-card");
+    console.log("Single G clicked");
+  };
+
   return (
     <>
       <div
@@ -33,6 +43,7 @@ const EventFAB = () => {
           marginBottom: "40px",
           height: "10%",
         }}
+        className="fab-container"
       >
         <div
           className="fab-button"
@@ -42,7 +53,7 @@ const EventFAB = () => {
           }}
         >
           <h2
-          className="fab-button-text"
+            className="fab-button-text"
             style={{
               position: "relative",
               fontSize: "18px",
@@ -53,7 +64,7 @@ const EventFAB = () => {
             EVENT
           </h2>
           <h3
-          className="fab-button-textX"
+            className="fab-button-textX"
             style={{
               position: "relative",
               fontSize: "18px",
@@ -66,8 +77,11 @@ const EventFAB = () => {
         </div>
         <div
           className="fab-item1"
-          onClick={(e) => {
-            console.log("clicked1");
+          onClick={() => {
+            setContent(0);
+            toggle();
+
+            console.log("clicked UDYAM");
           }}
         >
           <h2
@@ -83,8 +97,9 @@ const EventFAB = () => {
         </div>
         <div
           className="fab-item2"
-          onClick={(e) => {
-            console.log("clicked2");
+          onClick={() => {
+            setContent(2);
+            toggle();
           }}
         >
           <h2
@@ -100,8 +115,9 @@ const EventFAB = () => {
         </div>
         <div
           className="fab-item3"
-          onClick={(e) => {
-            console.log("clicked3");
+          onClick={() => {
+            setContent(1);
+            toggle();
           }}
         >
           <h2
@@ -117,6 +133,7 @@ const EventFAB = () => {
         </div>
         {/* <div className="fab-circular-ring-off"></div> */}
       </div>
+      <EventCard data={content}/>
     </>
   );
 };
