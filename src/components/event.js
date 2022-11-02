@@ -5,6 +5,7 @@ import EventCard from "./EventCard";
 function Event() {
   const [active, setActive] = useState(false);
   const [choosed, setChoosed] = useState(-1);
+  const [isinittial, setIsinittial] = useState(false);
   const toggle = () => {
     document
       .getElementsByClassName("event-detais-card")[0]
@@ -33,8 +34,14 @@ function Event() {
 
     // document.getElementsByClassName("fab-button-text").innerHTML = "X";
   }
+
   useEffect(() => {
+    if(isinittial){
     toggle();
+    }else{
+      setIsinittial(true);
+    }
+
   }, [active]);
 
   return (
