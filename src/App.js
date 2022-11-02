@@ -7,9 +7,10 @@ import Event from './components/event';
 import Title from './components/title';
 import EventFAB from './components/EventFAB';
 import EventCard from './components/EventCard';
-
+import {useState} from 'react';
 
 function App() {
+  const [index,setIndex]=useState([]);
   return (
     <div className="App">
       <Title />
@@ -23,7 +24,7 @@ function App() {
       <div className="event-list-main">
         <Event />
       </div>
-      <EventCard/>
+     
 
       <EventFAB />
     </div>

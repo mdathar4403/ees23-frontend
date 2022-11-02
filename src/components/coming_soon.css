@@ -6,8 +6,6 @@
 }
 
 
-
-
 .comingsoon  h1{
   color: white;
   position: relative;
@@ -17,8 +15,6 @@
   font-weight: bold;
   text-shadow: 2px 2px #fd4556;
 }
-
-
 
 .MuiLinearProgress-root::before{
   background-color: transparent !important;
