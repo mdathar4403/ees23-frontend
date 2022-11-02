@@ -1,0 +1,58 @@
+
+.event-detais-card {
+  height: 75vh;
+  width: 67vw;
+  /* background-color: white; */
+  backdrop-filter: blur(30px);
+  /* opacity: 0.9; */
+  position: fixed;
+  left: 18%;
+  top: 15%;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+}
+.event-detais-card h1 {
+  color: white;
+  text-shadow: 4px 1px #fd4556;
+  font-family: "Fontspring";
+  font-size: 2.8rem;
+  padding-left: 20px;
+  margin-top: 5%;
+  /* display: inline-block; */
+  width: 80%;
+  /* text-align: end; */
+  /* text-shadow: 1px 1px white; */
+}
+
+.event-content{
+  overflow-y: auto;
+  position: relative;
+  height: 50%;
+
+}
+
+.event-detais-card p {
+  color: white;
+  font-family: "Fontspring";
+  font-size: 1.5rem;
+  padding-left: 20px;
+  margin-top: 5%;
+  word-spacing: 1rem;
+  padding-right: 20px;
+  
+}
+
+.event-logo-container img {
+  position: relative;
+  /* display: inline; */
+  padding-left: 20px;
+  width: 5rem;
+  padding-top: 20px;
+  /* margin: 0 40%; */
+  /* left:"50%"; */
+}
+
+.event-logo-container {
+
+}

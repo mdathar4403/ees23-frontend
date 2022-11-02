@@ -59,7 +59,8 @@ th {
   /* position: relative; */
   /* bottom: 30%; */
   top: 40vh;
-  margin-left: 7%;
+  /* margin-left: 2%; */
+  padding: 10px;
   position: fixed;
 }
 .table-body a {

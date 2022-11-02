@@ -5,6 +5,8 @@ import "./fonts/Fontspring-DEMO-viata-extrabold.otf";
 import ComingSoonComp from './components/coming_soon';
 import Event from './components/event';
 import Title from './components/title';
+import EventFAB from './components/EventFAB';
+import EventCard from './components/EventCard';
 
 
 function App() {
@@ -12,13 +14,18 @@ function App() {
     <div className="App">
       <Title />
       <div className="landing-page-images">
-        <img src="/assets/1.png" alt="" />
+        <img src="/assets/1.png" alt=""/>
       </div>
       <div className="characters-image">
         <img src="/assets/Characters3.png" alt="" />
       </div>
       <ComingSoonComp />
-      <Event/>
+      <div className="event-list-main">
+        <Event />
+      </div>
+      <EventCard/>
+
+      <EventFAB />
     </div>
   );
 }
