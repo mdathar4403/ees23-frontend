@@ -5,7 +5,7 @@ import "./fonts/Fontspring-DEMO-viata-extrabold.otf";
 import ComingSoonComp from './components/coming_soon';
 import Event from './components/event';
 import Title from './components/title';
-import EventFAB from './components/EventFAB';
+// import EventFAB from './components/EventFAB';
 import EventCard from './components/EventCard';
 import {useState} from 'react';
 
@@ -26,7 +26,7 @@ function App() {
       </div>
      
 
-      <EventFAB />
+      {/* <EventFAB /> */}
     </div>
   );
 }

@@ -16,16 +16,18 @@ const heading=[
 const EventCard = (props) => {
 
   const off = ()=>{
-    const hello= document.getElementById('card');
-    hello.style.display='none';
+    document
+      .getElementsByClassName("event-detais-card")[0]
+      .classList.toggle("event-detais-card-active");
+    console.log("GG clicked");
   }
 
   return (
     <div>
-      <div id = 'card' className="event-detais-card">
+      <div className="event-detais-card">
         <div className="event-logo-container">
           <img src="./logo192.png" alt="" />
-          <a href="#" className="close" onClick={off}></a>
+          {/* <a href="#" className="close" onClick={off}></a> */}
         </div>
         <h1>{heading[props.data]}</h1>
         <div className="event-content">
