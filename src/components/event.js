@@ -1,6 +1,7 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
+import GoogleLoginPage from "./GoogleLoginPage";
 // import EventFAB from "./EventFAB";
 function Event() {
   const [active, setActive] = useState(false);
@@ -255,11 +256,9 @@ function Event() {
             UDGAM
           </h2>
         </div>
-        {/* <div className="fab-circular-ring-off"></div> */}
       </div>
-      <div className="register-button">
-        <a href="#">Register</a>
-      </div>
+      
+      
     </>
   );
 }

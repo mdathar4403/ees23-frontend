@@ -124,7 +124,7 @@ th {
 h2,
 h3 {
   font-family: first-font;
-  text-shadow: 2px 2px #fd4556;
+  text-shadow: 1px 1px #fd4556;
 }
 
 .fab-container {
@@ -140,7 +140,7 @@ h3 {
   background-color: transparent;
   border-radius: 150px;
   z-index: -2;
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: transparent;
   display: flex;
   justify-content: center;
@@ -156,7 +156,7 @@ h3 {
   border-radius: 150px;
   z-index: 1;
   transform: translate(0, -70px);
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
   box-shadow: 0 0 20px 2px #fd4556;
@@ -171,7 +171,7 @@ h3 {
   background-color: transparent;
   border-radius: 150px;
   z-index: -2;
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
 }
@@ -186,7 +186,7 @@ h3 {
   border-radius: 150px;
   z-index: 1;
   transform: translate(100px, 0);
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
   box-shadow: 0 0 20px 2px #fd4556;
@@ -201,7 +201,7 @@ h3 {
   background-color: transparent;
   border-radius: 150px;
   z-index: -2;
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
 }
@@ -216,7 +216,7 @@ h3 {
   border-radius: 150px;
   z-index: 1;
   transform: translate(-100px, 0);
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
   box-shadow: 0 0 20px 2px #fd4556;
@@ -224,31 +224,31 @@ h3 {
 
 .fab-button-active {
   position: fixed;
-  bottom: 0.5%;
+  bottom: 0%;
   right: 40%;
   height: 80px;
   width: 80px;
   border-radius: 150px;
   z-index: 1;
   /* animation-name: cssAnimation; */
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   transform: scale(0.5);
-  transition: all 1s ease-in-out;
+ transition: all 0.2s ease-in-out;
   box-shadow: 0 0 20px 4px white;
 }
 
 .fab-button h3 {
   display: none;
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .fab-button-active h2 {
   display: none;
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .fab-button-active h3 {
   display: block;
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .fab-circular-ring {
@@ -262,7 +262,7 @@ h3 {
   box-sizing: border-box;
   z-index: -10;
   /* position: fixed; */
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   margin: 0px auto;
 }
 
@@ -318,7 +318,7 @@ h3 {
     background-color: rgba(62, 70, 82, 60);
     border-radius: 150px;
     z-index: 1;
-    transition: all 1s ease-in-out;
+    transition: all 0.2s ease-in-out;
     display: flex;
     justify-content: center;
     box-shadow: 0 0 0px 1px white;
@@ -334,6 +334,10 @@ h3 {
   }
   .register-button a{
     font-size: 1.2rem;
+    text-shadow: 1px 1px #fd4556;
+  }
+  .fab-button-active{
+
   }
 
 }
