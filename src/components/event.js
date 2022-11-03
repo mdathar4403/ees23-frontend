@@ -1,6 +1,7 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
+import GoogleLoginPage from "./GoogleLoginPage";
 // import EventFAB from "./EventFAB";
 function Event() {
   const [active, setActive] = useState(false);
@@ -290,7 +291,7 @@ function Event() {
         </div>
       </div>
       <div className="register-button">
-        <a href="#">Register</a>
+        <GoogleLoginPage/>
       </div>
     </>
   );

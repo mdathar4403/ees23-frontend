@@ -1,5 +1,7 @@
 import React from 'react'
-
+import GoogleLogin from 'react-google-login';
+import post from "utils/post";
+import { useCallback } from 'react';
 const GoogleLoginPage = () => {
     const onGoogleLoginSuccess = useCallback(
       (response) => {
@@ -12,9 +14,12 @@ const GoogleLoginPage = () => {
 
         validateTokenAndObtainSession({ data, idToken })
           .then(console.log("GG"))
-          .catch(notifyError);
+          .catch(console.log("GError"));
       },
     );
+    const onGoogleLoginFailure = useCallback((response) => {
+      console.log("Google login failed: ", response);
+    });
     const validateTokenAndObtainSession = ({ data, idToken }) => {
       const headers = {
         Authorization: idToken,
