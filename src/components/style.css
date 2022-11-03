@@ -143,7 +143,7 @@ th {
 h2,
 h3 {
   font-family: first-font;
-  text-shadow: 2px 2px #fd4556;
+  text-shadow: 1px 1px #fd4556;
 }
 
 .fab-container {
@@ -353,6 +353,10 @@ h3 {
   }
   .register-button a{
     font-size: 1.2rem;
+    text-shadow: 1px 1px #fd4556;
+  }
+  .fab-button-active{
+
   }
 
 }
