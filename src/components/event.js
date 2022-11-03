@@ -200,12 +200,12 @@ function Event() {
         <div
           className="fab-item2"
           onClick={() => {
-            if (active && content === 1) {
+            if (active && content === 2) {
               setActive(false);
               setChoosed(-1);
               setContent(-1);
             } else {
-              setContent(1);
+              setContent(2);
 
               setActive(true);
             }
@@ -225,12 +225,12 @@ function Event() {
         <div
           className="fab-item3"
           onClick={() => {
-            if (active && content === 2) {
+            if (active && content === 1) {
               setActive(false);
               setChoosed(-1);
               setContent(-1);
             } else {
-              setContent(2);
+              setContent(1);
 
               setActive(true);
             }
