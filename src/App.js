@@ -20,7 +20,7 @@ function App() {
       <div className="characters-image">
         <img src="/assets/Characters3.png" alt="" />
       </div>
-      <ComingSoonComp />
+      {/* <ComingSoonComp /> */}
       <div className="event-list-main">
         <Event />
       </div>

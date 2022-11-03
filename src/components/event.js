@@ -11,6 +11,7 @@ function Event() {
       .getElementsByClassName("event-detais-card")[0]
       .classList.toggle("event-detais-card-active");
     console.log("Single G clicked");
+    document.getElementsByClassName("register-button")[0].classList.toggle("register-button-active");
   };
   const [content, setContent] = useState(-1);
   function ani(e) {
@@ -43,6 +44,13 @@ function Event() {
     }
 
   }, [active]);
+  const handleClose = () => {
+    if (active) {
+              setActive(false);
+              setChoosed(-1);
+              setContent(-1);
+            }
+  }
 
   return (
     <>
@@ -111,7 +119,7 @@ function Event() {
           <div></div>
         </div> */}
       </div>
-      <EventCard data={content} />
+      <EventCard data={content} close={handleClose} />
       <div
         style={{
           position: "fixed",
@@ -248,6 +256,9 @@ function Event() {
           </h2>
         </div>
         {/* <div className="fab-circular-ring-off"></div> */}
+      </div>
+      <div className="register-button">
+        <a href="#">Register</a>
       </div>
     </>
   );

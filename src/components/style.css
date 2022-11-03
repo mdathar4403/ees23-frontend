@@ -280,8 +280,47 @@ h3 {
   box-sizing: border-box;
   z-index: -10;
   /* position: fixed; */
-  transition: 1s ease-in-out;
+  transition: 0.2s ease-in-out;
   margin: 0px auto;
+}
+
+.register-button {
+  height: 15vw;
+  width: 15vw;
+  position: fixed;
+  top: 40%;
+  left: 82%;
+  max-width: 200px;
+  max-height: 60px;
+  /* border-radius: 150px; */
+  z-index: 1;
+  background-color: rgba(52, 59, 71, 60);
+  /* transform: skew(10deg); */
+  /* box-shadow: 0 0 8px 2px white; */
+  display: flex;
+  justify-content: center;
+  font-family: first-font;
+  border-radius: 10px;
+  /* background-color:red; */
+  /* width: 14vw; */
+  background-color: rgba(52, 59, 71, 60);
+  /* font-weight: 600; */
+  /* text-decoration: none; */
+  /* list-style: none; */
+  box-shadow: 2px 2px #fd4556;
+}
+.register-button a{
+  color: white;
+  font-family: first-font;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: auto;
+  text-shadow: 2px 2px #fd4556;
+}
+.register-button-active{
+  display: none;
 }
 
 @media (max-width: 600px) {
@@ -297,9 +336,18 @@ h3 {
     transition: all 1s ease-in-out;
     display: flex;
     justify-content: center;
-    box-shadow: 0 0 10px 2px  white;
+    box-shadow: 0 0 0px 1px white;
   }
   .fab-container {
     display: block;
+  }
+  .register-button{
+    position: fixed;
+    left: 35%;
+    width: 30vw;
+    top: 60%;
+  }
+  .register-button a{
+    font-size: 1.2rem;
   }
 }
