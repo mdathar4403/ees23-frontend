@@ -12,10 +12,10 @@
   position: fixed;
   z-index: -1;
 }
-.landing-page-images img {
+/* .landing-page-images img {
   width: 100%;
   height: 100%;
-}
+} */
 .characters-image {
   width: 100vw;
   height: 100vh;

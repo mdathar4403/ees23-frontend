@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-
 .event-detais-card {
   /* display: none; */
   height: 0;
@@ -19,10 +18,10 @@
   z-index: 2;
   transition: all 0.1s ease-in-out;
 }
-.event-detais-card img{
+.event-detais-card img {
   display: none;
 }
-.event-detais-card a{
+.event-detais-card a {
   display: none;
 }
 .event-detais-card-active {
@@ -41,7 +40,7 @@
   z-index: 2;
   transition: all 0.2s ease-in-out;
 }
-.event-detais-card-active a{
+.event-detais-card-active a {
   display: block;
 }
 /* .motion{
@@ -99,7 +98,7 @@
   /* left:"50%"; */
 }
 /* Close Button */
-.close {
+.event-detais-card-active .close {
   position: fixed;
   right: 32px;
   top: 8%;
@@ -107,10 +106,10 @@
   height: 32px;
   opacity: 0.5;
 }
-.close:hover {
+.event-detais-card-active .close:hover {
   opacity: 1;
 }
-.close:before,
+.event-detais-card-active .close:before,
 .close:after {
   position: absolute;
   left: 15px;
@@ -126,18 +125,16 @@
   transform: rotate(-45deg);
 }
 
-
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .event-detais-card-active {
-    position: fixed; 
+    position: fixed;
     top: 10%;
     height: 65%;
     width: 90%;
     left: 5%;
   }
-  .p{
-    
+  .event-detais-card-active .close:before, .close:after {
+    height: 13px;
+    width: 2px;
   }
-
-
 }
