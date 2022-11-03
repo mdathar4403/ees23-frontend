@@ -320,6 +320,9 @@ h3 {
   margin: auto;
   text-shadow: 2px 2px #fd4556;
 }
+.register-button:hover{
+  background: #3e4652;
+}
 .register-button-active{
   display: none;
 }
