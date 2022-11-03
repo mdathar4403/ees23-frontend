@@ -70,12 +70,13 @@ th {
   padding: 0.6vw 0.8vw;
 }
 .table-body a:hover {
-  /* background-color: #3e4652; */
+  background-color: #3e4652;
   color: #fd4556;
+  border-radius: 10px;
 }
-#event-dark {
+/* #event-dark {
   background-color: rgba(62, 70, 82, 60);
-}
+} */
 .upperline {
   height: 0.6vw;
   width: 13vw;
