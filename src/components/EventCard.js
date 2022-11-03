@@ -7,6 +7,11 @@ const paragraph = [
   "Mashal is the sports festival of the department of Electronics Engineering, IIT (BHU) Varanasi. It offers a venue for all significant competitions and sports to foster good sportsmanship among the students. Even though it started last year, the event covers numerous sports, including Marathon, Chess, Valorant, Table Tennis, Basketball, Tennis, Football, Cricket, Badminton, Kabaddi, Athletics, and Tug of War. Mashal unleashes the competitive spirit of the nation's brightest minds and offers a perfect arena for sports enthusiasts to face off against one another. As said by Serena Williams, let's overpower, overtake and overcome!",
 ];
 const heading = ["UDYAM", "UDGAM", "MASHAL"];
+const imageUrl = [
+  "./assets/udyam192.png",
+  "./assets/Mashal Logo-0192.png",
+  "./assets/Mashal Logo-0192.png",
+];
 
 const EventCard = (props) => {
   const off = () => {
@@ -17,8 +22,10 @@ const EventCard = (props) => {
     <div>
       <div className="event-detais-card">
         <div className="event-logo-container">
-          <img src="./logo192.png" alt="" />
           <a href="#" className="close" onClick={off}></a>
+        </div>
+        <div className="event-logo">
+          <img src={imageUrl[props.data]} alt="" />
         </div>
         <h1>{heading[props.data]}</h1>
         <div className="event-content">
