@@ -149,7 +149,7 @@ h3 {
 .fab-container {
   display: none;
 }
-
+/* 
 .fab-item1 {
   position: fixed;
   bottom: 2%;
@@ -179,8 +179,8 @@ h3 {
   display: flex;
   justify-content: center;
   box-shadow: 0 0 20px 2px #fd4556;
-}
-.fab-item2 {
+} */
+/* .fab-item2 {
   position: fixed;
   bottom: 2%;
   right: 40%;
@@ -193,8 +193,8 @@ h3 {
   transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
-}
-.fab-item2-active {
+} */
+/* .fab-item2-active {
   position: fixed;
   bottom: 1.5%;
   color: white;
@@ -209,8 +209,8 @@ h3 {
   display: flex;
   justify-content: center;
   box-shadow: 0 0 20px 2px #fd4556;
-}
-.fab-item3 {
+} */
+/* .fab-item3 {
   position: fixed;
   bottom: 2%;
   right: 40%;
@@ -223,8 +223,8 @@ h3 {
   transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
-}
-.fab-item3-active {
+} */
+/* .fab-item3-active {
   position: fixed;
   bottom: 1.5%;
   right: 40vw;
@@ -239,9 +239,9 @@ h3 {
   display: flex;
   justify-content: center;
   box-shadow: 0 0 20px 2px #fd4556;
-}
+} */
 
-.fab-button-active {
+/* .fab-button-active {
   position: fixed;
   bottom: 0%;
   right: 40%;
@@ -249,12 +249,12 @@ h3 {
   width: 80px;
   border-radius: 150px;
   z-index: 1;
-  /* animation-name: cssAnimation; */
+
   animation-duration: 0.5s;
   transform: scale(0.5);
  transition: all 0.2s ease-in-out;
   box-shadow: 0 0 20px 4px white;
-}
+} */
 
 .fab-button h3 {
   display: none;
@@ -268,21 +268,6 @@ h3 {
 .fab-button-active h3 {
   display: block;
   transition: all 0.2s ease-in-out;
-}
-
-.fab-circular-ring {
-  width: 300px;
-  height: 150px; /* as the half of the width */
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
-  border: 80px solid gray;
-  opacity: 0.4;
-  border-bottom: 0;
-  box-sizing: border-box;
-  z-index: -10;
-  /* position: fixed; */
-  transition: all 0.2s ease-in-out;
-  margin: 0px auto;
 }
 
 .register-button {
@@ -328,7 +313,7 @@ h3 {
 }
 
 @media (max-width: 600px) {
-  .fab-button {
+  /* .fab-button {
     position: fixed;
     bottom: 1%;
     right: 40%;
@@ -341,7 +326,7 @@ h3 {
     display: flex;
     justify-content: center;
     box-shadow: 0 0 0px 1px white;
-  }
+  } */
   .fab-container {
     display: block;
   }
