@@ -191,12 +191,12 @@ function Event() {
               margin: "auto 0",
             }}
             onClick={() => {
-              if (active && content === 1) {
+              if (active && content === 0) {
                 setActive(false);
                 setChoosed(-1);
                 setContent(-1);
               } else {
-                setContent(1);
+                setContent(0);
 
                 setActive(true);
               }

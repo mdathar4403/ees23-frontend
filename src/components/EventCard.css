@@ -7,6 +7,7 @@
   color: transparent;
 
   overflow-x: auto;
+  overflow: hidden;
   width: 67vw;
   /* background-color: white; */
   /* backdrop-filter: blur(27px); */
@@ -56,14 +57,18 @@
   }
 } */
 .event-detais-card h1 {
-  position: fixed;
+  /* position: fixed; */
+
   color: #f2f2f2;
   text-shadow: 4px 1px #fd4556;
   font-family: "Poppins", sans-serif;
   font-size: 4rem;
-  padding-left: 20px;
-  left: 30%;
+  padding-left: 17%;
+  padding-top: 0;
+  margin:auto 0;
+  /* left: 30%; */
   top: 0;
+  display: inline;
   /* display: inline-block; */
   /* width: 30%; */
   /* text-align: end; */
@@ -78,7 +83,7 @@
 }
 
 .event-detais-card p {
-  position: fixed;
+  /* position: fixed; */
   top: 30%;
   color: #f2f2f2;
   font-family: "Poppins", sans-serif;
@@ -94,13 +99,16 @@
 }
 .event-logo img {
   width: 12%;
-  position: fixed;
+  position: relative;
+  display: inline;
+  padding-top: 3%;
   left: 10%;
-  top: 10%;
+  top: 5%;
 }
 /* Close Button */
 .event-detais-card-active .close {
   position: fixed;
+  /* position: relative; */
   right: 32px;
   top: 8%;
   width: 32px;
