@@ -213,7 +213,7 @@ function Event() {
               setChoosed(-1);
               setContent(-1);
             } else {
-              setContent(1);
+              setContent(2);
 
               setActive(true);
             }
