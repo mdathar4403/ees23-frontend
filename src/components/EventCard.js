@@ -26,8 +26,8 @@ const EventCard = (props) => {
         </div>
         <div className="event-logo">
           <img src={imageUrl[props.data]} alt="" />
-        </div>
         <h1>{heading[props.data]}</h1>
+        </div>
         <div className="event-content">
           <p> {paragraph[props.data]}</p>
         </div>
