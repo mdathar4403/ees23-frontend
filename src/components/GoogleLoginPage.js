@@ -26,7 +26,9 @@ const GoogleLoginPage = () => {
         "Content-Type": "application/json",
       };
 
-      return post("users/init/", data, { headers });
+      return post("http://127.0.0.1:8000/auth/google-login/", data, {
+        headers,
+      });
     };
   return (
     <GoogleLogin
