@@ -120,7 +120,7 @@ function Event() {
         </div> */}
       </div>
       <EventCard data={content} close={handleClose} />
-      <div
+      {/* <div
         style={{
           position: "fixed",
           width: "100%",
@@ -255,7 +255,39 @@ function Event() {
             UDGAM
           </h2>
         </div>
-        {/* <div className="fab-circular-ring-off"></div> */}
+      </div> */}
+      <div className="fab-main-container">
+        <div className="fab-button-container">
+          <div
+            className="fab-button"
+            onClick={(e) => {
+              ani(e);
+              console.log("clicked");
+            }}
+          ></div>
+        </div>
+        <div className="fab-container">
+          <div
+            className="fab-item1"
+            onClick={(e) => {
+              console.log("clicked1");
+            }}
+          ></div>
+          <div
+            className="fab-item2"
+            onClick={(e) => {
+              ani(e);
+              console.log("clicked2");
+            }}
+          ></div>
+          <div
+            className="fab-item3"
+            onClick={(e) => {
+              console.log("clicked3");
+            }}
+          ></div>
+          <div className="fab-circular-ring"></div>
+        </div>
       </div>
       <div className="register-button">
         <a href="#">Register</a>
