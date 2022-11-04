@@ -10,7 +10,7 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: -1;
+  z-index: -1;pointer-events: none;
 }
 /* .landing-page-images img {
   width: 100%;
@@ -22,8 +22,12 @@
   position: fixed;
   z-index: -1;
   align-items: stretch;
+
+  pointer-events: none;
   text-align: center;
+
 }
+
 
 .characters-image img {
   height: 100vh;
@@ -32,8 +36,15 @@
   /* max-width: 30%; */
   top:3vw;
   bottom: 10%;
+
+  position: fixed;
+}
+img{
+  pointer-events: none;
+
   /* position: fixed; */
   left: 35%;
+
 }
 
 
