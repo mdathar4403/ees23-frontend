@@ -1,17 +1,11 @@
 .text-scroll{
-    /* overflow: hidden; */
-    /* width: 100%; */
-    /* position: relative; */
     display: flex;
     position: absolute;
     font-size: 200%;
      animation: scrollText 15s infinite linear;
      }
      @keyframes scrollText {
-         /* from   {  }
-         to { transform: translateX(0%); } */
          100%{transform: translateX(0%);}
-         /* 50%{transform: translateX(-50%);} */
          0%{transform: translateX(-50%);}
        }
 

@@ -17,7 +17,6 @@
   position: fixed;
   height: 80px;
   width: 80px;
-  background-color: red;
   border-radius: 150px;
   left: 37%;
   bottom: 0%;
@@ -31,7 +30,6 @@
   position: fixed;
   height: 80px;
   width: 80px;
-  background-color: red;
   border-radius: 150px;
   left: 69%;
   bottom: 20%;
@@ -43,14 +41,10 @@
 }
 
 .fab-button-active {
-  /* position: fixed; */
-  /* bottom: -2%; */
-  /* right: 39%; */
   height: 140px;
   width: 140px;
   border-radius: 150px;
   z-index:10;
-  /* animation-name: cssAnimation; */
   animation-duration: 1s;
   transform: scale(0.5);
   transition: all 0.5s ease-in-out;
@@ -79,26 +73,12 @@
 }
 
 
-/* .fab-button h3 {
-  display: none;
-  transition: all 0.2s ease-in-out;
-}
-
-.fab-button-active h2 {
-  display: none;
-  transition: all 0.2s ease-in-out;
-}
-.fab-button-active h3 {
-  display: block;
-  transition: all 0.2s ease-in-out;
-} */
 .fab-container {
   position: fixed;
   bottom: -150px;
   z-index:1;
   margin: auto;
   height: 300px;
-  /* width: 40vh; */
   display: flex;
   align-items: flex-end;
   transform: rotate(0deg);
@@ -114,7 +94,6 @@
   z-index:1;
   margin: auto;
   height: 300px;
-  /* width: 40vh; */
   display: flex;
   align-items: flex-end;
   transform: rotate(180deg);
@@ -141,7 +120,6 @@
     display: flex;
     justify-content: center;
     z-index:0;
-    /* pointer-events: none; */
 
   }
   .fab-button {
@@ -153,10 +131,8 @@
     border-radius: 150px;
     transition: all 0.5s ease-in-out;
     position: absolute;
-    /* bottom: -70px; */
     top:-70px;
     z-index: 10;
-    /* right: 1px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
