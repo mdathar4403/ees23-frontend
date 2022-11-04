@@ -9,7 +9,7 @@ const paragraph = [
 const heading = ["UDYAM", "UDGAM", "MASHAL"];
 const imageUrl = [
   "./assets/udyam192.png",
-  "./assets/Mashal Logo-0192.png",
+  "./assets/udgamlogo12.png",
   "./assets/Mashal Logo-0192.png",
 ];
 

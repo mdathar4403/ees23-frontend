@@ -66,6 +66,7 @@
   width:fit-content;
   display: inline-block;
   padding-left: 20%;
+  text-shadow: 3.7px 0px #fd4556;
   /* position: fixed; */
 }
 .card-items {
@@ -124,8 +125,8 @@
 .event-detais-card-active .close {
   position: fixed;
   /* position: relative; */
-  right: 32px;
-  top: 8%;
+  right: 35px;
+  top: 5%;
   width: 32px;
   height: 32px;
   opacity: 0.5;
@@ -219,6 +220,11 @@
     padding-left: 18%;
   }
 
+}
+@media (max-width:385px){
+  .event-detais-card h1 {
+    padding-left: 20%;
+  }
 }
 @media (min-width:850px) and (max-width:1150px){
   .event-logo img{
