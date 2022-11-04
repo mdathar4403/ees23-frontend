@@ -93,12 +93,19 @@
   height: fit-content;
 
 }
+
+
+.event-logo{
+  display: flex;
+  justify-content: center;
+}
+
 .event-logo img {
-  position: relative;
+  /* position: relative; */
   width: 50%;
   height: 60%;
-  left:20%;
-  top:20%;
+  /* left:20%;
+  top:20%; */
 }
 
 /* Close Button */
