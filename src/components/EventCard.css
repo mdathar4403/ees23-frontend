@@ -55,6 +55,8 @@
 .heading{
   width:fit-content;
   display: inline-block;
+
+  text-shadow: 3.7px 0px #fd4556;
   margin: 0;
   margin-top: 1%;
 }
@@ -201,6 +203,7 @@
   }
 
 }
+
 @media (min-width:850px) and (max-width:1150px){
   .event-logo img{
     height: 40%;
