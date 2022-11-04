@@ -51,7 +51,7 @@
   /* text-shadow: 2px 1px #fd4556; */
   font-family: "Poppins", sans-serif;
   font-size: 4rem;
-  padding-left: 30%;
+  /* padding-left: 30%; */
   /* left: 30%; */
   top: 0;
   display: inline;
@@ -65,7 +65,7 @@
   /* margin:auto; */
   width:fit-content;
   display: inline-block;
-  padding-left: 20%;
+  /* padding-left: 20%; */
   /* position: fixed; */
 }
 .card-items {
@@ -159,6 +159,12 @@
     margin-top: 1rem;
   }
 } */
+
+
+.event-logo-container {
+  display: flex;
+  justify-content: center;
+}
 @media (min-width:600px){
   .event-detais-card{
     margin-left: 2rem;
@@ -200,8 +206,9 @@
 
   .event-detais-card h1 {
     font-size: 2.4rem;
-    left: 0%;
+    /* left: 0%; */
     top: 0;
+
   }
 
   .event-detais-card p {
@@ -214,9 +221,9 @@
   }
 
 }
-@media (max-width:800px) and (min-width: 600px){
+@media (max-width:850px) and (min-width: 600px){
   .event-detais-card h1 {
-    padding-left: 18%;
+    /* padding-left: 18%; */
   }
 
 }
