@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Title />
       <div className="landing-page-images">
-        <img src="/assets/1.png" alt=""/>
+        <img src="/assets/udyam_best.jpg" alt=""/>
       </div>
       <div className="characters-image">
         <img src="/assets/Characters3.png" alt="" />
