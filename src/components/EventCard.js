@@ -20,17 +20,35 @@ const EventCard = (props) => {
 
   return (
     <div>
-      <div className="event-detais-card">
+      {/* <div className="event-detais-card">
         <div className="event-logo-container">
           <a href="#" className="close" onClick={off}></a>
         </div>
-        <div className="event-logo">
-          <img src={imageUrl[props.data]} alt="" />
-        <h1>{heading[props.data]}</h1>
+        <div className="event-logo" style={{ width: "30%", height: "30%", float: "left" }}>
+          <img style={{ width: "70%", height: "90%", top: "80%" }} src={imageUrl[props.data]} alt="" />
         </div>
-        <div className="event-content">
-          <p> {paragraph[props.data]}</p>
+        <h1 className="heading" style={{paddingLeft:"5%", padding: "0px", margin: "0px" }}>{heading[props.data]}</h1>
+
+        <div className="event-content" style={{ width: "70%", top: "0%", float: "right" }}>
+          <p className="para"> {paragraph[props.data]}</p>
         </div>
+      </div> */}
+      <div className="event-detais-card">
+        <div className="event-logo-container">
+          <h1 className="heading" >{heading[props.data]}</h1>
+          <a href="#" className="close" onClick={off}></a>
+        </div>
+
+        <div className="card-items">
+          <div className="event-logo">
+            <img src={imageUrl[props.data]} alt=""/>
+          </div>
+          <div className="event-content" style={{ width: "100%", top: "10%" }}>
+            <p className="para"> {paragraph[props.data]}</p>
+          </div>
+        </div>
+
+
       </div>
     </div>
   );
