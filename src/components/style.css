@@ -140,11 +140,7 @@ th {
   src: url(../fonts/viata-extrabold-1.otf);
 }
 
-h2,
-h3 {
-  font-family: first-font;
-  text-shadow: 1px 1px #fd4556;
-}
+
 
 .fab-container {
   display: none;
@@ -256,19 +252,7 @@ h3 {
   box-shadow: 0 0 20px 4px white;
 } */
 
-.fab-button h3 {
-  display: none;
-  transition: all 0.2s ease-in-out;
-}
 
-.fab-button-active h2 {
-  display: none;
-  transition: all 0.2s ease-in-out;
-}
-.fab-button-active h3 {
-  display: block;
-  transition: all 0.2s ease-in-out;
-}
 
 .register-button {
   height: 15vw;
@@ -339,9 +323,6 @@ h3 {
   .register-button a{
     font-size: 1.2rem;
     text-shadow: 1px 1px #fd4556;
-  }
-  .fab-button-active{
-
   }
 
 }
