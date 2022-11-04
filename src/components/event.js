@@ -1,7 +1,7 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
-import GoogleLoginPage from "./GoogleLoginPage";
+// import GoogleLoginPage from "./GoogleLoginPage";
 // import EventFAB from "./EventFAB";
 import './Fab.css';
 function Event() {
@@ -18,6 +18,7 @@ function Event() {
 
   const [content, setContent] = useState(-1);
   function ani(e) {
+
     console.log(e);
     document
       .getElementsByClassName("fab-button")[0]
@@ -25,6 +26,7 @@ function Event() {
     document
       .getElementsByClassName("fab-container")[0]
       .classList.toggle("fab-container-active");
+
   }
 
   useEffect(() => {

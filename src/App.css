@@ -22,33 +22,47 @@
   position: fixed;
   z-index: -1;
   align-items: stretch;
+
   pointer-events: none;
+  text-align: center;
+
 }
 
 
 .characters-image img {
   height: 100vh;
-  width: 100vw;
-  max-height: 85%;
-  max-width: 30%;
+  /* width: 100vw; */
+  /* max-height: 85%; */
+  /* max-width: 30%; */
+  top:3vw;
   bottom: 10%;
+
   position: fixed;
-  left: 35%;pointer-events: none;
 }
 img{
   pointer-events: none;
+
+  /* position: fixed; */
+  left: 35%;
+
 }
 
 
 
 @media (max-width: 600px) {
   .characters-image img {
-    height: 48vh;
-    position: fixed;
-    max-width: 150%;
-    width: 55%;
-    left: 20%;
-    bottom: 42%;
+    height: 75vh;
+    margin-top: 2vh;
+    /* position: relative;
+    top:3vh; */
+    /* position: fixed; */
+    /* max-width: 150%; */
+    /* width: 65%; */
+    /* left: 10%; */
+    /* bottom: 42%; */
+  }
+  .characters-image{
+    text-align: center;
   }
   .events {
     display: none;
