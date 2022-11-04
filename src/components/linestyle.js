@@ -3,8 +3,8 @@ import React from "react";
 function LinkStyle(props) {
   const styles = {
     height: " 0.6vw",
-    width: " 3vw",
-    top: "6vw",
+    width: `${props.width}vw`,
+    top: `${props.top}vw`,
 
     transform: ` skewX(${props.deg}deg)`,
     position: " absolute",
