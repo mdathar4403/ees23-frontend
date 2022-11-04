@@ -45,30 +45,18 @@
 
 
 .event-detais-card h1 {
-  /* position: fixed; */
-
   color: #f2f2f2;
-  /* text-shadow: 2px 1px #fd4556; */
   font-family: "Poppins", sans-serif;
   font-size: 4rem;
-  /* padding-left: 30%; */
-  /* left: 30%; */
   top: 0;
   display: inline;
-  /* display: inline-block; */
-  /* width: 30%; */
-  /* text-align: end; */
-  /* text-shadow: 1px 1px white; */
 }
 
 .heading{
-  /* margin:auto; */
   width:fit-content;
   display: inline-block;
   margin: 0;
   margin-top: 1%;
-  /* padding-left: 20%; */
-  /* position: fixed; */
 }
 .card-items {
   display: grid;
@@ -81,16 +69,10 @@
   position: relative;
   top: 0%;
   height: 110%;
-  /* padding-bottom: 5%; */
 }
 
-/* .event-detais-card{
-  display: grid;
-  grid-template-rows: 2fr 4fr;
-} */
+
 .event-detais-card p {
-  /* position: fixed; */
-  /* top: 30%; */
   color: #f2f2f2;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
@@ -111,9 +93,6 @@
   height: fit-content;
 
 }
-/* .event-logo-container{
-  position:sticky;
-} */
 .event-logo img {
   position: relative;
   width: 50%;
@@ -125,7 +104,6 @@
 /* Close Button */
 .event-detais-card-active .close {
   position: fixed;
-  /* position: relative; */
   right: 5%;
   top: 5%;
   width: 32px;
@@ -155,12 +133,6 @@
   transform: rotate(-45deg);
 }
 
-/* @media (max-width: 1000px){
-  .event-detais-card{
-    position: relative;
-    margin-top: 1rem;
-  }
-} */
 
 
 .event-logo-container {
@@ -208,7 +180,6 @@
 
   .event-detais-card h1 {
     font-size: 2.4rem;
-    /* left: 0%; */
     top: 0;
 
   }
@@ -220,12 +191,6 @@
 
   .event-content {
     height: 70%;
-  }
-
-}
-@media (max-width:850px) and (min-width: 600px){
-  .event-detais-card h1 {
-    /* padding-left: 18%; */
   }
 
 }
