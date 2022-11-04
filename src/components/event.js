@@ -1,7 +1,7 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
-import GoogleLoginPage from "./GoogleLoginPage";
+// import GoogleLoginPage from "./GoogleLoginPage";
 // import EventFAB from "./EventFAB";
 function Event() {
   const [active, setActive] = useState(false);
@@ -12,27 +12,27 @@ function Event() {
       .getElementsByClassName("event-detais-card")[0]
       .classList.toggle("event-detais-card-active");
     console.log("Single G clicked");
-    document.getElementsByClassName("register-button")[0].classList.toggle("register-button-active");
+    // document.getElementsByClassName("register-button")[0].classList.toggle("register-button-active");
   };
   const [content, setContent] = useState(-1);
   function ani(e) {
     //   e.currentTarget.classList.toggle("fab-button-active");
-    console.log(e);
-    document
-      .getElementsByClassName("fab-button")[0]
-      .classList.toggle("fab-button-active");
-    document
-      .getElementsByClassName("fab-item1")[0]
-      .classList.toggle("fab-item1-active");
-    document
-      .getElementsByClassName("fab-item2")[0]
-      .classList.toggle("fab-item2-active");
-    document
-      .getElementsByClassName("fab-item3")[0]
-      .classList.toggle("fab-item3-active");
-    document
-      .getElementsByClassName("fab-circular-ring-off")[0]
-      .classList.toggle("fab-circular-ring");
+    // console.log(e);
+    // document
+    //   .getElementsByClassName("fab-button")[0]
+    //   .classList.toggle("fab-button-active");
+    // document
+    //   .getElementsByClassName("fab-item1")[0]
+    //   .classList.toggle("fab-item1-active");
+    // document
+    //   .getElementsByClassName("fab-item2")[0]
+    //   .classList.toggle("fab-item2-active");
+    // document
+    //   .getElementsByClassName("fab-item3")[0]
+    //   .classList.toggle("fab-item3-active");
+    // document
+    //   .getElementsByClassName("fab-circular-ring-off")[0]
+    //   .classList.toggle("fab-circular-ring");
 
     // document.getElementsByClassName("fab-button-text").innerHTML = "X";
   }
