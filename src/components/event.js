@@ -7,14 +7,14 @@ import { GoogleLogin } from 'react-google-login';
 // import EventFAB from "./EventFAB";
 import './Fab.css';
 
-const clientId = "868476725043-56q2l17h7bf2a1fpvkqp04t5br7mti4p.apps.googleusercontent.com"
+const clientId = process.env.REACT_APP_CLIENT_ID
 const scope='https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read'
 
 
 function Event() {
   const navigate = useNavigate()
   const [active, setActive] = useState(false);
-  const [choosed, setChoosed] = useState(-1);
+  const [choosed, setChoosed] = useState(0);
   const [isinittial, setIsinittial] = useState(false);
   
   const onGoogleLoginSuccess = (res) => {
@@ -61,7 +61,7 @@ const onGoogleLoginFailure = (res) => {
   const handleClose = () => {
     if (active) {
               setActive(false);
-              setChoosed(-1);
+              setChoosed(0);
               setContent(-1);
             }
   }
@@ -80,11 +80,9 @@ const onGoogleLoginFailure = (res) => {
                 onClick={() => {
                   if (active && content === 0) {
                     setActive(false);
-                    setChoosed(-1);
                     setContent(-1);
                   } else {
                     setContent(0);
-
                     setActive(true);
                   }
                 }}
@@ -96,11 +94,9 @@ const onGoogleLoginFailure = (res) => {
                 onClick={() => {
                   if (active && content === 1) {
                     setActive(false);
-                    setChoosed(-1);
                     setContent(-1);
                   } else {
                     setContent(1);
-
                     setActive(true);
                   }
                 }}
@@ -113,11 +109,9 @@ const onGoogleLoginFailure = (res) => {
                 onClick={() => {
                   if (active && content === 2) {
                     setActive(false);
-                    setChoosed(-1);
                     setContent(-1);
                   } else {
                     setContent(2);
-
                     setActive(true);
                   }
                 }}
@@ -139,9 +133,9 @@ const onGoogleLoginFailure = (res) => {
               onClick={(e) => {
                 if (active) {
                   setActive(false);
-                  setChoosed(-1);
                   setContent(-1);
                 }
+                setChoosed(!choosed);
                 ani(e);
                 console.log("clicked");
               }}
@@ -179,7 +173,6 @@ const onGoogleLoginFailure = (res) => {
             onClick={() => {
               if (active && content === 2) {
                 setActive(false);
-                setChoosed(-1);
                 setContent(-1);
               } else {
                 setContent(2);
@@ -207,7 +200,6 @@ const onGoogleLoginFailure = (res) => {
             onClick={() => {
               if (active && content === 0) {
                 setActive(false);
-                setChoosed(-1);
                 setContent(-1);
               } else {
                 setContent(0);
@@ -235,7 +227,6 @@ const onGoogleLoginFailure = (res) => {
             onClick={() => {
               if (active && content === 1) {
                 setActive(false);
-                setChoosed(-1);
                 setContent(-1);
               } else {
                 setContent(1);
@@ -261,14 +252,14 @@ const onGoogleLoginFailure = (res) => {
           <div className="fab-circular-ring"></div>
         </div>
       </div>
-      <div className="register-button">
+      <div className="register-button" style={{display:(choosed || active)?"none":"unset"}}>
         {/* <Link to="/register">Register</Link>
          */}
          <GoogleLogin
               accessType="online"
               disabled={false}
               client_id={clientId}  // your Google app client ID
-              buttonText="Sign in with Google"
+              buttonText="Sign in"
               onSuccess={onGoogleLoginSuccess} // perform your user logic here
               onFailure={onGoogleLoginFailure} // handle errors here
               cookiePolicy={"single-host-origin"}

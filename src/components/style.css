@@ -129,13 +129,10 @@ th {
   max-width: 200px;
   max-height: 60px;
   z-index: 1;
-  background-color: rgba(52, 59, 71, 60);
   display: flex;
   justify-content: center;
   font-family: first-font;
   border-radius: 10px;
-  background-color: rgba(52, 59, 71, 60);
-  box-shadow: 2px 2px #fd4556;
 }
 .register-button a{
   color: white;
@@ -146,9 +143,6 @@ th {
   font-weight: 600;
   margin: auto;
   text-shadow: 2px 2px #fd4556;
-}
-.register-button:hover{
-  background: #3e4652;
 }
 .register-button-active{
   display: none;
@@ -162,7 +156,7 @@ th {
     position: fixed;
     left: 35%;
     width: 30vw;
-    top: 60%;
+    bottom: 10%;
   }
   .register-button a{
     font-size: 1.2rem;
