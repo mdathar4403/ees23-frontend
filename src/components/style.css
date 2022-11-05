@@ -131,10 +131,12 @@ th {
   z-index: 1;
   display: flex;
   justify-content: center;
-  font-family: first-font;
-  border-radius: 10px;
+  animation-name: reg-animation;
+  animation-duration: 4s;
+  /* font-family: first-font; */
+  /* border-radius: 10px; */
 }
-.register-button a{
+/* .register-button a{
   color: white;
   font-family: first-font;
   text-decoration: none;
@@ -143,10 +145,7 @@ th {
   font-weight: 600;
   margin: auto;
   text-shadow: 2px 2px #fd4556;
-}
-.register-button-active{
-  display: none;
-}
+} */
 
 @media (max-width: 600px) {
   .fab-container {

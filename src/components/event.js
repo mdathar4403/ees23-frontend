@@ -16,6 +16,7 @@ function Event() {
   const [active, setActive] = useState(false);
   const [choosed, setChoosed] = useState(0);
   const [isinittial, setIsinittial] = useState(false);
+  const [regActive, setRegActive] = useState(false);
   
   const onGoogleLoginSuccess = (res) => {
     console.log("SUCCESS!!! Current User: ", res);
@@ -56,6 +57,14 @@ const onGoogleLoginFailure = (res) => {
     }else{
       setIsinittial(true);
     }
+    if(active){
+      setRegActive(false);
+    }else{
+      setTimeout(() => {
+        setRegActive(true);
+      }, 1000);
+    }
+
 
   }, [active]);
   const handleClose = () => {
@@ -252,7 +261,7 @@ const onGoogleLoginFailure = (res) => {
           <div className="fab-circular-ring"></div>
         </div>
       </div>
-      <div className="register-button" style={{display:(choosed || active)?"none":"unset"}}>
+      <div className="register-button" style={{display:(!regActive)?"none":"unset"}}>
         {/* <Link to="/register">Register</Link>
          */}
          <GoogleLogin
