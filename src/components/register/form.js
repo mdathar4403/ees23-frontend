@@ -40,7 +40,9 @@ export default function Form() {
             "Authorization": token
         }
         const data = profdata;
-        axios.post("http://eeswebsite.herokuapp.com/auth/google-login", header, data)
+        axios.post("http://eeswebsite.herokuapp.com/auth/google-login", header, data).then((resp)=>{
+            console.log(resp);
+        });
     }
     
   return (
