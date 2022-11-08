@@ -54,6 +54,7 @@ th {
 }
 .events {
   top: 40vh;
+  left: 30px;
   padding: 10px;
   position: fixed;
 }
@@ -72,7 +73,15 @@ th {
 .line-mobile-view{
   display: none;
 }
-
+table{
+  border-collapse:collapse;
+}
+.td-up{
+border-radius: 10px 10px 0px 0px;
+}
+.td-bottom{
+border-radius: 0px 0px 10px 10px;
+}
 @media (max-width: 600px) {
   .main-title {
     font-size: 6vw;

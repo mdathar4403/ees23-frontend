@@ -1,35 +1,39 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
-import {useNavigate} from "react-router-dom"
-import { GoogleLogin } from 'react-google-login';
+import { useNavigate } from "react-router-dom";
+import { GoogleLogin } from "react-google-login";
 // import GoogleLoginPage from "./GoogleLoginPage";
 // import EventFAB from "./EventFAB";
-import './Fab.css';
+import "./Fab.css";
 
-const clientId = process.env.REACT_APP_CLIENT_ID
-const scope='https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read'
-
+const clientId = process.env.REACT_APP_CLIENT_ID;
+const scope =
+  "https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read";
 
 function Event() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [active, setActive] = useState(false);
   const [choosed, setChoosed] = useState(0);
   const [isinittial, setIsinittial] = useState(false);
   const [regActive, setRegActive] = useState(false);
-  
+
   const onGoogleLoginSuccess = (res) => {
     console.log("SUCCESS!!! Current User: ", res);
-    window.sessionStorage.setItem("profileData", JSON.stringify(res.profileObj));
+    window.sessionStorage.setItem(
+      "profileData",
+      JSON.stringify(res.profileObj)
+    );
     window.sessionStorage.setItem("tokenId", res.tokenId);
-    navigate("/register", {state: { profileData: res.profileObj, token: res.tokenId}})
-}
+    navigate("/register", {
+      state: { profileData: res.profileObj, token: res.tokenId },
+    });
+  };
 
-const onGoogleLoginFailure = (res) => {
+  const onGoogleLoginFailure = (res) => {
     console.log("FAILURE!!! res: ", res);
-}
+  };
 
-  
   const toggle = () => {
     document
       .getElementsByClassName("event-detais-card")[0]
@@ -37,10 +41,8 @@ const onGoogleLoginFailure = (res) => {
     console.log("Single G clicked");
   };
 
-
   const [content, setContent] = useState(-1);
   function ani(e) {
-
     console.log(e);
     document
       .getElementsByClassName("fab-button")[0]
@@ -48,92 +50,100 @@ const onGoogleLoginFailure = (res) => {
     document
       .getElementsByClassName("fab-container")[0]
       .classList.toggle("fab-container-active");
-
   }
 
   useEffect(() => {
-    if(isinittial){
-    toggle();
-    }else{
+    if (isinittial) {
+      toggle();
+    } else {
       setIsinittial(true);
     }
-    if(active){
+    if (active) {
       setRegActive(false);
-    }else{
+    } else {
       setTimeout(() => {
         setRegActive(true);
       }, 1000);
     }
-
-
   }, [active]);
   const handleClose = () => {
     if (active) {
-              setActive(false);
-              setChoosed(0);
-              setContent(-1);
-            }
-  }
+      setActive(false);
+      setChoosed(0);
+      setContent(-1);
+    }
+  };
 
   return (
     <>
       <div className="events">
         <table className="table">
           <thead>
-            <th>EVENTS</th>
+            <tr>
+              <th>EVENTS</th>
+            </tr>
           </thead>
-          <tbody>
-            <div className="table-body">
-              <a
-                href="#"
-                onClick={() => {
-                  if (active && content === 0) {
-                    setActive(false);
-                    setContent(-1);
-                  } else {
-                    setContent(0);
-                    setActive(true);
-                  }
-                }}
-              >
-                UDYAM
-              </a>
-              <a
-                href="#"
-                onClick={() => {
-                  if (active && content === 1) {
-                    setActive(false);
-                    setContent(-1);
-                  } else {
-                    setContent(1);
-                    setActive(true);
-                  }
-                }}
-                id="event-dark"
-              >
-                UDGAM
-              </a>
-              <a
-                href="#"
-                onClick={() => {
-                  if (active && content === 2) {
-                    setActive(false);
-                    setContent(-1);
-                  } else {
-                    setContent(2);
-                    setActive(true);
-                  }
-                }}
-                id="event-dark2"
-              >
-                MASHAL
-              </a>
-            </div>
+          <tbody className="table-body">
+            <tr>
+              <td className="td-up">
+                <a
+                  href="#"
+                  onClick={() => {
+                    if (active && content === 0) {
+                      setActive(false);
+                      setContent(-1);
+                    } else {
+                      setContent(0);
+                      setActive(true);
+                    }
+                  }}
+                >
+                  UDYAM
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="#"
+                  onClick={() => {
+                    if (active && content === 1) {
+                      setActive(false);
+                      setContent(-1);
+                    } else {
+                      setContent(1);
+                      setActive(true);
+                    }
+                  }}
+                  id="event-dark"
+                >
+                  UDGAM
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td className="td-bottom">
+                <a
+                  href="#"
+                  onClick={() => {
+                    if (active && content === 2) {
+                      setActive(false);
+                      setContent(-1);
+                    } else {
+                      setContent(2);
+                      setActive(true);
+                    }
+                  }}
+                  id="event-dark2"
+                >
+                  MASHAL
+                </a>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
       <EventCard data={content} close={handleClose} />
-
       <div className="fab-main-container">
         <div className="fab-container">
           <div className="fab-button-container">
@@ -168,8 +178,8 @@ const onGoogleLoginFailure = (res) => {
                   position: "relative",
                   // fontSize: "px",
                   textAlign: "center",
-                  marginTop:"0px",
-                  marginBottom:"40px",
+                  marginTop: "0px",
+                  marginBottom: "40px",
                   display: "block",
                 }}
               >
@@ -261,20 +271,23 @@ const onGoogleLoginFailure = (res) => {
           <div className="fab-circular-ring"></div>
         </div>
       </div>
-      <div className="register-button" style={{display:(!regActive)?"none":"unset"}}>
+      <div
+        className="register-button"
+        style={{ display: !regActive ? "none" : "unset" }}
+      >
         {/* <Link to="/register">Register</Link>
          */}
-         <GoogleLogin
-              accessType="online"
-              disabled={false}
-              client_id={clientId}  // your Google app client ID
-              buttonText="Sign in"
-              onSuccess={onGoogleLoginSuccess} // perform your user logic here
-              onFailure={onGoogleLoginFailure} // handle errors here
-              cookiePolicy={"single-host-origin"}
-              isSignedIn={true}
-              scope={scope}
-          />
+        <GoogleLogin
+          accessType="online"
+          disabled={false}
+          client_id={clientId} // your Google app client ID
+          buttonText="Sign in"
+          onSuccess={onGoogleLoginSuccess} // perform your user logic here
+          onFailure={onGoogleLoginFailure} // handle errors here
+          cookiePolicy={"single-host-origin"}
+          isSignedIn={true}
+          scope={scope}
+        />
       </div>
     </>
   );
