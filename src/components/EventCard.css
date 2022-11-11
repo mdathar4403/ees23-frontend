@@ -3,12 +3,12 @@
 .event-detais-card {
   display: block;
   height: 0;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   width: 67vw;
   backdrop-filter: blur(27px);
   position: fixed;
-  left: 18%;
-  top: 55%;
+  left: 15%;
+  top: 15%;
   border-radius: 40px;
   z-index: 2;
   transition: all 0.2s ease-in-out;
@@ -21,14 +21,14 @@
 
 .event-detais-card-active {
   display: inline-block;
-  height: 75%;
-  overflow-x: auto;
+  height: 65%;
+  /* overflow-x: auto; */
   width: 67vw;
   margin-top: 1rem;
   backdrop-filter: blur(20px);
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
-  left: 18%;
+  left: 15%;
   top: 15%;
   border-radius: 40px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
@@ -47,30 +47,39 @@
 .event-detais-card h1 {
   color: #f2f2f2;
   font-family: "Poppins", sans-serif;
-  font-size: 4rem;
+  font-size: 3.8rem;
   top: 0;
   display: inline;
 }
 
+
 .heading{
   width:fit-content;
   display: inline-block;
-
   text-shadow: 3.7px 0px #fd4556;
   margin: 0;
   margin-top: 1%;
 }
+.event-detais-card .card-items{
+  display: none;
+}
+.event-detais-card-active .card-items{
+  display: grid;
+}
+
 .card-items {
   display: grid;
   grid-template-columns: 25% 75%;
+  /* grid-template-rows: 25% 75%; */
 }
 
 
 .event-content {
-  overflow-x: hidden;
+  /* overflow: auto; */
   position: relative;
   top: 0%;
   height: 110%;
+  /* margin-bottom: 200px; */
 }
 
 
@@ -80,17 +89,17 @@
   font-size: 18px;
   padding-left: 5%;
   padding-right: 5%;
-  margin-top: 0%;
+  margin-top: 0;
   word-spacing: 0.4rem;
   padding-right: 20px;
 }
 
-.event-content::-webkit-scrollbar {
+.event-content-container::-webkit-scrollbar {
   display: none;
 }
 
 .event-content .para {
-  overflow-x: hidden;
+  /* overflow: auto; */
   position: relative;
   height: fit-content;
 
@@ -101,9 +110,17 @@
   display: flex;
   justify-content: center;
 }
+.event-detais-card img{
+  display:none;
+}
+.event-detais-card-active img{
+  display: block;
+}
 
 .event-logo img {
   /* position: relative; */
+  /* top: 10%; */
+  margin-top: 20%;
   width: 50%;
   height: 60%;
   /* left:20%;
@@ -142,26 +159,38 @@
   transform: rotate(-45deg);
 }
 
-
+.event-content-container{
+  position: relative;
+  height: 40vh;
+  overflow: auto;
+}
 
 .event-logo-container {
   display: flex;
   justify-content: center;
+  outline: 0 !important;
 }
 @media (min-width:600px){
   .event-detais-card{
     margin-left: 2rem;
   }
+  .event-content img{
+    height: 2rem;
+  }
 }
 @media (max-width:850px){
   .card-items {
-    display:block;
+    display:block !important;
   }
   .event-logo img{
     width:20%;
     left: 35%;
     margin: 0.5rem 0;
   }
+  .event-content-container{
+    height: 25vh;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -209,6 +238,7 @@
     height: 40%;
     width: 67%;
   }
+  
  
 }
 @media (min-width:1150px) and (max-width:1250px){

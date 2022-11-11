@@ -14,9 +14,14 @@ const imageUrl = [
 ];
 
 const EventCard = (props) => {
+  const { onClickOutside } = props;
   const off = () => {
     props.close();
   };
+  console.log("Props = ");
+  console.log(onClickOutside);
+
+  
 
   return (
     <div>
@@ -30,9 +35,12 @@ const EventCard = (props) => {
           <div className="event-logo">
             <img src={imageUrl[props.data]} alt=""/>
           </div>
+          <div className="event-content-container">
           <div className="event-content" style={{ width: "100%", top: "10%" }}>
             <p className="para"> {paragraph[props.data]}</p>
           </div>
+          </div>
+          
         </div>
 
 

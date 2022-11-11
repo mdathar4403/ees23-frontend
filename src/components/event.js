@@ -271,6 +271,7 @@ function Event() {
           <div className="fab-circular-ring"></div>
         </div>
       </div>
+      
       <div
         className="register-button"
         style={{ display: !regActive ? "none" : "unset" }}
