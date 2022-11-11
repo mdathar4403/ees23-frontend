@@ -1,6 +1,6 @@
 import "../App.css"
 import Title from "./title"
-import Event from "./event"
+import Event from "./event";
 
 function Home(){
     return(
@@ -14,7 +14,9 @@ function Home(){
       </div>
       {/* <ComingSoonComp /> */}
       <div className="event-list-main">
-        <Event />
+        
+        {/* <ContentButton/> */}
+        <Event/>
       </div>
         </>
     )
