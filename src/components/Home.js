@@ -1,23 +1,33 @@
-import "../App.css"
-import Title from "./title"
-import Event from "./event"
+import "../App.css";
+import Title from "./title";
+import Event from "./event";
+import logo from "./images/eeslogo.svg";
+import coming from "./images/coming.svg"
+import "./home.css";
 
-function Home(){
-    return(
-        <>
-            <Title />
-      <div className="landing-page-images">
-        <img src="/assets/udyam_best.jpg" alt=""/>
+function Home() {
+  return (
+    <>
+      <div className="background">
+        <div class="bg"></div>
+        <div class="star-field">
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div className="logo">
+            <img
+              src={logo}
+              height="310px"
+              alt=""
+            />
+            <img id="come" height="23px" src={coming} alt="" />
+
+          </div>
+        </div>
       </div>
-      <div className="characters-image">
-        <img src="/assets/Characters3.png" alt="" />
-      </div>
-      {/* <ComingSoonComp /> */}
-      <div className="event-list-main">
-        <Event />
-      </div>
-        </>
-    )
+      <div className="event-list-main"></div>
+    </>
+  );
 }
 
 export default Home;
