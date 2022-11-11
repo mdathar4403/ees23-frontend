@@ -180,7 +180,7 @@ border-radius: 0px 0px 10px 10px;
 }
 .hovered :hover{
   color:rgba(166, 40, 51, 1);
-  font-size:1.2em ;
+  /* font-size:1.2em ; */
   transition: all 0.2s ease-in-out;
 } 
    
