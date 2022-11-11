@@ -122,3 +122,9 @@
 #come{
     padding-top: 3%;
 }
+
+@media screen and (max-width: 750px) {
+    #come{
+        visibility: hidden;
+    }
+  }
