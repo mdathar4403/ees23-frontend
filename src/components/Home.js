@@ -4,6 +4,7 @@ import Event from "./event";
 import logo from "./images/eeslogo.svg";
 import coming from "./images/coming.svg"
 import "./home.css";
+import Footer from "./footer/Footer";
 
 function Home() {
   return (
@@ -26,6 +27,7 @@ function Home() {
         </div>
       </div>
       <div className="event-list-main"></div>
+      <Footer/>
     </>
   );
 }
