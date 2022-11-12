@@ -181,10 +181,11 @@ border-radius: 0px 0px 10px 10px;
 }
 .hovered :hover{
   color:rgb(170, 13, 13);
-  /* font-size:1.2em ; */
-  transition: all 0.2s ease-in-out;
-  /* text-shadow: 2px 2px rgba(166, 40, 51, 1);; */
-} 
+}
+
+div a.active{
+  color:rgb(170, 13, 13) !important;
+}
    
 @media (max-width: 600px) {
   .fab-container {
