@@ -52,6 +52,7 @@ function Event() {
       .getElementsByClassName("fab-container")[0]
       .classList.toggle("fab-container-active");
   }
+  const [activeNav, setActiveNav] = useState('#');
 
   useEffect(() => {
     if (isinittial) {
@@ -90,8 +91,9 @@ function Event() {
               <td className="td-up"> */}
               <h1 className="hovered">
                 <a
-                  href="#"
+                  href="#udyam"
                   onClick={() => {
+                    setActiveNav('#udyam');
                     if (active && content === 0) {
                       setActive(false);
                       setContent(-1);
@@ -100,6 +102,7 @@ function Event() {
                       setActive(true);
                     }
                   }}
+                  className={activeNav === '#udyam'?'active':''}
                 >
                   UDYAM
                 </a>
@@ -107,8 +110,9 @@ function Event() {
           
               <h1 className="hovered">
                 <a
-                  href="#"
+                  href="#udgam"
                   onClick={() => {
+                    setActiveNav('#udgam')
                     if (active && content === 1) {
                       setActive(false);
                       setContent(-1);
@@ -118,6 +122,7 @@ function Event() {
                     }
                   }}
                   id="event-dark"
+                  className={activeNav === '#udgam'?'active':''}
                 >
                   UDGAM
                 </a>
@@ -125,8 +130,9 @@ function Event() {
 
               <h1 className="hovered">
                 <a
-                  href="#"
+                  href="#mashal"
                   onClick={() => {
+                    setActiveNav('#mashal')
                     if (active && content === 2) {
                       setActive(false);
                       setContent(-1);
@@ -136,6 +142,7 @@ function Event() {
                     }
                   }}
                   id="event-dark2"
+                  className={activeNav === '#mashal'?'active':''}
                 >
                   MASHAL
                 </a>
