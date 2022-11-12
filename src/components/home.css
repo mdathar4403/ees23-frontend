@@ -125,6 +125,13 @@
 
 @media screen and (max-width: 750px) {
     #come{
-        display: none;
+        height: 21px;
     }
   }
+@media screen and (min-width: 1000px) {
+    .logo{
+      top: 22%;
+      transform: scale(0.92);
+    }
+  }
+ 

@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     bottom: 0;
-    height : 55px;
+    height : 42px;
     width: 100vw;
     background-color:#BD3944;
 }
@@ -15,7 +15,7 @@
 .content{
     font-family: footerFont;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 75px;
     color: #000000;
 }

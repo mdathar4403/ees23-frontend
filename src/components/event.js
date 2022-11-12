@@ -1,6 +1,7 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
+
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
 // import GoogleLoginPage from "./GoogleLoginPage";
@@ -76,8 +77,9 @@ function Event() {
 
   return (
     <>
-      <div className="events">
-        <table className="table">
+    <div className="content-button">
+      <div className="events trapezoid">
+        {/* <table className="table">
           <thead>
             <tr>
               <th>EVENTS</th>
@@ -85,7 +87,8 @@ function Event() {
           </thead>
           <tbody className="table-body">
             <tr>
-              <td className="td-up">
+              <td className="td-up"> */}
+              <h1 className="hovered">
                 <a
                   href="#"
                   onClick={() => {
@@ -100,10 +103,9 @@ function Event() {
                 >
                   UDYAM
                 </a>
-              </td>
-            </tr>
-            <tr>
-              <td>
+                </h1>
+          
+              <h1 className="hovered">
                 <a
                   href="#"
                   onClick={() => {
@@ -119,10 +121,9 @@ function Event() {
                 >
                   UDGAM
                 </a>
-              </td>
-            </tr>
-            <tr>
-              <td className="td-bottom">
+                </h1>
+
+              <h1 className="hovered">
                 <a
                   href="#"
                   onClick={() => {
@@ -138,11 +139,10 @@ function Event() {
                 >
                   MASHAL
                 </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              </h1>
+             
       </div>
+    </div>
       <EventCard data={content} close={handleClose} />
       <div className="fab-main-container">
         <div className="fab-container">
@@ -271,6 +271,7 @@ function Event() {
           <div className="fab-circular-ring"></div>
         </div>
       </div>
+      
       <div
         className="register-button"
         style={{ display: !regActive ? "none" : "unset" }}

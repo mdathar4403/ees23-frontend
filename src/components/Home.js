@@ -1,3 +1,4 @@
+
 import "../App.css";
 import Header from "./header/Header";
 import Title from "./title";
@@ -27,6 +28,7 @@ function Home() {
 
           </div>
         </div>
+         <Event/>
       </div>
       <div className="event-list-main"></div>
       <Footer/>
