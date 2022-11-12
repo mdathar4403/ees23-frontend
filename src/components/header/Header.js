@@ -1,13 +1,17 @@
 import './Header.css';
 // import { Register } from './Register';
 // import './Register.css';
-import { useState } from 'react'
+import { GoogleLogin } from "react-google-login";
+import { useState } from "react";
+
+
 function Header() {
     const [isShown, setIsShown] = useState(false);
     const handleClick = event => {
         setIsShown(current => !current);
         console.log("button clicked");
     }
+
     return (
         <>
             <div className='header-main-container'>

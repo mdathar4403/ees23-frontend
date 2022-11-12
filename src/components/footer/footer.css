@@ -7,6 +7,7 @@
     height : 42px;
     width: 100vw;
     background-color:#BD3944;
+    z-index: 2;
 }
 @font-face {
     font-family: footerFont;

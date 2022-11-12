@@ -75,7 +75,7 @@
 
 .fab-container {
   position: fixed;
-  bottom: -150px;
+  bottom: -108px;
   z-index:1;
   margin: auto;
   height: 300px;
@@ -90,7 +90,7 @@
 
 .fab-container-active {
   position: fixed;
-  bottom: -150px;
+  bottom: -108px;
   z-index:1;
   margin: auto;
   height: 300px;
