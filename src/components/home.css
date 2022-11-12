@@ -125,6 +125,6 @@
 
 @media screen and (max-width: 750px) {
     #come{
-        display: none;
+        height: 21px;
     }
   }
