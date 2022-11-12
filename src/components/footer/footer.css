@@ -1,0 +1,21 @@
+.footer{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    height : 42px;
+    width: 100vw;
+    background-color:#BD3944;
+}
+@font-face {
+    font-family: footerFont;
+    src: url("../../fonts/Poppins-Regular.otf");
+ }
+.content{
+    font-family: footerFont;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 75px;
+    color: #000000;
+}
