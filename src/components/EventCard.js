@@ -16,6 +16,7 @@ const imageUrl = [
 const EventCard = (props) => {
   const { onClickOutside } = props;
   const off = () => {
+    
     props.close();
   };
   console.log("Props = ");

@@ -73,6 +73,8 @@ function Event() {
       setActive(false);
       setChoosed(0);
       setContent(-1);
+      setActiveNav(0);
+      
     }
   };
 
