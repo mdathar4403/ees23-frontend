@@ -179,12 +179,12 @@ border-radius: 0px 0px 10px 10px;
   color:rgb(231, 223, 224);
   text-decoration: none;
 }
-.hovered :hover{
+/* .hovered :hover{
   color:rgb(170, 13, 13);
-}
+} */
 
 div a.active{
-  color:rgb(170, 13, 13) !important;
+  color:rgb(170, 13, 13);
 }
    
 @media (max-width: 600px) {
