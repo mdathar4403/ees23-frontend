@@ -93,6 +93,27 @@ function Event() {
               <td className="td-up"> */}
               <h1 className="hovered">
                 <a
+                  href="#udgam"
+                  onClick={() => {
+                    setActiveNav('#udgam')
+                    if (active && content === 1) {
+                      setActive(false);
+                      setContent(-1);
+                      setActiveNav(0);
+                    } else {
+                      setContent(1);
+                      setActive(true);
+                    }
+                  }}
+                  id="event-dark"
+                  className={activeNav === '#udgam'?'active':''}
+                >
+                  UDGAM
+                </a>
+                </h1>
+                
+              <h1 className="hovered">
+                <a
                   href="#udyam"
                   onClick={() => {
                     setActiveNav('#udyam');
@@ -112,26 +133,6 @@ function Event() {
                 </a>
                 </h1>
           
-              <h1 className="hovered">
-                <a
-                  href="#udgam"
-                  onClick={() => {
-                    setActiveNav('#udgam')
-                    if (active && content === 1) {
-                      setActive(false);
-                      setContent(-1);
-                      setActiveNav(0);
-                    } else {
-                      setContent(1);
-                      setActive(true);
-                    }
-                  }}
-                  id="event-dark"
-                  className={activeNav === '#udgam'?'active':''}
-                >
-                  UDGAM
-                </a>
-                </h1>
 
               <h1 className="hovered">
                 <a
