@@ -99,9 +99,11 @@ function Event() {
                     if (active && content === 0) {
                       setActive(false);
                       setContent(-1);
+                      setActiveNav(0);
                     } else {
                       setContent(0);
                       setActive(true);
+                      
                     }
                   }}
                   className={activeNav === '#udyam'?'active':''}
@@ -118,6 +120,7 @@ function Event() {
                     if (active && content === 1) {
                       setActive(false);
                       setContent(-1);
+                      setActiveNav(0);
                     } else {
                       setContent(1);
                       setActive(true);
@@ -138,6 +141,7 @@ function Event() {
                     if (active && content === 2) {
                       setActive(false);
                       setContent(-1);
+                      setActiveNav(0);
                     } else {
                       setContent(2);
                       setActive(true);
