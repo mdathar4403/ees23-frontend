@@ -189,7 +189,7 @@
         position: relative;
         right: 13vw;
         height: 4vw;
-        width: 48;
+        width: 48%;
         background-color: rgba(189, 57, 68, 255);
         transform: skewX(-20deg);
     }
