@@ -34,7 +34,7 @@ function Home() {
               id="eeslogored"
             />
             </div>
-            <div id="come">COMING SOON</div>
+            <div id="come" className="coming-soon">COMING SOON</div>
 
           </div>
         </div>
