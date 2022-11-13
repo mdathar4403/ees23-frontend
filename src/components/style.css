@@ -185,9 +185,10 @@ border-radius: 0px 0px 10px 10px;
   text-decoration: none;
   font-weight: 150;
 }
-/* .hovered :hover{
-  color:rgb(170, 13, 13);
-} */
+.hovered :hover{
+  /* color:rgb(170, 13, 13); */
+  text-shadow: 0 0 30px rgba(189, 57, 68, 255);
+}
 
 div a.active{
   color:rgb(170, 13, 13);
