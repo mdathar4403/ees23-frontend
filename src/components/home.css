@@ -142,7 +142,7 @@ background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
-animation: animate 1s linear infinite;
+animation: animate 3s linear infinite;
 letter-spacing: 5px;
 }
 
