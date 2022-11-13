@@ -173,7 +173,7 @@ function Event() {
                 console.log("clicked");
               }}
             >
-              <h2
+              <h3
                 className="fab-button-text"
                 style={{
                   position: "relative",
@@ -185,8 +185,8 @@ function Event() {
                 }}
               >
                 EVENTS
-              </h2>
-              <h2
+              </h3>
+              <h3
                 className="fab-button-textX"
                 style={{
                   position: "relative",
@@ -198,7 +198,7 @@ function Event() {
                 }}
               >
                 X
-              </h2>
+              </h3>
             </div>
           </div>
           <div
@@ -216,17 +216,17 @@ function Event() {
               console.log("clicked UDYAM");
             }}
           >
-            <h2
+            <h3
               style={{
                 position: "relative",
-                fontSize: "18px",
+                fontSize: "13px",
                 textAlign: "center",
                 margin: "auto 0",
                 pointerEvents: "none",
               }}
             >
               MASHAL
-            </h2>
+            </h3>
           </div>
           <div
             className="fab-item2"
@@ -243,17 +243,17 @@ function Event() {
               console.log("clicked UDYAM");
             }}
           >
-            <h2
+            <h3
               style={{
                 position: "relative",
-                fontSize: "18px",
+                fontSize: "13px",
                 textAlign: "center",
                 margin: "auto 0",
                 pointerEvents: "none",
               }}
             >
               UDYAM
-            </h2>
+            </h3>
           </div>
           <div
             className="fab-item3"
@@ -270,17 +270,17 @@ function Event() {
               console.log("clicked UDYAM");
             }}
           >
-            <h2
+            <h3
               style={{
                 position: "relative",
-                fontSize: "18px",
+                fontSize: "13px",
                 textAlign: "center",
                 margin: "auto 0",
                 pointerEvents: "none",
               }}
             >
               UDGAM
-            </h2>
+            </h3>
           </div>
           <div className="fab-circular-ring"></div>
         </div>
