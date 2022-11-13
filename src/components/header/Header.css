@@ -22,7 +22,7 @@
 .header-empty-div-2 {
     width: 100vw;
     height: 2.6vw;
-    background-color: rgba(44, 51, 57, 255);
+    background-color: rgba(44, 51, 57, 0.6);
     position: absolute;
     /* transform: skewX(30deg); */
 }
@@ -164,7 +164,7 @@
     .header-empty-div-2 {
         width: 100vw;
         height: 2.4vw;
-        background-color: rgba(44, 51, 57, 255);
+        background-color: rgba(44, 51, 57, 0.6);
         position: absolute;
         /* transform: skewX(30deg); */
     }
