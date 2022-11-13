@@ -13,7 +13,7 @@
 
 .header-empty-div-2 {
     width: 100vw;
-    height: 2.2vw;
+    height: 2.4vw;
     background-color: rgba(44, 51, 57, 255);
     position: absolute;
     /* transform: skewX(30deg); */
@@ -55,6 +55,7 @@
 .header-button-container {
     position: fixed;
     color: rgba(189, 57, 68, 255);
+    padding: 0.2vw;
     font-weight: 800;
     font-size: 1.5vw;
     letter-spacing: 0.8vw;
@@ -105,12 +106,14 @@
     
     .header-EES-element-container {
         position: relative;
+        padding-top:0.5vw;
+        padding-bottom: 0.5vw;
         width: 45vw;
         height: 15vw;
         font-size: 4vw;
         color: white;
         letter-spacing: 0.7vw;
-        line-height: 5vw;
+        line-height: 4.5vw;
         font-weight: 800;
         left: 5vw;
     }
