@@ -169,6 +169,7 @@
   display: flex;
   justify-content: center;
   outline: 0 !important;
+  margin: 40px auto;
 }
 @media (min-width:600px){
   .event-detais-card{
