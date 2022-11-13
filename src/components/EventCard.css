@@ -29,7 +29,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   left: 15%;
-  top: 15%;
+  top: 11%;
   border-radius: 40px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -204,7 +204,7 @@
 
   .event-detais-card-active {
     position: fixed;
-    top: 12%;
+    top: 13%;
     height: 60%;
     width: 90%;
     left: 5%;
