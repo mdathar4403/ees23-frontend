@@ -3,8 +3,10 @@
   src: url(../fonts/ngc292expand.ttf);
 }
 .fab-item1,.fab-item2,.fab-item3,.fab-button h3{
-  font-family: ngc292expand;
+  /* font-family: ngc292expand; */
   color: white;
+  
+
 }
 .fab-item1 {
   position: fixed;
