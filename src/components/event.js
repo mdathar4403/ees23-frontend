@@ -286,24 +286,7 @@ function Event() {
         </div>
       </div>
       
-      <div
-        className="register-button"
-        style={{ display: !regActive ? "none" : "unset" }}
-      >
-        {/* <Link to="/register">Register</Link>
-         */}
-        <GoogleLogin
-          accessType="online"
-          disabled={false}
-          client_id={clientId} // your Google app client ID
-          buttonText="Sign in"
-          onSuccess={onGoogleLoginSuccess} // perform your user logic here
-          onFailure={onGoogleLoginFailure} // handle errors here
-          cookiePolicy={"single-host-origin"}
-          isSignedIn={true}
-          scope={scope}
-        />
-      </div>
+      
     </>
   );
 }

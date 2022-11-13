@@ -115,6 +115,7 @@
   font-family: secondFont;
   src: url("../fonts/ngc292expand.ttf");
 }
+
 .logo{
     position: relative;
     display: flex;
@@ -123,11 +124,16 @@
     align-items: center;
     top: 23%;
 }
+
+.logos {
+  position: relative;
+}
+
 #come{
 
 font-family: secondFont;
 font-weight: 600;
-font-size: 32px;
+font-size: 5vh;
 line-height: 115px;
 /* identical to box height */
 
@@ -136,8 +142,36 @@ background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
+animation: animate 1s linear infinite;
+letter-spacing: 5px;
 }
 
+
+@keyframes animate{
+  0%{
+    text-shadow: 0 0 5px #A9A9A9,
+    0 0 10px #A9A9A9,
+    /* 0 0 15px #A9A9A9; */
+  }
+  30%{
+    text-shadow: 0 0 8px #A9A9A9,
+    0 0 12px #A9A9A9,
+    0 0 2px #A9A9A9;
+  }
+  
+}
+
+#eeslogored {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+#eeslogored:hover {
+  opacity: 1;
+}
 
 @media screen and (max-width: 1000px) {
     #come{
@@ -145,7 +179,7 @@ background-clip: text;
         line-height: 90px;
     }
     .logo{
-      top: 16%;
+      top: 23vh;
       transform: scale(0.90);
     }
     
