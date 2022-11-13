@@ -1,4 +1,11 @@
-
+@font-face {
+  font-family: ngc292expand;
+  src: url(../fonts/ngc292expand.ttf);
+}
+.fab-item1,.fab-item2,.fab-item3,.fab-button h3{
+  font-family: ngc292expand;
+  color: white;
+}
 .fab-item1 {
   position: fixed;
   height: 80px;
@@ -68,7 +75,7 @@
   pointer-events: none;
 }
 
-.fab-button h2{
+.fab-button h3{
   transform: rotate(180deg);
 }
 
@@ -84,7 +91,7 @@
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
 }
-.fab-container h2{
+.fab-container h3{
   rotate: 180deg;
 }
 
