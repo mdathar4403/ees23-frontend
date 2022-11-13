@@ -21,7 +21,7 @@ function Home() {
               height="310px"
               alt=""
             />
-            <img id="come" height="23px" src={coming} alt="" />
+            <div id="come">COMING SOON</div>
 
           </div>
         </div>

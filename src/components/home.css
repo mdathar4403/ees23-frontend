@@ -120,7 +120,19 @@
     top: 23%;
 }
 #come{
-    padding-top: 3%;
+
+font-family: 'Mukta Malar';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 120px;
+/* identical to box height */
+
+
+background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
 }
 
 @media screen and (max-width: 750px) {
