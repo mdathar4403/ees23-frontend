@@ -18,7 +18,9 @@
   display: none;
 }
 
-
+.para{
+  font-size: 132%;
+}
 .event-detais-card-active {
   display: inline-block;
   height: 65%;
