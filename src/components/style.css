@@ -166,7 +166,7 @@ border-radius: 0px 0px 10px 10px;
   left: 5%;
 } */
 .trapezoid {
-	border-bottom: 80px solid rgba(44, 51, 57, 1);
+	border-bottom: 80px solid rgba(44, 51, 57, 0.6);
 	border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
 	height: 0%;
