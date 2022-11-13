@@ -1,3 +1,11 @@
+@font-face {
+    font-family: Markpro;
+    src: url(./Mark-Pro.ttf);
+}
+@font-face {
+    font-family: ngc292expand;
+    src: url(./ngc292expand.ttf);
+}
 .header-main-container {
     max-width: 100%;
     overflow: hidden;
@@ -45,22 +53,24 @@
 }
 
 .header-EES-element-container {
+    font-family: Markpro;
     position: absolute;
     color: white;
     font-size: 2vw;
     font-weight: 700;
-    left: 32vw;
+    left: 31vw;
 }
 
 .header-button-container {
     position: fixed;
     color: rgba(189, 57, 68, 255);
-    padding: 0.2vw;
-    font-weight: 800;
+    font-family: ngc292expand;
+    padding-top: 0.3vw;
+    font-weight: 500;
     font-size: 1.5vw;
-    letter-spacing: 0.8vw;
+    letter-spacing: 0.6vw;
     max-width: 12vw;
-    right: 6vw;
+    right: 6.5vw;
 
 }
 
@@ -106,7 +116,8 @@
     
     .header-EES-element-container {
         position: relative;
-        padding-top:0.5vw;
+        font-family: Markpro;
+        padding-top:1.2vw;
         padding-bottom: 0.5vw;
         width: 45vw;
         height: 15vw;
@@ -119,14 +130,15 @@
     }
     
     .header-button-container {
+        font-family: ngc292expand;
         color: rgba(189, 57, 68, 255);
-        font-weight: 800;
-        font-size: 5.5vw;
+        font-weight: 600;
+        font-size: 3.5vw;
         letter-spacing: 0.8vw;
         max-width: 30vw;
         height: 7vw;
         left: 65vw;
-        top: 3.5vw;
+        top: 5.5vw;
     
     }
     .header-button-container:hover {
