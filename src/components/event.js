@@ -39,6 +39,7 @@ function Event() {
     document
       .getElementsByClassName("event-detais-card")[0]
       .classList.toggle("event-detais-card-active");
+    document.getElementsByClassName("coming-soon")[0].classList.toggle("coming-soon-active");
     console.log("Single G clicked");
   };
 
