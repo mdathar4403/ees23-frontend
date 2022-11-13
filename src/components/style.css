@@ -194,7 +194,11 @@ div a.active{
   color:rgb(170, 13, 13);
   text-shadow: 0 0 30px rgba(189, 57, 68, 255);
 }
-
+@media (max-width:900px) {
+  .trapezoid{
+    bottom: 16px;
+  }
+}
 @media (max-width: 600px) {
   .fab-container {
     display: block;
