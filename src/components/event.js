@@ -1,6 +1,7 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
+
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
 // import GoogleLoginPage from "./GoogleLoginPage";
@@ -51,6 +52,7 @@ function Event() {
       .getElementsByClassName("fab-container")[0]
       .classList.toggle("fab-container-active");
   }
+  const [activeNav, setActiveNav] = useState('#');
 
   useEffect(() => {
     if (isinittial) {
@@ -71,13 +73,16 @@ function Event() {
       setActive(false);
       setChoosed(0);
       setContent(-1);
+      setActiveNav(0);
+      
     }
   };
 
   return (
     <>
-      <div className="events">
-        <table className="table">
+    <div className="content-button">
+      <div className="events trapezoid">
+        {/* <table className="table">
           <thead>
             <tr>
               <th>EVENTS</th>
@@ -85,64 +90,73 @@ function Event() {
           </thead>
           <tbody className="table-body">
             <tr>
-              <td className="td-up">
+              <td className="td-up"> */}
+              <h1 className="hovered">
                 <a
-                  href="#"
+                  href="#udgam"
                   onClick={() => {
-                    if (active && content === 0) {
-                      setActive(false);
-                      setContent(-1);
-                    } else {
-                      setContent(0);
-                      setActive(true);
-                    }
-                  }}
-                >
-                  UDYAM
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a
-                  href="#"
-                  onClick={() => {
+                    setActiveNav('#udgam')
                     if (active && content === 1) {
                       setActive(false);
                       setContent(-1);
+                      setActiveNav(0);
                     } else {
                       setContent(1);
                       setActive(true);
                     }
                   }}
                   id="event-dark"
+                  className={activeNav === '#udgam'?'active':''}
                 >
                   UDGAM
                 </a>
-              </td>
-            </tr>
-            <tr>
-              <td className="td-bottom">
+                </h1>
+                
+              <h1 className="hovered">
                 <a
-                  href="#"
+                  href="#udyam"
                   onClick={() => {
+                    setActiveNav('#udyam');
+                    if (active && content === 0) {
+                      setActive(false);
+                      setContent(-1);
+                      setActiveNav(0);
+                    } else {
+                      setContent(0);
+                      setActive(true);
+                      
+                    }
+                  }}
+                  className={activeNav === '#udyam'?'active':''}
+                >
+                  UDYAM
+                </a>
+                </h1>
+          
+
+              <h1 className="hovered">
+                <a
+                  href="#mashal"
+                  onClick={() => {
+                    setActiveNav('#mashal')
                     if (active && content === 2) {
                       setActive(false);
                       setContent(-1);
+                      setActiveNav(0);
                     } else {
                       setContent(2);
                       setActive(true);
                     }
                   }}
                   id="event-dark2"
+                  className={activeNav === '#mashal'?'active':''}
                 >
                   MASHAL
                 </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              </h1>
+             
       </div>
+    </div>
       <EventCard data={content} close={handleClose} />
       <div className="fab-main-container">
         <div className="fab-container">
@@ -271,6 +285,7 @@ function Event() {
           <div className="fab-circular-ring"></div>
         </div>
       </div>
+      
       <div
         className="register-button"
         style={{ display: !regActive ? "none" : "unset" }}

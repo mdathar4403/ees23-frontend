@@ -1,0 +1,133 @@
+.header-main-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+.header-empty-div-1 {
+    position: relative;
+    width: 100vw;
+    height: 1.5vw;
+    background-color: rgba(189, 57, 68, 255);
+}
+
+.header-empty-div-2 {
+    width: 100vw;
+    height: 2.2vw;
+    background-color: rgba(44, 51, 57, 255);
+    position: absolute;
+    /* transform: skewX(30deg); */
+}
+
+.header-element-container {
+
+    width: 100vw;
+    display: flex;
+    position: relative;
+}
+
+.header-empty-div-3 {
+    position: relative;
+    left: 23vw;
+    height: 4vw;
+    width: 40%;
+    background-color: rgba(189, 57, 68, 255);
+    transform: skewX(20deg);
+}
+
+.header-empty-div-4 {
+    position: relative;
+    right: 13vw;
+    height: 4vw;
+    width: 50%;
+    background-color: rgba(189, 57, 68, 255);
+    transform: skewX(-20deg);
+}
+
+.header-EES-element-container {
+    position: absolute;
+    color: white;
+    font-size: 2vw;
+    font-weight: 700;
+    left: 32vw;
+}
+
+.header-button-container {
+    position: fixed;
+    color: rgba(189, 57, 68, 255);
+    font-weight: 800;
+    font-size: 1.5vw;
+    letter-spacing: 0.8vw;
+    max-width: 12vw;
+    right: 6vw;
+
+}
+
+.header-button-container:hover {
+    text-shadow: 0 0 30px rgba(189, 57, 68, 255);
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    .header-main-container {
+        max-width: 100%;
+    }
+    
+    .header-empty-div-1 {
+        position: absolute;
+        width: 100%;
+        height: 15vw;
+        background-color: rgba(189, 57, 68, 255);
+    }
+    
+    .header-empty-div-2 {
+        height: 14.5vw;
+        background-color: rgba(44, 51, 57, 255);
+        position: absolute;
+        top: 0.5vw;
+        max-width: 60%;
+        left: 60%;
+        transform: skewX(-30deg);
+    }
+    
+    .header-element-container {
+        width: 100vw;
+        display: flex;
+        position: relative;
+    }
+    
+    .header-empty-div-3 {
+        display: none;
+    }
+    
+    .header-empty-div-4 {
+        display: none;
+    }
+    
+    .header-EES-element-container {
+        position: relative;
+        width: 45vw;
+        height: 15vw;
+        font-size: 4vw;
+        color: white;
+        letter-spacing: 0.7vw;
+        line-height: 5vw;
+        font-weight: 800;
+        left: 5vw;
+    }
+    
+    .header-button-container {
+        color: rgba(189, 57, 68, 255);
+        font-weight: 800;
+        font-size: 5.5vw;
+        letter-spacing: 0.8vw;
+        max-width: 30vw;
+        height: 7vw;
+        left: 65vw;
+        top: 3.5vw;
+    
+    }
+    .header-button-container:hover {
+        text-shadow: 0 0 30px rgba(189, 57, 68, 255);
+        cursor: pointer;
+    }
+}
