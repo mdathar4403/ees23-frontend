@@ -1,3 +1,11 @@
+@font-face {
+    font-family: Markpro;
+    src: url(./Mark-Pro.ttf);
+}
+@font-face {
+    font-family: ngc292expand;
+    src: url(./ngc292expand.ttf);
+}
 .header-main-container {
     max-width: 100%;
     overflow: hidden;
@@ -7,13 +15,13 @@
 .header-empty-div-1 {
     position: relative;
     width: 100vw;
-    height: 1.5vw;
+    height: 2.5vw;
     background-color: rgba(189, 57, 68, 255);
 }
 
 .header-empty-div-2 {
     width: 100vw;
-    height: 2.2vw;
+    height: 2.6vw;
     background-color: rgba(44, 51, 57, 255);
     position: absolute;
     /* transform: skewX(30deg); */
@@ -29,7 +37,7 @@
 .header-empty-div-3 {
     position: relative;
     left: 23vw;
-    height: 4vw;
+    height: 5vw;
     width: 40%;
     background-color: rgba(189, 57, 68, 255);
     transform: skewX(20deg);
@@ -38,28 +46,32 @@
 .header-empty-div-4 {
     position: relative;
     right: 13vw;
-    height: 4vw;
+    height: 5vw;
     width: 50%;
     background-color: rgba(189, 57, 68, 255);
     transform: skewX(-20deg);
 }
 
 .header-EES-element-container {
+    font-family: Markpro;
     position: absolute;
     color: white;
-    font-size: 2vw;
-    font-weight: 700;
-    left: 32vw;
+    padding-top: 0.2vw;
+    font-size: 2.5vw;
+    font-weight: 800;
+    left: 25.8vw;
 }
 
 .header-button-container {
     position: fixed;
     color: rgba(189, 57, 68, 255);
-    font-weight: 800;
-    font-size: 1.5vw;
-    letter-spacing: 0.8vw;
+    font-family: ngc292expand;
+    padding-top: 0.5vw;
+    font-weight: 500;
+    font-size: 1.6vw;
+    letter-spacing: 0.4vw;
     max-width: 12vw;
-    right: 6vw;
+    right: 6.5vw;
 
 }
 
@@ -105,27 +117,105 @@
     
     .header-EES-element-container {
         position: relative;
+        font-family: Markpro;
+        padding-top:1.2vw;
+        padding-bottom: 0.7vw;
         width: 45vw;
         height: 15vw;
-        font-size: 4vw;
+        font-size: 3.5vw;
         color: white;
         letter-spacing: 0.7vw;
-        line-height: 5vw;
+        line-height: 4.3vw;
         font-weight: 800;
         left: 5vw;
     }
     
     .header-button-container {
+        font-family: ngc292expand;
         color: rgba(189, 57, 68, 255);
-        font-weight: 800;
-        font-size: 5.5vw;
+        font-weight: 600;
+        font-size: 3.5vw;
         letter-spacing: 0.8vw;
         max-width: 30vw;
         height: 7vw;
         left: 65vw;
-        top: 3.5vw;
+        top: 5.5vw;
     
     }
+    .header-button-container:hover {
+        text-shadow: 0 0 30px rgba(189, 57, 68, 255);
+        cursor: pointer;
+    }
+}
+@media(min-width: 900px) {
+    .header-main-container {
+        max-width: 100%;
+        overflow: hidden;
+        position: fixed;
+    }
+    
+    .header-empty-div-1 {
+        position: relative;
+        width: 100vw;
+        height: 1.5vw;
+        background-color: rgba(189, 57, 68, 255);
+    }
+    
+    .header-empty-div-2 {
+        width: 100vw;
+        height: 2.4vw;
+        background-color: rgba(44, 51, 57, 255);
+        position: absolute;
+        /* transform: skewX(30deg); */
+    }
+    
+    .header-element-container {
+    
+        width: 100vw;
+        display: flex;
+        position: relative;
+    }
+    
+    .header-empty-div-3 {
+        position: relative;
+        left: 23vw;
+        height: 4vw;
+        width: 40%;
+        background-color: rgba(189, 57, 68, 255);
+        transform: skewX(20deg);
+    }
+    
+    .header-empty-div-4 {
+        position: relative;
+        right: 13vw;
+        height: 4vw;
+        width: 50%;
+        background-color: rgba(189, 57, 68, 255);
+        transform: skewX(-20deg);
+    }
+    
+    .header-EES-element-container {
+        font-family: Markpro;
+        position: absolute;
+        color: white;
+        font-size: 2vw;
+        font-weight: 700;
+        left: 31vw;
+    }
+    
+    .header-button-container {
+        position: fixed;
+        color: rgba(189, 57, 68, 255);
+        font-family: ngc292expand;
+        padding-top: 0.3vw;
+        font-weight: 500;
+        font-size: 1.5vw;
+        letter-spacing: 0.6vw;
+        max-width: 12vw;
+        right: 6.5vw;
+    
+    }
+    
     .header-button-container:hover {
         text-shadow: 0 0 30px rgba(189, 57, 68, 255);
         cursor: pointer;
