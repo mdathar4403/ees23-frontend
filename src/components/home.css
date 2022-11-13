@@ -139,15 +139,24 @@ background-clip: text;
 }
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
     #come{
         font-size: 20px;
+        line-height: 90px;
     }
+    .logo{
+      top: 16%;
+      transform: scale(0.90);
+    }
+    
   }
 @media screen and (min-width: 1000px) {
     .logo{
-      top: 19%;
+      top: 17%;
       transform: scale(0.90);
+    }
+    #come {
+      line-height: 100px;
     }
   }
  
