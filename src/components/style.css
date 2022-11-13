@@ -2,6 +2,10 @@
   font-family: first-font;
   src: url(../fonts/viata-extrabold-1.otf);
 }
+@font-face {
+  font-family: ngc292expand;
+  src: url(../fonts/ngc292expand.ttf);
+}
 
 .title-container {
   position: fixed;
@@ -177,7 +181,9 @@ border-radius: 0px 0px 10px 10px;
 }
 .trapezoid h1 a{
   color:rgb(231, 223, 224);
+  font-family: ngc292expand;
   text-decoration: none;
+  font-weight: 150;
 }
 /* .hovered :hover{
   color:rgb(170, 13, 13);

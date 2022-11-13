@@ -1,6 +1,6 @@
 import React from "react";
 import "./EventCard.css";
-
+ 
 const paragraph = [
   "Udyam is the Annual Technological Festival of the department of Electronics Engineering, IIT (BHU) Varanasi. It brings a broad spectrum of events spanning Data Science, Machine Learning, Digital and Analog Electronics and others to boost the participant's skill sets. Since 2010, Udyam has provided a platform to develop and showcase the technical skills of Indian technocrats. And we are pleased to announce that the grand event is again returning this spring as UDYAM'23!",
   "Udgam is the Annual Cultural Festival of the department of Electronics Engineering, IIT (BHU) Varanasi. It brings you multifarious events that kindle your creative side and awaken your artistic self. EES introduced Udgam at the start of 2022 to provide a platform for participants to showcase their talents in non-technical fields like fine arts, dance, music, photography, and literature. Udgam is back again, bigger and brighter, and awaiting to witness the vigour its participants would bring to the stage. Get ready to manifest your artistry and let your creative self sparkle!",
@@ -8,9 +8,9 @@ const paragraph = [
 ];
 const heading = ["UDYAM", "UDGAM", "MASHAL"];
 const imageUrl = [
-  "./assets/udyam192.png",
-  "./assets/udgamlogo12.png",
-  "./assets/Mashal Logo-0192.png",
+  "./assets/udyam192 (1).png",
+  "./assets/udgamlogo12 (1).png",
+  "./assets/Mashal Logo-0192 (1).png",
 ];
 
 const EventCard = (props) => {
