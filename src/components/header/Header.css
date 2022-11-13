@@ -1,6 +1,6 @@
 @font-face {
     font-family: Markpro;
-    src: url(./Mark-Pro.ttf);
+    src: url(./MarkProBold.ttf);
 }
 @font-face {
     font-family: ngc292expand;
@@ -199,7 +199,7 @@
         position: absolute;
         color: white;
         font-size: 2vw;
-        font-weight: 700;
+        font-weight: 900;
         left: 31vw;
     }
     
@@ -210,9 +210,9 @@
         padding-top: 0.3vw;
         font-weight: 500;
         font-size: 1.5vw;
-        letter-spacing: 0.6vw;
+        letter-spacing: 0.3vw;
         max-width: 12vw;
-        right: 6.5vw;
+        right: 6vw;
     
     }
     
