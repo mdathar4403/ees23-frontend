@@ -111,6 +111,10 @@
 .star-field .layer:nth-child(3) {
   animation: sf-fly-by-3 5s linear infinite;
 }
+@font-face {
+  font-family: secondFont;
+  src: url("../fonts/ngc292expand.ttf");
+}
 .logo{
     position: relative;
     display: flex;
@@ -121,11 +125,10 @@
 }
 #come{
 
-font-family: 'Mukta Malar';
-font-style: normal;
+font-family: secondFont;
 font-weight: 600;
 font-size: 32px;
-line-height: 120px;
+line-height: 115px;
 /* identical to box height */
 
 
@@ -135,15 +138,16 @@ background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 background-clip: text;
 }
 
+
 @media screen and (max-width: 750px) {
     #come{
-        height: 21px;
+        font-size: 20px;
     }
   }
 @media screen and (min-width: 1000px) {
     .logo{
-      top: 22%;
-      transform: scale(0.92);
+      top: 19%;
+      transform: scale(0.90);
     }
   }
  
