@@ -177,7 +177,7 @@ function Event() {
                 className="fab-button-text"
                 style={{
                   position: "relative",
-                  fontSize: "18px",
+                  fontSize: "23px",
                   textAlign: "center",
                   margin: "auto 0",
                   rotate: "180deg",
@@ -219,7 +219,7 @@ function Event() {
             <h3
               style={{
                 position: "relative",
-                fontSize: "13px",
+                fontSize: "18px",
                 textAlign: "center",
                 margin: "auto 0",
                 pointerEvents: "none",
@@ -246,7 +246,7 @@ function Event() {
             <h3
               style={{
                 position: "relative",
-                fontSize: "13px",
+                fontSize: "18px",
                 textAlign: "center",
                 margin: "auto 0",
                 pointerEvents: "none",
@@ -273,7 +273,7 @@ function Event() {
             <h3
               style={{
                 position: "relative",
-                fontSize: "13px",
+                fontSize: "18px",
                 textAlign: "center",
                 margin: "auto 0",
                 pointerEvents: "none",
