@@ -95,7 +95,7 @@ export default function Form() {
     }
     
   return (
-    <section className="registerContainer">
+      <>
     <div className='App'>
       <ThemeProvider theme={darkTheme}>
         <Box className='form-background' >
@@ -206,6 +206,6 @@ export default function Form() {
             </div>
         </div> */}
 
-    </section>
+    </>
   )
 }
