@@ -14,9 +14,18 @@
     src: url("../../fonts/ngc292expand.ttf");
  }
 .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: footerFont;
     font-weight: 200;
     font-size: 15px;
     line-height: 75px;
     color: #000000;
+}
+
+.cr{
+    height: 18px;
+    width: 18px;
+    margin-right: 3px;
 }
