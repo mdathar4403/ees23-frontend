@@ -5,11 +5,13 @@ import { useForm } from 'react-hook-form';
 import "./form.css"
 import { GoogleLogin } from 'react-google-login';
 import { useCallback } from 'react';
-// import { post } from 'utils/sdk';
 import axios from 'axios';
 import { gapi } from "gapi-script"
 import logo from './ees_logo.png'
 import { useNavigate } from "react-router-dom";
+
+
+
 const clientId = "868476725043-56q2l17h7bf2a1fpvkqp04t5br7mti4p.apps.googleusercontent.com"
 const scope = 'https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read'
 
@@ -19,13 +21,8 @@ export default function Form() {
   const onSubmit = data => console.log(data);
   const [isGSignedIn,setisGSignedIn] = useState(0);
 
-  // const { state } = useLocation();
-  // const { profileData, token } = state;
-
   const profileData = window.sessionStorage.getItem("profileData");
   const token = window.sessionStorage.getItem("tokenId");
-  // console.log(profileData);
-
   const postData = (profdata) => {
     console.log(profdata)
     const mobile = Number(profdata.phone_number);

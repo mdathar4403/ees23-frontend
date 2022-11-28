@@ -31,63 +31,12 @@
   font-family: first-font;
 }
 
-/* body {
-  color: white;
-}
-th {
-  text-shadow: 6px 0px #fd4556;
-  font-size: 3.5vw;
-}
-.table {
-  font-family: first-font;
-  color: white;
 
-  font-size: 2.5vw;
-  padding: 0px 28px;
-}
-
-.table-body {
-  font-family: first-font;
-  border-radius: 10px;
-  width: 14vw;
-  background-color: rgba(52, 59, 71, 60);
-  font-weight: 600;
-  text-decoration: none;
-  list-style: none;
-  box-shadow: 2px 2px #fd4556;
-}
-.events {
-  top: 40vh;
-  left: 30px;
-  padding: 10px;
-  position: fixed;
-}
-.table-body a {
-  display: block;
-  text-decoration: none;
-  color: #fd4556;
-  padding: 0.6vw 0.8vw;
-}
-.table-body a:hover {
-  background-color: #3e4652;
-  color: #fd4556;
-  border-radius: 10px;
-}
- */
 
 .line-mobile-view{
   display: none;
 }
 
-/* table{
-  border-collapse:collapse;
-}
-.td-up{
-border-radius: 10px 10px 0px 0px;
-}
-.td-bottom{
-border-radius: 0px 0px 10px 10px;
-} */
 @media (max-width: 600px) {
   .main-title {
     font-size: 6vw;
@@ -102,25 +51,7 @@ border-radius: 0px 0px 10px 10px;
     display: block;
   }
 
-  /* .events {
-    width: 50%;
-    margin: 0 auto;
-    top: 15%;
-    margin-left: 15%;
-  } */
-  /* .table-body a {
-    font-size: 1.4rem;
-    text-align: center;
-    padding: 0.5rem 0;
-  }
-  .table-body {
-    width: 50vw;
-    left: 20%;
-  }
-  .events .table th {
-    font-size: 1.7rem;
-    text-shadow: 2px 2px #fd4556;
-  } */
+  
 }
 @font-face {
   font-family: first-font;
@@ -133,23 +64,6 @@ border-radius: 0px 0px 10px 10px;
   display: none;
 }
 
-
-
-
-/* .register-button a{
-  color: white;
-  font-family: first-font;
-  text-decoration: none;
-  list-style: none;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: auto;
-  text-shadow: 2px 2px #fd4556;
-} */
-/* .content-button {
-  position: relative;
-  left: 5%;
-} */
 .trapezoid {
 	border-bottom: 80px solid rgba(44, 51, 57, 0.6);
 	border-left: 25px solid transparent;
@@ -191,15 +105,6 @@ div a.active{
   .events{
     display: none;
   }
-  .register-button{
-    position: fixed;
-    left: 35%;
-    width: 30vw;
-    bottom: 10%;
-  }
-  .register-button a{
-    font-size: 1.2rem;
-    text-shadow: 1px 1px #fd4556;
-  }
+
 
 }
