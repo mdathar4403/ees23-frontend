@@ -9,7 +9,7 @@ import axios from 'axios';
 import { gapi } from "gapi-script"
 import logo from './ees_logo.png'
 import { useNavigate } from "react-router-dom";
-
+import AnimatedButton from '../../animated button/AnimatedButton';
 
 
 const clientId = "868476725043-56q2l17h7bf2a1fpvkqp04t5br7mti4p.apps.googleusercontent.com"
@@ -167,7 +167,10 @@ export default function Form() {
                 {errors.Password?.type === "required" && "password is required"}
                 {errors.ConfirmPassword?.type === "required" &&
                   "confirm password is required"}
-                <button className="signinbtn">Sign In</button>
+                <AnimatedButton
+                  className="signinbtn"
+                  text={"Register"}
+                />
               </form>
             </div>
             <div className="col-2">
