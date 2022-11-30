@@ -16,10 +16,6 @@ function Header() {
         navigate("/register", 
         );
     }
-
-    
-
-
     return (
       <>
         <div className="header-main-container">
