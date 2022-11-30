@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import "./form.css"
 import { GoogleLogin } from 'react-google-login';
-import { useCallback } from 'react';
 import axios from 'axios';
-import { gapi } from "gapi-script";
 import logo from '../images/eeslogored.png';
 import { useNavigate } from "react-router-dom";
 import AnimatedButton from '../../animated button/AnimatedButton';
@@ -66,8 +63,15 @@ export default function Form() {
         <div class="layer"></div>
         <div class="layer"></div>
         <div class="layer"></div>
+        <div className="refisterForm">
+            <div className="register">
+              <div className="col-1">
+                
         {isGSignedIn === 0 && (
           <>
+            <h1>
+                <strong className="register-heading">Sign in</strong>
+            </h1>
             <div className="g-sign-in-button">
               <div className="register-button">
                 <GoogleLogin
@@ -80,21 +84,19 @@ export default function Form() {
                   cookiePolicy={"single-host-origin"}
                   isSignedIn={true}
                   scope={scope}
-                  style={{backgroundColor:"black"}}
                 />
               </div>
             </div>
+            <h5 style={{color:"white"}}>Don't worry your data is kept confidential with us. 
+            <br></br>By continuing further you are subscribing to our newsletter. </h5>
           </>
         )}
 
-        {isGSignedIn == 1 && (
-          <div className="refisterForm">
-            <div className="register">
-              <div className="col-1">
-                <h1>
-                  <strong className="register-heading">Register</strong>
-                </h1>
-
+        {isGSignedIn === 1 && (
+          <>
+              <h1>
+                <strong className="register-heading">Register</strong>
+              </h1>
                 <form
                   id="form"
                   className="flex flex-col"
@@ -162,14 +164,15 @@ export default function Form() {
                     text={"Register"}
                   />
                 </form>
-              </div>
-              <div className="col-2">
+              </>
+        
+        )}
+        </div>
+        <div className="col-2">
                 <img className="formimg" src={logo} alt="" />
               </div>
             </div>
           </div>
-        
-        )}
         </div>
         </div>
       </>
