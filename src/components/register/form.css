@@ -40,6 +40,8 @@
   border-radius: 5px;
   /* box-shadow: 1px 3px 10px #e9ecef; */
   /* background: #3d0b0b; */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
 }
 
 .register span{
@@ -122,7 +124,8 @@
 
 .col-2 {
   margin: auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
+  padding-left: 0rem;
 }
 .register .col-2 img{
   width: 300px;
@@ -261,3 +264,7 @@
   animation: sf-fly-by-3 5s linear infinite;
 }
 
+.ees {
+  color: rgba(189, 57, 68, 255);
+  text-align: center;
+}
