@@ -1,11 +1,9 @@
 
 import "../App.css";
 import Header from "./header/Header";
-import Title from "./title";
-import Event from "./event";
+import Event from "./events/event";
 import logo1 from "./images/eeslogo.svg";
 import logo2 from "./images/eeslogored.png";
-import coming from "./images/coming.svg"
 import "./home.css";
 import Footer from "./footer/Footer";
 

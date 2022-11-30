@@ -1,6 +1,6 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
-import EventCard from "./EventCard";
+import EventCard from "./eventscard/EventCard";
 
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
@@ -194,11 +194,11 @@ function Event() {
                   // fontSize: "px",
                   textAlign: "center",
                   marginTop: "0px",
-                  marginBottom: "40px",
+                  marginBottom: "15px",
                   display: "block",
                 }}
               >
-                X
+                <img src="./assets/cross_icon.svg" alt="X" style={{width:"50px"}}></img>
               </h3>
             </div>
           </div>

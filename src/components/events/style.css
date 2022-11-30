@@ -1,10 +1,10 @@
 @font-face {
   font-family: first-font;
-  src: url(../fonts/viata-extrabold-1.otf);
+  src: url(../../fonts/viata-extrabold-1.otf);
 }
 @font-face {
   font-family: ngc292expand;
-  src: url(../fonts/ngc292expand.ttf);
+  src: url(../../fonts/ngc292expand.ttf);
 }
 
 .title-container {
@@ -55,7 +55,7 @@
 }
 @font-face {
   font-family: first-font;
-  src: url(../fonts/viata-extrabold-1.otf);
+  src: url(../../fonts/viata-extrabold-1.otf);
 }
 
 
