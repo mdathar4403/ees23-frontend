@@ -8,9 +8,9 @@ const paragraph = [
 ];
 const heading = ["UDYAM", "UDGAM", "MASHAL"];
 const imageUrl = [
-  "./assets/udyam192 (1).png",
-  "./assets/udgamlogo12 (1).png",
-  "./assets/Mashal Logo-0192 (1).png",
+  "./assets/udyamlogo.png",
+  "./assets/udgamlogo.png",
+  "./assets/mashallogo.png",
 ];
 
 const EventCard = (props) => {

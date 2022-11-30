@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
-import bgImg from './Characters1.png'
 import { useForm } from 'react-hook-form';
 import "./form.css"
 import { GoogleLogin } from 'react-google-login';
@@ -12,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import AnimatedButton from '../../animated button/AnimatedButton';
 
 
-const clientId = "868476725043-56q2l17h7bf2a1fpvkqp04t5br7mti4p.apps.googleusercontent.com"
+const clientId = process.env.REACT_APP_CLIENT_ID;
 const scope = 'https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read'
 
 export default function Form() {
@@ -81,6 +80,7 @@ export default function Form() {
                   cookiePolicy={"single-host-origin"}
                   isSignedIn={true}
                   scope={scope}
+                  style={{backgroundColor:"black"}}
                 />
               </div>
             </div>
