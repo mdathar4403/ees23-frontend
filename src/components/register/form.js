@@ -9,7 +9,7 @@ import axios from 'axios';
 import { gapi } from "gapi-script";
 import logo from '../images/eeslogored.png';
 import { useNavigate } from "react-router-dom";
-import AnimatedButton from '../../animated button/AnimatedButton';
+import AnimatedButton from '../../../animated button/AnimatedButton';
 
 
 const clientId = "868476725043-56q2l17h7bf2a1fpvkqp04t5br7mti4p.apps.googleusercontent.com"
