@@ -6,8 +6,8 @@ import "./form.css"
 import { GoogleLogin } from 'react-google-login';
 import { useCallback } from 'react';
 import axios from 'axios';
-import { gapi } from "gapi-script"
-import logo from '../images/eeslogored.png'
+import { gapi } from "gapi-script";
+import logo from '../images/eeslogored.png';
 import { useNavigate } from "react-router-dom";
 import AnimatedButton from '../../animated button/AnimatedButton';
 
@@ -30,11 +30,6 @@ export default function Form() {
       console.log("wrong number")
       return;
     }
-    if (profdata.Password !== profdata.ConfirmPassword) {
-      console.log("Password is not equal to confirm password")
-      return;
-    }
-
     const header = {
       "Authorization": token
     }
@@ -59,6 +54,7 @@ export default function Form() {
     console.log("FAILURE!!! res: ", res);
   };
 
+  
 
   useEffect(() => {
 
@@ -104,20 +100,19 @@ export default function Form() {
                   className="flex flex-col"
                   onSubmit={handleSubmit((data) => postData(data))}
                 >
-
                   <input
                     type="text"
                     {...register("name")}
-                    value={profileData.givenName}
-                    placeholder={profileData.givenName}
+                    value={JSON.parse(profileData).givenName} 
+                    placeholder={JSON.parse(profileData).givenName}
                     readOnly
                   />
                   
                   <input
                     type="text"
                     {...register("email")}
-                    value={profileData.email}
-                    placeholder={profileData.email}
+                    value={JSON.parse(profileData).email}
+                    placeholder={JSON.parse(profileData).email}
                     readOnly
                   />
                   <input
