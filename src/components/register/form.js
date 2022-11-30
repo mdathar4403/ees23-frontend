@@ -134,8 +134,8 @@ export default function Form() {
                     required
                   />
                   <datalist id="years">
-                    <option value="ONE">ONE</option>
-                    <option value="TWO">TWO</option>
+                    <option value="FIRST">First</option>
+                    <option value="SECOND">Second</option>
                     <option value="THIRD">Third</option>
                     <option value="FOURTH">Fourth</option>
                     <option value="FIFTH">Fifth</option>
