@@ -3,12 +3,10 @@
 .event-detais-card {
   display: block;
   height: 0;
-  /* overflow-x: auto; */
   width: 67vw;
   backdrop-filter: blur(27px);
   position: fixed;
-  left: 15%;
-  top: 15%;
+  top: 55%;
   border-radius: 40px;
   z-index: 2;
   transition: all 0.2s ease-in-out;
@@ -34,9 +32,7 @@
   left: 13%;
   top: 11%;
   border-radius: 40px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   z-index: 2;
   transition: all 0.2s ease-in-out;
 }
@@ -164,7 +160,7 @@
 
 .event-content-container{
   position: relative;
-  height: 40vh;
+  height: 47vh;
   overflow: auto;
 }
 
@@ -192,7 +188,7 @@
     margin: 0.5rem 0;
   }
   .event-content-container{
-    height: 30vh;
+    height:35vh;
   }
 
 }
