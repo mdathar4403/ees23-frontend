@@ -188,7 +188,7 @@
     margin: 0.5rem 0;
   }
   .event-content-container{
-    height:35vh;
+    height:33.5vh;
   }
 
 }
@@ -202,9 +202,10 @@
     left: 50%;
   }
 
+
   .event-detais-card-active {
     position: fixed;
-    top: 13%;
+    top: 10%;
     height: 60%;
     width: 90%;
     left: 5%;
