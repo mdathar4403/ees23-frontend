@@ -43,6 +43,11 @@ export default function Form() {
     window.sessionStorage.setItem("registered_email:" + profdata.email, 1);
     navigate("/");
   };
+
+  const goBack = () => {
+    window.history.back();
+  };
+
   const onGoogleLoginSuccess = (res) => {
     console.log("SUCCESS!!! Current User: ", res);
     window.sessionStorage.setItem(
@@ -68,7 +73,7 @@ export default function Form() {
           <div class="layer"></div>
           <div className="refisterForm">
             <div className="register">
-              <div className="col-1">
+              <div className="col-left">
                 {isGSignedIn === 0 && (
                   <>
                     <h1>
@@ -89,11 +94,11 @@ export default function Form() {
                         />
                       </div>
                     </div>
-                    <h5 style={{ color: "white" }}>
+                    <h6 className="mt-4" style={{ color: "white" }}>
                       Don't worry your data is kept confidential with us.
                       <br></br>By continuing further you are subscribing to our
                       newsletter.{" "}
-                    </h5>
+                    </h6>
                   </>
                 )}
 
@@ -2133,9 +2138,16 @@ export default function Form() {
                   </>
                 )}
               </div>
-              <div className="col-2">
+              <div className="col-right">
                 <img className="formimg" src={logo} alt="" />
               </div>
+              <button
+                type="button"
+                className="btn btn-outline-light btn-dark"
+                onClick={goBack}
+              >
+                Back
+              </button>
             </div>
           </div>
         </div>

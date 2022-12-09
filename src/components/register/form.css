@@ -1,3 +1,4 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .registerContainer > * {
@@ -119,17 +120,17 @@
   flex-direction: column;
 }
 
-.register .col-1{
+.register .col-left{
   margin: auto;
   padding: 1rem 3rem;
 }
 
-.col-2 {
+.col-right {
   margin: auto;
   padding: 1rem 2rem;
   padding-left: 0rem;
 }
-.register .col-2 img{
+.register .col-right img{
   width: 300px;
   height: 300px;
   object-fit: cover;
@@ -140,13 +141,13 @@
 }
 
 @media screen and (min-width: 860px)  {
-  .register .col-2 img{
+  .register .col-right img{
     display: initial;
   }
 }
 
 @media screen and (max-width: 860px) {
-  .col-2{
+  .col-right{
     padding-right: 0;
   }
 }
@@ -269,4 +270,13 @@
 .ees {
   color: rgba(189, 57, 68, 255);
   text-align: center;
+}
+
+.btn-outline-light
+{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  width: 5rem;
 }
