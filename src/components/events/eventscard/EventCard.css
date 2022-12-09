@@ -161,7 +161,6 @@
 .event-detais-card-active .close:hover {
   opacity: 1;
 }
-
 .event-detais-card-active .close:before,
 .close:after {
   position: absolute;
@@ -171,7 +170,6 @@
   width: 2px;
   background-color: rgb(245, 241, 241);
 }
-
 .close:before {
   transform: rotate(45deg);
 }
