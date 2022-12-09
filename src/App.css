@@ -29,6 +29,9 @@
 
 }
 
+.App{
+  user-select: none;
+}
 
 .characters-image img {
   height: 100vh;
