@@ -30,6 +30,11 @@
   border-radius: 12px;
 }
 
+.contact-handles a:hover{
+  transform: scale(1.1);
+  transition: all ease 100ms;
+}
+
 
 /* .event-detais-card a {
   display: none;
