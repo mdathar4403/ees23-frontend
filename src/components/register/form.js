@@ -74,7 +74,7 @@ export default function Form() {
           <div className="refisterForm">
             
             <div className="register">
-              <a href="#" className="close" onClick={console.log("Write here method to close")}></a>
+              <a href="#" className="close" onClick={goBack}></a>
               <div className="col-left">
                 {isGSignedIn === 0 && (
                   <>
@@ -2143,13 +2143,6 @@ export default function Form() {
               <div className="col-right">
                 <img className="formimg" src={logo} alt="" />
               </div>
-              {/* <button
-                type="button"
-                className="btn btn-outline-light btn-dark"
-                onClick={goBack}
-              >
-                Back
-              </button> */}
             </div>
           </div>
         </div>
