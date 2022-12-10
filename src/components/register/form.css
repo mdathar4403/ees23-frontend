@@ -4,7 +4,7 @@
 
 .close {
   position: fixed;
-  right: 5%;
+  right: 2%;
   top: 5%;
   width: 32px;
   height: 32px;
@@ -307,13 +307,4 @@
 .ees {
   color: rgba(189, 57, 68, 255);
   text-align: center;
-}
-
-.btn-outline-light
-{
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  z-index: 10;
-  width: 5rem;
 }
