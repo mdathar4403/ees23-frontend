@@ -29,6 +29,7 @@
 
 .contact-handles img{
   border-radius: 12px;
+  filter: brightness(0.8) ;
 }
 
 .contact-handles a:hover{
