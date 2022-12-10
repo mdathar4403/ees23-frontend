@@ -117,6 +117,7 @@ function Event() {
                   onClick={() => {
                     setActiveNav('#udgam')
                     if (active && content === 1) {
+                      
                       setActive(false);
                       setContent(-1);
                       setActiveNav(0);
@@ -242,9 +243,12 @@ function Event() {
                 setActive(false);
                 setContent(-1);
               } else {
+                if (active) {
+                  animateOncardChange();
+                } else {
+                  setActive(true);
+                }
                 setContent(2);
-
-                setActive(true);
               }
 
               console.log("clicked UDYAM");
@@ -269,9 +273,12 @@ function Event() {
                 setActive(false);
                 setContent(-1);
               } else {
+                if (active) {
+                  animateOncardChange();
+                } else {
+                  setActive(true);
+                }
                 setContent(0);
-
-                setActive(true);
               }
 
               console.log("clicked UDYAM");
@@ -296,9 +303,12 @@ function Event() {
                 setActive(false);
                 setContent(-1);
               } else {
+                if (active) {
+                  animateOncardChange();
+                } else {
+                  setActive(true);
+                }
                 setContent(1);
-
-                setActive(true);
               }
 
               console.log("clicked UDYAM");
