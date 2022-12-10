@@ -78,6 +78,25 @@ function Event() {
       
     }
   };
+  const animateOncardChange = ()=>{
+    document.getElementsByClassName("event-detais-card")[0].animate(
+      [
+        {
+          transform: "rotate(0) scale(0.5)",
+          color: "#000",
+        },
+        { color: "#431236", offset: 0.3 },
+        {
+          transform: "rotateY(360deg) scale(1)",
+          color: "#000",
+        },
+      ],
+      {
+        duration: 300,
+        // iterations: Infinity,
+      }
+    );
+  }
 
   return (
     <>
@@ -102,8 +121,12 @@ function Event() {
                       setContent(-1);
                       setActiveNav(0);
                     } else {
-                      setContent(1);
-                      setActive(true);
+                      if (active) {
+                        animateOncardChange();
+                        
+                      } else {
+                        setActive(true);
+                      }setContent(1);
                     }
                   }}
                   id="event-dark"
@@ -123,8 +146,14 @@ function Event() {
                       setContent(-1);
                       setActiveNav(0);
                     } else {
+                      if(active){
+                        animateOncardChange();
+                        
+                      }else{
+                        setActive(true);
+                      }
                       setContent(0);
-                      setActive(true);
+                      
                       
                     }
                   }}
@@ -145,8 +174,12 @@ function Event() {
                       setContent(-1);
                       setActiveNav(0);
                     } else {
+                      if (active) {
+                        animateOncardChange();
+                      } else {
+                        setActive(true);
+                      }
                       setContent(2);
-                      setActive(true);
                     }
                   }}
                   id="event-dark2"
