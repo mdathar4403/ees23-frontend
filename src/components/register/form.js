@@ -12,6 +12,25 @@ const scope =
   "https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read";
 
 export default function Form() {
+  const animateOncardChange = () => {
+    document.getElementsByClassName("register")[0].animate(
+      [
+        {
+          transform: "rotate(0) scale(0.5)",
+          color: "#000",
+        },
+        { color: "#431236", offset: 0.3 },
+        {
+          transform: "rotateY(360deg) scale(1)",
+          color: "#000",
+        },
+      ],
+      {
+        duration: 300,
+        // iterations: Infinity,
+      }
+    );
+  };
   const navigate = useNavigate();
   const {
     register,
@@ -62,15 +81,17 @@ export default function Form() {
     console.log("FAILURE!!! res: ", res);
   };
 
-  useEffect(() => {}, [isGSignedIn]);
+  useEffect(() => {
+    animateOncardChange();
+  }, [isGSignedIn]);
 
   return (
     <>
       <div className="bg">
-        <div class="star-field">
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
+        <div className="star-field">
+          <div className="layer"></div>
+          <div className="layer"></div>
+          <div className="layer"></div>
           <div className="refisterForm">
             
             <div className="register">
