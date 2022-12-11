@@ -140,7 +140,7 @@
     border-radius: 150px;
     transition: all 0.5s ease-in-out;
     position: absolute;
-    top:-70px;
+    top:-75px;
     z-index: 10;
     display: flex;
     flex-direction: column;

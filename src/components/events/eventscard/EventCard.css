@@ -7,7 +7,7 @@
   backdrop-filter: blur(27px);
   position: fixed;
   top: 100%;
-    left: 50%;
+  left: 50%;
   border-radius: 40px;
   z-index: 2;
   transition: all 0.1s ease-in-out;
@@ -54,7 +54,7 @@
   backdrop-filter: blur(20px);
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
-  left: 13% !important;
+  left: 13%;
   top: 11%;
   border-radius: 40px;
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -71,6 +71,7 @@
 .event-detais-card h1 {
   color: #f2f2f2;
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
   font-size: 3.5rem;
   top: 0;
   display: inline;
