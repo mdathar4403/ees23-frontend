@@ -54,13 +54,11 @@
     display: block;
   }
 
-  
 }
 @font-face {
   font-family: first-font;
   src: url(../../fonts/viata-extrabold-1.otf);
 }
-
 
 
 .fab-container {
@@ -77,13 +75,14 @@
   justify-content:space-around;
 	width: 90%;
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   left:4.5%;
   
 }
 .trapezoid h1 a{
   color:rgb(231, 223, 224);
   font-family: ngc292expand;
+  font-size: 2.1rem;
   text-decoration: none;
   font-weight: 150;
 }
