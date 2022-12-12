@@ -55,7 +55,7 @@ export default function Form() {
     };
     const data = profdata;
     axios
-      .post("http://udyam.pythonanywhere.com/auth/google-login", header, data)
+      .post("https://udyam.pythonanywhere.com/auth/google-login", header, data)
       .then((resp) => {
         console.log(resp);
       });
