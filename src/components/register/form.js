@@ -50,9 +50,19 @@ export default function Form() {
   const postData = (profdata) => {
     console.log(profdata);
     const mobile = Number(profdata.phone_number);
+    const year = profdata.year;
     if (isNaN(mobile)) {
       console.log("wrong number");
+      toast.error("Invalid phone number", {
+        position: toast.POSITION.TOP_CENTER
+      });
       return;
+    }
+    if(!(["FIRST","SECOND","THIRD","FOURTH","FIFTH"].includes(year))) {
+      console.log("invalid year")
+      toast.error("Invalid year", {
+        position: toast.POSITION.TOP_CENTER
+      });
     }
     const header = {
       Authorization: token,
@@ -61,7 +71,10 @@ export default function Form() {
     axios
       .post("https://udyam.pythonanywhere.com/auth/google-login/", header, data)
       .then((resp) => {
-        console.log(resp);
+        console.log(resp.code);
+        toast.info(resp.code,{
+          position: toast.POSITION.TOP_CENTER
+        });
       });
     window.sessionStorage.setItem("registered_email:" + profdata.email, 1);
     navigate("/");
@@ -73,6 +86,9 @@ export default function Form() {
 
   const onGoogleLoginSuccess = (res) => {
     console.log("SUCCESS!!! Current User: ", res);
+    toast.success("Login Success", {
+      position: toast.POSITION.TOP_CENTER
+    });
     window.sessionStorage.setItem(
       "profileData",
       JSON.stringify(res.profileObj)
@@ -83,6 +99,9 @@ export default function Form() {
 
   const onGoogleLoginFailure = (res) => {
     console.log("FAILURE!!! res: ", res);
+    toast.error("Login Failure", {
+      position: toast.POSITION.TOP_CENTER
+    });
   };
 
   useEffect(() => {
