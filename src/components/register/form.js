@@ -162,7 +162,7 @@ export default function Form() {
                         placeholder="College/Institute"
                         name="college"
                         list="all_colleges"
-                        required={true}
+                        required
                       />
                       <datalist id="all_colleges">
                         <option value="AAA COLLEGE OF ENGINEERING AND TECHNOLOGY">
