@@ -186,38 +186,24 @@ export default function Form() {
                         required
                       />
                       <Collegelist id="all_colleges" />
-                      <input
-                        list="years"
+                      <select 
+                        id="years"
                         {...register("year")}
-                        placeholder="Year"
                         required
-                      />
-                      <datalist id="years">
+                      >
+                        <option id='select-heading' value="" disabled selected hidden>Year</option>
                         <option value="FIRST">First</option>
                         <option value="SECOND">Second</option>
                         <option value="THIRD">Third</option>
                         <option value="FOURTH">Fourth</option>
                         <option value="FIFTH">Fifth</option>
-                      </datalist>
+                      </select>
                       <input
                         type="text"
                         {...register("branch")}
                         placeholder="Branch"
                         required
                       />
-                      {errors.mobile?.type === "required" &&
-                        "Some Fields are missing!!!"}
-                      {errors.college_name?.type === "required" &&
-                        "College Name is required"}
-                      {errors.mobile?.type === "valueAsNumber" &&
-                        "Enter correct mobile Number"}
-                      {errors.year?.type === "required" && "Year is required"}
-                      {errors.branch?.type === "required" &&
-                        "Branch is required"}
-                      {errors.Password?.type === "required" &&
-                        "password is required"}
-                      {errors.ConfirmPassword?.type === "required" &&
-                        "confirm password is required"}
                       <AnimatedButton className="signinbtn" text={"Register"} />
                       <ToastContainer />
                     </form>
