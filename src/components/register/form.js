@@ -71,9 +71,9 @@ export default function Form() {
       .post("https://udyam.pythonanywhere.com/auth/google-login/", header, data)
       .then((resp) => {
         console.log(resp);
-        toast.info(resp,{
-          position: toast.POSITION.TOP_CENTER
-        });
+        // toast.info(resp,{
+        //   position: toast.POSITION.TOP_CENTER
+        // });
       });
     window.sessionStorage.setItem("registered_email:" + profdata.email, 1);
     navigate("/");
