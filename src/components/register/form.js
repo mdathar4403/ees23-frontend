@@ -10,7 +10,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Collegelist from "./collegelist";
 
-
 const clientId = process.env.REACT_APP_CLIENT_ID;
 const scope =
   "https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read";
@@ -42,7 +41,6 @@ export default function Form() {
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
   const [isGSignedIn, setisGSignedIn] = useState(0);
 
   const profileData = window.sessionStorage.getItem("profileData");
@@ -63,6 +61,7 @@ export default function Form() {
       toast.error("Invalid year", {
         position: toast.POSITION.TOP_CENTER
       });
+      return;
     }
     const header = {
       Authorization: token,
@@ -71,8 +70,8 @@ export default function Form() {
     axios
       .post("https://udyam.pythonanywhere.com/auth/google-login/", header, data)
       .then((resp) => {
-        console.log(resp.code);
-        toast.info(resp.code,{
+        console.log(resp);
+        toast.info(resp,{
           position: toast.POSITION.TOP_CENTER
         });
       });
@@ -181,10 +180,10 @@ export default function Form() {
                       />
                       <input
                         type="text"
+                        list="all_colleges"
                         {...register("college_name")}
                         placeholder="College/Institute"
                         name="college"
-                        list="all_colleges"
                         required
                       />
                       <Collegelist id="all_colleges" />
@@ -221,6 +220,7 @@ export default function Form() {
                       {errors.ConfirmPassword?.type === "required" &&
                         "confirm password is required"}
                       <AnimatedButton className="signinbtn" text={"Register"} />
+                      <ToastContainer />
                     </form>
                   </>
                 )}
