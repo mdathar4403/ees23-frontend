@@ -144,7 +144,7 @@ select:invalid {
 
 #form >  input, #form > select,  .signinbtn{
   border: 1px solid #e9ecef;
-  padding: .9em 1em;
+  padding: .5em 1em;
 }
 
 #form > input:focus, #form > select:focus{
