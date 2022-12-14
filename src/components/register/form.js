@@ -198,7 +198,6 @@ export default function Form() {
                     placeholder={JSON.parse(profileData).givenName}
                     readOnly
                   />
-
                   <input
                     type="text"
                     {...register("email")}
