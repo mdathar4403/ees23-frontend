@@ -42,7 +42,6 @@ export default function Form() {
     formState: { errors },
   } = useForm();
   const [isGSignedIn, setisGSignedIn] = useState(0);
-
   const profileData = window.sessionStorage.getItem("profileData");
   const token = window.sessionStorage.getItem("tokenId");
   const postData = (profdata) => {
@@ -181,7 +180,7 @@ export default function Form() {
                       <input
                         type="text"
                         list="all_colleges"
-                        {...register("college_name")}
+                        {...register("college")}
                         placeholder="College/Institute"
                         name="college"
                         required
