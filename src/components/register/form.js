@@ -215,8 +215,8 @@ export default function Form() {
                     type="text"
                     {...register("phone_number", { valueAsNumber: true })}
                     placeholder="Whatsapp Number"
-                    pattern="/^(?:(?:\+|0{0,2})91(\s*|[\-])?|[0]?)?([6789]\d{2}([ -]?)\d{3}([ -]?)\d{4})$/"
-                    title="A 10 digit valid number is required"
+                    pattern="^[6-9]\d{9}$"
+                    title="A valid number is required"
                     required
                   />
                   <input
