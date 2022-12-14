@@ -191,7 +191,7 @@ export default function Form() {
                         {...register("year")}
                         required
                       >
-                        <option id='select-heading' value="" disabled selected hidden>Year</option>
+                        <option value="" disabled selected hidden>Year</option>
                         <option value="FIRST">First</option>
                         <option value="SECOND">Second</option>
                         <option value="THIRD">Third</option>
