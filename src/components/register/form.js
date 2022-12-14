@@ -108,6 +108,8 @@ export default function Form() {
 
   const onGoogleLoginSuccess = (res) => {
     console.log("SUCCESS!!! Current User: ", res);
+    setTimeout(() => {
+
     toast.success("Login Success", {
       theme: "dark",
       position:
@@ -116,6 +118,7 @@ export default function Form() {
           : toast.POSITION.TOP_RIGHT,
       autoClose: 1200,
     });
+    }, 1000);
     window.sessionStorage.setItem(
       "profileData",
       JSON.stringify(res.profileObj)
