@@ -19,6 +19,13 @@
 
 }
 
+@media screen and (max-width: 800px) {
+  .animated-button1 {
+    font-size: 15px;
+    padding: 10px 30px;
+  }
+}
+
 .animated-button1::before {
   content: '';
   position: absolute;
