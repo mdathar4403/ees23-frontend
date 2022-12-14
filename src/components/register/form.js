@@ -43,7 +43,6 @@ export default function Form() {
   } = useForm();
   const [isGSignedIn, setisGSignedIn] = useState(0);
   const profileData = window.sessionStorage.getItem("profileData");
-  const token = window.sessionStorage.getItem("tokenId");
   const postData = (profdata) => {
     console.log(profdata);
     const mobile = Number(profdata.phone_number);
@@ -72,12 +71,12 @@ export default function Form() {
       });
       return;
     }
-    const header = {
-      Authorization: token,
-    };
-    const data = profdata;
-    axios
-      .post("https://udyam.pythonanywhere.com/auth/google-login/", header, data)
+    axios({
+      url:"https://udyam.pythonanywhere.com/auth/google-login/",
+      method:"post",
+      headers:{'Authorization': window.sessionStorage.getItem("tokenId")},
+      data:profdata
+    })
       .then((resp) => {
         console.log(resp);
         toast.success("Registered Successfully", {
@@ -91,14 +90,18 @@ export default function Form() {
         window.sessionStorage.setItem("registered_email:" + profdata.email, 1);
         navigate("/");
       }).catch((err) => {
-        toast.error(err.message, {
-          theme: "dark",
-          position:
-            window.innerWidth < 600
-              ? toast.POSITION.BOTTOM_CENTER
-              : toast.POSITION.TOP_RIGHT,
-          autoClose: 1200,
-        });
+        console.log(err.response.data)
+        Object.keys(err.response.data).forEach(function(key) {
+          toast.error(key+" : "+err.response.data[key], {
+            theme: "dark",
+            position:
+              window.innerWidth < 600
+                ? toast.POSITION.BOTTOM_CENTER
+                : toast.POSITION.TOP_RIGHT,
+            autoClose: 1200,
+          });
+         });
+        
         });
   };
 
@@ -212,14 +215,16 @@ export default function Form() {
                     type="text"
                     {...register("phone_number", { valueAsNumber: true })}
                     placeholder="Whatsapp Number"
+                    pattern="/^(?:(?:\+|0{0,2})91(\s*|[\-])?|[0]?)?([6789]\d{2}([ -]?)\d{3}([ -]?)\d{4})$/"
+                    title="A 10 digit valid number is required"
                     required
                   />
                   <input
                     type="text"
                     list="all_colleges"
-                    {...register("college")}
+                    {...register("college_name")}
                     placeholder="College/Institute"
-                    name="college"
+                    name="college_name"
                     required
                   />
                   <Collegelist id="all_colleges" />
