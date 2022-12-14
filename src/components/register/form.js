@@ -51,14 +51,24 @@ export default function Form() {
     if (isNaN(mobile)) {
       console.log("wrong number");
       toast.error("Invalid phone number", {
-        position: toast.POSITION.TOP_CENTER
+        theme: "dark",
+        position:
+          window.innerWidth < 600
+            ? toast.POSITION.BOTTOM_CENTER
+            : toast.POSITION.TOP_RIGHT,
+        autoClose: 1200,
       });
       return;
     }
     if(!(["FIRST","SECOND","THIRD","FOURTH","FIFTH"].includes(year))) {
       console.log("invalid year")
       toast.error("Invalid year", {
-        position: toast.POSITION.TOP_CENTER
+        theme: "dark",
+        position:
+          window.innerWidth < 600
+            ? toast.POSITION.BOTTOM_CENTER
+            : toast.POSITION.TOP_RIGHT,
+        autoClose: 1200,
       });
       return;
     }
@@ -70,12 +80,26 @@ export default function Form() {
       .post("https://udyam.pythonanywhere.com/auth/google-login/", header, data)
       .then((resp) => {
         console.log(resp);
-        // toast.info(resp,{
-        //   position: toast.POSITION.TOP_CENTER
-        // });
-      });
-    window.sessionStorage.setItem("registered_email:" + profdata.email, 1);
-    navigate("/");
+        toast.success("Registered Successfully", {
+          theme: "dark",
+          position:
+            window.innerWidth < 600
+              ? toast.POSITION.BOTTOM_CENTER
+              : toast.POSITION.TOP_RIGHT,
+          autoClose: 1200,
+        });
+        window.sessionStorage.setItem("registered_email:" + profdata.email, 1);
+        navigate("/");
+      }).catch((err) => {
+        toast.error(err.message, {
+          theme: "dark",
+          position:
+            window.innerWidth < 600
+              ? toast.POSITION.BOTTOM_CENTER
+              : toast.POSITION.TOP_RIGHT,
+          autoClose: 1200,
+        });
+        });
   };
 
   const goBack = () => {
@@ -85,7 +109,12 @@ export default function Form() {
   const onGoogleLoginSuccess = (res) => {
     console.log("SUCCESS!!! Current User: ", res);
     toast.success("Login Success", {
-      position: toast.POSITION.TOP_CENTER
+      theme: "dark",
+      position:
+        window.innerWidth < 600
+          ? toast.POSITION.BOTTOM_CENTER
+          : toast.POSITION.TOP_RIGHT,
+      autoClose: 1200,
     });
     window.sessionStorage.setItem(
       "profileData",
@@ -98,7 +127,12 @@ export default function Form() {
   const onGoogleLoginFailure = (res) => {
     console.log("FAILURE!!! res: ", res);
     toast.error("Login Failure", {
-      position: toast.POSITION.TOP_CENTER
+      theme: "dark",
+      position:
+        window.innerWidth < 600
+          ? toast.POSITION.BOTTOM_CENTER
+          : toast.POSITION.TOP_RIGHT,
+      autoClose: 1200,
     });
   };
 
@@ -113,107 +147,110 @@ export default function Form() {
           <div className="layer"></div>
           <div className="layer"></div>
           <div className="layer"></div>
-          <div className="refisterForm">
-            
-            <div className="register">
-              <a href="#" className="close" onClick={goBack}></a>
-              <div className="col-left">
-                {isGSignedIn === 0 && (
-                  <>
-                    <h1>
-                      <strong className="register-heading">Sign in</strong>
-                    </h1>
-                    <div className="g-sign-in-button">
-                      <div className="register-button">
-                        <GoogleLogin
-                          accessType="online"
-                          disabled={false}
-                          client_id={clientId} // your Google app client ID
-                          buttonText="Sign in with Google"
-                          onSuccess={onGoogleLoginSuccess} // perform your user logic here
-                          onFailure={onGoogleLoginFailure} // handle errors here
-                          cookiePolicy={"single-host-origin"}
-                          isSignedIn={true}
-                          scope={scope}
-                        />
-                      </div>
-                    </div>
-                    <h6 className="mt-4" style={{ color: "white" }}>
-                      Don't worry your data is kept confidential with us.
-                      <br></br>By continuing further you are subscribing to our
-                      newsletter.{" "}
-                    </h6>
-                  </>
-                )}
+        </div>
+      </div>
+      <div className="refisterForm">
+        <div className="register">
+          <a href="#" className="close" onClick={goBack}></a>
+          <div className="col-left">
+            {isGSignedIn === 0 && (
+              <>
+                <h1>
+                  <strong className="register-heading">Sign in</strong>
+                </h1>
+                <div className="g-sign-in-button">
+                  <div className="register-button">
+                    <GoogleLogin
+                      accessType="online"
+                      disabled={false}
+                      client_id={clientId} // your Google app client ID
+                      buttonText="Sign in with Google"
+                      onSuccess={onGoogleLoginSuccess} // perform your user logic here
+                      onFailure={onGoogleLoginFailure} // handle errors here
+                      cookiePolicy={"single-host-origin"}
+                      isSignedIn={true}
+                      scope={scope}
+                    />
+                  </div>
+                </div>
+                <h6 className="mt-4" style={{ color: "white" }}>
+                  Don't worry your data is kept confidential with us.
+                  <br></br>By continuing further you are subscribing to our
+                  newsletter.{" "}
+                </h6>
+              </>
+            )}
 
-                {isGSignedIn === 1 && (
-                  <>
-                    <h1>
-                      <strong className="register-heading">Register</strong>
-                    </h1>
-                    <form
-                      id="form"
-                      className="flex flex-col"
-                      onSubmit={handleSubmit((data) => postData(data))}
+            {isGSignedIn === 1 && (
+              <>
+                <h1>
+                  <strong className="register-heading">Register</strong>
+                </h1>
+                <form
+                  id="form"
+                  className="flex flex-col"
+                  onSubmit={handleSubmit((data) => postData(data))}
+                >
+                  <input
+                    type="text"
+                    {...register("name")}
+                    value={JSON.parse(profileData).givenName}
+                    placeholder={JSON.parse(profileData).givenName}
+                    readOnly
+                  />
+
+                  <input
+                    type="text"
+                    {...register("email")}
+                    value={JSON.parse(profileData).email}
+                    placeholder={JSON.parse(profileData).email}
+                    readOnly
+                  />
+                  <input
+                    type="text"
+                    {...register("phone_number", { valueAsNumber: true })}
+                    placeholder="Whatsapp Number"
+                    required
+                  />
+                  <input
+                    type="text"
+                    list="all_colleges"
+                    {...register("college")}
+                    placeholder="College/Institute"
+                    name="college"
+                    required
+                  />
+                  <Collegelist id="all_colleges" />
+                  <select id="years" {...register("year")} required>
+                    <option
+                      id="select-heading"
+                      value="Choose Year"
+                      disabled
+                      selected
+                      hidden
                     >
-                      <input
-                        type="text"
-                        {...register("name")}
-                        value={JSON.parse(profileData).givenName}
-                        placeholder={JSON.parse(profileData).givenName}
-                        readOnly
-                      />
-
-                      <input
-                        type="text"
-                        {...register("email")}
-                        value={JSON.parse(profileData).email}
-                        placeholder={JSON.parse(profileData).email}
-                        readOnly
-                      />
-                      <input
-                        type="text"
-                        {...register("phone_number", { valueAsNumber: true })}
-                        placeholder="Whatsapp Number"
-                        required
-                      />
-                      <input
-                        type="text"
-                        list="all_colleges"
-                        {...register("college")}
-                        placeholder="College/Institute"
-                        name="college"
-                        required
-                      />
-                      <Collegelist id="all_colleges" />
-                      <select 
-                        id="years"
-                        {...register("year")}
-                        required
-                      >
-                        <option id='select-heading' value="" disabled selected hidden>Year</option>
-                        <option value="FIRST">First</option>
-                        <option value="SECOND">Second</option>
-                        <option value="THIRD">Third</option>
-                        <option value="FOURTH">Fourth</option>
-                        <option value="FIFTH">Fifth</option>
-                      </select>
-                      <input
-                        type="text"
-                        {...register("branch")}
-                        placeholder="Branch"
-                        required
-                      />
-                      <AnimatedButton className="signinbtn" text={"Register"} />
-                      <ToastContainer />
-                    </form>
-                  </>
-                )}
-              </div>
-              <div className="col-right">
-                <img className="formimg" src={logo} alt="" />
-              </div>
-            </div>
+                      Year
+                    </option>
+                    <option value="FIRST">First</option>
+                    <option value="SECOND">Second</option>
+                    <option value="THIRD">Third</option>
+                    <option value="FOURTH">Fourth</option>
+                    <option value="FIFTH">Fifth</option>
+                  </select>
+                  <input
+                    type="text"
+                    {...register("branch")}
+                    placeholder="Branch"
+                    required
+                  />
+                  <AnimatedButton className="signinbtn" text={"Register"} />
+                  <ToastContainer  className="form-toast"/>
+                </form>
+              </>
+            )}
+          </div>
+          <div className="col-right">
+            <img className="formimg" src={logo} alt="" />
           </div>
         </div>
       </div>

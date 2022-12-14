@@ -107,12 +107,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px 0px;
 }
 
 #form input, #form select{
   border-radius: 5px;
   width: 80%;
+  max-height: 5vh !important;
 }
 
 .register-heading {
@@ -315,4 +317,17 @@
 .ees {
   color: rgba(189, 57, 68, 255);
   text-align: center;
+}
+
+@media screen and (max-width: 350px) {
+  .register-heading{
+    font-size: 11vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .form-toast{
+    height: 10% !important;
+    bottom: 20% !important;
+    width: 100% !important;
+  }
 }
