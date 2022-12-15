@@ -148,6 +148,7 @@ export default function Form() {
       })
       .catch((e) => {
         console.log(e);
+        setisGSignedIn(1);
         setTimeout(() => {
           toast.success("Login Success", {
             theme: "dark",
