@@ -11,7 +11,7 @@ import { ToastContainer } from "react-toastify";
 function Home() {
   return (
     <>
-    <ToastContainer className="toast-container" />
+      <ToastContainer className="toast-container" /> 
       <Header/>
       <div className="background">
         <div class="bg"></div>
@@ -38,7 +38,7 @@ function Home() {
 
           </div>
         </div>
-         <Event/>
+          <Event/>
       </div>
       <div className="event-list-main"></div>
       <Footer/>

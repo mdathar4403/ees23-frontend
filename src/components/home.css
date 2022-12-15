@@ -199,3 +199,12 @@ letter-spacing: 5px;
 .toast-container{
   bottom: 15% !important;
 }
+
+@media screen and (max-width: 600px) {
+  .toast-container{
+    position: fixed;
+    bottom: 10% !important;
+    width: 70% !important;
+    margin-left: 15% !important;
+  }
+}
