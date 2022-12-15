@@ -1,0 +1,188 @@
+.displayToggle{
+    display:none;
+  }
+  
+  
+  .container {
+      background: rgba(44, 51, 57, 0.6);
+      margin-right :17px;
+      width: 20%;
+      position: absolute;
+      right: 0%;
+      top: 18%;
+      height: 60%;
+      border-radius: 15px;
+      /* border: 1px solid rgb(157, 157, 157) ; */
+      overflow-y: hidden;
+      transition: all 0.5s ease-in-out;
+  }
+  
+  .container:hover{
+    cursor: default;
+  }
+  
+  .updateListParent{
+      overflow: hidden;
+  }
+  
+  .update-header {
+      color:rgb(228, 72, 72);
+      font-family: ngc292expand;
+      display: flex;
+      background: rgb(24, 29, 36);
+      justify-content: center;
+      font-size: 1rem;
+      padding: 20px 0px;
+      transition: all 0.4s ease-in-out;
+      position: relative ;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+  }
+  
+  .updateLink{
+    color: rgb(228, 72, 72);
+    text-decoration: none;
+  }
+  
+  .updateLink:hover{
+    color: rgb(177, 60, 60);
+    text-decoration: none;
+  }
+  
+  .updateList::-webkit-scrollbar {
+      display: none;
+    }
+  
+  .updateList{
+      height: 100%;
+  
+  }
+  
+  .update-in-list {
+      color:rgb(180, 180, 180);
+      background: rgba(0, 0, 0, 0.664);
+      margin: 5px;
+      padding: 5px 3px;
+      font-family: "Poppins", sans-serif;
+      border-radius: 5px;
+  }
+  
+  .animate {
+  
+          animation: my-animation 12s linear infinite;
+    }
+  
+  .pauseAni {
+      animation-play-state: paused;
+  }
+  
+  
+    @keyframes my-animation {
+      from {
+        -moz-transform: translateY(670px);
+        -webkit-transform: translateY(670px);
+        transform: translateY(670px);
+      }
+      to {
+        -moz-transform: translateY(-670px);
+        -webkit-transform: translateY(-670px);
+        transform: translateY(-670px);
+      }
+    }
+  
+  #update-btn-i{
+    color:rgb(255, 255, 255);
+      font-family: ngc292expand;
+      background: #BD3944;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+      position: absolute;
+      top: 15vw;
+      margin: 15px;
+      width: 50px;
+      height: 50px;
+      z-index: 5;
+  /* animation; */
+    animation: tilt-shaking 2s  infinite;
+    transform: rotate(0);
+  }
+  
+  #update-btn-x{
+    color:rgb(255, 255, 255);
+      font-family: ngc292expand;
+      background: #BD3944;
+      padding: 10px;
+      border-radius: 25px;
+      position: absolute;
+      top: 15vw;
+      margin: 15px;
+      width: 50px;
+      height: 50px;
+      z-index: 5;
+      display: none;
+  }
+  
+  #updates-icon-x{
+    margin: 2px;
+  }
+  
+  @keyframes tilt-shaking {
+    0% { transform: rotate(20deg); }
+    5% { transform: rotate(0deg); }
+    10% { transform: rotate(-20deg); }
+    15% { transform: rotate(0deg); }
+    20% { transform: rotate(20deg); }
+    25% { transform: rotate(0deg); }
+    30% { transform: rotate(-20deg); }
+    35% { transform: rotate( 0deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .update-btn:hover {
+   cursor: pointer;
+  }
+  
+  @media screen and (max-width:600px) {
+      .container{
+          position: fixed;
+          top: -100vh;
+          /* right:100vh; */
+          margin: 0 50vw;
+          backdrop-filter: blur(27px);
+          width: 0%;
+          height: 0%;
+          /* display: none; */
+          border: 1px solid white;
+          transition: all 0.5s ease-in-out;
+      }
+  
+      .container-active{
+        position: absolute;
+          top: 20vh;
+          margin: 0 10vw;
+          backdrop-filter: blur(27px);
+          width: 80%;
+          height: 60%;
+          /* display: block; */
+          border: 1px solid white;
+          transition: all 0.5s ease-in-out;
+      }
+  
+      .update-header {
+        /* backdrop-filter: blur(27px); */
+        /* background: rgba(24, 28, 31, 0.847) ; */
+        background-color: none;
+        margin:20px auto;
+        padding: 0;
+      }
+  }
+  
+  @media screen and (min-width:600px) {
+    .update-btn{
+      display: none;
+    }  
+  }
