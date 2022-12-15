@@ -138,7 +138,7 @@ export default function Form() {
                 : toast.POSITION.BOTTOM_RIGHT,
             autoClose: 1200,
           });
-        }, 1000);
+        }, 500);
 
         window.sessionStorage.setItem(
           "registered_email:" + res.profileObj.email,
