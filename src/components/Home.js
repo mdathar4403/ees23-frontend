@@ -7,6 +7,7 @@ import logo2 from "./images/eeslogored.png";
 import "./home.css";
 import Footer from "./footer/Footer";
 import { ToastContainer } from "react-toastify";
+import Updates from "./Updates/Updates";
 
 function Home() {
   return (
@@ -37,6 +38,7 @@ function Home() {
             <div id="come" className="coming-soon">COMING SOON</div>
 
           </div>
+          <Updates/>
         </div>
           <Event/>
       </div>
