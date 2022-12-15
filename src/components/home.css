@@ -195,4 +195,7 @@ letter-spacing: 5px;
       line-height: 100px;
     }
   }
- 
+
+.toast-container{
+  bottom: 15% !important;
+}

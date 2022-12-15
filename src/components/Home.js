@@ -6,10 +6,12 @@ import logo1 from "./images/eeslogo.svg";
 import logo2 from "./images/eeslogored.png";
 import "./home.css";
 import Footer from "./footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 function Home() {
   return (
     <>
+    <ToastContainer className="toast-container" />
       <Header/>
       <div className="background">
         <div class="bg"></div>
