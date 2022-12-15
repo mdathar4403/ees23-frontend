@@ -79,14 +79,17 @@ export default function Form() {
     })
       .then((resp) => {
         console.log(resp);
-        toast.success("Registered Successfully", {
-          theme: "dark",
-          position:
-            window.innerWidth < 600
-              ? toast.POSITION.BOTTOM_CENTER
-              : toast.POSITION.TOP_RIGHT,
-          autoClose: 1200,
-        });
+        
+        setTimeout(() => {
+          toast.success("Registered Successfully", {
+            theme: "dark",
+            position:
+              window.innerWidth < 600
+                ? toast.POSITION.BOTTOM_CENTER
+                : toast.POSITION.BOTTOM_RIGHT,
+            autoClose: 1200,
+          });
+        }, 1000);
         window.sessionStorage.setItem("registered_email:" + profdata.email, 1);
         navigate("/");
       }).catch((err) => {
