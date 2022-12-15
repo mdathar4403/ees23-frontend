@@ -111,23 +111,54 @@ export default function Form() {
 
   const onGoogleLoginSuccess = (res) => {
     console.log("SUCCESS!!! Current User: ", res);
-    setTimeout(() => {
-
-    toast.success("Login Success", {
-      theme: "dark",
-      position:
-        window.innerWidth < 600
-          ? toast.POSITION.BOTTOM_CENTER
-          : toast.POSITION.TOP_RIGHT,
-      autoClose: 1200,
-    });
-    }, 1000);
     window.sessionStorage.setItem(
       "profileData",
       JSON.stringify(res.profileObj)
     );
     window.sessionStorage.setItem("tokenId", res.tokenId);
-    setisGSignedIn(1);
+    const header = {
+      Authorization: res.tokenId,
+    };
+    axios({
+      url: "https://udyam.pythonanywhere.com/auth/google-login/",
+      method: "post",
+      headers: { Authorization: window.sessionStorage.getItem("tokenId") },
+      data: {
+        email: res.profileObj.email
+      },
+    })
+      .then((resp) => {
+        console.log(resp);
+        setTimeout(() => {
+          toast.success(resp.data.message, {
+            theme: "dark",
+            position:
+              window.innerWidth < 600
+                ? toast.POSITION.BOTTOM_CENTER
+                : toast.POSITION.BOTTOM_RIGHT,
+            autoClose: 1200,
+          });
+        }, 1000);
+
+        window.sessionStorage.setItem(
+          "registered_email:" + res.profileObj.email,
+          1
+        );
+        navigate("/");
+      })
+      .catch((e) => {
+        console.log(e);
+        setTimeout(() => {
+          toast.success("Login Success", {
+            theme: "dark",
+            position:
+              window.innerWidth < 600
+                ? toast.POSITION.BOTTOM_CENTER
+                : toast.POSITION.TOP_RIGHT,
+            autoClose: 1200,
+          });
+        }, 1000);
+      });
   };
 
   const onGoogleLoginFailure = (res) => {
@@ -236,7 +267,7 @@ export default function Form() {
                       selected
                       hidden
                     >
-                      Year
+                      Year 
                     </option>
                     <option value="FIRST">First</option>
                     <option value="SECOND">Second</option>
