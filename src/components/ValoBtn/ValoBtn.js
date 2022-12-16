@@ -9,7 +9,7 @@ const ValoBtn = () => {
           <button class="btn">
             <span class="btn__inner">
               <span class="btn__slide"></span>
-              <span class="btn__content">Regsiter</span>
+              <span class="btn__content">Register</span>
             </span>
           </button>
         </div>
