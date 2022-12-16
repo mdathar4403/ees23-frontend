@@ -140,27 +140,35 @@
     }
     .header-udyamfest-container-mobile{
         display: block;
-        /* z-index: 1; */
+       
         position: absolute;
         font-family: ngc292expand;
         color: white;
-        font-weight: 600;
-        font-size: 2.5vw;
+        font-weight: 100;
+        font-size: 2.7vw;
         letter-spacing: 0.8vw;
-        max-width: 30vw;
-        height: 3.5vw;
-        left: 21vw;
-        top: 23vw;
+        
+        height: 5vh;
+        width: 16vh;
+        left: -14vw;
+        top: 85vw;
+        transform: rotate(-90deg);
+        background-color: rgba(44, 51, 57, 0.4);
+        text-align: center;
+        border-radius: 4vw;
+
         
     }
     .header-udyamfest-container-link-mobile{
         display: block;
         text-decoration: none;
         color: white;
+        position: relative;
+        top: 4vw;
     }
     .header-udyamfest-container-link-mobile:hover{
         text-decoration: none;
-        color: white;
+        color: rgba(189, 57, 68, 255);
         text-shadow: 0 0 30px rgba(189, 57, 68, 255);
         cursor: pointer;
     }
