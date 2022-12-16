@@ -19,6 +19,9 @@
   left: 0;
   opacity: 0.3;
 }
+
+
+/* Valo Button Over */
 @keyframes sf-fly-by-1 {
   from {
     transform: translateZ(-600px);
@@ -116,51 +119,45 @@
   src: url("../fonts/ngc292expand.ttf");
 }
 
-.logo{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 23%;
+.logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 23%;
 }
 
 .logos {
   position: relative;
 }
 
-#come{
+#come {
+  font-family: secondFont;
+  font-weight: 600;
+  font-size: 5vh;
+  line-height: 115px;
+  /* identical to box height */
 
-font-family: secondFont;
-font-weight: 600;
-font-size: 5vh;
-line-height: 115px;
-/* identical to box height */
-
-
-background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-animation: animate 3s linear infinite;
-letter-spacing: 5px;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: animate 3s linear infinite;
+  letter-spacing: 5px;
 }
-.coming-soon-active{
+.coming-soon-active {
   display: none;
 }
 
-@keyframes animate{
-  0%{
-    text-shadow: 0 0 5px #A9A9A9,
-    0 0 10px #A9A9A9,
+@keyframes animate {
+  0% {
+    text-shadow: 0 0 5px #a9a9a9, 0 0 10px #a9a9a9;
     /* 0 0 15px #A9A9A9; */
   }
-  30%{
-    text-shadow: 0 0 8px #A9A9A9,
-    0 0 12px #A9A9A9,
-    0 0 2px #A9A9A9;
+  30% {
+    text-shadow: 0 0 8px #a9a9a9, 0 0 12px #a9a9a9, 0 0 2px #a9a9a9;
   }
-  
 }
 
 #eeslogored {
@@ -176,32 +173,31 @@ letter-spacing: 5px;
 }
 
 @media screen and (max-width: 1000px) {
-    #come{
-        font-size: 20px;
-        line-height: 90px;
-    }
-    .logo{
-      top: 23vh;
-      transform: scale(0.90);
-    }
-    
+  #come {
+    font-size: 20px;
+    line-height: 90px;
   }
+  .logo {
+    top: 23vh;
+    transform: scale(0.9);
+  }
+}
 @media screen and (min-width: 1000px) {
-    .logo{
-      top: 17%;
-      transform: scale(0.90);
-    }
-    #come {
-      line-height: 100px;
-    }
+  .logo {
+    top: 17%;
+    transform: scale(0.9);
   }
+  #come {
+    line-height: 100px;
+  }
+}
 
-.toast-container{
+.toast-container {
   bottom: 15% !important;
 }
 
 @media screen and (max-width: 600px) {
-  .toast-container{
+  .toast-container {
     position: fixed;
     bottom: 10% !important;
     width: 70% !important;

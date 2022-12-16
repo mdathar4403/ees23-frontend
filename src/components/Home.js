@@ -8,13 +8,19 @@ import "./home.css";
 import Footer from "./footer/Footer";
 import { ToastContainer } from "react-toastify";
 import Updates from "./Updates/Updates";
+import ValoBtn from "./ValoBtn/ValoBtn";
 
 function Home() {
   return (
     <>
-      <ToastContainer className="toast-container" /> 
-      <Header/>
+      <ToastContainer className="toast-container" />
+      <Header />
+     
+
       <div className="background">
+        
+       
+
         <div class="bg"></div>
         <div class="star-field">
           <div class="layer"></div>
@@ -22,28 +28,32 @@ function Home() {
           <div class="layer"></div>
           <div className="logo">
             <div className="logos">
-            <img
-              src={logo1}
-              height="310px"
-              alt=""
-              id="eeslogo"
-            />
-            <img
-              src={logo2}
-              height="310px"
-              alt=""
-              id="eeslogored"
-            />
+              <img
+                src={logo1}
+                height="310px"
+                alt=""
+                id="eeslogo"
+              />
+              <img
+                src={logo2}
+                height="310px"
+                alt=""
+                id="eeslogored"
+              />
             </div>
+
+
             <div id="come" className="coming-soon">COMING SOON</div>
 
           </div>
-          <Updates/>
+          <ValoBtn/>
+          <Updates />
+          
         </div>
-          <Event/>
+        <Event />
       </div>
       <div className="event-list-main"></div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
