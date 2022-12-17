@@ -149,8 +149,8 @@
         letter-spacing: 0.8vw;
         
         height: 5vh;
-        width: 18vh;
-        left: -16vw;
+        width: 23vh;
+        left: -20vw;
         top: 103vw;
         transform: rotate(-90deg);
         background-color: rgba(44, 51, 57, 0.4);
@@ -164,7 +164,7 @@
         text-decoration: none;
         color: white;
         position: relative;
-        top: 4vw;
+        top: 3.5vw;
     }
     .header-udyamfest-container-link-mobile:hover{
         text-decoration: none;
