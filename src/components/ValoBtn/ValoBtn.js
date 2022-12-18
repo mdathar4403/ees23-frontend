@@ -14,7 +14,7 @@ const ValoBtn = () => {
             <span class="btn__inner">
               <span class="btn__slide"></span>
               <span class="btn__content">
-                <img src={valo} className="img-valo" alt="valo" />
+                {/* <img src={valo} className="img-valo" alt="valo" /> */}
                 Registration Open
               </span>
             </span>
