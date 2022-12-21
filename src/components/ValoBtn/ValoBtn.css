@@ -159,6 +159,10 @@
     color: var(--button-text-color-hover);
   }
   
+  .btn:hover .img-valo{
+    filter: brightness(0) invert(1);
+  }
+
   .btn:hover .btn__slide {
     width: calc(100% + 15px);
   }

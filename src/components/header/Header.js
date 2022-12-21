@@ -1,7 +1,9 @@
 import './Header.css';
 // import { Register } from './Register';
 // import './Register.css';
-import { GoogleLogin } from "react-google-login";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { GoogleLogout } from "react-google-login";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -16,12 +18,27 @@ function Header() {
     navigate("/register",
     );
   }
+  const logout = event => {
+    window.sessionStorage.removeItem("registered_email");
+    setTimeout(() => {
+      toast.success("Logout was successfull!", {
+        theme: "dark",
+        position:
+          window.innerWidth < 600
+            ? toast.POSITION.BOTTOM_CENTER
+            : toast.POSITION.BOTTOM_RIGHT,
+        autoClose: 1200,
+      });
+    }, 1000);
+    navigate("/",);
+  }
+  console.log((window.sessionStorage.getItem("registered_email")));
   return (
     <>
       <div className="header-main-container">
         <div className="header-empty-div-1"></div>
         <div className="header-empty-div-2"></div>
-        
+
         <div className="header-element-container">
           <div className="header-empty-div-3"></div>
           <div className="header-empty-div-4"></div>
@@ -31,15 +48,24 @@ function Header() {
           <div className="header-udyamfest-container">
             <a className="header-udyamfest-container-link" href="https://udyamfest.com">udyamfest</a>
           </div>
-          <div className="header-button-container" onClick={handleClick}>
-            REGISTER
-          </div>
-
+          {(window.sessionStorage.getItem("registered_email") == null) && (
+            <div className="header-button-container" onClick={handleClick}>
+              REGISTER
+            </div>
+          )}
+          {(window.sessionStorage.getItem("registered_email")) && (
+            <GoogleLogout
+              clientId={clientId}
+              render={renderProps => (<div className="header-button-container" onClick={renderProps.onClick} disabled={renderProps.disabled}>Logout</div>)}
+              onLogoutSuccess={logout}
+            />
+          )
+          }
         </div>
       </div>
       <div className="header-udyamfest-container-mobile">
-          <a className="header-udyamfest-container-link-mobile" href="https://udyamfest.com">udyamfest</a>
-        </div>
+        <a className="header-udyamfest-container-link-mobile" href="https://udyamfest.com">udyamfest</a>
+      </div>
     </>
   );
 }

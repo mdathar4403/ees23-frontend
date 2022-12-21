@@ -5,7 +5,7 @@ import valo from './images/valorant.png'
 const ValoBtn = () => {
     return (
       <a
-        href="http://bit.ly/m/Mashal"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdxNETlYX_gUFUy172bkC8rx6Qsn_gvfC70wa2JTKsdRIYhGA/viewform"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -14,8 +14,8 @@ const ValoBtn = () => {
             <span class="btn__inner">
               <span class="btn__slide"></span>
               <span class="btn__content">
-                {/* <img src={valo} className="img-valo" alt="valo" /> */}
-                Registration Open
+                <img src={valo} className="img-valo" alt="valo" />
+                &nbsp; Registration Open
               </span>
             </span>
           </button>

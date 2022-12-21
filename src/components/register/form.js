@@ -90,7 +90,7 @@ export default function Form() {
             autoClose: 1200,
           });
         }, 1000);
-        window.sessionStorage.setItem("registered_email:" + profdata.email, 1);
+        window.sessionStorage.setItem("registered_email", profdata.email);
         navigate("/");
       }).catch((err) => {
         console.log(err.response.data)
@@ -144,8 +144,7 @@ export default function Form() {
         }, 500);
 
         window.sessionStorage.setItem(
-          "registered_email:" + res.profileObj.email,
-          1
+          "registered_email" , res.profileObj.email
         );
         navigate("/");
       })
@@ -172,7 +171,7 @@ export default function Form() {
       position:
         window.innerWidth < 600
           ? toast.POSITION.BOTTOM_CENTER
-          : toast.POSITION.TOP_RIGHT,
+          : toast.POSITION.BOTTOM_RIGHT,
       autoClose: 1200,
     });
   };
@@ -202,6 +201,7 @@ export default function Form() {
                 <div className="g-sign-in-button">
                   <div className="register-button">
                     <GoogleLogin
+                      theme="dark"
                       accessType="online"
                       disabled={false}
                       client_id={clientId} // your Google app client ID

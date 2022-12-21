@@ -6,6 +6,11 @@ const paragraph = [
   "Udgam is the Annual Cultural Festival of the department of Electronics Engineering, IIT (BHU) Varanasi. It brings you multifarious events that kindle your creative side and awaken your artistic self. EES introduced Udgam at the start of 2022 to provide a platform for participants to showcase their talents in non-technical fields like fine arts, dance, music, photography, and literature. Udgam is back again, bigger and brighter, and awaiting to witness the vigour its participants would bring to the stage. Get ready to manifest your artistry and let your creative self sparkle!",
   "Mashal is the sports festival of the department of Electronics Engineering, IIT (BHU) Varanasi.It offers a venue for all significant competitions and sports to foster good sportsmanship among the students.Even though it started last year, the event covers numerous sports, including Marathon, Chess, Valorant, Table Tennis, Basketball, Tennis, Football, Cricket, Badminton, Kabaddi, Athletics, and Tug of War. Mashal unleashes the competitive spirit of the nation's brightest minds and offers a perfect arena for sports enthusiasts to face off against one another. As said by Serena Williams, let's overpower, overtake and overcome!",
 ];
+const brochure_link = [
+  "https://drive.google.com/uc?export=download&id=1j_150yLyklyoox7N9oTF0KGnOEe8wxjQ",
+  "https://drive.google.com/uc?export=download&id=1WmHE7KF1EA7b7S4P0p5GPcImQdOZTou-",
+  "https://drive.google.com/uc?export=download&id=1bKTo2boXLOthmIz7Tg7kpS62mjF20r4s",
+];
 const handleUrls = [
   {
     ig: "https://www.instagram.com/udyam_iit_bhu/",
@@ -52,14 +57,22 @@ const EventCard = (props) => {
 
         <div className="card-items">
           <div className="event-logo">
-            <img src={imageUrl[props.data]} alt="" />
+              <img src={imageUrl[props.data]} alt="" />
           </div>
           <div className="event-content-container">
             <div
               className="event-content"
               style={{ width: "100%", top: "10%" }}
             >
-              <p className="para"> {paragraph[props.data]}</p>
+              <p className="para"> 
+                {paragraph[props.data]}<br></br>
+                <a 
+                  href={brochure_link[props.data]}
+                  style={{'text-decoration':'none'}}
+                >
+                  Download Brochure
+                </a>
+              </p>
             </div>
           </div>
         </div>
