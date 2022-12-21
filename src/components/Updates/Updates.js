@@ -8,7 +8,7 @@ const updatesArray = [
   //an object with id, text, link as keys
   {id:1,updateRegarrding : "UDYAM",text:' : Radianite Points System is live. For more information, ',link:"https://www.instagram.com/p/CmJLSrnjOSl/",},
   {id:2,updateRegarrding : "UDYAM",text:' : Workshop Phase 1  starting from 17th Dec',link:"",},
-  {id:3,updateRegarrding : "UDYAM",text:' : Unstop PR Insternships is live, ',link:"https://unstop.com/p/public-relations-internship-indian-institute-of-technology-iit-bhu-varanasi-550718",},  
+  {id:3,updateRegarrding : "UDYAM",text:' : Unstop PR Internships is live, ',link:"https://unstop.com/p/public-relations-internship-indian-institute-of-technology-iit-bhu-varanasi-550718",},  
   {id:4,updateRegarrding : "UDYAM",text:' : Trailer launch soon',link:"",},  
   {id:5,updateRegarrding : "UDGAM",text:' : Campusinpixels, Ridham and Ignite are live. To send your entries ',link:"https://linktr.ee/UDGAM_2023",},
   {id:6,updateRegarrding : "MASHAL",text:' : Chess Clash is live. To register, ',link:"https://docs.google.com/forms/d/e/1FAIpQLSf7m0oJo7SCBTkHmU0aCcXrClotG7FdLBswknxI7tOwm6sNaA/viewform",},  
