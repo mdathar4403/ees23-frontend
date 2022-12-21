@@ -20,6 +20,10 @@
   .container:hover{
     cursor: default;
   }
+
+  /* marquee{
+    overflow-y: auto;
+  } */
   
   .updateListParent{
       overflow: hidden;
@@ -54,15 +58,70 @@
       display: none;
     }
   
-  .updateList{
-      height: 100%;
+  .updateList, .updateList2{
+      /* height: 100%; */
   
   }
+
+  .update-in-list {
+    /* height:100px; */
+    /* width:58px; */
+    color: #ccc;
+    border: 1px solid #666;
+    /* position:absolute; */
+}
+#marId{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.updateList, .updateList2 {
+    /* height: 180px; */
+    width:90%;
+    border: solid 1px black;
+    position: relative;
+    overflow: hidden;
+}
+.updateList {
+  /* display: inline-block; */
+  /* margin-top:20px; */
+  animation: marquee 10s linear infinite;
+}
+
+.updateList2 {
+  /* display: inline-block; */
+  /* margin-top: 20px; */
+  top: 100%;
+  /* display: none; */
+  animation: marquee2 10s linear infinite;
+  animation-delay: 5s;
+}
+
+@keyframes marquee {
+  from {
+    transform: translatey(100%);
+    /* top: 100%; */
+  }
+  to {
+    transform: translatey(-100%);
+    /* top: -100%; */
+  }
+}
+
+@keyframes marquee2 {
+  from {
+    transform: translatey(0%);
+  }
+  to {
+    transform: translatey(-200%);
+  }
+}
   
   .update-in-list {
       color:rgb(180, 180, 180);
       background: rgba(0, 0, 0, 0.664);
-      margin: 5px;
+      /* margin: 5px; */
       padding: 5px 3px;
       font-family: "Poppins", sans-serif;
       border-radius: 5px;
