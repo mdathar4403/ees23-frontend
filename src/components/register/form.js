@@ -59,7 +59,7 @@ export default function Form() {
       });
       return;
     }
-    if(!(["FIRST","SECOND","THIRD","FOURTH","FIFTH"].includes(year))) {
+    if (!(["FIRST", "SECOND", "THIRD", "FOURTH", "FIFTH"].includes(year))) {
       console.log("invalid year")
       toast.error("Invalid year", {
         theme: "dark",
@@ -72,14 +72,14 @@ export default function Form() {
       return;
     }
     axios({
-      url:"https://udyam.pythonanywhere.com/auth/google-login/",
-      method:"post",
-      headers:{'Authorization': window.sessionStorage.getItem("tokenId")},
-      data:profdata
+      url: "https://udyam.pythonanywhere.com/auth/google-login/",
+      method: "post",
+      headers: { 'Authorization': window.sessionStorage.getItem("tokenId") },
+      data: profdata
     })
       .then((resp) => {
         console.log(resp);
-        
+
         setTimeout(() => {
           toast.success("Registered Successfully", {
             theme: "dark",
@@ -94,8 +94,8 @@ export default function Form() {
         navigate("/");
       }).catch((err) => {
         console.log(err.response.data)
-        Object.keys(err.response.data).forEach(function(key) {
-          toast.error(key+" : "+err.response.data[key], {
+        Object.keys(err.response.data).forEach(function (key) {
+          toast.error(key + " : " + err.response.data[key], {
             theme: "dark",
             position:
               window.innerWidth < 600
@@ -103,9 +103,9 @@ export default function Form() {
                 : toast.POSITION.TOP_RIGHT,
             autoClose: 1200,
           });
-         });
-        
         });
+
+      });
   };
 
   const goBack = () => {
@@ -119,6 +119,15 @@ export default function Form() {
       JSON.stringify(res.profileObj)
     );
     window.sessionStorage.setItem("tokenId", res.tokenId);
+    toast.info("Please Wait", {
+      theme: "dark",
+      position:
+        window.innerWidth < 600
+          ? toast.POSITION.BOTTOM_CENTER
+          : toast.POSITION.TOP_RIGHT,
+      autoClose: 1200,
+    });
+
     const header = {
       Authorization: res.tokenId,
     };
@@ -144,23 +153,38 @@ export default function Form() {
         }, 500);
 
         window.sessionStorage.setItem(
-          "registered_email" , res.profileObj.email
+          "registered_email", res.profileObj.email
         );
         navigate("/");
       })
       .catch((e) => {
-        console.log(e);
-        setisGSignedIn(1);
         setTimeout(() => {
-          toast.success("Login Success", {
+          toast.warning("Registeration is temporarily closed. We apologize for the inconvenience.", {
             theme: "dark",
             position:
               window.innerWidth < 600
                 ? toast.POSITION.BOTTOM_CENTER
-                : toast.POSITION.TOP_RIGHT,
-            autoClose: 1200,
+                : toast.POSITION.BOTTOM_RIGHT,
+            autoClose: 3000,
           });
-        }, 1000);
+        }, 500);
+
+        window.sessionStorage.setItem(
+          "registered_email", res.profileObj.email
+        );
+        navigate("/");
+        // console.log(e);
+        // setisGSignedIn(1);
+        // setTimeout(() => {
+        //   toast.success("Login Success", {
+        //     theme: "dark",
+        //     position:
+        //       window.innerWidth < 600
+        //         ? toast.POSITION.BOTTOM_CENTER
+        //         : toast.POSITION.TOP_RIGHT,
+        //     autoClose: 1200,
+        //   });
+        // }, 1000);
       });
   };
 
@@ -219,6 +243,7 @@ export default function Form() {
                   <br></br>By continuing further you are subscribing to our
                   newsletter.{" "}
                 </h6>
+                <ToastContainer className="form-toast" />
               </>
             )}
 
@@ -271,7 +296,7 @@ export default function Form() {
                       selected
                       hidden
                     >
-                      Year 
+                      Year
                     </option>
                     <option value="FIRST">First</option>
                     <option value="SECOND">Second</option>
@@ -286,7 +311,7 @@ export default function Form() {
                     required
                   />
                   <AnimatedButton className="signinbtn" text={"Register"} />
-                  <ToastContainer  className="form-toast"/>
+                  <ToastContainer className="form-toast" />
                 </form>
               </>
             )}

@@ -20,16 +20,14 @@ function Header() {
   }
   const logout = event => {
     window.sessionStorage.removeItem("registered_email");
-    setTimeout(() => {
-      toast.success("Logout was successfull!", {
-        theme: "dark",
-        position:
-          window.innerWidth < 600
-            ? toast.POSITION.BOTTOM_CENTER
-            : toast.POSITION.BOTTOM_RIGHT,
-        autoClose: 1200,
-      });
-    }, 1000);
+    toast.success("Logout was successfull!", {
+      theme: "dark",
+      position:
+        window.innerWidth < 600
+          ? toast.POSITION.BOTTOM_CENTER
+          : toast.POSITION.BOTTOM_RIGHT,
+      autoClose: 1200,
+    });
     navigate("/",);
   }
   console.log((window.sessionStorage.getItem("registered_email")));

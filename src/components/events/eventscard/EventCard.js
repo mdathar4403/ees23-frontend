@@ -7,9 +7,9 @@ const paragraph = [
   "Mashal is the sports festival of the department of Electronics Engineering, IIT (BHU) Varanasi.It offers a venue for all significant competitions and sports to foster good sportsmanship among the students.Even though it started last year, the event covers numerous sports, including Marathon, Chess, Valorant, Table Tennis, Basketball, Tennis, Football, Cricket, Badminton, Kabaddi, Athletics, and Tug of War. Mashal unleashes the competitive spirit of the nation's brightest minds and offers a perfect arena for sports enthusiasts to face off against one another. As said by Serena Williams, let's overpower, overtake and overcome!",
 ];
 const brochure_link = [
-  "https://drive.google.com/uc?export=download&id=1j_150yLyklyoox7N9oTF0KGnOEe8wxjQ",
-  "https://drive.google.com/uc?export=download&id=1WmHE7KF1EA7b7S4P0p5GPcImQdOZTou-",
-  "https://drive.google.com/uc?export=download&id=1bKTo2boXLOthmIz7Tg7kpS62mjF20r4s",
+  "https://drive.google.com/uc?export=download&id=1MkbNbkPGYusBxit-fH1uQ3FNNiUIXbDt",
+  "https://drive.google.com/uc?export=download&id=1UwR9EB2AJb98KPfMHt4PEmuSsl9i97Og",
+  "https://drive.google.com/uc?export=download&id=1kS0tIVt7REbqBY8Cq1rUHnteFt3ktedt",
 ];
 const handleUrls = [
   {

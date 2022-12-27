@@ -9,17 +9,31 @@ import Footer from "./footer/Footer";
 import { ToastContainer } from "react-toastify";
 import Updates from "./Updates/Updates";
 import ValoBtn from "./ValoBtn/ValoBtn";
+import React, { useEffect } from 'react'
 
 function Home() {
+  let countDown = new Date('april 7, 2023 00:00:00').getTime();
+  let now = new Date().getTime();
+  let distance = countDown - now;
+  let text = [Math.ceil(distance / (24 * 60 * 60 * 1000)) + " DAYS LEFT", "COMING SOON"];
+  useEffect(() => {
+    const interval = setInterval(function () {
+      if (document.getElementById('come').innerText === text[0])
+        document.getElementById('come').innerText = text[1];
+      else document.getElementById('come').innerText = text[0];
+    }, 4000)
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <ToastContainer className="toast-container" />
       <Header />
-     
+
 
       <div className="background">
-        
-       
+
+
 
         <div class="bg"></div>
         <div class="star-field">
@@ -44,11 +58,10 @@ function Home() {
 
 
             <div id="come" className="coming-soon">COMING SOON</div>
-
           </div>
-          <ValoBtn/>
+          <ValoBtn />
           <Updates />
-          
+
         </div>
         <Event />
       </div>
