@@ -60,7 +60,6 @@ const Navbar = () => {
   const [eventLink, setEventLink] = useState(false);
   const [click, setclick] = useState(true);
   const [slideUdyam, setSlideUdyam] = useState(false);
-  console.log('client_id: ', clientId);
   function expand() {
     if (click) {
       document.querySelector('.nav-links').style.display = 'flex';
