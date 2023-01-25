@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+.speakers-container {
+  background-color: #001432;
+  color: #ffffff;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  z-index: 1;
+  width: 100vw;
+}
+.speakers-gradient {
+  position: absolute;
+  display: flex;
+  align-self: center;
+  width: 580px;
+  height: 610px;
+  top: 8rem;
+
+  background: radial-gradient(50% 50% at 50% 50%, rgba(118, 60, 172, 0.9) 0%, rgba(50, 15, 133, 0) 100%);
+}
+.speakers-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.speakers-heading {
+  font-size: 4rem;
+  margin: 5rem 0 1.5rem 0;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+}
+.speakers-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80vw;
+  height: auto;
+}
+.speakers-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1359px) {
+  .speakers-gradient {
+    top: 28rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .speakers-heading {
+    font-size: 3.5rem;
+  }
+  .speakers-gradient {
+    top: 9rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  .speakers-gradient {
+    width: 100%;
+  }
+  .speakers-heading {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .speakers-heading {
+    font-size: 2rem;
+  }
+}
