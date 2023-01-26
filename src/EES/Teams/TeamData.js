@@ -7,7 +7,7 @@ const TeamMemberName = [
   ['Shubhi Singh', 'Archit Soni', 'Pratishtha Dhiraj', 'P V Krishna Priya', 'Tarun Siddharth', 'Sakshi Tomar', 'Anusha Mahajan', 'Ritesh Lakra', 'Dharmesh Mahajan', 'Shrirang Gupta', 'Avani Jangid', 'Saket Kumar Singh'],
   ['Nishant Gounder', 'Pushpam Berlia', 'Harsh Singh', 'Deependra Singh'],
   ['Ayushi Gupta', 'Ankit', 'Shreyansh Jain', 'Shubham Kumar', 'Mohit Singh', 'Riya Chauhan', 'Amit Kumar', 'Harsh Kumar', 'Aditya Mishra', 'Anshu Soni', 'Shivam Raj', 'Harsh Saini', 'Shivom', 'Vaatsalya Sinha', 'Nikhil Aggarwal'],
-  ['Avinash Singh', 'Kuldeep Singh', 'Nikhil Kumar Singh', 'Bhavna Chavan', 'Priyanshu', 'Divyanshu', 'Ravi Kumar Meena', 'Jaya Kedia', 'Anupam Shukla', 'Vaibhav Gupta', 'Harshit Anand', 'Anshu Kumar', 'Utkarsh Kumar', 'Aditya chandel', 'Aditya kumar', 'Mendapara Khelankumar']
+  ['Avinash Singh', 'Priyanshu', 'Divyanshu', 'Ravi Kumar Meena', 'Jaya Kedia', 'Anupam Shukla', 'Vaibhav Gupta', 'Harshit Anand', 'Anshu Kumar', 'Utkarsh Kumar', 'Aditya chandel', 'Aditya kumar', 'Mendapara Khelankumar']
 ];
 const MemberImage = [
   [
@@ -88,7 +88,7 @@ const Designation = [
   ['Content Head', 'Coordinator', 'Coordinator', 'Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator'],
   ['Marketing Head', 'Coordinator', 'Coordinator', 'Coordinator'],
   ['Head', 'Coordinator', 'Coordinator', 'Coordinator', 'Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator'],
-  ['Head', 'Coordinator', 'Coordinator', 'Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator']
+  ['Head', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator']
 ];
 const TeamMemberDetails = [
   ['Fourth Yearite', 'Fourth Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite'],
@@ -98,7 +98,7 @@ const TeamMemberDetails = [
   ['Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite'],
   ['Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite'],
   ['Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite'],
-  ['Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite']
+  ['Third Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite']
 ];
 const ContactMail = [
   [
@@ -154,9 +154,6 @@ const ContactMail = [
   ],
   [
     'avinash.singh.ece20@itbhu.ac.in',
-    'kuldeep.singh.ece20@itbhu.ac.in',
-    'nikhil.kumarsingh.cd.ece20@itbhu.ac.in',
-    'bhavna.student.ece20@itbhu.ac.in',
     'priyanshu.student.ece21@itbhu.ac.in',
     'divyanshu.student.ece21@itbhu.ac.in',
     'ravikumar.meena.ece21@itbhu.ac.in',
@@ -182,7 +179,7 @@ const ContactInstagram = [
     'https://www.instagram.com/suhanii_97/?igshid=ZDdkNTZiNTM%3D',
     'https://www.instagram.com/ag_raghav26/',
     'https://instagram.com/_surya__ss?igshid=ZDdkNTZiNTM=',
-    '',
+    'https://www.instagram.com/akshit._.singla/',
     '',
     '',
     'https://www.instagram.com/raina_jainn/',
@@ -225,9 +222,6 @@ const ContactInstagram = [
   ],
   [
     'http://www.instagram.com/avinash.singh___',
-    '',
-    '',
-    '',
     'instagram.com/messy.medulla',
     'https://instagram.com/divyanshudevashish007?igshid=ZDdkNTZiNTM=',
     'https://www.instagram.com/ravi_kumar.5/',
@@ -254,7 +248,7 @@ const ContactLinkedIn = [
     'https://www.linkedin.com/in/suhani-agrawal-4030861bb/',
     'https://www.linkedin.com/in/ag-raghav26/',
     'https://www.linkedin.com/in/suryansh-singh-5b89461bb',
-    '',
+    'https://www.linkedin.com/in/akshit-singla-91b0aa220/',
     '',
     '',
     'https://www.linkedin.com/in/raina-jain-6b4b68143/',
@@ -297,9 +291,6 @@ const ContactLinkedIn = [
   ],
   [
     'https://www.linkedin.com/in/avinash-singh-a03b86224',
-    '',
-    '',
-    '',
     'https://www.linkedin.com/mwlite/in/paloxzz',
     'https://www.linkedin.com/in/divyanshu-devashish-186579230',
     'https://www.linkedin.com/in/ravi-kumar-meena-868150245/',
