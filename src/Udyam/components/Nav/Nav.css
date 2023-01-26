@@ -186,9 +186,13 @@
 #active {
   background: #4e4b4b;
 }
-.ees-div-img{
+.ees-div-img {
   position: absolute;
   bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 /* @media screen and (min-width: 800px){
         .udyam-ees-mobile{

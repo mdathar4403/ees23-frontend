@@ -3,14 +3,19 @@ import Navbar from '../Navbar/Navbar';
 import TeamMemberCard from './TeamMemberCard';
 import { TeamMemberName, TeamDomain, Designation, TeamMemberDetails, ContactInstagram, ContactMail, ContactLinkedIn, MemberImage } from './TeamData';
 import { useState } from 'react';
+
 const Teams = () => {
   const [TeamNumber, setTeamNumber] = useState(0);
-  const changeTeam = (event) => {
-    var num = event.target;
-    document.querySelector('.active').classList.remove('active');
-    num.classList.add('active');
-    console.log(num);
-    setTeamNumber(num.classList[1]);
+  const changeTeam = (num) => {
+    document.querySelector('.circle-active').classList.remove('circle-active');
+    document.getElementsByClassName('circle-box')[num].classList.add('circle-active');
+    setTimeout(function () {
+      document.getElementsByClassName('ct-main')[0].scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 50);
+    setTeamNumber(num);
   };
   let TeamArr = [];
   let ArrLen = Object.keys(TeamMemberName[TeamNumber]).length;
@@ -29,34 +34,62 @@ const Teams = () => {
             <h1>{TeamDomain[TeamNumber]}</h1>
             <div className="Team-cards-container">{TeamArr}</div>
           </div>
-          <div className="Teams-Nav">
-            <div className="Teams-Nav-1">
-              <div className="Teams-Nav-Item 0 active" onClick={changeTeam}>
-                CORE TEAM
-              </div>
-              <div className="Teams-Nav-Item 2" onClick={changeTeam}>
-                DEVELOPERS
-              </div>
-              <div className="Teams-Nav-Item 4" onClick={changeTeam}>
-                CONTENT & CREATIVE
-              </div>
-              <div className="Teams-Nav-Item 6" onClick={changeTeam}>
-                EXTERNAL AFFAIRS
-              </div>
+          <div className="scrollable-side">
+            <div
+              className="circle-box circle-active"
+              onClick={() => {
+                changeTeam(0);
+              }}>
+              <div className="circle-content">CORE TEAM</div>
             </div>
-            <div className="Teams-Nav-2">
-              <div className="Teams-Nav-Item 1" onClick={changeTeam}>
-                SENIOR ADVISORS
-              </div>
-              <div className="Teams-Nav-Item 3" onClick={changeTeam}>
-                DESIGNERS
-              </div>
-              <div className="Teams-Nav-Item 5" onClick={changeTeam}>
-                MARKETING
-              </div>
-              <div className="Teams-Nav-Item 7" onClick={changeTeam}>
-                PUBLIC RELATIONS
-              </div>
+            <div
+              className="circle-box"
+              onClick={() => {
+                changeTeam(1);
+              }}>
+              <div className="circle-content">SENIOR ADVISORS</div>
+            </div>
+            <div
+              className="circle-box"
+              onClick={() => {
+                changeTeam(2);
+              }}>
+              <div className="circle-content">DEVELOPERS</div>
+            </div>
+            <div
+              className="circle-box"
+              onClick={() => {
+                changeTeam(3);
+              }}>
+              <div className="circle-content">DESIGNERS</div>
+            </div>
+            <div
+              className="circle-box"
+              onClick={() => {
+                changeTeam(4);
+              }}>
+              <div className="circle-content">CONTENT & CREATIVE</div>
+            </div>
+            <div
+              className="circle-box"
+              onClick={() => {
+                changeTeam(5);
+              }}>
+              <div className="circle-content">MARKETING</div>
+            </div>
+            <div
+              className="circle-box"
+              onClick={() => {
+                changeTeam(6);
+              }}>
+              <div className="circle-content">EXTERNAL AFFAIRS</div>
+            </div>
+            <div
+              className="circle-box"
+              onClick={() => {
+                changeTeam(7);
+              }}>
+              <div className="circle-content">PUBLIC RELATIONS</div>
             </div>
           </div>
         </div>
