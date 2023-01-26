@@ -202,9 +202,6 @@ const Nav = (props) => {
       {(udyamName || true) && width < 800 && <Profile />}
       {(slideNav || width > 800) && (
         <div className="udyam-nav">
-          <div className="close" onClick={helloNav}>
-            <IoIosArrowBack />
-          </div>
 
           <div className="udyam-img">
             <Link to="/udyam" style={{ textDecoration: 'none' }}>
@@ -232,14 +229,14 @@ const Nav = (props) => {
                   render={(renderProps) => (
                     <Link to="#" className="game-changer" style={{ textDecoration: 'none' }} onClick={renderProps.onClick}>
                       <BiQrScan className="info" />
-                      <p>Name</p>
+                      <p>Register</p>
                     </Link>
                   )}
                 />
               ) : (
                 <Link to="/dashboard" className="game-changer" style={{ textDecoration: 'none' }}>
                   <BiQrScan className="info" />
-                  <p>Name</p>
+                  <p>Dashboard</p>
                 </Link>
               )}
               ;
@@ -284,38 +281,22 @@ const Nav = (props) => {
               </Link>
             </div>
           </div>
-          <div className="hovered ees-div-img">
-            <Link to="/" className="game-changer">
-              <img className="eesimg" src={ees} alt="hreo" />
-            </Link>
+          
+          <div className='expanded_btn'>
+            <div className="hovered ees-div-img">
+              <Link to="/" className="game-changer">
+                <img className="eesimg" src={ees} alt="hreo" />
+              </Link>
+            </div>
+            <div className="close" onClick={helloNav}>
+              <IoIosArrowBack />
+            </div>
           </div>
-          {/* <div className="udyam-ees">
-                    <img className='ees-img' src={ees} alt="hreo" />
-                </div> */}
         </div>
       )}
       <div className="menu-icon" onClick={menuNav}>
         <TfiMenu />
       </div>
-      {/* 
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-      
-              
-              
-              
-              
-              
-               */}
       {false && (
         <div className="token">
           <div className="back">

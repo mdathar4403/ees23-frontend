@@ -10,7 +10,7 @@ const TeamMemberCard = (props) => {
               <a href={props.LinkedIn}>
                 <img src="/assets/TeamsSectionImages/icons8-linkedin 2.svg" alt="" />
               </a>
-              <a href={props.Email}>
+              <a href={'mailto:' + props.Email}>
                 <img src="/assets/TeamsSectionImages/icons8-gmail-logo.svg" alt="" />
               </a>
               <a href={props.Instalink}>
@@ -27,7 +27,7 @@ const TeamMemberCard = (props) => {
           <a href={props.LinkedIn}>
             <img src="/assets/TeamsSectionImages/icons8-linkedin 2.svg" alt="" />
           </a>
-          <a href={props.Email}>
+          <a href={'mailto:' + props.Email}>
             <img src="/assets/TeamsSectionImages/icons8-gmail-logo.svg" alt="" />
           </a>
           <a href={props.Instalink}>

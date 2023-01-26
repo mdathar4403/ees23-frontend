@@ -137,6 +137,25 @@ p {
 .mobile-contact-links {
   display: none;
 }
+.team-card {
+  /* margin: 8vw 2vw; */
+  height: 45vh;
+  display: grid;
+}
+.content-on-hover {
+  display: none;
+}
+.mobile-contact-links {
+  display: block;
+  position: relative;
+  bottom: 0;
+}
+.mobile-contact-links a {
+  padding: 1vh;
+}
+.member-details {
+  padding: 1vh;
+}
 @media (max-width: 820px) {
   .team-members-main {
     flex-direction: column;
@@ -179,22 +198,7 @@ p {
     grid-template-columns: auto;
     margin: 0 auto;
   }
-  .team-card {
-    margin: 8vw 2vw;
-    height: 45vh;
-  }
-  .content-on-hover {
-    display: none;
-  }
-  .mobile-contact-links {
-    display: block;
-  }
-  .mobile-contact-links a {
-    padding: 1vh;
-  }
-  .member-details {
-    padding: 1vh;
-  }
+  
 }
 @media (max-width: 1200px) and (min-width: 600px) {
   .Team-cards-container {
