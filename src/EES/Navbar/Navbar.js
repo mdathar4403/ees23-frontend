@@ -4,6 +4,7 @@ import { BiChevronDown } from 'react-icons/bi';
 import { IoMdLogOut } from 'react-icons/io';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -178,14 +179,15 @@ const Navbar = () => {
                 </div>
               )}
               <li className="menu-item">
-                <a href="#sponsors" onClick={open}>
-                  Sponsors
-                </a>
+                <HashLink to="/#sponsors">
+                  <a onClick={open}>Sponsors</a>
+                </HashLink>
               </li>
               <li className="menu-item">
-                <a href="#speakers" onClick={open}>
-                  Speakers
-                </a>
+                {/*speakers*/}
+                <HashLink to="/#speakers">
+                  <a onClick={open}>Speakers</a>
+                </HashLink>
               </li>
               <li className="menu-item">
                 <Link to="/gallery">
@@ -194,7 +196,7 @@ const Navbar = () => {
               </li>
               <li className="menu-item">
                 <Link to="/team">
-                  <a href="/team">Team</a>
+                  <a>Team</a>
                 </Link>
               </li>
             </ul>
@@ -252,14 +254,14 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="#sponsors" onClick={expand}>
-                  Sponsors
-                </a>
+                <HashLink to="/#sponsors">
+                  <a onClick={open}>Sponsors</a>
+                </HashLink>
               </li>
               <li>
-                <a href="#speakers" onClick={expand}>
-                  Speakers
-                </a>
+                <HashLink to="/#speakers">
+                  <a onClick={open}>Speakers</a>
+                </HashLink>
               </li>
               <li>
                 <Link to="/gallery">
