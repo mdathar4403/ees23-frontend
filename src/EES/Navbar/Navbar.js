@@ -84,9 +84,6 @@ const Navbar = () => {
 
   function open() {
     document.querySelector('.header').classList.toggle('menu-opened');
-    setTimeout(function () {
-      document.getElementsByClassName('logout-btn')[0].classList.toggle('show-now');
-    }, 500);
   }
   function nameOfEvents() {
     setSlideUdyam(!slideUdyam);
@@ -114,18 +111,19 @@ const Navbar = () => {
               </div>
             </div>
 
-            <GoogleLogout
-              clientId={clientId}
-              theme="dark"
-              render={(renderProps) => (
-                <div className="logout-btn" onClick={renderProps.onClick}>
-                  <IoMdLogOut></IoMdLogOut>
-                </div>
-              )}
-              onLogoutSuccess={logout}
-            />
-
             <ul className="menu">
+              <li className="menu-item">
+                <GoogleLogout
+                  clientId={clientId}
+                  theme="dark"
+                  render={(renderProps) => (
+                    <div className="logout-btn" onClick={renderProps.onClick}>
+                      <IoMdLogOut></IoMdLogOut>
+                    </div>
+                  )}
+                  onLogoutSuccess={logout}
+                />
+              </li>
               <li className="menu-item">
                 <Link to="/" onClick={open}>
                   Home
