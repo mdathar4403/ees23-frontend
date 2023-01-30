@@ -1,33 +1,41 @@
 {
-  "name": "loading",
+  "name": "main-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.13",
-    "@mui/styled-engine-sc": "^5.10.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.1.3",
+    "axios": "^1.2.3",
+    "dotenv": "^16.0.3",
+    "framer-motion": "^8.4.6",
     "gapi-script": "^1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-google-login": "^5.2.2",
-    "react-hook-form": "^7.39.1",
-    "react-icons": "^4.6.0",
-    "react-router-dom": "^6.4.3",
+    "react-hook-form": "^7.42.1",
+    "react-icons": "^4.7.1",
+    "react-in-viewport": "^1.0.0-alpha.29",
+    "react-lazy-load-image-component": "^1.5.6",
+    "react-qr-code": "^2.0.11",
+    "react-router-dom": "^6.5.0",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.1",
-    "styled-components": "^5.3.6",
+    "reactstrap": "^9.1.5",
+    "three": "^0.148.0",
+    "three-globe": "^2.24.13",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +56,13 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "sass": "^1.56.2"
+=======
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "2.8.1"
+>>>>>>> def1de90cdf017a31f49c7d674ce86dce3d1f786
   }
 }
