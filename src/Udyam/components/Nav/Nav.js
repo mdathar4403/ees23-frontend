@@ -202,7 +202,6 @@ const Nav = (props) => {
       {(udyamName || true) && width < 800 && <Profile />}
       {(slideNav || width > 800) && (
         <div className="udyam-nav">
-
           <div className="udyam-img">
             <Link to="/udyam" style={{ textDecoration: 'none' }}>
               <img className="udyam-logo" src={udyam} alt="hero" />
@@ -281,8 +280,8 @@ const Nav = (props) => {
               </Link>
             </div>
           </div>
-          
-          <div className='expanded_btn'>
+
+          <div className="expanded_btn">
             <div className="hovered ees-div-img">
               <Link to="/" className="game-changer">
                 <img className="eesimg" src={ees} alt="hreo" />
