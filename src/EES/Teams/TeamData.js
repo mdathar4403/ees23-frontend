@@ -232,7 +232,6 @@ const ContactInstagram = [
     'https://instagram.com/anshukumar613?igshid=ZDdkNTZiNTM=',
     'https://instagram.com/utkarshkumar83958?igshid=ZDdkNTZiNTM=',
     'https://instagram.com/chande6526?igshid=ZDdkNTZiNTM=',
-
     'https://instagram.com/aadix__12?igshid=ZDdkNTZiNTM=',
     'https://www.instagram.com/kp_obviouslyop/'
   ]

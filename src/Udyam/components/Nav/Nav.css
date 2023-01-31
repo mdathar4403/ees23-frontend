@@ -186,7 +186,7 @@
 #active {
   background: #4e4b4b;
 }
-.ees-div-img{
+.ees-div-img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,18 +343,18 @@
     gap: 1rem;
   }
 }
-.expanded_btn{
+.expanded_btn {
   display: flex;
   flex-direction: row;
   margin-top: 78vh;
 }
-.expanded_btn div{
+.expanded_btn div {
   width: fit-content;
   margin: auto;
 }
 
 @media screen and (min-width: 800px) {
-  .close{
+  .close {
     display: none;
   }
 }
