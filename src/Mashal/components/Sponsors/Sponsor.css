@@ -7,11 +7,11 @@
   flex-direction: column;
   width: 100%;
   justify-content: flex-end;
-  height: 19vh;
+  height: 8rem;
   position: relative;
-  bottom: 19vh;
+  bottom: 8.1rem;
   opacity: 0;
-  border-radius: 40px;
+  border-radius: 30px;
   text-align: center;
   background-color: rgba(187, 204, 226, 0.7);
   -webkit-transition: all 0.4s ease-in-out 0s;
@@ -20,7 +20,7 @@
 }
 
 .mcontent:hover .details {
-  top: -15px;
+  top: -30px;
   opacity: 1;
 }
 .mcontent:hover {
@@ -34,8 +34,8 @@
 
 .details {
   position: relative;
-  color: rgb(31, 24, 25);
-  top: 20%;
+  color: #161616;
+  top: 21%;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
@@ -48,7 +48,7 @@
   /* width: 84vw; */
   position: relative;
   top: 10%;
-  height: 100vh;
+  min-height: 100vh;
   /* margin: auto; */
   background-image: url('./images//BG.png');
   background-position: center;
@@ -57,12 +57,13 @@
 }
 .msponser img {
   height: 8rem;
-  border-radius: 40px;
+  border-radius: 30px;
+  box-shadow: 0 6px 6px grey;
 }
 .msponsers h1 {
   display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 0;
+  margin-top: 10vh;
+  margin-bottom: 10px;
   position: relative;
   font-size: 60px;
   font-weight: 500;
@@ -82,48 +83,68 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 84%;
-  height: 80vh;
+  height: 75vh;
+  overflow-y: auto;
 }
 .msponser {
   display: inline-block;
   width: 18%;
   margin: 5%;
   height: 20vh;
-}
-.msponser img {
-  height: 18vh;
+  top: 15%;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  border-radius: 30px;
 }
 
-.msponser1 img {
-  box-shadow: 0 5px 5px 5px white;
+/* #msponser1 img {
+  box-shadow:  5px 5px  white;
 }
-.msponser2 img {
-  box-shadow: 0 5px 5px 5px white;
+#msponser2 img {
+  box-shadow:  5px 5px  white;
 }
-.msponser3 img {
-  box-shadow: 0 5px 5px 5px white;
+#msponser3 img {
+  box-shadow:  5px 5px  white;
 }
-.msponser4 img {
-  box-shadow: 0 5px 5px 5px white;
+#msponser4 img {
+  box-shadow:  5px 5px  white;
 }
-.msponser5 img {
-  box-shadow: 0 5px 5px 5px black;
+#msponser5 img {
+  box-shadow:  5px 5px  black;
 }
-.msponser6 img {
-  box-shadow: 0 5px 5px 5px white;
-}
+#msponser6 img {
+  box-shadow:  5px -5px 5px  5px white;
+} */
 
 @media (max-width: 428px) {
   .msponser {
-    width: 80%;
-    /* height: 45vh; */
+    width: 55%;
+    position: relative;
+    top: 31%;
+  }
+  .msponsers {
+    background-image: url('./images/FAIN.png');
+    height: 100vh;
+  }
+  .msponser {
+    opacity: 0.5;
+  }
+  .scale {
+    transform: scale(1.5);
+    opacity: 1;
   }
   msponsers h1 {
     font-size: 3rem;
+    margin-bottom: 30px;
   }
   .msponsorBox {
-    overflow-y: auto;
     height: 90vh;
+    padding-bottom: 100%;
+    padding-top: 50%;
+    width: 100%;
+    background-image: none;
+    background: none;
   }
   .details {
     padding: 25px;
