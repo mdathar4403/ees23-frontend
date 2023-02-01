@@ -13,7 +13,7 @@ import vaibhavsinha from './landing-images/vaibhavsinha.jpg';
 import './main-page.css';
 function UDGmain() {
   const arrimg = [muskangupta, amansingh, yogyatasingh, raghavagarwal, khushikapoor, kuldeep, priyanshu, sudarshanyadav, vaibhavsinha];
-  const names = ['Muskan Gupta', 'Aman Singh', 'Yogyata Singh', 'Raghav Agrawal', 'Khushi Kapoor', 'Kuldeep', 'priyanshu', 'sudarshanyadav', 'vaibhavsinha'];
+  const names = ['Muskan Gupta', 'Aman Singh', 'Yogyata Singh', 'Raghav Agrawal', 'Khushi Kapoor', 'Kuldeep', 'Priyanshu', 'Sudarshan Yadav', 'Vaibhav Sinha'];
   const [counter, setCounter] = useState(0);
   // const arr = ['100vw', '0vw', '0vw', '0vw', '0vw', '0vw'];
   let interval = 0;
