@@ -70,7 +70,7 @@ const Sponsors = () => {
           <div style={{ height: '0' }}>
             <img className="img" src={cisco} alt="" style={{ width: '100%' }} />
             <div className="mcontent">
-              <div className="details">
+              <div className="mdetails">
                 <h3>CISCO</h3>
                 <p>Take your client onboard seamlessly. </p>
               </div>
@@ -81,7 +81,7 @@ const Sponsors = () => {
           <div style={{ height: '0' }}>
             <img src={coins} alt="" style={{ width: '100%' }} />
             <div className="mcontent">
-              <div className="details">
+              <div className="mdetails">
                 <h3>COINSWITCH</h3>
                 <p>Take your client onboard seamlessly.</p>
               </div>
@@ -92,7 +92,7 @@ const Sponsors = () => {
           <div style={{ height: '0' }}>
             <img src={mentor} alt="" style={{ width: '100%' }} />
             <div className="mcontent">
-              <div className="details">
+              <div className="mdetails">
                 <h3>MENTOR</h3>
                 <p>Take your client onboard seamlessly.</p>
               </div>
@@ -103,7 +103,7 @@ const Sponsors = () => {
           <div style={{ height: '0' }}>
             <img src={codechef} alt="" style={{ width: '100%' }} />
             <div className="mcontent">
-              <div className="details">
+              <div className="mdetails">
                 <h3>CODECHEF</h3>
                 <p>Take your client onboard seamlessly.</p>
               </div>
@@ -114,7 +114,7 @@ const Sponsors = () => {
           <div style={{ height: '0' }}>
             <img src={nvidia} alt="" style={{ width: '100%' }} />
             <div className="mcontent">
-              <div className="details">
+              <div className="mdetails">
                 <h3>NVIDIA</h3>
                 <p>Take your client onboard seamlessly.</p>
               </div>
@@ -125,7 +125,7 @@ const Sponsors = () => {
           <div style={{ height: '0' }}>
             <img src={silence} alt="" style={{ width: '100%' }} />
             <div className="mcontent">
-              <div className="details">
+              <div className="mdetails">
                 <h3>SILENCE</h3>
                 <p>Take your client onboard seamlessly.</p>
               </div>

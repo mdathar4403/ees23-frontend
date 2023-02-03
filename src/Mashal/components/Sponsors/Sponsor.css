@@ -19,7 +19,7 @@
   transition: all 0.4s ease-in-out 0s;
 }
 
-.mcontent:hover .details {
+.mcontent:hover .mdetails {
   top: -30px;
   opacity: 1;
 }
@@ -32,7 +32,7 @@
   box-shadow: none;
 }
 
-.details {
+.mdetails {
   position: relative;
   color: #161616;
   top: 21%;
@@ -146,11 +146,11 @@
     background-image: none;
     background: none;
   }
-  .details {
+  .mdetails {
     padding: 25px;
   }
-  .mcontent:hover .details {
-    top: 10px;
+  .mcontent:hover .mdetails {
+    top: -10px;
   }
 }
 
