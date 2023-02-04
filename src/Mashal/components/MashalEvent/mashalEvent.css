@@ -15,11 +15,14 @@
   justify-content: center;
   width: auto;
   align-items: center;
+  padding: 2rem;
 }
 .mashal-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   flex-direction: row;
   justify-content: center;
+  /* margin-left: 3rem; */
   width: 100%;
 }
 .heading-mashal h1 {
@@ -64,10 +67,11 @@
 .card__thumb img {
   background-size: cover;
   width: 100%;
+  max-height: 350px;
 }
 @media (min-width: 1024px) {
   .card__thumb {
-    max-height: 500px;
+    max-height: 350px;
   }
 }
 .card__thumb::after {
@@ -118,12 +122,12 @@
 }
 .card__snippet {
   display: -webkit-box;
-  max-height: 150px;
+  max-height: 250px;
   margin: 20px 0;
   overflow: hidden;
   font-family: 'Comfortaa', cursive;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 30px;
   text-overflow: ellipsis;
   transition: 0.5s ease-in-out;
   -webkit-line-clamp: 5;
@@ -229,9 +233,6 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin-top: -80%;
-  }
-  .container1 {
-    height: 150vh;
+    margin-top: -24%;
   }
 }
