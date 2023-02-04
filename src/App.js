@@ -12,7 +12,7 @@ import DashBoard from './EES/Dashboard/DashBoard';
 // import UdgamAbout from './Udgam/components/About/UdgamAbout';
 // import UdgamNav from './Udgam/components/UdgamNav/UdgamNav';
 // import UdgamEvents from './Udgam/components/Events/udgamEvents';
-// import UDGmain from './Udgam/components/main-page/main-page';
+import UDGmain from './Udgam/components/main-page/main-page';
 import Teams from './EES/Teams/Teams';
 // import Mashal from './Mashal/mashal';
 // import Masponsor from './Mashal/components/Sponsors/Sponsors';
@@ -185,7 +185,8 @@ function App() {
                 <div style={{ position: 'fixed', zIndex: '999' }}>
                   <Navbar />
                 </div>
-                <ComingSoon />
+                {/* <ComingSoon /> */}
+                <UDGmain />
               </>
             }
           />
