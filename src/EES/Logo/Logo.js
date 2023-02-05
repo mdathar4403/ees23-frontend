@@ -45,10 +45,22 @@ const Logo = (props) => {
   useEffect(() => {
     animateImg();
   }, []);
+  let countDown = new Date('april 7, 2023 00:00:00').getTime();
+  let now = new Date().getTime();
+  let distance = countDown - now;
+  let text = [Math.ceil(distance / (24 * 60 * 60 * 1000)) + ' DAYS LEFT', 'COMING SOON'];
+  useEffect(() => {
+    const interval = setInterval(function () {
+      if (document.getElementById('ToGo').innerText === text[0]) document.getElementById('ToGo').innerText = text[1];
+      else document.getElementById('ToGo').innerText = text[0];
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="container-logo">
       <div className="empty-div"></div>
+      <div id="ToGo" className="daysToGoContainer"></div>
       <div className="main-container-for-logo">
         <div className="circular-mai-container"></div>
         {/* <img className="circuit-img" src="/Groupouter-circuit.png" alt="" /> */}

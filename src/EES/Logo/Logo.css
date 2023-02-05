@@ -3,6 +3,29 @@
   background-color: aqua;
 }
 
+@keyframes animate {
+  0% {
+    text-shadow: 0 0 5px #a9a9a9, 0 0 10px #a9a9a9;
+  }
+  30% {
+    text-shadow: 0 0 8px #a9a9a9, 0 0 12px #a9a9a9, 0 0 2px #a9a9a9;
+  }
+}
+.daysToGoContainer {
+  display: flex;
+  width: 20vw;
+  letter-spacing: 5px;
+  /* background-color: red; */
+  color: white;
+  position: absolute;
+  top: 70vh;
+  right: 10vw;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  animation: animate 4s linear infinite;
+}
 .container-logo {
   position: absolute;
   right: 0;
@@ -165,5 +188,19 @@
     height: 120% !important;
     margin: 8vh !important;
     pointer-events: auto;
+  }
+}
+@media (max-width: 1200px) {
+  .daysToGoContainer {
+    right: 13.5vw;
+    width: 16vw;
+  }
+}
+@media (max-width: 600px) {
+  .daysToGoContainer {
+    width: 50vw;
+    top: 2.5vh;
+    right: 25vw;
+    font-size: 1rem;
   }
 }
