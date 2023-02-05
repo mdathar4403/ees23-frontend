@@ -241,6 +241,7 @@ function App() {
                 <div style={{ position: 'fixed', zIndex: '999' }}>
                   <Navbar />
                 </div>
+                {/* <MashalEvent /> */}
                 <ComingSoon />
               </>
             }
