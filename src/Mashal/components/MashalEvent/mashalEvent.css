@@ -7,8 +7,6 @@
   background: linear-gradient(296.82deg, #161616 0%, #3e3e3e 100%);
 }
 .container1 {
-  display: grid;
-  grid-template-columns: 80% 20%;
   flex-wrap: wrap;
   height: auto;
   margin-top: 5rem;
@@ -16,6 +14,7 @@
   width: auto;
   align-items: center;
   padding: 2rem;
+  margin-left: 5vw;
 }
 .mashal-card {
   display: grid;
@@ -40,7 +39,7 @@
   /* position: relative; */
   /* top: 60%; */
   /* height: 100%; */
-  background-color: rgba(99, 26, 225, 0.858);
+  background-color: transparent;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   padding: 0;
 }
@@ -63,11 +62,13 @@
   margin: 0px;
   max-height: 400px;
   overflow: hidden;
+  border-radius: 10px;
 }
 .card__thumb img {
   background-size: cover;
   width: 100%;
-  max-height: 350px;
+  height: 350px;
+  border-radius: 10px;
 }
 @media (min-width: 1024px) {
   .card__thumb {
@@ -172,13 +173,14 @@
   text-decoration: none;
 }
 .four {
+  position: fixed;
+  right: -15px;
+  top: 50%;
   color: #fff;
-  width: 45%;
-  float: right;
-  display: flex;
   flex-direction: column;
   font-size: 24px;
   gap: 1rem;
+  height: 20px;
 }
 .four img {
   width: 100%;
@@ -213,6 +215,7 @@
   .container1 {
     display: grid;
     grid-template-columns: 100%;
+    margin-left: auto;
   }
   .mashal-card {
     display: flex;
