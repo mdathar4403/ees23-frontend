@@ -15,7 +15,6 @@ const Sponsors = () => {
   const func = () => {
     const ele1 = document.getElementById('msponser1');
     var val1 = ele1.getBoundingClientRect().top;
-    console.log(val1 + 'one');
     if (val1 > 200) {
       ele1.classList.add('scale');
     } else {
@@ -23,7 +22,6 @@ const Sponsors = () => {
     }
     const ele2 = document.getElementById('msponser2');
     var val2 = ele2.getBoundingClientRect().top;
-    console.log(val2 + 'two');
     if (val2 < 350 && val2 > 200) {
       ele2.classList.add('scale');
     } else {
@@ -31,7 +29,6 @@ const Sponsors = () => {
     }
     const ele3 = document.getElementById('msponser3');
     var val3 = ele3.getBoundingClientRect().top;
-    console.log(val3 + 'three');
     if (val3 < 350 && val3 > 200) {
       ele3.classList.add('scale');
     } else {
@@ -39,7 +36,6 @@ const Sponsors = () => {
     }
     const ele4 = document.getElementById('msponser4');
     var val4 = ele4.getBoundingClientRect().top;
-    console.log(val4 + 'four');
     if (val4 < 350 && val4 > 200) {
       ele4.classList.add('scale');
     } else {
@@ -47,7 +43,6 @@ const Sponsors = () => {
     }
     const ele5 = document.getElementById('msponser5');
     var val5 = ele5.getBoundingClientRect().top;
-    console.log(val5 + 'five');
     if (val5 < 350 && val5 > 200) {
       ele5.classList.add('scale');
     } else {
@@ -55,7 +50,6 @@ const Sponsors = () => {
     }
     const ele6 = document.getElementById('msponser6');
     var val6 = ele6.getBoundingClientRect().top;
-    console.log(val6 + 'six');
     if (val6 < 430) {
       ele6.classList.add('scale');
     } else {
