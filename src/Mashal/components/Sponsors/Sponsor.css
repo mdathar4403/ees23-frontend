@@ -41,6 +41,9 @@
   transition: all 0.3s ease-in-out 0s;
 }
 
+.mdetails h3{
+  color:rgb(68, 67, 67)!important;
+}
 .msponsers {
   display: flex;
   flex-direction: column;
@@ -69,7 +72,7 @@
   font-weight: 500;
   font-family: homePageHeadingFont;
   background-clip: text;
-  color: #5630ce;
+  color: #d12727;
 }
 .msponsorBox {
   position: relative;
