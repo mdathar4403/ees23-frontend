@@ -384,12 +384,17 @@ body {
 
 @media (min-width: 1200px) {
   .content-box h3 {
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
   }
 }
 @media (min-width: 835px) and (max-width: 980px) {
   .squares {
     left: 5vw;
     bottom: 13%;
+  }
+}
+@media (max-width: 1199px) and (min-width: 601px) {
+  .content-box h3 {
+    padding-bottom: 2rem;
   }
 }
