@@ -7,6 +7,7 @@ import './Home.css';
 import Speakers from './Speakers/Speakers';
 import Faq from './faq/Faq';
 import Footer from './footer/footer';
+import Timer from './Timer/Timer';
 import Updates from './updates/updates';
 import About from './AboutUS/AboutUs';
 import Sponsors from './Sponsors/sponsors.jsx';
@@ -46,7 +47,7 @@ const Home = () => {
           <ContentCard event={eventData[eventindex]} />
           <Logo eventchange={changeEvent} />
         </div>
-
+        <Timer />
         <About />
         <Updates />
         <Sponsors />
