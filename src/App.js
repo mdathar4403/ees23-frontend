@@ -15,7 +15,7 @@ import DashBoard from './EES/Dashboard/DashBoard';
 import UDGmain from './Udgam/components/main-page/main-page';
 import Teams from './EES/Teams/Teams';
 // import Mashal from './Mashal/mashal';
-// import Masponsor from './Mashal/components/Sponsors/Sponsors';
+// import MashalSponsor from './Mashal/components/Sponsors/Sponsors';
 // import MashalLeaderboard from './Mashal/components/MashalLeaderboard/MashalLeaderboard';
 // import MashalEvent from './Mashal/components/MashalEvent/mashalEvent';
 import Navbar from './EES/Navbar/Navbar';
@@ -241,6 +241,7 @@ function App() {
                 <div style={{ position: 'fixed', zIndex: '999' }}>
                   <Navbar />
                 </div>
+                {/* <MashalEvent /> */}
                 <ComingSoon />
               </>
             }
