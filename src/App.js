@@ -7,11 +7,11 @@ import Nav from './Udyam/components/Nav/Nav';
 import LeaderBoard from './Udyam/components/LeaderBoard/LeaderBoard';
 import HomePage from './Udyam/components/HomePage/HomePage';
 import Sponsors from './Udyam/components/Sponsors/Sponsors';
-// import UdgamSponsors from './Udgam/components/Sponsors/Sponsors';
+import UdgamSponsors from './Udgam/components/Sponsors/Sponsors';
 import DashBoard from './EES/Dashboard/DashBoard';
-// import UdgamAbout from './Udgam/components/About/UdgamAbout';
-// import UdgamNav from './Udgam/components/UdgamNav/UdgamNav';
-// import UdgamEvents from './Udgam/components/Events/udgamEvents';
+import UdgamAbout from './Udgam/components/About/UdgamAbout';
+import UdgamNav from './Udgam/components/UdgamNav/UdgamNav';
+import UdgamEvents from './Udgam/components/Events/udgamEvents';
 import UDGmain from './Udgam/components/main-page/main-page';
 import Teams from './EES/Teams/Teams';
 // import Mashal from './Mashal/mashal';
@@ -182,8 +182,9 @@ function App() {
             path="/udgam"
             element={
               <>
-                <div style={{ position: 'fixed', zIndex: '999' }}>
-                  <Navbar />
+                <div>
+                  {/* <Navbar /> */}
+                  <UdgamNav />
                 </div>
                 {/* <ComingSoon /> */}
                 <UDGmain />
@@ -194,10 +195,12 @@ function App() {
             path="/udgam/sponsors"
             element={
               <>
-                <div style={{ position: 'fixed', zIndex: '999' }}>
-                  <Navbar />
+                <div>
+                  {/* <Navbar /> */}
+                  <UdgamNav />
                 </div>
-                <ComingSoon />
+                {/* <ComingSoon /> */}
+                <UdgamSponsors />
               </>
             }
           />
@@ -205,10 +208,12 @@ function App() {
             path="/udgam/about"
             element={
               <>
-                <div style={{ position: 'fixed', zIndex: '999' }}>
-                  <Navbar />
+                <div>
+                  {/* <Navbar /> */}
+                  <UdgamNav />
                 </div>
-                <ComingSoon />
+                {/* <ComingSoon /> */}
+                <UdgamAbout />
               </>
             }
           />
@@ -216,8 +221,22 @@ function App() {
             path="/udgam/events"
             element={
               <>
-                <div style={{ position: 'fixed', zIndex: '999' }}>
-                  <Navbar />
+                <div>
+                  {/* <Navbar /> */}
+                  <UdgamNav />
+                </div>
+                {/* <ComingSoon /> */}
+                <UdgamEvents />
+              </>
+            }
+          />
+          <Route
+            path="/udgam/leaderboard"
+            element={
+              <>
+                <div>
+                  {/* <Navbar /> */}
+                  <UdgamNav />
                 </div>
                 <ComingSoon />
               </>
