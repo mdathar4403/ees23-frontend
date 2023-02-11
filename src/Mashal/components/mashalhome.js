@@ -31,7 +31,7 @@ function Mhome() {
             <Link to="/mashal/events">
               <p className="tpx">EVENTS</p>
             </Link>
-            <Link to="/mashal/about">
+            <Link to="/mashal/aboutus">
               <p className="tpx">ABOUT US</p>
             </Link>
 

@@ -4,6 +4,7 @@ import './mashmobile.css';
 import mmologo from './image/EES-LOGO-phone.svg';
 import mmoimg from './image/image 55.svg';
 import mmobmash from './image/MASHAL ‘23.svg';
+import { Link } from 'react-router-dom';
 // import Mashnav from './Mashnav/mashnav';
 
 export default function Mashmobile() {
@@ -17,8 +18,12 @@ export default function Mashmobile() {
           <img src={mmologo} alt="" />
         </div>
         <div className="mmobnav">
-          <p className="mmobt">Sponsors ↗</p>
-          <p className="mmobt">Follow us ↗</p>
+          <Link to="/mashal/events" className="xxxx">
+            <p className="mmobt">Events ↗</p>
+          </Link>
+          <Link to="/mashal/sponsors" className="xxxx">
+            <p className="mmobt">Sponsors ↗</p>
+          </Link>
         </div>
         <div className="mmobimg">
           <img src={mmoimg} alt="" />

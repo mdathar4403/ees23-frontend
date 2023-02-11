@@ -132,8 +132,13 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="menu-item">
-                <Link to="/team">
-                  <a href="/team">Team</a>
+                <Link to="/mashal/aboutus">
+                  <a href="#">About Us</a>
+                </Link>
+              </li>
+              <li className="menu-item">
+                <Link to="/mashal/events">
+                  <a href="#">Events</a>
                 </Link>
               </li>
             </ul>
