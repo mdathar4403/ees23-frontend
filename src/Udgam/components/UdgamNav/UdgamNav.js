@@ -7,7 +7,7 @@ import { BiNews } from 'react-icons/bi';
 import { BiDollarCircle } from 'react-icons/bi';
 import { FaAward } from 'react-icons/fa';
 import { IoIosArrowBack } from 'react-icons/io';
-import { BiQrScan } from 'react-icons/bi';
+// import { BiQrScan } from 'react-icons/bi';
 import ees from './ees.svg';
 import udyam from './udgam.svg';
 import { useState } from 'react';
@@ -15,63 +15,63 @@ import { useEffect } from 'react';
 import { TfiMenu } from 'react-icons/tfi';
 // import { IoIosArrowBack } from 'react-icons/io';
 import { Link } from 'react-router-dom';
-import { GoogleLogin } from 'react-google-login';
+// import { GoogleLogin } from 'react-google-login';
 import Profile from '../../../Udyam/components/Profile/Profile';
 // import AOS from 'aos';
 // import 'aos/dist/aos.css'; // You can also use <link> for styles
 // // ..
 // AOS.init();
-import { toast } from 'react-toastify';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+// import { toast } from 'react-toastify';
+// import axios from 'axios';
+// import { useNavigate } from 'react-router-dom';
 
-const scope = 'https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read';
-const clientId = process.env.REACT_APP_CLIENT_ID;
+// const scope = 'https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read';
+// const clientId = process.env.REACT_APP_CLIENT_ID;
 
 const UdgamNav = (props) => {
-  const navigate = useNavigate();
-  const onGoogleLoginSuccess = (res) => {
-    console.log('SUCCESS!!! Current User: ', res);
-    window.sessionStorage.setItem('profileData', JSON.stringify(res.profileObj));
-    window.sessionStorage.setItem('tokenId', res.tokenId);
-    window.sessionStorage.setItem('imageUrl', res.profileObj.imageUrl);
-    // console.log('res.profileObj: ', res);
-    axios({
-      url: 'https://udyam.pythonanywhere.com/auth/google-login/',
-      method: 'post',
-      headers: { Authorization: res.tokenId },
-      data: {
-        email: res.profileObj.email
-      }
-    })
-      .then((res) => {
-        console.log('res: ', res);
-        if (res.status === 200) {
-          window.sessionStorage.setItem('registered_email', res.data.email);
-          window.sessionStorage.setItem('profileData', JSON.stringify(res.data));
-          toast.success('Login was successfull!', {
-            theme: 'dark',
-            position: window.innerWidth < 600 ? toast.POSITION.BOTTOM_CENTER : toast.POSITION.BOTTOM_RIGHT,
-            autoClose: 1200
-          });
-          console.log('stored Data', JSON.parse(window.sessionStorage.getItem('profileData')));
-          navigate('/dashboard');
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.warning('Your registeration is incomplete.', {
-          theme: 'dark',
-          position: window.innerWidth < 600 ? toast.POSITION.BOTTOM_CENTER : toast.POSITION.BOTTOM_RIGHT,
-          autoClose: 3000
-        });
-        navigate('/dashboard');
-      });
-  };
+  // const navigate = useNavigate();
+  // const onGoogleLoginSuccess = (res) => {
+  //   console.log('SUCCESS!!! Current User: ', res);
+  //   window.sessionStorage.setItem('profileData', JSON.stringify(res.profileObj));
+  //   window.sessionStorage.setItem('tokenId', res.tokenId);
+  //   window.sessionStorage.setItem('imageUrl', res.profileObj.imageUrl);
+  //   // console.log('res.profileObj: ', res);
+  //   axios({
+  //     url: 'https://udyam.pythonanywhere.com/auth/google-login/',
+  //     method: 'post',
+  //     headers: { Authorization: res.tokenId },
+  //     data: {
+  //       email: res.profileObj.email
+  //     }
+  //   })
+  //     .then((res) => {
+  //       console.log('res: ', res);
+  //       if (res.status === 200) {
+  //         window.sessionStorage.setItem('registered_email', res.data.email);
+  //         window.sessionStorage.setItem('profileData', JSON.stringify(res.data));
+  //         toast.success('Login was successfull!', {
+  //           theme: 'dark',
+  //           position: window.innerWidth < 600 ? toast.POSITION.BOTTOM_CENTER : toast.POSITION.BOTTOM_RIGHT,
+  //           autoClose: 1200
+  //         });
+  //         console.log('stored Data', JSON.parse(window.sessionStorage.getItem('profileData')));
+  //         navigate('/dashboard');
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       toast.warning('Your registeration is incomplete.', {
+  //         theme: 'dark',
+  //         position: window.innerWidth < 600 ? toast.POSITION.BOTTOM_CENTER : toast.POSITION.BOTTOM_RIGHT,
+  //         autoClose: 3000
+  //       });
+  //       navigate('/dashboard');
+  //     });
+  // };
 
-  const onGoogleLoginFailure = (res) => {
-    console.log('FAILURE!!! res: ', res);
-  };
+  // const onGoogleLoginFailure = (res) => {
+  //   console.log('FAILURE!!! res: ', res);
+  // };
   // const [slideEvent, setEvent] = useState('false');
   // const [slideLeader, setLeader] = useState('false');
   const [slideNav, setNav] = useState(false);
@@ -165,9 +165,9 @@ const UdgamNav = (props) => {
   function events() {
     helloNav();
   }
-  function names() {
-    helloNav();
-  }
+  // function names() {
+  //   helloNav();
+  // }
   function abouts() {
     helloNav();
   }
@@ -209,7 +209,7 @@ const UdgamNav = (props) => {
             </Link>
           </div>
           <div className="udyam-icon">
-            <div
+            {/* <div
               className="name hovered"
               // ind="#name"
               onClick={names}
@@ -240,7 +240,7 @@ const UdgamNav = (props) => {
                 </Link>
               )}
               ;
-            </div>
+            </div> */}
             <div
               className="about hovered"
               // ind="#about"
