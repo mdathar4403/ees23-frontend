@@ -24,6 +24,7 @@
   src: url('./Ellen-Luff_Leyton-Free-Font_170217/LeytonPersonal-Bold.otf');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 .namesdiv {
   z-index: 8;
   color: white;
@@ -35,10 +36,12 @@
   padding: 20px;
   text-align: center;
   /* font-weight: 900; */
-  font-weight: bolder;
+  /* font-weight: bolder; */
   font-size: 30px;
   /* height: 10vh; */
   width: 30vw;
+  /* font-family:titlefont; */
+  font-family: 'Poppins', sans-serif;
 }
 .title-udgam {
   width: 50vw;
