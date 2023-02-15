@@ -1,4 +1,7 @@
 {
+<<<<<<< HEAD
+  "githubPullRequests.ignoredPullRequestBranches": ["master"]
+=======
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "cSpell.words": [
@@ -8,4 +11,5 @@
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   }
+>>>>>>> def1de90cdf017a31f49c7d674ce86dce3d1f786
 }
