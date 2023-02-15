@@ -8,7 +8,7 @@ body {
   display: -moz-inline-grid;
 }
 .contain {
-  height: 105vh;
+  min-height: 105vh;
   background-color: rgba(0, 20, 50, 1);
   position: relative;
   bottom: 10vh;
@@ -229,7 +229,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .contain {
-    height: auto;
+    min-height: 100vh;
     margin-top: 30px;
     bottom: 0;
   }
