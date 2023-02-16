@@ -145,3 +145,9 @@ h6 {
     justify-content: center;
   }
 }
+
+@media (min-width: 500px) {
+  .mashhomexxx {
+    display: none;
+  }
+}

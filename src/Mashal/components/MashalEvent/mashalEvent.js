@@ -23,10 +23,14 @@ import { BsFacebook } from 'react-icons/bs';
 import { BsTwitter } from 'react-icons/bs';
 import { BsGlobe } from 'react-icons/bs';
 import lg from './images/mashalLogo.svg';
+import Mashnav from '../Mashnav/mashnav';
 
 const MashalEvent = () => {
   return (
     <>
+      <div className="mashnavxxx">
+        <Mashnav></Mashnav>
+      </div>
       <div className="event-section">
         <div className="heading-mashal">
           <h1>EVENTS</h1>
