@@ -346,7 +346,7 @@
 .expanded_btn {
   display: flex;
   flex-direction: row;
-  margin-top: 78vh;
+  margin-top: 70vh;
 }
 .expanded_btn div {
   width: fit-content;
