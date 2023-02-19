@@ -1,41 +1,46 @@
 import React from 'react';
 import './MashalLeaderboard.css';
-
+import Mashnav from '../Mashnav/mashnav';
 function MashalLeaderboard() {
   return (
-    <div className="leaderboard-background">
-      <div className="leaderboard-heading">LEADERBOARD</div>
-      <div className="leaderboard-container">
-        <div className="heading-container">TOP PLAYERS SCORE</div>
-        <div className="leaderboard-score-container">
-          <div className="first-team teams">
-            <div className="positionBadge"></div>
-            <div>TEAM NAME</div>
-            <div className="score">100</div>
-          </div>
-          <div className="second-team teams">
-            <div className="positionBadge"></div>
-            <div>TEAM NAME</div>
-            <div className="score">80</div>
-          </div>
-          <div className="third-team teams">
-            <div className="positionBadge"></div>
-            <div>TEAM NAME</div>
-            <div className="score">70</div>
-          </div>
-          <div className="fourth-team teams">
-            <div className="positionBadge"></div>
-            <div>TEAM NAME</div>
-            <div className="score">60</div>
-          </div>
-          <div className="fifth-team teams">
-            <div className="positionBadge"></div>
-            <div>TEAM NAME</div>
-            <div className="score">50</div>
+    <>
+      <div className="mashnavxxx">
+        <Mashnav></Mashnav>
+      </div>
+      <div className="leaderboard-background">
+        <div className="leaderboard-heading">LEADERBOARD</div>
+        <div className="leaderboard-container">
+          <div className="heading-container">TOP PLAYERS SCORE</div>
+          <div className="leaderboard-score-container">
+            <div className="first-team teams">
+              <div className="positionBadge"></div>
+              <div>TEAM NAME</div>
+              <div className="score">100</div>
+            </div>
+            <div className="second-team teams">
+              <div className="positionBadge"></div>
+              <div>TEAM NAME</div>
+              <div className="score">80</div>
+            </div>
+            <div className="third-team teams">
+              <div className="positionBadge"></div>
+              <div>TEAM NAME</div>
+              <div className="score">70</div>
+            </div>
+            <div className="fourth-team teams">
+              <div className="positionBadge"></div>
+              <div>TEAM NAME</div>
+              <div className="score">60</div>
+            </div>
+            <div className="fifth-team teams">
+              <div className="positionBadge"></div>
+              <div>TEAM NAME</div>
+              <div className="score">50</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -226,3 +226,8 @@
     background-size: contain;
   }
 }
+@media (min-width: 500px) {
+  .mashhomexxx {
+    display: none;
+  }
+}
