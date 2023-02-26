@@ -376,7 +376,7 @@ const ContactInstagram = [
     'https://instagram.com/_surya__ss?igshid=ZDdkNTZiNTM=',
     'https://www.instagram.com/akshit._.singla/',
     '',
-    '',
+    'https://instagram.com/ankuragrawal9455?igshid=ZDdkNTZiNTM=',
     'https://www.instagram.com/raina_jainn/',
     'https://www.instagram.com/nishu_07.02/'
   ],
@@ -392,7 +392,7 @@ const ContactInstagram = [
     'https://instagram.com/_prince_0911?igshid=ZDdkNTZiNTM='
   ],
   [
-    '',
+    'https://instagram.com/ankuragrawal9455?igshid=ZDdkNTZiNTM=',
     'https://www.instagram.com/raina_jainn/',
     'https://instagram.com/akash_kourav03?igshid=ZDdkNTZiNTM=',
     'https://instagram.com/avnesh141?igshid=ZDdkNTZiNTM=',
@@ -516,6 +516,7 @@ const ContactLinkedIn = [
     'https://www.linkedin.com/in/akshit-singla-91b0aa220/',
     'https://www.linkedin.com/in/mayank-singh-1a5791204',
     'https://www.linkedin.com/in/sarang-manerikar/',
+    'https://www.linkedin.com/in/ankuragrawaldev',
     'https://www.linkedin.com/in/raina-jain-6b4b68143/',
     'https://www.linkedin.com/in/nishanth-gounder-15477a224/'
   ],
@@ -531,7 +532,7 @@ const ContactLinkedIn = [
     'https://www.linkedin.com/in/prince-kumar-gond-3b22b81b2'
   ],
   [
-    '',
+    'https://www.linkedin.com/in/ankuragrawaldev',
     'https://www.linkedin.com/in/raina-jain-6b4b68143/',
     'https://www.linkedin.com/in/akash-kumar-371439246',
     'https://www.linkedin.com/in/avnesh-kumar-08b549230',
