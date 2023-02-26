@@ -5,7 +5,7 @@ const TeamMemberCard = (props) => {
         <div className="member-image">
           <img className="tm-image" src={props.Img} alt="" />
           <div className="content-on-hover">
-            <h6>{props.hover}</h6>
+            <h6 className="sixth-heading-size">{props.hover}</h6>
             <div className="team-contact-handles">
               <a href={props.LinkedIn}>
                 <img src="/assets/TeamsSectionImages/icons8-linkedin 2.svg" alt="" />
@@ -20,8 +20,8 @@ const TeamMemberCard = (props) => {
           </div>
         </div>
         <div className="member-details">
-          <h4>{props.name}</h4>
-          <h6>{props.des}</h6>
+          <h4 className="fourth-heading-size">{props.name}</h4>
+          <h6 className="sixth-heading-size">{props.des}</h6>
         </div>
         <div className="mobile-contact-links">
           <a href={props.LinkedIn}>
