@@ -13,6 +13,8 @@
   grid-template-columns: repeat(40, 1fr);
   grid-template-rows: repeat(20, 1fr);
   background-size: cover;
+  top: 0%;
+  position: fixed;
 }
 .one {
   grid-column: 1/41;
@@ -96,4 +98,16 @@
 p.spx {
   position: absolute;
   top: 74%;
+}
+
+@media (min-width: 500px) {
+  .mashhomexxx {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .bgxd {
+    display: none;
+  }
 }

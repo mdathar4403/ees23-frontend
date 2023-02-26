@@ -239,3 +239,13 @@
     margin-top: -24%;
   }
 }
+@media (min-width: 500px) {
+  .mashhomexxx {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .heading-mashal h1 {
+    padding-top: 15%;
+  }
+}

@@ -175,3 +175,9 @@
     width: 10rem;
   }
 }
+
+@media (min-width: 500px) {
+  .mashhomexxx {
+    display: none;
+  }
+}

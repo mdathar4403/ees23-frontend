@@ -1,13 +1,17 @@
 import React from 'react';
 import './MashalAboutUs.css';
-import MashalAboutUsImage from '../image/MashalAboutusImage.png';
+import MashalAboutUsImage from '../image/MashalAboutusImage.jpg';
 import FacebookIcon from '../image/akar-icons_facebook-fill.svg';
 import TwitterIcon from '../image/akar-icons_twitter-fill.svg';
 import WorldIcon from '../image/tabler_world.svg';
 import InstagramIcon from '../image/akar-icons_instagram-fill.svg';
+import Mashnav from '../Mashnav/mashnav';
 const MashalAboutUs = () => {
   return (
     <>
+      <div className="mashnavxxx">
+        <Mashnav></Mashnav>
+      </div>
       <div className="mashal-aboutUs-main-container">
         <div className="mashal-aboutUs-heading-container">
           <h1>ABOUT US</h1>
