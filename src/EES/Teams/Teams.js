@@ -22,7 +22,6 @@ const Teams = () => {
   for (let i = 0; i < ArrLen; i++) {
     TeamArr.push(<TeamMemberCard name={TeamMemberName[TeamNumber][i]} Img={MemberImage[TeamNumber][i]} des={Designation[TeamNumber][i]} hover={TeamMemberDetails[TeamNumber][i]} Email={ContactMail[TeamNumber][i]} Instalink={ContactInstagram[TeamNumber][i]} LinkedIn={ContactLinkedIn[TeamNumber][i]} />);
   }
-  console.log(TeamArr);
   return (
     <>
       <div className="Teams-Navbar">
@@ -31,7 +30,7 @@ const Teams = () => {
       <div className="Teams-main-container">
         <div className="team-members-main">
           <div className="ct-main">
-            <h1>{TeamDomain[TeamNumber]}</h1>
+            <h1 className="biggest-heading">{TeamDomain[TeamNumber]}</h1>
             <div className="Team-cards-container">{TeamArr}</div>
           </div>
           <div className="scrollable-side">
