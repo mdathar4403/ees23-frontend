@@ -18,7 +18,7 @@ import Mashal from './Mashal/mashal';
 import MashalSponsor from './Mashal/components/Sponsors/Sponsors';
 import MashalLeaderboard from './Mashal/components/MashalLeaderboard/MashalLeaderboard';
 import MashalEvent from './Mashal/components/MashalEvent/mashalEvent';
-import MashalAboutUs from './Mashal/components/MashalAboutUs/MashalAboutUs';
+// import MashalAboutUs from './Mashal/components/MashalAboutUs/MashalAboutUs';
 import Navbar from './EES/Navbar/Navbar';
 
 import { gapi } from 'gapi-script';
@@ -139,7 +139,10 @@ function App() {
             path="/mashal/aboutus"
             element={
               <>
-                <MashalAboutUs />
+                {/* <MashalAboutUs /> */}
+                <div>
+                  <ComingSoon />
+                </div>
               </>
             }
           />
