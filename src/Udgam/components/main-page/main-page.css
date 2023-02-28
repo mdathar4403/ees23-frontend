@@ -28,20 +28,21 @@
 .namesdiv {
   z-index: 8;
   color: white;
-  /* background-color: #232323; */
   position: fixed;
-  bottom: 2vh;
-  left: 20vw;
-  /* line-height: 100%; */
-  padding: 20px;
+  bottom: 3vh;
+  right: 40vw;
   text-align: center;
-  /* font-weight: 900; */
-  /* font-weight: bolder; */
-  font-size: 30px;
+  font-size: 18px;
+  width: 22vw;
   /* height: 10vh; */
-  width: 30vw;
-  /* font-family:titlefont; */
+  /* padding: 2rem; */
   font-family: 'Poppins', sans-serif;
+}
+.captured{
+  color: #e2f839;
+  padding:1.2rem;
+  background-color: #12121298;
+  /* filter: blur(0.9); */
 }
 .title-udgam {
   width: 50vw;
@@ -55,31 +56,27 @@
   line-height: 30vh;
   position: absolute;
   left: 24vw;
-  /* width: 1049px;
-height: 240px;
-left: 196px;
-top: 377px; */
-
-  /* font-family: 'Leyton Personal'; */
-  /* font-style: normal;
-font-weight: 400;
-font-size: 200px;
-line-height: 240px; */
-  /* identical to box height */
-
   text-align: center;
-  /* letter-spacing: -0.005em; */
-
   color: #fcfbfc;
 }
+
 @media screen and (max-width: 800px) {
   .title-udgam {
-    left: 8vw;
+    left: 11vw;
+    /* position: relative; */
+    /* align-items: center; */
     font-size: 12vw;
-    width: 70vw;
+    width: 80vw;
     line-height: 20vh;
   }
   .namesdiv {
     font-size: 20px;
+    width: 30vw;
+  }
+}
+@media screen and (max-width: 450px){
+  .namesdiv{
+    width: 45vw;
+    font-size: 15.5px;
   }
 }

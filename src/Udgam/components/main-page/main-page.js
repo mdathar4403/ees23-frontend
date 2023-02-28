@@ -39,9 +39,7 @@ function UDGmain() {
         {/* <img src={arrimg[(counter + 1) % arrimg.length]} /> */}
       </motion.div>
       <motion.div className="namesdiv" key={counter} initial={{ x: '50vw', opacity: 0 }} animate={{ x: '30vw', opacity: 1 }} transition={{ duration: 3 }}>
-        {/* <p> */}
-        Captured by - {names[(counter + 1) % names.length]}
-        {/* </p> */}
+        <p className="captured">Captured by - {names[(counter + 1) % names.length]}</p>
       </motion.div>
       <div className="moving " style={{ backgroundImage: `url(${arrimg[counter % arrimg.length]})`, zIndex: '0' }}></div>
     </div>

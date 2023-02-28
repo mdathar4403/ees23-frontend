@@ -7,7 +7,7 @@ import Nav from './Udyam/components/Nav/Nav';
 import LeaderBoard from './Udyam/components/LeaderBoard/LeaderBoard';
 import HomePage from './Udyam/components/HomePage/HomePage';
 import Sponsors from './Udyam/components/Sponsors/Sponsors';
-// import UdgamSponsors from './Udgam/components/Sponsors/Sponsors';
+import UdgamSponsors from './Udgam/components/Sponsors/Sponsors';
 import DashBoard from './EES/Dashboard/DashBoard';
 import UdgamAbout from './Udgam/components/About/UdgamAbout';
 import UdgamNav from './Udgam/components/UdgamNav/UdgamNav';
@@ -222,8 +222,8 @@ function App() {
                   {/* <Navbar /> */}
                   <UdgamNav />
                 </div>
-                <ComingSoon />
-                {/* <UdgamSponsors /> */}
+                {/* <ComingSoon /> */}
+                <UdgamSponsors />
               </>
             }
           />
