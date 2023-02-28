@@ -1,6 +1,6 @@
 const TeamDomain = ['CORE TEAM', 'SENIOR ADVISORS', 'DEVELOPERS', 'DESIGNERS', 'CONTENT AND CREATIVE', 'MARKETING TEAM', 'EXTERNAL AFFAIRS', 'PUBLIC RELATION'];
 const TeamMemberName = [
-  ['Akshat Jain', 'Pranav Mittal', 'Bisesh Agarwal', 'Atharva Bhatt', 'Yashank Aggarwal', 'Mayank Singh', 'Sarang Manerikar', 'Shivansh Dubey', 'Suhani Agrawal', 'Raghav Agrawal', 'Suryansh Singh', 'Akshit Singla', 'Ayush Bemera', 'Ankur Agrawal', 'Raina Jain', 'Nishant Gounder'],
+  ['Akshat Jain', 'Pranav Mittal', 'Bisesh Agarwal', 'Atharva Bhatt', 'Mayank Singh', 'Sarang Manerikar', 'Shivansh Dubey', 'Suhani Agrawal', 'Raghav Agrawal', 'Suryansh Singh', 'Akshit Singla', 'Ayush Bemera', 'Ankur Agrawal', 'Raina Jain', 'Nishant Gounder'],
   ['Yash Jain', 'Vikash Prajapati', 'Vikhyath Venkatraman', 'Siddharth Anand Srivastav', 'Eshaan Gupta', 'Smriti Sharma', 'Prajakta Priyadarshini', 'Nisitha Vallamdasu', 'Prince Kumar Gond'],
   ['Ankur Agrawal', 'Raina Jain', 'Akash Kumar', 'Avnesh Kumar', 'Kumar Sonu', 'Dhruv Chaudhary', 'Anant Jain', 'Md Athar', 'Shubham Jaiswal', 'Ashish Kumar', 'Nikhil Agarwal', 'Archit Pattanaik', 'Harshit Swarnkar', 'Nikhil Aggarwal', 'Samarth Tankasali', 'Samar Singh Randhawa', 'Mamalesh Rajkumar Hake'],
   ['Devi Tanuja Vasamsetty', 'Korivi Vedharshini', 'Riya Saini', 'Kalpit Adhao', 'Shivam Gupta', 'Aditya Mishra', 'Jasnoor Sandhu', 'Nilesh Sangle', 'Md Athar', 'Niharika Singh'],
@@ -40,7 +40,6 @@ const MemberImage = [
     '/assets/TeamsSectionImages/Pranav_Mittal.jpg',
     '/assets/TeamsSectionImages/Bisesh Agarwal.jpg',
     '/assets/TeamsSectionImages/Atharva_Bhatt.jpg',
-    '/assets/TeamsSectionImages/Yashank Aggarwal.webp',
     '/assets/TeamsSectionImages/Mayank Singh.JPG',
     '/assets/TeamsSectionImages/Sarang Manerikar.jpg',
     '/assets/TeamsSectionImages/Shivansh_Dubey.jpg',
@@ -174,7 +173,7 @@ const MemberImage = [
   ]
 ];
 const Designation = [
-  ['Convener', 'General Secretary', 'Co-Convener', 'Joint Gen Secy', 'Joint Gen Secy', 'Joint Gen Secy', 'Joint Gen Secy', 'Tech Secy', 'Tech Secy', 'Cult Secy', 'Cult Secy', 'Sports Secy', 'Sports Secy', 'Web Head', 'Web Head', 'Marketing Head'],
+  ['Convener', 'General Secretary', 'Co-Convener', 'Joint Gen Secy', 'Joint Gen Secy', 'Joint Gen Secy', 'Tech Secy', 'Tech Secy', 'Cult Secy', 'Cult Secy', 'Sports Secy', 'Sports Secy', 'Web Head', 'Web Head', 'Marketing Head'],
   ['Senior web advisor', 'Senior Advisor External Affairs', 'Senior Advisor', 'Senior Advisor (Design)', 'Senior Tech Advisor', 'Senior Tech Advisor', 'Senior Advisor', 'Senior Advisor (Content and Creative)', 'Senior Adivisor (Public Relations)'],
   ['Web Head', 'Web Head', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator', 'Web Coordinator'],
   ['Head', 'Coordinator', 'Coordinator', 'Coordinator', 'Co-Coordinator', 'Co-Cordinator', 'Co-Cordinator', 'Co-Cordinator', 'Co-Cordinator', 'Co-Cordinator'],
@@ -209,7 +208,7 @@ const Designation = [
   ['Head', 'Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator', 'Co-Coordinator']
 ];
 const TeamMemberDetails = [
-  ['Fourth Yearite', 'Fourth Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite'],
+  ['Fourth Yearite', 'Fourth Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite'],
   ['Fourth Yearite', 'Fourth Yearite', 'Fourth Yearite', 'Fourth Yearite', 'Fourth Yearite', 'Fourth Yearite', 'Fourth Yearite', 'Fourth Yearite', 'Fourth Yearite'],
   ['Third Yearite', 'Third Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite'],
   ['Third Yearite', 'Third Yearite', 'Third Yearite', 'Third Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite', 'Second Yearite'],
@@ -249,7 +248,6 @@ const ContactMail = [
     'pranav.mittal.ece19@itbhu.ac.in',
     'bisesh.agarwal.ece20@itbhu.ac.in',
     'atharva.bhatt.ece20@itbhu.ac.in',
-    'yashank.aggarwal.ece20@itbhu.ac.in',
     'mayank.singh.ece20@itbhu.ac.in',
     'sarang.manerikar.ece20@itbhu.ac.in',
     'shivansh.dubey.ece20@itbhu.ac.in',
@@ -367,7 +365,6 @@ const ContactInstagram = [
     'https://www.instagram.com/pranav_2x1/',
     '',
     'https://instagram.com/bhattatharva?igshid=ZDdkNTZiNTM=',
-    'https://instagram.com/yashankagg?igshid=ZDdkNTZiNTM=',
     'https://instagram.com/mayank_s_ingh_',
     'https://www.instagram.com/',
     'https://www.instagram.com/shivansh_d_/',
@@ -506,7 +503,6 @@ const ContactLinkedIn = [
     'https://www.linkedin.com/in/pranav-mittal-4b15a0195',
     '',
     'https://www.linkedin.com/in/atharva-bhatt-199665156',
-    'https://www.linkedin.com/in/yashank-aggarwal-575750208',
     'https://www.linkedin.com/in/mayank-singh-1a5791204',
     'https://www.linkedin.com/in/sarang-manerikar/',
     'https://www.linkedin.com/in/shivansh-dubey-032916213/',
