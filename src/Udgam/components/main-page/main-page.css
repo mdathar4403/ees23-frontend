@@ -38,9 +38,9 @@
   /* padding: 2rem; */
   font-family: 'Poppins', sans-serif;
 }
-.captured{
+.captured {
   color: #e2f839;
-  padding:1.2rem;
+  padding: 1.2rem;
   background-color: #12121298;
   /* filter: blur(0.9); */
 }
@@ -74,8 +74,8 @@
     width: 30vw;
   }
 }
-@media screen and (max-width: 450px){
-  .namesdiv{
+@media screen and (max-width: 450px) {
+  .namesdiv {
     width: 45vw;
     font-size: 15.5px;
   }
