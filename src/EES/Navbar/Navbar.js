@@ -144,7 +144,7 @@ const Navbar = () => {
                     scope={scope}
                     render={(renderProps) => (
                       <Link to="#" onClick={renderProps.onClick}>
-                        <a href="#">Registration</a>
+                        <a href="#">SignIn</a>
                       </Link>
                     )}
                   />
@@ -235,7 +235,7 @@ const Navbar = () => {
                     scope={scope}
                     render={(renderProps) => (
                       <Link to="#" onClick={renderProps.onClick}>
-                        <a href="#">Registration</a>
+                        <a href="#">SignIn</a>
                       </Link>
                     )}
                   />
@@ -285,7 +285,7 @@ const Navbar = () => {
                 scope={scope}
                 render={(renderProps) => (
                   <div className="menu-text" style={{ display: 'flex' }} onClick={renderProps.onClick}>
-                    <span>Register</span>
+                    <span>SignIn</span>
                   </div>
                 )}
               />

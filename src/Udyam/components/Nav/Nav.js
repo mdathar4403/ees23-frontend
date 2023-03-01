@@ -228,7 +228,7 @@ const Nav = (props) => {
                   render={(renderProps) => (
                     <Link to="#" className="game-changer" style={{ textDecoration: 'none' }} onClick={renderProps.onClick}>
                       <BiQrScan className="info" />
-                      <p>Register</p>
+                      <p>SignIn</p>
                     </Link>
                   )}
                 />
