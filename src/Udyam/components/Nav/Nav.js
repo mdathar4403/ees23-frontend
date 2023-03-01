@@ -192,7 +192,7 @@ const Nav = (props) => {
     <>
       {' '}
       <div className="background">
-        <div className="bg"></div>
+        <div className="bag"></div>
         <div className="star-field">
           <div className="layer"></div>
           <div className="layer"></div>
