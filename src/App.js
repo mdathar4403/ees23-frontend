@@ -18,40 +18,13 @@ import Mashal from './Mashal/mashal';
 import MashalSponsor from './Mashal/components/Sponsors/Sponsors';
 import MashalLeaderboard from './Mashal/components/MashalLeaderboard/MashalLeaderboard';
 import MashalEvent from './Mashal/components/MashalEvent/mashalEvent';
-// import MashalAboutUs from './Mashal/components/MashalAboutUs/MashalAboutUs';
 import Navbar from './EES/Navbar/Navbar';
-
-import { gapi } from 'gapi-script';
-import { useEffect } from 'react';
 import Register from './EES/Register/Register';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComingSoon from './EES/ComingSoon/ComingSoon';
-// import {useState,useEffect} from 'react';
+
 function App() {
-  const clientId = process.env.REACT_APP_CLIENT_ID;
-
-  const scope = 'https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read';
-
-  useEffect(() => {
-    const initClient = () => {
-      gapi.client.init({
-        clientId: clientId,
-        scope: scope
-      });
-    };
-    gapi.load('client:auth2', initClient);
-  });
-  // let wid;
-  // const [width, setWidth] = useState(window.innerWidth);
-  // const updateWidth = () => {
-  //   setWidth(window.innerWidth);
-  //   wid=width;
-  // };
-  // useEffect(() => {
-  //   window.addEventListener('resize', updateWidth);
-  //   return () => window.removeEventListener('resize', updateWidth);
-  // }, []);
   return (
     <div className="App">
       <ToastContainer />

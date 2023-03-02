@@ -283,7 +283,7 @@ const UdgamNav = (props) => {
             </div>
           </div>
 
-          <div className="expanded_btn">
+          <div className="udgam_expanded_btn">
             <div className="hovered ees-div-img">
               <Link to="/" className="game-changer">
                 <img className="eesimg" src={ees} alt="hreo" />

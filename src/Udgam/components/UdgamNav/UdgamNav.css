@@ -355,12 +355,12 @@
     gap: 1rem;
   }
 }
-.expanded_btn {
+.udgam_expanded_btn {
   display: flex;
   flex-direction: row;
   margin-top: 70vh;
 }
-.expanded_btn div {
+.udgam_expanded_btn div {
   width: fit-content;
   margin: auto;
 }
