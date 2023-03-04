@@ -69,9 +69,25 @@ const Navbar = () => {
               </li>
               <li className="menu-item">
                 {window.sessionStorage.getItem('registered_email') == null ? (
+                  // <GoogleLogin
+                  //   theme="dark"
+                  //   accessType="online"
+                  //   disabled={false}
+                  //   client_id={clientId} // your Google app client ID
+                  //   buttonText="Sign in with Google"
+                  //   onSuccess={onGoogleLoginSuccess} // perform your user logic here
+                  //   onFailure={onGoogleLoginFailure} // handle errors here
+                  //   cookiePolicy={'single-host-origin'}
+                  //   scope={scope}
+                  //   render={(renderProps) => (
+                  //     <Link to="#" onClick={renderProps.onClick}>
+                  //       <a href="#">SignIn</a>
+                  //     </Link>
+                  //   )}
+                  // />
                   <GoogleLoginBTN>
                     <Link to="#">
-                      <a href="#">Registration</a>
+                      <a href="#">SignIn</a>
                     </Link>
                   </GoogleLoginBTN>
                 ) : (
@@ -149,9 +165,25 @@ const Navbar = () => {
               </li>
               <li>
                 {window.sessionStorage.getItem('registered_email') == null ? (
+                  // <GoogleLogin
+                  //   theme="dark"
+                  //   accessType="online"
+                  //   disabled={false}
+                  //   client_id={clientId} // your Google app client ID
+                  //   buttonText="Sign in with Google"
+                  //   onSuccess={onGoogleLoginSuccess} // perform your user logic here
+                  //   onFailure={onGoogleLoginFailure} // handle errors here
+                  //   cookiePolicy={'single-host-origin'}
+                  //   scope={scope}
+                  //   render={(renderProps) => (
+                  //     <Link to="#" onClick={renderProps.onClick}>
+                  //       <a href="#">SignIn</a>
+                  //     </Link>
+                  //   )}
+                  // />
                   <GoogleLoginBTN>
                     <Link to="#">
-                      <a href="#">Registration</a>
+                      <a href="#">SignIn</a>
                     </Link>
                   </GoogleLoginBTN>
                 ) : (
@@ -190,7 +222,7 @@ const Navbar = () => {
             {window.sessionStorage.getItem('registered_email') == null ? (
               <GoogleLoginBTN>
                 <div className="menu-text" style={{ display: 'flex' }}>
-                  <span>Register</span>
+                  <span>SignIn</span>
                 </div>
               </GoogleLoginBTN>
             ) : (

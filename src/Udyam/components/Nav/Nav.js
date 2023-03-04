@@ -83,7 +83,7 @@ const Nav = (props) => {
                 <GoogleLoginBTN>
                   <Link to="#" className="game-changer" style={{ textDecoration: 'none' }}>
                     <BiQrScan className="info" />
-                    <p>Register</p>
+                    <p>SignIn</p>
                   </Link>
                 </GoogleLoginBTN>
               ) : (

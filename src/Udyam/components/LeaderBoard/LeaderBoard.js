@@ -1,15 +1,17 @@
 import './LeaderBoard.css';
 import './LB_MobileView.css';
 import React from 'react';
-import { teamName, teamScore } from './LB_data';
+// import { teamName, teamScore } from './LB_data';
 import { useState, useEffect } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 import { MdArrowForwardIos } from 'react-icons/md';
-const LeaderBoard = (props) => {
+// import LeaderBoardBox from './LeaderBoardBox';
+const LeaderBoard = () => {
   // const [slideEvent, setEvent] = useState('false');
   // const [slideLeader, setLeader] = useState(true);
   // const [slideNav, setNav] = useState('false');
   const [width, setWidth] = useState(window.innerWidth);
+  const [users, setUsers] = useState([]);
   // const [activeNav, setActiveNav] = useState('#');
   // const [udyamName, setUdyamName] = useState(true);
   // const [udyevents,setudyevents]=useState('Digism');
@@ -51,8 +53,17 @@ const LeaderBoard = (props) => {
   const updateWidth = () => {
     setWidth(window.innerWidth);
   };
+
+  const fetchUsers = async () => {
+    const response = await fetch('https://udyam.pythonanywhere.com/auth/leaderboard');
+    const newUser = await response.json();
+    console.log(newUser);
+    setUsers(newUser.array);
+  };
+
   useEffect(() => {
     window.addEventListener('resize', updateWidth);
+    fetchUsers();
     return () => window.removeEventListener('resize', updateWidth);
   }, []);
   // function slideIn(e) {
@@ -106,7 +117,7 @@ const LeaderBoard = (props) => {
   // }
 
   // const [contentIndex, setContentIndex] = useState(0);
-  const contentIndex = props.contentIndex;
+  // const contentIndex = props.contentIndex;
   return (
     <>
       {/* <div className="background">
@@ -157,11 +168,10 @@ const LeaderBoard = (props) => {
       <div className="getback" onClick={sliding}>
         <MdArrowForwardIos />
       </div>
-      <div className="lb-coming-soon">COMING SOON</div>
       <div className="leaderboards-main-container">
-        <h1>LEADERBOARDS</h1>
+        <h1>Radianite Leaderboard</h1>
         <div className="lb-container">
-          <div className="podium-main-container">
+          {/* <div className="podium-main-container">
             <div className="mobile-first-position">
               <div className="img-and-score">
                 <img src="/assets/medals/gold.png" alt="" />
@@ -169,7 +179,6 @@ const LeaderBoard = (props) => {
                   {teamScore[contentIndex].first}
                 </div>
               </div>
-              {/* <div className="middle-glow"></div> */}
               <div className="team-name">{teamName[contentIndex].first}</div>
             </div>
             <div className="second-position">
@@ -179,7 +188,7 @@ const LeaderBoard = (props) => {
                   {teamScore[contentIndex].second}
                 </div>
               </div>
-              {/* <div className="middle-glow"></div> */}
+              
               <div className="team-name">{teamName[contentIndex].second}</div>
             </div>
             <div className="first-position">
@@ -189,7 +198,7 @@ const LeaderBoard = (props) => {
                   {teamScore[contentIndex].first}
                 </div>
               </div>
-              {/* <div className="middle-glow"></div> */}
+              
               <div className="team-name">{teamName[contentIndex].first}</div>
             </div>
             <div className="third-position">
@@ -199,33 +208,27 @@ const LeaderBoard = (props) => {
                   {teamScore[contentIndex].third}
                 </div>
               </div>
-              {/* <div className="middle-glow"></div> */}
+              
               <div className="team-name">{teamName[contentIndex].third}</div>
             </div>
-          </div>
+          </div> */}
           <div className="remaining-leaderboard">
-            <div className="leaderboard-box">
-              <div className="leaderboard-position" style={{ width: '15%' }}>
-                4th
-              </div>
-              <div className="team-name-non-podium" style={{ width: '65%' }}>
-                {teamName[contentIndex].fourth}
-              </div>
-              <div className="team-score-non-podium" style={{ width: '20%' }}>
-                {teamScore[contentIndex].fourth}
-              </div>
-            </div>
-            <div className="leaderboard-box">
-              <div className="leaderboard-position" style={{ width: '15%' }}>
-                4th
-              </div>
-              <div className="team-name-non-podium" style={{ width: '65%' }}>
-                {teamName[contentIndex].fifth}
-              </div>
-              <div className="team-score-non-podium" style={{ width: '20%' }}>
-                {teamScore[contentIndex].fifth}
-              </div>
-            </div>
+            {/* <LeaderBoardBox /> */}
+            {users.map((user, index) => {
+              return (
+                <div className="leaderboard-box" key={index}>
+                  <div className="leaderboard-position" style={{ width: '15%' }}>
+                    {index + 1}
+                  </div>
+                  <div className="team-name-non-podium" style={{ width: '65%' }}>
+                    {user.name}
+                  </div>
+                  <div className="team-score-non-podium" style={{ width: '15%' }}>
+                    {user.radianite_points}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
