@@ -124,13 +124,14 @@
   font-family: 'Russo One', sans-serif;
 }
 .leaderboards-main-container {
-  /* display: none; */
+  display: grid;
+  grid-template-rows: min-content auto;
   height: 100vh;
   width: 70%;
   color: white;
   position: absolute;
   font-family: 'Russo One', sans-serif;
-  left: 28vw;
+  left: 18vw;
 }
 
 .leaderboards-main-container h1 {
@@ -197,9 +198,9 @@
 }
 
 .remaining-leaderboard {
-  height: 40vh;
+  height: 45vh;
   width: 100%;
-  padding-top: 3%;
+  /* padding-top: 3%; */
   padding-left: 4%;
   overflow-x: hidden;
   overflow-y: auto;
@@ -214,6 +215,7 @@
   border-radius: 1vh;
   padding: 1.2vh;
   font-size: 4vh;
+  overflow: hidden;
 }
 
 /* .middle-glow {

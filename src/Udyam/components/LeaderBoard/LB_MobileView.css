@@ -13,9 +13,9 @@
   }
   .leaderboards-main-container h1 {
     font-size: 2rem;
-    padding: 5vh;
+    padding: 5vh 0.5vw;
     text-align: center;
-    margin: 0 auto;
+    width: 99vw;
   }
   .podium-main-container {
     width: 100vw;
