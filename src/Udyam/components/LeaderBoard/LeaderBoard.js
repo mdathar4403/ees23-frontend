@@ -169,7 +169,7 @@ const LeaderBoard = () => {
         <MdArrowForwardIos />
       </div>
       <div className="leaderboards-main-container">
-        <h1>LEADERBOARDS</h1>
+        <h1>Radianite Leaderboard</h1>
         <div className="lb-container">
           {/* <div className="podium-main-container">
             <div className="mobile-first-position">
