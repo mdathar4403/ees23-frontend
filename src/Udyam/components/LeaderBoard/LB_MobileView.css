@@ -6,7 +6,7 @@
     top: 30vh;
   }
   .leaderboards-main-container {
-    display: none;
+    /* display: none; */
     left: unset;
     /* display: flex; */
     flex-direction: column;
