@@ -129,16 +129,6 @@
 }
 
 .udyam-icon {
-  /* height: 45vh; */
-  /* width: 100%; */
-  /* position: relative;
-  top: 12vh;
-  display: flex;
-  justify-content: space-around;
-  align-self: center;
-  align-items: center;
-  flex-direction: column; */
-
   top: 50%;
   transform: translateY(-50%);
   /* height: 50vh; */
@@ -182,8 +172,9 @@
 .udyam-img {
   position: relative;
   top: 1.2%;
-  margin: 5%;
+  margin: 0%;
   display: flex;
+  /* width: 100%; */
   justify-content: center;
 }
 
@@ -290,17 +281,7 @@
   display: none;
   z-index: 6;
 }
-/* @media screen and (max-width: 1000px) {
-  .udyam-nav {
-    width: 10vw;
-  }
-  .hovered {
-    width: 10vw;
-  }
-  .leader {
-    left: 10vw;
-  }
-} */
+
 @media screen and (max-width: 800px) {
   .udyam-nav {
     width: 205px;
@@ -355,12 +336,12 @@
     gap: 1rem;
   }
 }
-.expanded_btn {
+.udgam_expanded_btn {
   display: flex;
   flex-direction: row;
   margin-top: 70vh;
 }
-.expanded_btn div {
+.udgam_expanded_btn div {
   width: fit-content;
   margin: auto;
 }

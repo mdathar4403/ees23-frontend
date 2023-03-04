@@ -9,7 +9,7 @@ import { FaAward } from 'react-icons/fa';
 import { IoIosArrowBack } from 'react-icons/io';
 // import { BiQrScan } from 'react-icons/bi';
 import ees from './ees.svg';
-import udyam from './udgam.svg';
+import udgam from './udgam.svg';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { TfiMenu } from 'react-icons/tfi';
@@ -195,18 +195,20 @@ const UdgamNav = (props) => {
       <div className="background">
         <div className="bg"></div>
         <div className="bg_filter"></div>
+
         <div className="star-field">
           <div className="layer"></div>
           <div className="layer"></div>
           <div className="layer"></div>
         </div>
+
       </div>
       {(udyamName || true) && width < 800 && <Profile />}
       {(slideNav || width > 800) && (
         <div className="udyam-nav">
           <div className="udyam-img">
             <Link to="/udgam" style={{ textDecoration: 'none' }}>
-              <img className="udyam-logo" src={udyam} alt="hero" />
+              <img className="udyam-logo" src={udgam} alt="hero" />
             </Link>
           </div>
           <div className="udyam-icon">
@@ -283,7 +285,7 @@ const UdgamNav = (props) => {
             </div>
           </div>
 
-          <div className="expanded_btn">
+          <div className="udgam_expanded_btn">
             <div className="hovered ees-div-img">
               <Link to="/" className="game-changer">
                 <img className="eesimg" src={ees} alt="hreo" />

@@ -8,42 +8,67 @@ function UdgamSponsors() {
       <div className="sponsorContainer">
         <div className="sponsor">
           <div className="logo-container sponsor1"></div>
-          <div className="sponsorName">WION Global News Partner</div>
+          <a className="sponsorName" href="https://www.rapidai.com" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+            {' '}
+            <h4>CISCO</h4>
+          </a>
         </div>
 
         <div className="sponsor">
           <div className="logo-container sponsor2"></div>
-          <div className="sponsorName">WION Global News Partner</div>
+          <a className="sponsorName" href="https://www.rapidai.com" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+            {' '}
+            <h4>CODECHEF</h4>
+          </a>
         </div>
 
         <div className="sponsor">
           <div className="logo-container sponsor3"></div>
-          <div className="sponsorName">WION Global News Partner</div>
+          <a className="sponsorName" href="https://www.rapidai.com" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+            {' '}
+            <h4>COINSWITCH KUBER</h4>
+          </a>
         </div>
 
         <div className="sponsor">
           <div className="logo-container sponsor4"></div>
-          <div className="sponsorName">WION Global News Partner</div>
+          <a className="sponsorName" href="https://www.rapidai.com" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+            {' '}
+            <h4>MENTOR</h4>
+          </a>
         </div>
 
         <div className="sponsor">
           <div className="logo-container sponsor5"></div>
-          <div className="sponsorName">WION Global News Partner</div>
+          <a className="sponsorName" href="https://www.rapidai.com" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+            {' '}
+            <h4>NVIDIA</h4>
+          </a>
         </div>
 
         <div className="sponsor">
           <div className="logo-container sponsor6"></div>
-          <div className="sponsorName">WION Global News Partner</div>
+          <a className="sponsorName" href="https://www.rapidai.com" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+            {' '}
+            <h4>RapidAI</h4>
+          </a>
         </div>
 
         <div className="sponsor">
           <div className="logo-container sponsor7"></div>
-          <div className="sponsorName">WION Global News Partner</div>
+          <a className="sponsorName" href="https://www.rapidai.com" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+            {' '}
+            <h4>SILENCE LAB</h4>
+          </a>
         </div>
 
         <div className="sponsor">
           <div className="logo-container sponsor8"></div>
-          <div className="sponsorName">WION Global News Partner</div>
+          <a className="sponsorName" href="https://www.rapidai.com" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+            {' '}
+            <h4>TEESHOOD</h4>
+          </a>
+          {/* <div className="sponsorName">TEESHOOD</div> */}
         </div>
       </div>
     </div>
