@@ -80,24 +80,29 @@ const Nav = (props) => {
               id={props.active === '#name' ? 'active' : ''}
             >
               {window.sessionStorage.getItem('registered_email') == null ? (
-                <GoogleLogin
-                  theme="dark"
-                  accessType="online"
-                  disabled={false}
-                  client_id={clientId} // your Google app client ID
-                  buttonText="Sign in with Google"
-                  onSuccess={onGoogleLoginSuccess} // perform your user logic here
-                  onFailure={onGoogleLoginFailure} // handle errors here
-                  cookiePolicy={'single-host-origin'}
-                  scope={scope}
-                  render={(renderProps) => (
-                    <Link to="#" className="game-changer" style={{ textDecoration: 'none' }} onClick={renderProps.onClick}>
-                      <BiQrScan className="info" />
-                      <p>SignIn</p>
-                    </Link>
-                  )}
-                />
+                <GoogleLoginBTN>
+                  <Link to="#">
+                    <a href="#">SignIn</a>
+                  </Link>
+                </GoogleLoginBTN>
               ) : (
+                // <GoogleLogin
+                //   theme="dark"
+                //   accessType="online"
+                //   disabled={false}
+                //   client_id={clientId} // your Google app client ID
+                //   buttonText="Sign in with Google"
+                //   onSuccess={onGoogleLoginSuccess} // perform your user logic here
+                //   onFailure={onGoogleLoginFailure} // handle errors here
+                //   cookiePolicy={'single-host-origin'}
+                //   scope={scope}
+                //   render={(renderProps) => (
+                //     <Link to="#" className="game-changer" style={{ textDecoration: 'none' }} onClick={renderProps.onClick}>
+                //       <BiQrScan className="info" />
+                //       <p>SignIn</p>
+                //     </Link>
+                //   )}
+                // />
                 <Link to="/dashboard" className="game-changer" style={{ textDecoration: 'none' }}>
                   <BiQrScan className="info" />
                   <p>Dashboard</p>
