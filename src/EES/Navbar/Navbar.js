@@ -220,26 +220,10 @@ const Navbar = () => {
               </li>
             </ul>
             {window.sessionStorage.getItem('registered_email') == null ? (
-              // <GoogleLogin
-              //   theme="dark"
-              //   accessType="online"
-              //   disabled={false}
-              //   client_id={clientId} // your Google app client ID
-              //   buttonText="Sign in with Google"
-              //   onSuccess={onGoogleLoginSuccess} // perform your user logic here
-              //   onFailure={onGoogleLoginFailure} // handle errors here
-              //   cookiePolicy={'single-host-origin'}
-              //   scope={scope}
-              //   render={(renderProps) => (
-              //     <div className="menu-text" style={{ display: 'flex' }} onClick={renderProps.onClick}>
-              //       <span>SignIn</span>
-              //     </div>
-              //   )}
-              // />
               <GoogleLoginBTN>
-                <Link to="#">
-                  <a href="#">SignIn</a>
-                </Link>
+                <div className="menu-text" style={{ display: 'flex' }}>
+                  <span>SignIn</span>
+                </div>
               </GoogleLoginBTN>
             ) : (
               <GoogleLogoutBTN>
