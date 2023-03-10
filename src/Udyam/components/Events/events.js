@@ -26,7 +26,7 @@ const data = [
   {
     title: 'I-CHIP',
     description: 'Design, simulate, validate, and debug digital systems, from flip-flops to microprocessors. Work with Verilog HDL and get your hands on FPGA Boards through this Verilog-based event.',
-    psLink: 'https://drive.google.com/file/d/18UqA0Djh6ikyroMJmDFsjYGAy_JgZK_3/view?usp=share_link'
+    psLink: 'https://drive.google.com/file/d/1jY_QC-TCy0vt5McbIQuAXCQ8ww2ONiQ1/view?usp=share_link'
   },
   {
     title: 'DEVBITS',
