@@ -26,7 +26,7 @@ const DashBoard = () => {
     setUser(newUser);
     setToken(newUser.token);
     axios
-      .get('http://udyam.pythonanywhere.com/api/events/')
+      .get('https://udyam.pythonanywhere.com/api/events/')
       .then((res) => {
         console.log(res);
         setEventsData(res.data);
@@ -34,7 +34,7 @@ const DashBoard = () => {
       .catch((error) => console.log(error));
 
     axios
-      .get('http://udyam.pythonanywhere.com/api/teams/user/', { headers: { Authorization: `Token ${newUser.token}` } })
+      .get('https://udyam.pythonanywhere.com/api/teams/user/', { headers: { Authorization: `Token ${newUser.token}` } })
       .then((res) => {
         console.log(res);
         setTeamData(res.data);
@@ -75,7 +75,7 @@ const DashBoard = () => {
       member2: data.member2
     };
     axios
-      .post('http://udyam.pythonanywhere.com/api/team/create/', senddata, {
+      .post('https://udyam.pythonanywhere.com/api/team/create/', senddata, {
         // headers: {
         //   Authorization: `Basic ${token}`
         // }
