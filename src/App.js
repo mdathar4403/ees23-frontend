@@ -23,6 +23,7 @@ import Register from './EES/Register/Register';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComingSoon from './EES/ComingSoon/ComingSoon';
+import Gallery from './EES/Gallery/Gallery';
 
 function App() {
   return (
@@ -45,10 +46,7 @@ function App() {
             path="/gallery"
             element={
               <>
-                <div style={{ position: 'fixed', zIndex: '999' }}>
-                  <Navbar />
-                </div>
-                <ComingSoon />
+                <Gallery />
               </>
             }
           />
