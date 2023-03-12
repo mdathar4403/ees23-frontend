@@ -21,42 +21,50 @@ const data = [
   {
     title: 'DIGISIM',
     description: 'Gain mastery of digital system designing and computer architecture by designing optimized digital systems and simulating them on Proteus. Grab this chance to put to test your debugging and logic-building skills.',
-    psLink: ''
+    psLink: 'https://drive.google.com/file/d/1m4meRoE6gra8m01SoERahFN-7qBNdFnB/view?usp=share_link',
+    submissionLink: ''
   },
   {
     title: 'I-CHIP',
     description: 'Design, simulate, validate, and debug digital systems, from flip-flops to microprocessors. Work with Verilog HDL and get your hands on FPGA Boards through this Verilog-based event.',
-    psLink: 'https://drive.google.com/file/d/1jY_QC-TCy0vt5McbIQuAXCQ8ww2ONiQ1/view?usp=share_link'
+    psLink: 'https://drive.google.com/file/d/1jY_QC-TCy0vt5McbIQuAXCQ8ww2ONiQ1/view?usp=share_link',
+    submissionLink: ''
   },
   {
     title: 'DEVBITS',
     description: 'Get the hang of two of the most sought-after verticals under the programming umbrella. Test your critical thinking abilities with a competitive-programming round. Work on creating highly functional web applications built using industry-sought tech stacks.',
-    psLink: ''
+    psLink: '',
+    submissionLink: ''
   },
   {
     title: 'COMMNET',
     description: 'Become proficient in Network Architecture and MATLAB implementation of coding theory, compression algorithms, signal processing, modulation and demodulation techniques, designing and simulating analog circuits & filters to perform computations using CAD tools.',
-    psLink: ''
+    psLink: '',
+    submissionLink: ''
   },
   {
     title: 'X-IOT-A',
     description: 'Propose and implement a solution to a real-world problem with the help of the booming technology of the Internet of Things involving circuit designing and the incorporation of hardware and software.',
-    psLink: 'https://drive.google.com/file/d/1d3UkJB_tNFYfI2HBMR_T_DhQsF07eDfw/view?usp=share_link'
+    psLink: 'https://drive.google.com/file/d/1d3UkJB_tNFYfI2HBMR_T_DhQsF07eDfw/view?usp=share_link',
+    submissionLink: 'https://docs.google.com/forms/d/e/1FAIpQLSf0igPnY4bjQiIgp7EVZYhWiiQbkyBFxICFL5Kvz267avGwNQ/viewform'
   },
   {
     title: 'CASSANDRA',
     description: 'Prove yourself a good data analyst by designing a model that learns and optimizes the dataset provided, implementing Machine Learning algorithms in industrial problems and gain exposure to the ABCs of data science.',
-    psLink: ''
+    psLink: '',
+    submissionLink: ''
   },
   {
     title: 'MOSAIC',
     description: 'Get the opportunity to decipher canonical problems based on the intriguing subject of Machine Learning and Computer Vision. Know about deep learning and image processing inside out and acquire expertise in machine learning.',
-    psLink: 'https://drive.google.com/file/d/1IgzULOh1dQkfOVA9FQqoxO_9lvTPe0cT/view?usp=share_link'
+    psLink: 'https://drive.google.com/file/d/1IgzULOh1dQkfOVA9FQqoxO_9lvTPe0cT/view?usp=share_link',
+    submissionLink: ''
   },
   {
     title: 'FUNCKIT',
     description: 'Test your problem-solving abilities through low-level programming and building gate-level circuitry to optimize the logic and hardware and decrease execution time.',
-    psLink: ''
+    psLink: 'https://drive.google.com/file/d/1PAd6g6Qw9HTc3o9usjeKzlSbVzTqbZ0P/view?usp=share_link',
+    submissionLink: ''
   }
 ];
 
@@ -213,7 +221,15 @@ function Events() {
                 <>PROBLEM STATEMENT</>
               )}
             </div>
-            <div className="udyam-event-submit">SUBMIT</div>
+            <div className="udyam-event-submit">
+              {eventData.submissionLink ? (
+                <a href={eventData.submissionLink} target="_blank" rel="noreferrer">
+                  SUBMIT
+                </a>
+              ) : (
+                <>SUBMIT</>
+              )}
+            </div>
           </div>
           <div className="udyam-event-arrows">
             <img id="left" src={left} alt="" onClick={lastone} />

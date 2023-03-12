@@ -165,7 +165,7 @@
   text-align: center;
 }
 
-.ps-link a{
+.ps-link a,.udyam-event-submit a{
   text-decoration: none;
   color: inherit;
 }
