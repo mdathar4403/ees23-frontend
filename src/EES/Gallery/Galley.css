@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+.entire-page-gallery {
+  background-color: #001432;
+  background-repeat: repeat-y;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+.gallery-heading {
+  color: white;
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 4.5rem;
+}
+.gallery-div {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0rem 1.5rem 0rem;
+}
+.workshop-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.workshop-carousel .img {
+  width: 30rem;
+  display: flex;
+  transition: all 0.37s ease-in-out;
+  z-index: 1;
+  border-radius: 10px;
+  position: relative;
+  height: 380px;
+}
+.workshop-carousel .carousel-btn:active {
+  transform: scale(1.1);
+}
+.workshop-carousel .prev-image-gallery {
+  transform: scale(0.5);
+  left: 160px;
+}
+.workshop-carousel .next-image-gallery {
+  transform: scale(0.5);
+  left: -160px;
+}
+.workshop-carousel .current-image-gallery {
+  z-index: 3;
+  transform: scale(0.9);
+}
+.carousel-btn {
+  display: flex;
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  height: 40px;
+  z-index: 1;
+  top: 165px;
+}
+#carousel-btn-left {
+  left: 247px;
+}
+#carousel-btn-right {
+  right: 247px;
+}
+.carousel-background {
+  width: 100vw;
+  position: absolute;
+  height: 220px;
+  top: 109px;
+  z-index: 0;
+}
+.current-carousel-bk {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  width: 28.5rem;
+  height: 22.5rem;
+}
+.gallery-workshop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+  position: relative;
+}
+.gallery-design-box {
+  background-color: transparent;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  border: 4.5px solid;
+  border-image: linear-gradient(-135deg, #3e54d3, #15cdca) 1;
+  z-index: 2;
+  position: absolute;
+}
+#workshop-gallery-box-1 {
+  right: 49.5vw;
+  top: 161px;
+}
+#workshop-gallery-box-2 {
+  left: 49.5vw;
+  top: 20px;
+}
+.carousel-heading {
+  z-index: 1;
+  position: absolute;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: white;
+  left: 1.5vw;
+  top: 95px;
+}
+.gallery-gradient {
+  position: absolute;
+  display: flex;
+  width: 580px;
+  height: 610px;
+  left: 83vw;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(118, 60, 172, 0.9) 0%, rgba(50, 15, 133, 0) 100%);
+  overflow-x: hidden;
+}
+#workshop-gallery-gradient {
+  top: 315px;
+}
+#udyam-gallery-gradient {
+  top: 735px;
+}
+#mashal-gallery-gradient {
+  top: 1165px;
+}
+.mobile-heading-background {
+  height: 0;
+  width: 100vw;
+  margin: 10px 0;
+}
+.right-carousel-background {
+  position: relative;
+  display: flex;
+  height: 0;
+  left: 20px;
+}
+.right-carousel-div {
+  display: flex;
+  width: 100vw;
+  justify-content: flex-end;
+}
+.left-carousel-background {
+  height: 0;
+}
+@media screen and (max-width: 1375px) {
+  .carousel-heading {
+    font-size: 2.5rem;
+  }
+  .workshop-carousel .img {
+    height: 300px;
+    width: 420px;
+  }
+  .carousel-background {
+    height: 175px;
+    top: 90px;
+  }
+  .current-carousel-bk {
+    width: 25rem;
+    height: 18.3rem;
+  }
+  #workshop-gallery-box-2 {
+    left: 49vw;
+    top: 17px;
+  }
+  #workshop-gallery-box-1 {
+    top: 112px;
+    right: 49vw;
+  }
+  .gallery-design-box {
+    height: 13.5rem;
+    width: 13.5rem;
+    border: 3.5px solid;
+    border-image: linear-gradient(-135deg, #3e54d3, #15cdca) 1;
+  }
+  .carousel-btn {
+    top: 130px;
+  }
+  .gallery-gradient {
+    height: 521px;
+  }
+  #udyam-gallery-gradient {
+    top: 695px;
+  }
+  #mashal-gallery-gradient {
+    top: 1070px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .carousel-heading {
+    font-size: 2rem;
+    top: 75px;
+  }
+  .workshop-carousel .img {
+    height: 250px;
+    width: 370px;
+  }
+  .carousel-background {
+    height: 145px;
+    top: 79px;
+  }
+  .current-carousel-bk {
+    width: 22rem;
+    height: 15.3rem;
+  }
+  #workshop-gallery-box-2 {
+    left: 51.5vw;
+    top: 14px;
+  }
+  #workshop-gallery-box-1 {
+    top: 112px;
+    right: 51.5vw;
+  }
+  .gallery-design-box {
+    height: 10.5rem;
+    width: 10.5rem;
+  }
+  .carousel-btn {
+    top: 105px;
+    height: 27px;
+  }
+  .carousel-btn img {
+    width: 20px;
+  }
+  #workshop-gallery-gradient {
+    top: 258px;
+  }
+  #udyam-gallery-gradient {
+    top: 600px;
+  }
+  #mashal-gallery-gradient {
+    top: 920px;
+  }
+}
+@media screen and (max-width: 968px) {
+  .carousel-heading {
+    font-size: 2rem;
+    top: 75px;
+  }
+  .workshop-carousel .img {
+    height: 220px;
+    width: 320px;
+  }
+  .carousel-background {
+    height: 130px;
+    top: 72px;
+  }
+  .current-carousel-bk {
+    width: 19rem;
+    height: 13.3rem;
+  }
+  #workshop-gallery-box-2 {
+    left: 52vw;
+    top: 18px;
+  }
+  #workshop-gallery-box-1 {
+    top: 109px;
+    right: 52vw;
+  }
+  .gallery-design-box {
+    height: 8.5rem;
+    width: 8.5rem;
+  }
+  .carousel-btn {
+    top: 98px;
+    height: 27px;
+  }
+  .carousel-btn img {
+    width: 20px;
+  }
+  #carousel-btn-left {
+    left: 238px;
+  }
+  #carousel-btn-right {
+    right: 238px;
+  }
+  #workshop-gallery-gradient {
+    top: 230px;
+  }
+  #udyam-gallery-gradient {
+    top: 520px;
+  }
+  #mashal-gallery-gradient {
+    top: 820px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .mobile-heading-background {
+    height: 50px;
+  }
+  .right-carousel-background {
+    height: 100%;
+  }
+  .left-carousel-background {
+    height: 100%;
+  }
+  .carousel-heading {
+    font-size: 2rem;
+    top: -95px;
+  }
+  #workshop-gallery-gradient {
+    width: 0px;
+  }
+  #udyam-gallery-gradient {
+    width: 0px;
+  }
+  #mashal-gallery-gradient {
+    width: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .gallery-div {
+    padding: 4rem 0rem 1.5rem 0rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #carousel-btn-left {
+    left: 0;
+  }
+  #carousel-btn-right {
+    right: 0;
+  }
+  .workshop-carousel .prev-image-gallery {
+    width: 0px;
+  }
+  .workshop-carousel .next-image-gallery {
+    width: 0px;
+  }
+  #workshop-gallery-box-2 {
+    visibility: hidden;
+  }
+  #workshop-gallery-box-1 {
+    visibility: hidden;
+  }
+  .carousel-background {
+    width: 400px;
+    height: 50px;
+    border-radius: 15px;
+    top: 113px;
+  }
+}
+@media screen and (max-width: 413px) {
+  .workshop-carousel .img {
+    height: 205px;
+    width: 270px;
+  }
+  .workshop-carousel .prev-image-gallery {
+    width: 0px;
+  }
+  .workshop-carousel .next-image-gallery {
+    width: 0px;
+  }
+  .current-carousel-bk {
+    width: 16rem;
+    height: 12.3rem;
+  }
+  .carousel-background {
+    width: 355px;
+  }
+}

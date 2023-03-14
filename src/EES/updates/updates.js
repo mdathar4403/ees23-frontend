@@ -72,21 +72,21 @@ function Updates() {
   return (
     <>
       <section className="updates-main-container">
-        <div className="updates-udyam-head-container udyam-background-dark">
+        <div id="UdyamUpdates" className="updates-udyam-head-container udyam-background-dark">
           <h1>UDYAM UPDATES</h1>
         </div>
         <div className="updates-udyam-content udyam-background-dark">
           <div className="update-content">{udyamarr}</div>
         </div>
 
-        <div className="updates-udgam-head-container udgam-background-dark">
+        <div id="UdgamUpdates" className="updates-udgam-head-container udgam-background-dark">
           <h1>UDGAM UPDATES</h1>
         </div>
         <div className="updates-udgam-content udgam-background-dark">
           <div className="update-content">{udgamarr}</div>
         </div>
 
-        <div className="updates-mashal-head-container mashal-background-dark">
+        <div id="MashalUpdates" className="updates-mashal-head-container mashal-background-dark">
           <h1>MASHAL UPDATES</h1>
         </div>
         <div className="updates-mashal-content mashal-background-dark">

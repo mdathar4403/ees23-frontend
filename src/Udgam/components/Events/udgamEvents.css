@@ -260,6 +260,10 @@
   font-family: eventHeadingfont;
 }
 
+.register a {
+  color: inherit;
+  text-decoration: none;
+}
 .event-submit {
   border: 1px solid #ffffff;
   border-radius: 0px;

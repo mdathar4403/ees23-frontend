@@ -355,12 +355,12 @@
     gap: 1rem;
   }
 }
-.expanded_btn {
+.mashal_expanded_btn {
   display: flex;
   flex-direction: row;
   margin-top: 60vh;
 }
-.expanded_btn div {
+.mashal_expanded_btn div {
   width: fit-content;
   margin: auto;
 }

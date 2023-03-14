@@ -12,134 +12,19 @@ import udyam from '../Nav/udyam.svg';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { TfiMenu } from 'react-icons/tfi';
-// import { IoIosArrowBack } from 'react-icons/io';
 import { Link } from 'react-router-dom';
-import { GoogleLogin } from 'react-google-login';
 import Profile from '../Profile/Profile';
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'; // You can also use <link> for styles
-// // ..
-// AOS.init();
-import { toast } from 'react-toastify';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-
-const scope = 'https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/user.addresses.read https://www.googleapis.com/auth/user.organization.read';
-const clientId = process.env.REACT_APP_CLIENT_ID;
+import { GoogleLoginBTN } from '../../../EES/Navbar/googleauth';
 
 const Nav = (props) => {
-  const navigate = useNavigate();
-  const onGoogleLoginSuccess = (res) => {
-    console.log('SUCCESS!!! Current User: ', res);
-    window.sessionStorage.setItem('profileData', JSON.stringify(res.profileObj));
-    window.sessionStorage.setItem('tokenId', res.tokenId);
-    window.sessionStorage.setItem('imageUrl', res.profileObj.imageUrl);
-    // console.log('res.profileObj: ', res);
-    axios({
-      url: 'https://udyam.pythonanywhere.com/auth/google-login/',
-      method: 'post',
-      headers: { Authorization: res.tokenId },
-      data: {
-        email: res.profileObj.email
-      }
-    })
-      .then((res) => {
-        console.log('res: ', res);
-        if (res.status === 200) {
-          window.sessionStorage.setItem('registered_email', res.data.email);
-          window.sessionStorage.setItem('profileData', JSON.stringify(res.data));
-          toast.success('Login was successfull!', {
-            theme: 'dark',
-            position: window.innerWidth < 600 ? toast.POSITION.BOTTOM_CENTER : toast.POSITION.BOTTOM_RIGHT,
-            autoClose: 1200
-          });
-          console.log('stored Data', JSON.parse(window.sessionStorage.getItem('profileData')));
-          navigate('/dashboard');
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.warning('Your registeration is incomplete.', {
-          theme: 'dark',
-          position: window.innerWidth < 600 ? toast.POSITION.BOTTOM_CENTER : toast.POSITION.BOTTOM_RIGHT,
-          autoClose: 3000
-        });
-        navigate('/dashboard');
-      });
-  };
-
-  const onGoogleLoginFailure = (res) => {
-    console.log('FAILURE!!! res: ', res);
-  };
-  // const [slideEvent, setEvent] = useState('false');
-  // const [slideLeader, setLeader] = useState('false');
   const [slideNav, setNav] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
-  // const [activeNav, setActiveNav] = useState('#');
   const [udyamName, setUdyamName] = useState(true);
-  // const [udyevents,setudyevents]=useState('Digism');
-  // let ind=0;
 
-  // function life(){
-  //   const location = useLocation();
-
-  //   // The current location.
-  //   console.log(location);
-  //   if(location.pathname=='/udyam/about'){setActiveNav('#about');}
-
-  // }
-  // useEffect(() => {
-  //   life();
-  // }, []);
-  //   useEffect(() => {
-  //     life();
-  //   }, []);
-
-  // }
-  // // life();
-
-  // window.addEventListener("beforeunload", () => {
-  //   life();
-  //   console.log("API call before page reload");
-  // });
-
-  // window.addEventListener("unload", () => {
-  //   life();
-  //   console.log("API call after page reload");
-  // });
-
-  // const Token = document.getElementsByClassName('.token')
-  // const UdyamNav = document.getElementsByClassName('.udyam-nav');
-
-  // function checkNav() {
-  //   // props.eventTitleFunc=e;
-  //   // eventTitleFunc(e);
-  //   setUdyamName(true);
-  //   if (width > 800) {
-  //     return;
-  //   } else {
-  //     if (slideLeader === false) {
-  //       document.querySelector('.leader').style.display = 'none';
-  //     } else {
-  //       document.querySelector('.token').style.display = 'none';
-  //     }
-  //     document.querySelector('.udyam-nav').style.display = 'none';
-  //   }
-  //   // props.eventTitleFunc();
-  // }
   function menuNav() {
     setUdyamName(false);
-    // if (slideLeader === false) {
-    //   document.querySelector('.leader').style.display = 'block';
-    // } else {
-    //   document.querySelector('.token').style.display = 'block';
-    // }
-    // document.querySelector('.token').style.display = 'block';
-    // document.querySelector('.leader').style.display = 'block';
-
     setNav(true);
     document.querySelector('.udyam-nav').style.display = 'block';
-    // setNav(!slideNav);
   }
 
   const updateWidth = () => {
@@ -150,17 +35,6 @@ const Nav = (props) => {
     return () => window.removeEventListener('resize', updateWidth);
   }, []);
 
-  // function slideEvents() {
-  //   setEvent(!slideEvent);
-  //   setLeader(true);
-
-  //   // Events.style.backgroundColor = 'yellow'
-  // }
-  // function slideLeaderboard() {
-  //   setLeader(!slideLeader);
-  //   setEvent(true);
-
-  // }
   function events() {
     helloNav();
   }
@@ -173,17 +47,8 @@ const Nav = (props) => {
   function sponsors() {
     helloNav();
   }
-  // function showNav() {
-  //   setNav(!slideNav);
-  //   setEvent(true);
-  //   setLeader(true);
-  // }
-  // // function slidemobile() {
-  //   // setEvent(true);
-  //   // setLeader(true);
-  // }
+
   function helloNav() {
-    // if(width<=800){document.querySelector('.udyam-nav').style.display = 'none';}
     setNav(false);
     setUdyamName(true);
   }
@@ -215,23 +80,12 @@ const Nav = (props) => {
               id={props.active === '#name' ? 'active' : ''}
             >
               {window.sessionStorage.getItem('registered_email') == null ? (
-                <GoogleLogin
-                  theme="dark"
-                  accessType="online"
-                  disabled={false}
-                  client_id={clientId} // your Google app client ID
-                  buttonText="Sign in with Google"
-                  onSuccess={onGoogleLoginSuccess} // perform your user logic here
-                  onFailure={onGoogleLoginFailure} // handle errors here
-                  cookiePolicy={'single-host-origin'}
-                  scope={scope}
-                  render={(renderProps) => (
-                    <Link to="#" className="game-changer" style={{ textDecoration: 'none' }} onClick={renderProps.onClick}>
-                      <BiQrScan className="info" />
-                      <p>Register</p>
-                    </Link>
-                  )}
-                />
+                <GoogleLoginBTN>
+                  <Link to="#" className="game-changer" style={{ textDecoration: 'none' }}>
+                    <BiQrScan className="info" />
+                    <p>SignIn</p>
+                  </Link>
+                </GoogleLoginBTN>
               ) : (
                 <Link to="/dashboard" className="game-changer" style={{ textDecoration: 'none' }}>
                   <BiQrScan className="info" />
@@ -251,10 +105,6 @@ const Nav = (props) => {
                 <AiOutlineInfoCircle className="info" />
                 <p>About Us</p>
               </Link>
-              {/* <a href="/udyam/about" className="game-changer">
-                <AiOutlineInfoCircle className="info" />
-                <p>About Us</p>
-              </a> */}
             </div>
             <div className="events hovered" id={props.active === '#event' ? 'active' : ''} onClick={events}>
               <Link to="/udyam/events" className="game-changer" style={{ textDecoration: 'none' }}>
