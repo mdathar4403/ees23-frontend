@@ -221,6 +221,15 @@ function Events() {
                 <>PROBLEM STATEMENT</>
               )}
             </div>
+            <div className="register-link">
+              {eventData.registerLink ? (
+                <a href="https://eesiitbhu.in/dashboard#events-register" target="_blank" rel="noreferrer">
+                  REGISTER
+                </a>
+              ) : (
+                <>REGISTER</>
+              )}
+            </div>
             <div className="udyam-event-submit">
               {eventData.submissionLink ? (
                 <a href={eventData.submissionLink} target="_blank" rel="noreferrer">

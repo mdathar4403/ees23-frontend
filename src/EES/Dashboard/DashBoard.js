@@ -186,7 +186,7 @@ const DashBoard = () => {
           </div>
           {/* add team */}
           <h2 className="add-Teams">+ Add Teams</h2>
-          <div className="row">
+          <div className="row" id="events-register">
             {eventsData.map((e) => (
               // <div key={e.id} className="column">
               //   <div className="card">
