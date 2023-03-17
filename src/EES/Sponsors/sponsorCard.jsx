@@ -12,7 +12,7 @@ function SponsorCard(props) {
         <div className="sponsor-content">
           <div className="sponsor-title">{props.title}</div>
           <div className="sponsor-description">{props.description}</div>
-          <a href={props.link}>
+          <a href={props.link} target="_blank" rel="noreferrer">
             <div className="learn-more-btn">LEARN MORE</div>
           </a>
         </div>
