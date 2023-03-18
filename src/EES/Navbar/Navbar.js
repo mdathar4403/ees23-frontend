@@ -56,11 +56,13 @@ const Navbar = () => {
 
             <ul className="menu">
               <li className="menu-item">
-                <GoogleLogoutBTN>
-                  <div className="logout-btn">
-                    <IoMdLogOut></IoMdLogOut>
-                  </div>
-                </GoogleLogoutBTN>
+                {window.sessionStorage.getItem('registered_email') && (
+                  <GoogleLogoutBTN>
+                    <div className="logout-btn">
+                      <IoMdLogOut></IoMdLogOut>
+                    </div>
+                  </GoogleLogoutBTN>
+                )}
               </li>
               <li className="menu-item">
                 <Link to="/" onClick={open}>
