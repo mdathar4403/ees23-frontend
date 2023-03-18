@@ -39,7 +39,7 @@ const data = [
   {
     title: 'COMMNET',
     description: 'Become proficient in Network Architecture and MATLAB implementation of coding theory, compression algorithms, signal processing, modulation and demodulation techniques, designing and simulating analog circuits & filters to perform computations using CAD tools.',
-    psLink: 'https://drive.google.com/file/d/1_Akts5nkyS1Viy7S1_OuwFi6MHCaC_-S/view?usp=share_link',
+    psLink: 'https://drive.google.com/file/d/1F_l-Xc7C3sYEp7azpT2bQWIU9-_JhH2O/view?usp=share_link',
     submissionLink: ''
   },
   {
