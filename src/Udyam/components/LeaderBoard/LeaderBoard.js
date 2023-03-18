@@ -231,9 +231,9 @@ const LeaderBoard = () => {
               );
             })}
           </div>
-          <div className="scroll_image_container">
+          {/* <div className="scroll_image_container">
             <img className="scroll_image" src="/assets/scrolling.png" alt="" />
-          </div>
+          </div> */}
         </div>
       </div>
     </>
