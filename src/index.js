@@ -6,7 +6,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 // import Udyam from './Udyam/Udyam';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const clientId = "test";
+const clientId = 'test';
 root.render(
   <GoogleOAuthProvider clientId={clientId}>
     <React.StrictMode>
