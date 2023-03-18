@@ -52,6 +52,14 @@ const Nav = (props) => {
     setNav(false);
     setUdyamName(true);
   }
+  useEffect(() => {
+    document.addEventListener('click', (e) => {
+      console.log(e.target.className);
+      if (e.target.className == 'main-container' || e.target.className == 'background' || e.target.className == 'bag' || e.target.className == 'star-field' || e.target.className == 'layer' || e.target.className == 'heading' || e.target.className == 'tag-line' || e.target.className == 'globe'
+      || e.target.className=='emma'
+      ) helloNav();
+    });
+  }, []);
 
   return (
     <>
@@ -66,19 +74,18 @@ const Nav = (props) => {
       </div>
       {(udyamName || true) && width < 800 && <Profile />}
       {(slideNav || width > 800) && (
-        <div className="udyam-nav">
+        <div className="udyam-nav udyam_side_nav">
           <div className="udyam-img">
             <Link to="/udyam" style={{ textDecoration: 'none' }}>
               <img className="udyam-logo" src={udyam} alt="hero" />
             </Link>
           </div>
-          <div className="udyam-icon">
+          <div className="udyam-icon udyam_side_nav">
             <div
               className="name hovered"
               // ind="#name"
               onClick={names}
-              id={props.active === '#name' ? 'active' : ''}
-            >
+              id={props.active === '#name' ? 'active' : ''}>
               {window.sessionStorage.getItem('registered_email') == null ? (
                 <GoogleLoginBTN>
                   <Link to="#" className="game-changer" style={{ textDecoration: 'none' }}>
@@ -98,8 +105,7 @@ const Nav = (props) => {
               className="about hovered"
               // ind="#about"
               onClick={abouts}
-              id={props.active === '#about' ? 'active' : ''}
-            >
+              id={props.active === '#about' ? 'active' : ''}>
               <Link to="/udyam/about" className="game-changer" style={{ textDecoration: 'none' }}>
                 {' '}
                 <AiOutlineInfoCircle className="info" />
@@ -116,8 +122,7 @@ const Nav = (props) => {
               className="sposors hovered"
               // ind="#sponsors"
               onClick={sponsors}
-              id={props.active === '#sponsors' ? 'active' : ''}
-            >
+              id={props.active === '#sponsors' ? 'active' : ''}>
               <Link to="/udyam/sponsors" className="game-changer" style={{ textDecoration: 'none' }}>
                 <BiDollarCircle className="info" />
                 <p>Sponsors</p>
