@@ -54,10 +54,12 @@ const MashalEvent = () => {
               <figure className="card__thumb">
                 <img src={Run} alt="Picture by Kyle Cottrell" className="card__image" />
                 <figcaption className="card__caption">
-                  <h2 className="card__title">5-KM RUN</h2>
+                  <h2 className="card__title">
+                    5-KM RUN <span id="livenow">Live</span>
+                  </h2>
                   <p className="card__snippet">Track: 5 km running track Track: 5 km running track, Inside IIT BHU Campus</p>
-                  <a href="#" className="card__button">
-                    Coming Soon
+                  <a href="https://docs.google.com/forms/d/1tzb4yvLkVRlJsKWVUhtCMXnle894ImQMZL5lGfF17j0/viewform?edit_requested=true" className="card__button">
+                    Register
                   </a>
                 </figcaption>
               </figure>
@@ -66,9 +68,11 @@ const MashalEvent = () => {
               <figure className="card__thumb">
                 <img src={chess} alt="Picture by Kyle Cottrell" className="card__image" />
                 <figcaption className="card__caption">
-                  <h2 className="card__title">CHESS</h2>
+                  <h2 className="card__title">
+                    CHESS <span id="livenow">Live</span>
+                  </h2>
                   <p className="card__snippet">Participation: Individual , 3 Rounds: Lichess Arena, Swiss Tournament, Offline Boards</p>
-                  <a href="https://bit.ly/m/Mashal?fbclid=PAAab1MUruaFTM0K4Av3d4pqM5OI18MWZKzbRIbea3t8F_gBfKd94yyu0ojRI" target="__blank" className="card__button">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7m0oJo7SCBTkHmU0aCcXrClotG7FdLBswknxI7tOwm6sNaA/closedform" target="__blank" className="card__button">
                     Register
                   </a>
                 </figcaption>
@@ -90,9 +94,11 @@ const MashalEvent = () => {
               <figure className="card__thumb">
                 <img src={kho} alt="Picture by Kyle Cottrell" className="card__image" />
                 <figcaption className="card__caption">
-                  <h2 className="card__title">KHO-KHO</h2>
+                  <h2 className="card__title">
+                    KHO-KHO <span id="livenow">Live</span>
+                  </h2>
                   <p className="card__snippet">Team Size: 12 players , Only 9 players take the field, Match: 9 mins x 2 innings</p>
-                  <a href="https://bit.ly/m/Mashal?fbclid=PAAab1MUruaFTM0K4Av3d4pqM5OI18MWZKzbRIbea3t8F_gBfKd94yyu0ojRI" target="__blank" className="card__button">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSciFs1FM-9L0ASPrTIsYNcHrngih1XivQ5M8WFO5ORzOML8DA/viewform" target="__blank" className="card__button">
                     Register
                   </a>
                 </figcaption>
@@ -138,10 +144,12 @@ const MashalEvent = () => {
               <figure className="card__thumb">
                 <img src={cycle} alt="Picture by Kyle Cottrell" className="card__image" />
                 <figcaption className="card__caption">
-                  <h2 className="card__title">CYCLING</h2>
+                  <h2 className="card__title">
+                    CYCLING <span id="livenow">Live</span>
+                  </h2>
                   <p className="card__snippet">Duration: 5-day event, Participation: Individual , Categories: Men’s and Women’s, Platform: Strava</p>
-                  <a href="#" className="card__button">
-                    Coming Soon
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfV77ZaVMmLT5INZQbcg6NJAfPJDaDMqfWAmisxqOWv7CPgKg/viewform" className="card__button">
+                    Register
                   </a>
                 </figcaption>
               </figure>
@@ -150,10 +158,12 @@ const MashalEvent = () => {
               <figure className="card__thumb">
                 <img src={tt} alt="Picture by Kyle Cottrell" className="card__image" />
                 <figcaption className="card__caption">
-                  <h2 className="card__title">TABLE TENNIS</h2>
+                  <h2 className="card__title">
+                    TABLE TENNIS <span id="livenow">Live</span>
+                  </h2>
                   <p className="card__snippet">Team Size: 3 (for boys) , 2 (for girls), Matches: 3 singles (for boys), 2 singles, 1 doubles (for girls)</p>
-                  <a href="#" className="card__button">
-                    Coming Soon
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSclYUMm1gN-VumVBwqM80p1WG80SMlJvw3nlq2N5YTIRJDcbg/viewform" className="card__button">
+                    Register
                   </a>
                 </figcaption>
               </figure>
