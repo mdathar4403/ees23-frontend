@@ -304,7 +304,9 @@ nav {
   height: 4vh;
   text-align: center;
   position: relative;
-  top: 28%;
+  top: 31%;
+  /* display: flex; */
+  /* justify-content: center; */
   right: -32%;
   z-index: 5;
   cursor: pointer;
