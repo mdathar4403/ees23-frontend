@@ -73,9 +73,14 @@ const data = [
 function Events() {
   const [eventData, setEventData] = useState(data[0]);
   const [eventtable, setEventtable] = useState(true);
+  const [checkDevbits, setDevbits] = useState(0);
+
   // const [eventnav, setEventnav] = useState(false);
+  var isDevbits = 0;
   const eventName = (event) => {
     var element = event.target.classList[0];
+    setDevbits(element);
+    console.log(isDevbits);
     setEventData(data[element]);
     // setEventtable(false);
     console.log(element);
@@ -140,6 +145,17 @@ function Events() {
     // console.log(copyeventitem.get(i));
     setEventData(data[i]);
   }
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div>
@@ -211,6 +227,7 @@ function Events() {
           </div>
           <div className="udyam-event-title">{eventData.title}</div>
           <div className="udyam-event-desc">{eventData.description}</div>
+          <div> {checkDevbits == 2 && <div className="apply-button" data-hackathon-slug="DEVBITS WEB DEVELOPMENT HACKATHON" data-button-theme="light" style={{ height: '44px', width: '312px' }}></div>}</div>
           <div className="udyam-event-buttons">
             <div className="ps-link">
               {eventData.psLink ? (
