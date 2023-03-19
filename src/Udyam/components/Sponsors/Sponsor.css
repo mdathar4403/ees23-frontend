@@ -9,7 +9,8 @@
   width: 84vw;
   position: relative;
   top: 10%;
-  left: 12%;
+  /* left: 10%; */
+  margin: auto;
 }
 .sponser img {
   height: 10rem;
