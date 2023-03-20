@@ -7,6 +7,16 @@ import axios from 'axios';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 const DashBoard = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   const [user, setUser] = useState({
     name: 'Default',
     email: 'default@gmail.com',
@@ -22,7 +32,6 @@ const DashBoard = () => {
   const [token, setToken] = useState('');
   useEffect(() => {
     var newUser = JSON.parse(window.sessionStorage.getItem('profileData'));
-    // var newUser = { name: 'Default', email: 'dhruv.chaudhary.ece21@itbhu.ac.in', college: 'null', year: 'Part II', phone: '1234567890', referral: 'default#EES-10000', radianite_points: 0 };
     setUser(newUser);
     setToken(newUser.token);
     axios
@@ -209,6 +218,7 @@ const DashBoard = () => {
               </div>
             ))}
           </div>
+
           {showForm && (
             <div id="team-register-form" className="form-dashboard-container">
               <h1 className="form-heading">Team Registeration</h1>
@@ -229,6 +239,7 @@ const DashBoard = () => {
                 <button type="submit" className="form-dashboard-submit">
                   <span>Register</span>
                 </button>
+                {event === 'Devbits' && <div className="apply-button" data-hackathon-slug="YOUR-HACKATHON-SLUG" data-button-theme="light" style={{ height: '44px', width: '312px', zIndex: '100', position: 'relative' }}></div>}
               </form>
             </div>
           )}

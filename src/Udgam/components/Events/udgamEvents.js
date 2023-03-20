@@ -3,6 +3,7 @@ import './udgamEvents.css';
 import { useState, useEffect } from 'react';
 import { MdArrowForwardIos } from 'react-icons/md';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 function UdgamEvents() {
   const events = [
@@ -208,7 +209,13 @@ function UdgamEvents() {
                   <>Coming Soon</>
                 )}
               </div>
-              <div className="event-submit">SUBMIT</div>
+              {subEventLink && (
+                <div className="event-submit">
+                  <Link to="/udgam/events/eventover" style={{ textDecoration: 'none', color: 'white' }}>
+                    SUBMIT
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>

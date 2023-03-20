@@ -24,6 +24,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComingSoon from './EES/ComingSoon/ComingSoon';
 import Gallery from './EES/Gallery/Gallery';
+import EventOver from './EES/EventOver/EventOver';
 
 function App() {
   return (
@@ -224,6 +225,14 @@ function App() {
                 </div>
                 {/* <ComingSoon /> */}
                 <UdgamEvents />
+              </>
+            }
+          />
+          <Route
+            path="/udgam/events/eventover"
+            element={
+              <>
+                <EventOver />
               </>
             }
           />
