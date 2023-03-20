@@ -102,7 +102,8 @@ const Teams = () => {
               className="circle-box"
               onClick={() => {
                 changeTeam(8);
-              }}>
+              }}
+            >
               <div className="circle-content">EVENT CO-ORDINATORS</div>
             </div>
           </div>
