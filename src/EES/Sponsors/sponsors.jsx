@@ -28,7 +28,7 @@ const sponsorData = [
     link: 'https://www.codechef.com/'
   }
   // {
-  //   title: 'ZEEVE',
+  //   title: '',
   //   description: 'Co-Title Sponsor for Devbits.',
   //   image: require('./images/zeeve_whit.webp'),
   //   link: 'https://www.silverpush.co/'
