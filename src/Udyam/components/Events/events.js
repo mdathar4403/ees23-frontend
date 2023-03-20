@@ -171,42 +171,42 @@ function Events() {
             <div className="0 digism event-name" onClick={checkNav}>
               <a href="#" className="0">
                 {/* {' '} */}
-                Digisim
+                DIGISIM
               </a>
             </div>
             <div className="1 ichip event-name" onClick={checkNav}>
               <a href="#" className="1">
-                I-Chip
+                I-CHIP
               </a>
             </div>
             <div className="2 devbits event-name" onClick={checkNav}>
               <a href="#" className="2">
-                DevBits
+                DEVBITS
               </a>
             </div>
             <div className="3 commnet event-name" onClick={checkNav}>
               <a href="#" className="3">
-                CommNet
+                COMMNET
               </a>
             </div>
             <div className="4 xiota event-name" onClick={checkNav}>
               <a href="#" className="4">
-                X-Iot-A
+                X-IoT-A
               </a>
             </div>
             <div className="5 cassandra event-name" onClick={checkNav}>
               <a href="#" className="5">
-                Cassandra
+                CASSANDRA
               </a>
             </div>
             <div className="6 mosaic event-name" onClick={checkNav}>
               <a href="#" className="6">
-                Mosaic
+                MOSAIC
               </a>
             </div>
             <div className="7 funckit event-name" onClick={checkNav}>
               <a href="#" className="7">
-                Funckit
+                FUNCKIT
               </a>
             </div>
           </div>
