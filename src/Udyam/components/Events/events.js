@@ -227,7 +227,7 @@ function Events() {
           </div>
           <div className="udyam-event-title">{eventData.title}</div>
           <div className="udyam-event-desc">{eventData.description}</div>
-          <div> {checkDevbits == 2 && <div className="apply-button" data-hackathon-slug="DEVBITS WEB DEVELOPMENT HACKATHON" data-button-theme="light" style={{ height: '44px', width: '312px' }}></div>}</div>
+          <div> {checkDevbits == 2 && <div className="apply-button" data-hackathon-slug="devbits-web-development-hackathon" data-button-theme="dark" style={{ height: '44px', width: '312px' }}></div>}</div>
           <div className="udyam-event-buttons">
             <div className="ps-link">
               {eventData.psLink ? (
