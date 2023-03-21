@@ -7,7 +7,7 @@ function SponsorCard(props) {
     <>
       <div className="sponsor-card">
         <div className="sponsor-image">
-          <img src={props.image.default}></img>
+          <img src={props.image}></img>
         </div>
         <div className="sponsor-content">
           <div className="sponsor-title">{props.title}</div>
