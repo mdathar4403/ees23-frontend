@@ -18,21 +18,45 @@ const sponsorData = [
   {
     title: 'DEVFOLIO',
     description: 'Title Sponsor for Devbits.',
-    image: require('./images/devfolio.svg'),
+    image: require('./images/Devfolio.png'),
     link: 'https://devfolio.co'
   },
   {
     title: 'CODECHEF',
     description: 'Platform Sponsor for the competitive programming contest of Devbits.',
-    image: require('./images/codechef.svg'),
+    image: require('./images/Codechef.jpg'),
     link: 'https://www.codechef.com/'
+  },
+  {
+    title: 'ZEEVE',
+    description: 'Co-Title Sponsor for Devbits.',
+    image: require('./images/Zeeve.webp'),
+    link: 'https://www.zeeve.io/'
+  },
+  {
+    title: 'FILECOIN',
+    description: 'Co-Title Sponsor for Devbits.',
+    image: require('./images/Filecoin.png'),
+    link: 'https://filecoin.io/'
+  },
+  {
+    title: 'POLYGON',
+    description: 'Co-Title Sponsor for Devbits.',
+    image: require('./images/Polygon.png'),
+    link: 'https://polygon.technology/'
+  },
+  {
+    title: 'SOLANA',
+    description: 'Co-Title Sponsor for Devbits.',
+    image: require('./images/Solana.png'),
+    link: 'https://solana.com/'
+  },
+  {
+    title: 'REPLIT',
+    description: 'Co-Title Sponsor for Devbits.',
+    image: require('./images/Replit.png'),
+    link: 'https://replit.com/'
   }
-  // {
-  //   title: '',
-  //   description: 'Co-Title Sponsor for Devbits.',
-  //   image: require('./images/zeeve_whit.webp'),
-  //   link: 'https://www.silverpush.co/'
-  // },
   // {
   //   title: 'SILENCE LABS.',
   //   description: 'Take your client onboard seamlessly by our amazing tool of digital onboard process.',
