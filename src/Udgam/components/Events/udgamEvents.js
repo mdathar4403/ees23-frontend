@@ -165,22 +165,22 @@ function UdgamEvents() {
           )}
           <div className="token-event" onClick={eventName}>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Photography</a>
+              <div className="event-name-item">Photography</div>
             </div>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Dance</a>
+              <div className="event-name-item">Dance</div>
             </div>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Art</a>
+              <div className="event-name-item">Art</div>
             </div>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Music</a>
+              <div className="event-name-item">Music</div>
             </div>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Literature</a>
+              <div className="event-name-item">Literature</div>
             </div>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Treasure Hunt</a>
+              <div className="event-name-item">Treasure Hunt</div>
             </div>
           </div>
         </div>
