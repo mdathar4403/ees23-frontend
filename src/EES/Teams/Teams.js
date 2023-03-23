@@ -90,6 +90,13 @@ const Teams = () => {
               }}>
               <div className="circle-content">PUBLIC RELATIONS</div>
             </div>
+            <div
+              className="circle-box"
+              onClick={() => {
+                changeTeam(8);
+              }}>
+              <div className="circle-content">EVENT CO-ORDINATORS</div>
+            </div>
           </div>
         </div>
       </div>

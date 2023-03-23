@@ -52,6 +52,12 @@ const Nav = (props) => {
     setNav(false);
     setUdyamName(true);
   }
+  useEffect(() => {
+    document.addEventListener('click', (e) => {
+      console.log(e.target.className);
+      if (e.target.className == 'main-container' || e.target.className == 'background' || e.target.className == 'bag' || e.target.className == 'star-field' || e.target.className == 'layer' || e.target.className == 'heading' || e.target.className == 'tag-line' || e.target.className == 'globe' || e.target.className == 'emma') helloNav();
+    });
+  }, []);
 
   return (
     <>
@@ -66,13 +72,13 @@ const Nav = (props) => {
       </div>
       {(udyamName || true) && width < 800 && <Profile />}
       {(slideNav || width > 800) && (
-        <div className="udyam-nav">
+        <div className="udyam-nav udyam_side_nav">
           <div className="udyam-img">
             <Link to="/udyam" style={{ textDecoration: 'none' }}>
               <img className="udyam-logo" src={udyam} alt="hero" />
             </Link>
           </div>
-          <div className="udyam-icon">
+          <div className="udyam-icon udyam_side_nav">
             <div
               className="name hovered"
               // ind="#name"
@@ -152,29 +158,29 @@ const Nav = (props) => {
             <IoIosArrowBack />
           </div>
           <div className="token-event">
-            <div className="digism event-name active">
-              <a href="#"> Digisim</a>
+            <div className="digisim event-name active">
+              <a href="#"> DIGISIM</a>
             </div>
             <div className="ichip event-name">
-              <a href="#">I-Chip</a>
+              <a href="#">I-CHIP</a>
             </div>
             <div className="devbits event-name">
-              <a href="#">DevBits</a>
+              <a href="#">DEVBITS</a>
             </div>
             <div className="commnet event-name">
-              <a href="#">CommNet</a>
+              <a href="#">COMMNET</a>
             </div>
             <div className="xiota event-name">
               <a href="#">X-IoT-A</a>
             </div>
             <div className="cassandra event-name">
-              <a href="#">Cassandra</a>
+              <a href="#">CASSANDRA</a>
             </div>
             <div className="mosaic event-name">
-              <a href="#">Mosaic</a>
+              <a href="#">MOSAIC</a>
             </div>
             <div className="funckit event-name">
-              <a href="#">Funckit</a>
+              <a href="#">FUNCKIT</a>
             </div>
           </div>
         </div>

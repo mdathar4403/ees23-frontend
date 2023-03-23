@@ -73,9 +73,14 @@ const data = [
 function Events() {
   const [eventData, setEventData] = useState(data[0]);
   const [eventtable, setEventtable] = useState(true);
+  const [checkDevbits, setDevbits] = useState(0);
+
   // const [eventnav, setEventnav] = useState(false);
+  var isDevbits = 0;
   const eventName = (event) => {
     var element = event.target.classList[0];
+    setDevbits(element);
+    console.log(isDevbits);
     setEventData(data[element]);
     // setEventtable(false);
     console.log(element);
@@ -141,6 +146,17 @@ function Events() {
     setEventData(data[i]);
   }
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div>
       {(eventtable || width > 800) && (
@@ -153,45 +169,28 @@ function Events() {
 
           <div className="token-event" onClick={eventName}>
             <div className="0 digism event-name" onClick={checkNav}>
-              <a href="#" className="0">
-                {/* {' '} */}
-                Digisim
-              </a>
+              <div className="0 event-name-item"> Digisim </div>
             </div>
             <div className="1 ichip event-name" onClick={checkNav}>
-              <a href="#" className="1">
-                I-Chip
-              </a>
+              <div className="1 event-name-item"> I-Chip </div>
             </div>
             <div className="2 devbits event-name" onClick={checkNav}>
-              <a href="#" className="2">
-                DevBits
-              </a>
+              <div className="2 event-name-item"> DevBits </div>
             </div>
             <div className="3 commnet event-name" onClick={checkNav}>
-              <a href="#" className="3">
-                CommNet
-              </a>
+              <div className="3 event-name-item"> CommNet </div>
             </div>
             <div className="4 xiota event-name" onClick={checkNav}>
-              <a href="#" className="4">
-                X-Iot-A
-              </a>
+              <div className="4 event-name-item"> X-Iot-A </div>
             </div>
             <div className="5 cassandra event-name" onClick={checkNav}>
-              <a href="#" className="5">
-                Cassandra
-              </a>
+              <div className="5 event-name-item"> Cassandra </div>
             </div>
             <div className="6 mosaic event-name" onClick={checkNav}>
-              <a href="#" className="6">
-                Mosaic
-              </a>
+              <div className="6 event-name-item"> Mosaic </div>
             </div>
             <div className="7 funckit event-name" onClick={checkNav}>
-              <a href="#" className="7">
-                Funckit
-              </a>
+              <div className="7 event-name-item"> Funckit </div>
             </div>
           </div>
         </div>
@@ -211,6 +210,7 @@ function Events() {
           </div>
           <div className="udyam-event-title">{eventData.title}</div>
           <div className="udyam-event-desc">{eventData.description}</div>
+          <div> {checkDevbits == 2 && <div className="apply-button" data-hackathon-slug="devbits-web-development-hackathon" data-button-theme="dark" style={{ height: '44px', width: '312px' }}></div>}</div>
           <div className="udyam-event-buttons">
             <div className="ps-link">
               {eventData.psLink ? (

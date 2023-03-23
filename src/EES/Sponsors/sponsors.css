@@ -54,10 +54,14 @@
   height: 80px;
   width: 120px;
   margin: 0 10px;
+  background-color: white;
+  padding: 2px;
 }
 
 .sponsor-image img {
-  width: 120px;
+  width: 116px;
+  height: fit-content;
+  margin: auto;
 }
 
 .sponsor-content {
