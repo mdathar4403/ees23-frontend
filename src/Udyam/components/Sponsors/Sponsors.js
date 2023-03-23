@@ -68,14 +68,14 @@ const Sponsors = () => {
             <FaChevronCircleRight className="spicon" />
           </a>
         </div>
-        {/* <div className="sponser sponser8">
-          <img className="sponsorImage" src={rapid} alt="" style={{ width: '100%' }} />
-          <a href="https://www.rapidai.com" target="_blank" rel="noreferrer" className="sp" style={{ textDecoration: 'none' }}>
-            {' '}
-            <h4>RapidAI</h4>
-            <FaChevronCircleRight className="spicon" />
-          </a>
-        </div> */}
+        {/* <div className="sponser sponser8"> */}
+        {/* <img className="sponsorImage" src={rapid} alt="" style={{ width: '100%' }} />
+        <a href="https://www.rapidai.com" target="_blank" rel="noreferrer" className="sp" style={{ textDecoration: 'none' }}>
+          {' '}
+          <h4>RapidAI</h4>
+          <FaChevronCircleRight className="spicon" />
+        </a> */}
+        {/* </div> */}
       </div>
     </div>
   );

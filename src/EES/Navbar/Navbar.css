@@ -125,7 +125,8 @@
 .window .header ul.menu li.menu-item:nth-child(7) {
   transition-delay: 0.07s;
 }
-.window .header ul.menu li.menu-item a, .mobnavevents {
+.window .header ul.menu li.menu-item a,
+.mobnavevents {
   display: block;
   position: relative;
   color: #fff;
@@ -141,7 +142,7 @@
   width: 100%;
   height: 12vh;
 }
-.mobnavevents{
+.mobnavevents {
   cursor: pointer;
 }
 .window .header.menu-opened {
@@ -274,12 +275,14 @@ nav {
   width: 80%;
 }
 
-.nav-links li a, .navevents {
+.nav-links li a,
+.navevents {
   text-decoration: none;
   font-size: 1.2rem;
   color: #fff;
 }
-.nav-links li a:hover, .navevents:hover {
+.nav-links li a:hover,
+.navevents:hover {
   border-bottom: 3px solid #fff;
   cursor: pointer;
 }
@@ -376,7 +379,8 @@ nav {
   }
 }
 @media screen and (max-width: 800px) and (min-width: 600px) {
-  .nav-links li a, .navevents {
+  .nav-links li a,
+  .navevents {
     font-size: 1.1rem;
   }
   .menu-text {
