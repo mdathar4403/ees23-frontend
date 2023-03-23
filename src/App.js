@@ -25,6 +25,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ComingSoon from './EES/ComingSoon/ComingSoon';
 import Gallery from './EES/Gallery/Gallery';
 import EventOver from './EES/EventOver/EventOver';
+import MashalAboutUs from './Mashal/components/MashalAboutUs/MashalAboutUs';
 
 function App() {
   return (
@@ -111,10 +112,10 @@ function App() {
             path="/mashal/aboutus"
             element={
               <>
-                {/* <MashalAboutUs /> */}
-                <div>
+                <MashalAboutUs />
+                {/* <div>
                   <ComingSoon />
-                </div>
+                </div> */}
               </>
             }
           />
