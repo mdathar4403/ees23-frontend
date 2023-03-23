@@ -41,12 +41,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: -7vh;
 }
 
 .left {
   width: 42vw;
   margin: 0vw 2vw;
-  margin-top: -16vh;
+  margin-top: -10vh;
   padding-bottom: 10vh;
 }
 
@@ -98,7 +99,7 @@
 }
 
 .right {
-  padding-top: 20px;
+  padding-top: 0vh;
   width: 45vw;
   height: 58vh;
   margin-top: 2em;
@@ -224,10 +225,9 @@
   }
 
   .left {
-    margin-top: -25px;
+    margin-top: -20px;
     height: auto;
     align-items: center;
-    /* line-height: 1px; */
     width: 90vw;
   }
 
@@ -243,7 +243,9 @@
     background: none;
     overflow-y: auto;
     padding-bottom: 15vh;
-    margin-bottom: 10vh;
+    margin-top: -3vh;
+    margin-bottom: 5vh;
+
   }
 
   .ques {
