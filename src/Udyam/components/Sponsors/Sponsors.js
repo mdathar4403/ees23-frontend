@@ -6,7 +6,7 @@ import nvidia from './images/Nvidia.png';
 import mentor from './images/Mentor.jpg';
 import tees from './images/Tees.png';
 import silence from './images/Silence.png';
-import rapid from './images/Rapid.jpg';
+// import rapid from './images/Rapid.jpg';
 import coins from './images/Coins.jpg';
 import cisco from './images/Cisco.png';
 
@@ -68,7 +68,7 @@ const Sponsors = () => {
           </a>
         </div>
         <div className="sponser sponser8">
-          <img className="sponsorImage" src={rapid} alt="" style={{ width: '100%' }} />
+          <img className="sponsorImage" src="https://media.licdn.com/dms/image/C4D0BAQEpzD1SzvheZg/company-logo_200_200/0/1604090384779?e=2147483647&v=beta&t=s-JTHFpceRD5jfwfp9kVCs27E3KTOSCmz1e1RprKdBc" alt="" style={{ width: '100%' }} />
           <a href="https://www.rapidai.com" target="_blank" rel="noreferrer" className="sp" style={{ textDecoration: 'none' }}>
             {' '}
             <h4>RapidAI</h4>
