@@ -135,7 +135,7 @@ const eGlobe = memo(() => {
   });
   return (
     <div id="globe-div">
-      <canvas id="globe"></canvas>
+      <canvas id="globe" className="globe"></canvas>
     </div>
   );
 });

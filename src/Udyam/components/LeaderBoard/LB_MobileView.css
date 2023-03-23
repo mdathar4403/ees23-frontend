@@ -1,4 +1,7 @@
 @media screen and (max-width: 600px) {
+  .scroll_image_container {
+    display: none;
+  }
   /* .remaining-leaderboard {
     display: none;
   } */
@@ -34,7 +37,6 @@
     border-radius: 3vh;
     padding: 2vh;
     display: flex;
-
     background: rgb(231, 226, 223);
     background: linear-gradient(90deg, rgba(231, 226, 223, 0.6001751042213761) 12%, rgba(182, 159, 130, 0.15479695296087181) 100%, rgba(60, 57, 4, 0.3368697820925245) 100%, rgba(170, 151, 151, 0.7010154403558299) 100%);
   }

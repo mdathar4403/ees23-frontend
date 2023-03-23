@@ -3,7 +3,7 @@ import './Profile.css';
 import { Link } from 'react-router-dom';
 import default_img from './default_img.png';
 const Profile = () => {
-  var userName = 'EES';
+  var userName = 'UDYAM';
   var img_url = default_img;
   if (window.sessionStorage.getItem('profileData') != null) {
     console.log(window.sessionStorage.getItem('profileData'));
