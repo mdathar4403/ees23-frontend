@@ -133,7 +133,7 @@ const Register = () => {
           <input type="text" {...register('phone_number', { valueAsNumber: true })} placeholder="Whatsapp Number" pattern="^[6-9]\d{9}$" title="A valid number is required" required />
           <input type="text" list="all_colleges" {...register('college_name')} placeholder="College/Institute" name="college_name" required />
           <Collegelist id="all_colleges" />
-          <select id="years" {...register('year')} required>
+          <select id="years" className="givebgcolor" {...register('year')} required>
             <option id="select-heading" value="Choose Year" disabled selected hidden>
               Year
             </option>

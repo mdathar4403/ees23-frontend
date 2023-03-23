@@ -56,11 +56,13 @@ const Navbar = () => {
 
             <ul className="menu">
               <li className="menu-item">
-                <GoogleLogoutBTN>
-                  <div className="logout-btn">
-                    <IoMdLogOut></IoMdLogOut>
-                  </div>
-                </GoogleLogoutBTN>
+                {window.sessionStorage.getItem('registered_email') && (
+                  <GoogleLogoutBTN>
+                    <div className="logout-btn">
+                      <IoMdLogOut></IoMdLogOut>
+                    </div>
+                  </GoogleLogoutBTN>
+                )}
               </li>
               <li className="menu-item">
                 <Link to="/" onClick={open}>
@@ -97,7 +99,7 @@ const Navbar = () => {
                 )}
               </li>
               <li className="menu-item" onClick={nameOfEvents}>
-                <a href="#">Events</a>
+                <div className="mobnavevents">Events</div>
               </li>
               {slideUdyam && (
                 <div className="event-names">
@@ -193,10 +195,10 @@ const Navbar = () => {
                 )}
               </li>
               <li>
-                <a href="#events" onClick={showEvents}>
+                <div className="navevents" onClick={showEvents}>
                   Events
                   <BiChevronDown style={{ color: '#fff' }} />
-                </a>
+                </div>
               </li>
               <li>
                 <HashLink to="/#sponsors">

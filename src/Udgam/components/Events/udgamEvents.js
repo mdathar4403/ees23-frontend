@@ -3,6 +3,7 @@ import './udgamEvents.css';
 import { useState, useEffect } from 'react';
 import { MdArrowForwardIos } from 'react-icons/md';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 function UdgamEvents() {
   const events = [
@@ -164,22 +165,22 @@ function UdgamEvents() {
           )}
           <div className="token-event" onClick={eventName}>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Photography</a>
+              <div className="event-name-item">Photography</div>
             </div>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Dance</a>
+              <div className="event-name-item">Dance</div>
             </div>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Art</a>
+              <div className="event-name-item">Art</div>
             </div>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Music</a>
+              <div className="event-name-item">Music</div>
             </div>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Literature</a>
+              <div className="event-name-item">Literature</div>
             </div>
             <div className="event-name" onClick={checkNav}>
-              <a href="#">Treasure Hunt</a>
+              <div className="event-name-item">Treasure Hunt</div>
             </div>
           </div>
         </div>
@@ -208,7 +209,13 @@ function UdgamEvents() {
                   <>Coming Soon</>
                 )}
               </div>
-              <div className="event-submit">SUBMIT</div>
+              {subEventLink && (
+                <div className="event-submit">
+                  <Link to="/udgam/events/eventover" style={{ textDecoration: 'none', color: 'white' }}>
+                    SUBMIT
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
