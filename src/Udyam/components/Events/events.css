@@ -33,7 +33,7 @@
 }
 
 .udyam-events-item {
-  font-family: udyam-eventListFont;
+  /* font-family: udyam-eventListFont; */
   color: #6f6f6f;
   margin: 20px;
 }
@@ -165,7 +165,8 @@
   text-align: center;
 }
 
-.ps-link a,.udyam-event-submit a{
+.ps-link a,
+.udyam-event-submit a {
   text-decoration: none;
   color: inherit;
 }

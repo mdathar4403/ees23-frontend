@@ -170,6 +170,7 @@ const LeaderBoard = () => {
       </div>
       <div className="leaderboards-main-container">
         <h1>Radianite Leaderboard</h1>
+
         <div className="lb-container">
           {/* <div className="podium-main-container">
             <div className="mobile-first-position">
@@ -230,6 +231,9 @@ const LeaderBoard = () => {
               );
             })}
           </div>
+          {/* <div className="scroll_image_container">
+            <img className="scroll_image" src="/assets/scrolling.png" alt="" />
+          </div> */}
         </div>
       </div>
     </>

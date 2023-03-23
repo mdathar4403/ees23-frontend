@@ -63,7 +63,7 @@ const Sponsors = () => {
         <Mashnav></Mashnav>
       </div>
       <div className="msponsers">
-        <h1>SPONSORS</h1>
+        <h1>PREVIOUS SPONSORS</h1>
         <div className="msponsorBox" id="sponserbox" onScroll={func}>
           <div className="msponser" id="msponser1">
             <div style={{ height: '0' }}>
@@ -71,7 +71,7 @@ const Sponsors = () => {
               <div className="mcontent">
                 <div className="mdetails">
                   <h3>CISCO</h3>
-                  <p>Take your client onboard seamlessly. </p>
+                  <p>Safeguard the people and devices that connect your network. </p>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ const Sponsors = () => {
               <div className="mcontent">
                 <div className="mdetails">
                   <h3>COINSWITCH</h3>
-                  <p>Take your client onboard seamlessly.</p>
+                  <p>Your crypto journey starts here!.</p>
                 </div>
               </div>
             </div>
@@ -93,7 +93,7 @@ const Sponsors = () => {
               <div className="mcontent">
                 <div className="mdetails">
                   <h3>MENTOR</h3>
-                  <p>Take your client onboard seamlessly.</p>
+                  <p>Engineer a smarter future faster with Siemens.</p>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@ const Sponsors = () => {
               <div className="mcontent">
                 <div className="mdetails">
                   <h3>CODECHEF</h3>
-                  <p>Take your client onboard seamlessly.</p>
+                  <p>Fastrack your journey to becoming an Ace Programmer</p>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@ const Sponsors = () => {
               <div className="mcontent">
                 <div className="mdetails">
                   <h3>SILENCE</h3>
-                  <p>Take your client onboard seamlessly.</p>
+                  <p>Reimagining Seamless Authentication.</p>
                 </div>
               </div>
             </div>
