@@ -7,11 +7,10 @@
   flex-direction: column;
   width: 100%;
   justify-content: flex-end;
-  height: 8rem;
+  height: 9rem;
   position: relative;
-  bottom: 8.1rem;
+  bottom: 9.2rem;
   opacity: 0;
-  border-radius: 30px;
   text-align: center;
   background-color: rgba(187, 204, 226, 0.7);
   -webkit-transition: all 0.4s ease-in-out 0s;
@@ -59,13 +58,11 @@
   background-repeat: no-repeat;
 }
 .msponser img {
-  height: 8rem;
-  border-radius: 30px;
+  height: 9rem;
   box-shadow: 0 6px 6px grey;
 }
 .msponsers h1 {
   display: inline-block;
-  margin-top: 10vh;
   margin-bottom: 10px;
   position: relative;
   font-size: 60px;
@@ -98,7 +95,6 @@
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
-  border-radius: 30px;
 }
 
 /* #msponser1 img {
@@ -144,7 +140,7 @@
   .msponsorBox {
     height: 90vh;
     padding-bottom: 100%;
-    padding-top: 50%;
+    /* padding-top: 50%; */
     width: 100%;
     background-image: none;
     background: none;
@@ -166,7 +162,7 @@
     font-size: 45px;
   }
   .msponser {
-    margin: 2rem;
+    margin: 3rem;
   }
 }
 

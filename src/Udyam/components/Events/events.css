@@ -33,7 +33,7 @@
 }
 
 .udyam-events-item {
-  font-family: udyam-eventListFont;
+  /* font-family: udyam-eventListFont; */
   color: #6f6f6f;
   margin: 20px;
 }

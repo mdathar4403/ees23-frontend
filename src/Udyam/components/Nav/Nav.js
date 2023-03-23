@@ -158,29 +158,29 @@ const Nav = (props) => {
             <IoIosArrowBack />
           </div>
           <div className="token-event">
-            <div className="digism event-name active">
-              <a href="#"> Digisim</a>
+            <div className="digisim event-name active">
+              <a href="#"> DIGISIM</a>
             </div>
             <div className="ichip event-name">
-              <a href="#">I-Chip</a>
+              <a href="#">I-CHIP</a>
             </div>
             <div className="devbits event-name">
-              <a href="#">DevBits</a>
+              <a href="#">DEVBITS</a>
             </div>
             <div className="commnet event-name">
-              <a href="#">CommNet</a>
+              <a href="#">COMMNET</a>
             </div>
             <div className="xiota event-name">
               <a href="#">X-IoT-A</a>
             </div>
             <div className="cassandra event-name">
-              <a href="#">Cassandra</a>
+              <a href="#">CASSANDRA</a>
             </div>
             <div className="mosaic event-name">
-              <a href="#">Mosaic</a>
+              <a href="#">MOSAIC</a>
             </div>
             <div className="funckit event-name">
-              <a href="#">Funckit</a>
+              <a href="#">FUNCKIT</a>
             </div>
           </div>
         </div>
