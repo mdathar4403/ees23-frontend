@@ -38,63 +38,72 @@ const Teams = () => {
               className="circle-box circle-active"
               onClick={() => {
                 changeTeam(0);
-              }}>
+              }}
+            >
               <div className="circle-content">CORE TEAM</div>
             </div>
             <div
               className="circle-box"
               onClick={() => {
                 changeTeam(1);
-              }}>
+              }}
+            >
               <div className="circle-content">SENIOR ADVISORS</div>
             </div>
             <div
               className="circle-box"
               onClick={() => {
                 changeTeam(2);
-              }}>
+              }}
+            >
               <div className="circle-content">DEVELOPERS</div>
             </div>
             <div
               className="circle-box"
               onClick={() => {
                 changeTeam(3);
-              }}>
+              }}
+            >
               <div className="circle-content">DESIGNERS</div>
             </div>
             <div
               className="circle-box"
               onClick={() => {
                 changeTeam(4);
-              }}>
+              }}
+            >
               <div className="circle-content">CONTENT & CREATIVE</div>
             </div>
             <div
               className="circle-box"
               onClick={() => {
                 changeTeam(5);
-              }}>
+              }}
+            >
               <div className="circle-content">MARKETING</div>
             </div>
             <div
               className="circle-box"
               onClick={() => {
                 changeTeam(6);
-              }}>
+              }}
+            >
               <div className="circle-content">EXTERNAL AFFAIRS</div>
             </div>
             <div
               className="circle-box"
               onClick={() => {
                 changeTeam(7);
-              }}>
+              }}
+            >
               <div className="circle-content">PUBLIC RELATIONS</div>
             </div>
             <div
               className="circle-box"
               onClick={() => {
                 changeTeam(8);
-              }}>
+              }}
+            >
               <div className="circle-content">EVENT CO-ORDINATORS</div>
             </div>
           </div>

@@ -107,7 +107,7 @@ p.spx {
 }
 @media (min-width: 800px) {
   .navx {
-    visibility:hidden;
+    visibility: hidden;
   }
 }
 
