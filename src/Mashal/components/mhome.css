@@ -105,6 +105,11 @@ p.spx {
     display: none;
   }
 }
+@media (min-width: 800px) {
+  .navx {
+    visibility: hidden;
+  }
+}
 
 @media (max-width: 500px) {
   .bgxd {
