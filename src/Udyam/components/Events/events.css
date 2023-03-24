@@ -167,7 +167,8 @@
 }
 
 .ps-link a,
-.udyam-event-submit a {
+.udyam-event-submit a,
+.register-link a {
   text-decoration: none;
   color: inherit;
 }
