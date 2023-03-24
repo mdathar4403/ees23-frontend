@@ -182,19 +182,19 @@
   width: 20%;
 }
 
-.delete-text{
+.delete-text {
   text-align: center;
   margin: 15px 0;
 }
 
-.delete-box{
+.delete-box {
   display: flex;
   align-items: center;
   justify-content: center;
   /* flex-direction: column; */
 }
 
-.delete-item{
+.delete-item {
   height: 30px;
   width: 30px;
   margin: 0 10px;
