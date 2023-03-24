@@ -33,7 +33,7 @@ const Carousel = ({ reqArr }) => {
       } else {
         setNext(next - 1);
       }
-    }, 300);
+    }, 400);
   };
   const handleTransitionEnd = () => {
     prevImage.current.style.opacity = '1';
@@ -52,7 +52,7 @@ const Carousel = ({ reqArr }) => {
       setNext((next + 1) % arr.length);
       setCurrent((current + 1) % arr.length);
       setPrev((prev + 1) % arr.length);
-    }, 300);
+    }, 400);
   };
   return (
     <div className="workshop-carousel">
