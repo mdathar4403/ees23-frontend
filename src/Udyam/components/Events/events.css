@@ -171,6 +171,16 @@
   color: inherit;
 }
 
+.apply-button{
+  display: flex;
+  color: white;
+  width: 100px;
+}
+
+.hidden{
+  display: none;
+}
+
 @media (max-width: 800px) {
   .udyam-events-main {
     left: 0;
