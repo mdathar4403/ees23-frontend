@@ -113,6 +113,8 @@ body {
   margin-left: 4vw;
   overflow-y: auto;
   text-align: justify;
+   -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .content p {
