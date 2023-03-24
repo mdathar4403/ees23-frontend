@@ -268,9 +268,11 @@ const DashBoard = () => {
                       <img src={'/assets/events/' + e.event.toUpperCase() + '.png'} alt="img" />
                     </div>
                     <div className="team-info">
-                      <h2>{e.event}</h2>
-                      <h2>{e.teamname}</h2>
-                      <h2>{user.name.split(' ').slice(0, 2).join(' ')}</h2>
+                      <h1 className="team-info-event-name">{e.event}</h1>
+                      <h2 className="team-info-team-name">{e.teamname}</h2>
+                      <h4 className="team-info-teammember-name">{e.leader.split(' ').slice(0, 2).join(' ')}</h4>
+                      <h4 className="team-info-teammember-name">{e.member1.split(' ').slice(0, 2).join(' ')}</h4>
+                      <h4 className="team-info-teammember-name">{e.member2.split(' ').slice(0, 2).join(' ')}</h4>
                     </div>
                     <div className="team-btns">
                       <FaEdit
@@ -334,7 +336,7 @@ const DashBoard = () => {
                   <div className="logo-event">
                     <img src={'/assets/events/' + e.event.toUpperCase() + '.png'}></img>
                   </div>
-                  <h3>{e.event}</h3>
+                  <h3 className="eventInfoEventName">{e.event}</h3>
                   <button className="register-btn" onClick={() => registerHandler(e.event)}>
                     Register
                   </button>
@@ -342,7 +344,6 @@ const DashBoard = () => {
               </div>
             ))}
           </div>
-
           {showForm && (
             <div id="team-register-form" className="form-dashboard-container">
               <h1 className="form-heading">Team Registeration</h1>
@@ -371,18 +372,18 @@ const DashBoard = () => {
             <div id="team-register-form" className="form-dashboard-container">
               <h1 className="form-heading">Team Update</h1>
               <form onSubmit={(e) => postEdit(e)}>
-                <input id="teamname" type="text" onChange={(e) => handle1(e)} placeholder="Enter Team Name" required></input>
+                <input id="teamname" type="text" onChange={(e) => handle1(e)} value={editing.teamname} placeholder="Enter Team Name" required></input>
                 <input id="event" type="text" value={editing.event} readOnly></input>
                 {editing.event === 'Mosaic' || editing.event === 'Cassandra' || editing.event === 'Devbits' ? (
                   <>
                     <input id="leader" type="text" value={editing.leader} placeholder="Team Leader" readOnly></input>
-                    <input id="member1" type="text" onChange={(e) => handle1(e)} placeholder="Team Member"></input>
-                    <input id="member2" type="text" onChange={(e) => handle1(e)} placeholder="Team Member"></input>
+                    <input id="member1" type="text" onChange={(e) => handle1(e)} value={editing.member1} placeholder="Team Member"></input>
+                    <input id="member2" type="text" onChange={(e) => handle1(e)} value={editing.member2} placeholder="Team Member"></input>
                   </>
                 ) : (
                   <>
                     <input id="leader" type="text" value={editing.leader} placeholder="Team Leader" readOnly></input>
-                    <input id="member1" type="text" onChange={(e) => handle1(e)} placeholder="Team Member"></input>
+                    <input id="member1" type="text" onChange={(e) => handle1(e)} value={editing.member1} placeholder="Team Member"></input>
                   </>
                 )}
                 <button type="submit" className="form-dashboard-submit">
