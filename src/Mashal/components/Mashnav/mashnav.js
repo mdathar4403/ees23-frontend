@@ -188,6 +188,30 @@ const UdgamNav = (props) => {
     setNav(false);
     setUdyamName(true);
   }
+  // close nav when clicked outside
+  useEffect(() => {
+    document.addEventListener('click', (e) => {
+      console.log(e.target.className);
+      if (
+        e.target.className == 'mmobbg' ||
+        e.target.className == 'title-udgam' ||
+        e.target.className == 'emma' ||
+        e.target.className == 'mcontent' ||
+        // className including logo-container
+        e.target.className.includes('mdetails') ||
+        e.target.className.includes('msponsorBox') ||
+        e.target.className.includes('msponsers') ||
+        e.target.className === '' ||
+        e.target.className.includes('event-section') ||
+        e.target.className.includes('card__snippet') ||
+        e.target.className.includes('card__title') ||
+        e.target.className.includes('mashal-card') ||
+        e.target.className.includes('teams') ||
+        e.target.className.includes('leaderboard')
+      )
+        helloNav();
+    });
+  }, []);
 
   return (
     <>
@@ -246,8 +270,7 @@ const UdgamNav = (props) => {
               className="about hovered"
               // ind="#about"
               onClick={abouts}
-              id={props.active === '#about' ? 'active' : ''}
-            >
+              id={props.active === '#about' ? 'active' : ''}>
               <Link to="/mashal/aboutus" className="game-changer" style={{ textDecoration: 'none' }}>
                 {' '}
                 <AiOutlineInfoCircle className="info" />
@@ -268,8 +291,7 @@ const UdgamNav = (props) => {
               className="sposors hovered"
               // ind="#sponsors"
               onClick={sponsors}
-              id={props.active === '#sponsors' ? 'active' : ''}
-            >
+              id={props.active === '#sponsors' ? 'active' : ''}>
               <Link to="/mashal/sponsors" className="game-changer" style={{ textDecoration: 'none' }}>
                 <BiDollarCircle className="info" />
                 <p>Sponsors</p>
