@@ -26,10 +26,7 @@ const MashalAboutUs = () => {
             <img className="aboutUs-image" src={MashalAboutUsImage} alt="" />
           </div>
           <div className="aboutUS-paragraph">
-            <h2 className="mashalHeadText" style={{ color: 'white' }}>
-              MASHAL
-            </h2>
-            <p>
+            <p className="aboutUS-paragraph-details">
               Mashal is the sports festival of the department of Electronics Engineering, IIT (BHU) Varanasi. It offers a venue for all significant competitions and sports to foster good sportsmanship among the students. The event covers numerous sports, including Marathon, Chess, Valorant, Table Tennis, Basketball, Tennis, Football, Cricket, Badminton, Kabaddi, Athletics, and Tug of War. Mashal
               unleashes the competitive spirit of the nations brightest minds and offers a perfect arena for sports enthusiasts to face off against one another. As said by Serena Williams, lets overpower, overtake and overcome!
             </p>
