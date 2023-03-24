@@ -270,9 +270,9 @@ const DashBoard = () => {
                     <div className="team-info">
                       <h1 className="team-info-event-name">{e.event}</h1>
                       <h2 className="team-info-team-name">{e.teamname}</h2>
-                      <h4 className="team-info-teammember-name">{e.leader.split(' ').slice(0, 2).join(' ')}</h4>
-                      <h4 className="team-info-teammember-name">{e.member1.split(' ').slice(0, 2).join(' ')}</h4>
-                      <h4 className="team-info-teammember-name">{e.member2.split(' ').slice(0, 2).join(' ')}</h4>
+                      <h4 className="team-info-teammember-name">{e.leader.split('@')[0].split('.').slice(0, 2).join(' ')}</h4>
+                      <h4 className="team-info-teammember-name">{e.member1.split('@')[0].split('.').slice(0, 2).join(' ')}</h4>
+                      <h4 className="team-info-teammember-name">{e.member2.split('@')[0].split('.').slice(0, 2).join(' ')}</h4>
                     </div>
                     <div className="team-btns">
                       <FaEdit
