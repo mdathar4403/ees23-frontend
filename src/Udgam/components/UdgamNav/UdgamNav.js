@@ -200,16 +200,21 @@ const UdgamNav = (props) => {
   //     return () => document.removeEventListener('click', handleOutsideClick);
   //   },
   // )
-    useEffect(() => {
-      document.addEventListener('click', (e) => {
-        console.log(e.target.className);
-        if (e.target.className == 'moving' || e.target.className == 'title-udgam' || e.target.className == 'emma' || e.target.className == 'sponsorContainer' 
-          // className including logo-container
-          || e.target.className.includes('logo-container')
-          
-        ) helloNav();
-      });
-    }, []);
+  useEffect(() => {
+    document.addEventListener('click', (e) => {
+      console.log(e.target.className);
+      if (
+        e.target.className == 'moving' ||
+        e.target.className == 'title-udgam' ||
+        e.target.className == 'emma' ||
+        e.target.className == 'sponsorContainer' ||
+        // className including logo-container
+        e.target.className.includes('logo-container') ||
+        e.target.className == ''
+      )
+        helloNav();
+    });
+  }, []);
 
   return (
     <>
