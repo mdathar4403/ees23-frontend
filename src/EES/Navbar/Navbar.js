@@ -12,7 +12,10 @@ const Navbar = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [eventLink, setEventLink] = useState(false);
   const [click, setclick] = useState(false);
+  const [updatesLink, setUpdatesLink] = useState(false);
+
   const [slideUdyam, setSlideUdyam] = useState(false);
+  const [slideUpdates, setSlideUpdates] = useState(false);
   function expand() {
     document.querySelector('.nav-links').style.display = 'flex';
     // document.querySelector('.menu-text').style.display = 'none';
@@ -21,6 +24,9 @@ const Navbar = () => {
   }
   function showEvents() {
     setEventLink(!eventLink);
+  }
+  function showEventUpdates() {
+    setUpdatesLink(!updatesLink);
   }
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -35,6 +41,9 @@ const Navbar = () => {
   }
   function nameOfEvents() {
     setSlideUdyam(!slideUdyam);
+  }
+  function nameOfUpdates() {
+    setSlideUpdates(!slideUpdates);
   }
 
   return (
@@ -99,6 +108,28 @@ const Navbar = () => {
                   </li>
                 </div>
               )}
+              <li className="menu-item" onClick={nameOfUpdates}>
+                <div className="mobnavupdates">Updates</div>
+              </li>
+              {slideUpdates && (
+                <div className="event-names">
+                  <li>
+                    <HashLink to="/#UdyamUpdates">
+                      <a onClick={open}>Udyam</a>
+                    </HashLink>
+                  </li>
+                  <li>
+                    <HashLink to="/#udgamUpdates">
+                      <a onClick={open}>Udgam</a>
+                    </HashLink>
+                  </li>
+                  <li>
+                    <HashLink to="/#mashalUpdates">
+                      <a onClick={open}>Mashal</a>
+                    </HashLink>
+                  </li>
+                </div>
+              )}
               <li className="menu-item">
                 <HashLink to="/#sponsors">
                   <a onClick={open}>Sponsors</a>
@@ -137,6 +168,19 @@ const Navbar = () => {
           </Link>
         </div>
       )}
+      {updatesLink && (
+        <div className="updatesdropmenu">
+          <HashLink to="/#UdyamUpdates">
+            <a href="#">Udyam</a>
+          </HashLink>
+          <HashLink to="/#udgamUpdates">
+            <a href="#">Udgam</a>
+          </HashLink>
+          <HashLink to="/#mashalUpdates">
+            <a href="#">Mashal</a>
+          </HashLink>
+        </div>
+      )}
       {width > 800 && (
         <div className="container">
           <nav>
@@ -160,6 +204,12 @@ const Navbar = () => {
               <li>
                 <div className="navevents" onClick={showEvents}>
                   Events
+                  <BiChevronDown style={{ color: '#fff' }} />
+                </div>
+              </li>
+              <li>
+                <div className="navupdates" onClick={showEventUpdates}>
+                  Updates
                   <BiChevronDown style={{ color: '#fff' }} />
                 </div>
               </li>

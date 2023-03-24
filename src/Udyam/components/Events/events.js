@@ -33,7 +33,7 @@ const data = [
   {
     title: 'DEVBITS',
     description: 'Get the hang of two of the most sought-after verticals under the programming umbrella. Test your critical thinking abilities with a competitive-programming round. Work on creating highly functional web applications built using industry-sought tech stacks.',
-    psLink: '',
+    psLink: 'https://devbits-web-development-hackathon.devfolio.co/',
     submissionLink: ''
   },
   {
