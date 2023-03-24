@@ -188,6 +188,12 @@ const UdgamNav = (props) => {
     setNav(false);
     setUdyamName(true);
   }
+  useEffect(() => {
+    document.addEventListener('click', (e) => {
+      console.log(e.target.className);
+      if (e.target.className == 'main-container'||e.target.className == 'leaderboard-container' ||e.target.className == 'mashal-card'||e.target.className == 'first-team.teams'||e.target.className == 'about-container'||e.target.className == 'about-content' ||e.target.className == 'about-image'|| e.target.className == 'mainDiv' ||e.target.className == 'sponsor' ||e.target.className == 'sponsorContainer' || e.target.className == 'background' || e.target.className == 'bag' || e.target.className == 'star-field' || e.target.className == 'layer' || e.target.className == 'heading' || e.target.className == 'tag-line' || e.target.className == 'globe' || e.target.className == 'emma') helloNav();
+    });
+  }, []);
 
   return (
     <>
@@ -247,8 +253,7 @@ const UdgamNav = (props) => {
               className="about hovered"
               // ind="#about"
               onClick={abouts}
-              id={props.active === '#about' ? 'active' : ''}
-            >
+              id={props.active === '#about' ? 'active' : ''}>
               <Link to="/udgam/about" className="game-changer" style={{ textDecoration: 'none' }}>
                 {' '}
                 <AiOutlineInfoCircle className="info" />
@@ -269,8 +274,7 @@ const UdgamNav = (props) => {
               className="sposors hovered"
               // ind="#sponsors"
               onClick={sponsors}
-              id={props.active === '#sponsors' ? 'active' : ''}
-            >
+              id={props.active === '#sponsors' ? 'active' : ''}>
               <Link to="/udgam/sponsors" className="game-changer" style={{ textDecoration: 'none' }}>
                 <BiDollarCircle className="info" />
                 <p>Sponsors</p>
