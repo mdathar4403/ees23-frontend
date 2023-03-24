@@ -232,7 +232,7 @@ function Events() {
             <div className="register-link">{eventData.registerLink ? <a href={eventData.registerLink}>REGISTER</a> : <>REGISTER</>}</div>
             <div className="udyam-event-submit">
               {eventData.submissionLink ? (
-                <a href={eventData.submissionLink} target="" rel="noreferrer">
+                <a href={eventData.submissionLink} target="_blank" rel="noreferrer">
                   SUBMIT
                 </a>
               ) : (
