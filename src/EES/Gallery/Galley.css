@@ -25,7 +25,7 @@
 .workshop-carousel .img {
   width: 30rem;
   display: flex;
-  transition: all 0.37s ease-in-out;
+  transition: all 0.4s ease-in-out;
   z-index: 1;
   border-radius: 10px;
   position: relative;

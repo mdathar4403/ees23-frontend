@@ -268,9 +268,11 @@ const DashBoard = () => {
                       <img src={'/assets/events/' + e.event.toUpperCase() + '.png'} alt="img" />
                     </div>
                     <div className="team-info">
-                      <h2>{e.event}</h2>
-                      <h2>{e.teamname}</h2>
-                      <h2>{user.name.split(' ').slice(0, 2).join(' ')}</h2>
+                      <h1 className="team-info-event-name">{e.event}</h1>
+                      <h2 className="team-info-team-name">{e.teamname}</h2>
+                      <h4 className="team-info-teammember-name">{e.leader}</h4>
+                      <h4 className="team-info-teammember-name">{e.member1}</h4>
+                      <h4 className="team-info-teammember-name">{e.member2}</h4>
                     </div>
                     <div className="team-btns">
                       <FaEdit
@@ -334,7 +336,7 @@ const DashBoard = () => {
                   <div className="logo-event">
                     <img src={'/assets/events/' + e.event.toUpperCase() + '.png'}></img>
                   </div>
-                  <h3>{e.event}</h3>
+                  <h3 className="eventInfoEventName">{e.event}</h3>
                   <button className="register-btn" onClick={() => registerHandler(e.event)}>
                     Register
                   </button>
@@ -342,7 +344,6 @@ const DashBoard = () => {
               </div>
             ))}
           </div>
-
           {showForm && (
             <div id="team-register-form" className="form-dashboard-container">
               <h1 className="form-heading">Team Registeration</h1>
