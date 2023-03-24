@@ -371,18 +371,18 @@ const DashBoard = () => {
             <div id="team-register-form" className="form-dashboard-container">
               <h1 className="form-heading">Team Update</h1>
               <form onSubmit={(e) => postEdit(e)}>
-                <input id="teamname" type="text" onChange={(e) => handle1(e)} placeholder="Enter Team Name" required></input>
+                <input id="teamname" type="text" onChange={(e) => handle1(e)} value={editing.teamname} placeholder="Enter Team Name" required></input>
                 <input id="event" type="text" value={editing.event} readOnly></input>
                 {editing.event === 'Mosaic' || editing.event === 'Cassandra' || editing.event === 'Devbits' ? (
                   <>
                     <input id="leader" type="text" value={editing.leader} placeholder="Team Leader" readOnly></input>
-                    <input id="member1" type="text" onChange={(e) => handle1(e)} placeholder="Team Member"></input>
-                    <input id="member2" type="text" onChange={(e) => handle1(e)} placeholder="Team Member"></input>
+                    <input id="member1" type="text" onChange={(e) => handle1(e)} value={editing.member1} placeholder="Team Member"></input>
+                    <input id="member2" type="text" onChange={(e) => handle1(e)} value={editing.member2} placeholder="Team Member"></input>
                   </>
                 ) : (
                   <>
                     <input id="leader" type="text" value={editing.leader} placeholder="Team Leader" readOnly></input>
-                    <input id="member1" type="text" onChange={(e) => handle1(e)} placeholder="Team Member"></input>
+                    <input id="member1" type="text" onChange={(e) => handle1(e)} value={editing.member1} placeholder="Team Member"></input>
                   </>
                 )}
                 <button type="submit" className="form-dashboard-submit">
