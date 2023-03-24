@@ -16,7 +16,7 @@ import UDGmain from './Udgam/components/main-page/main-page';
 import Teams from './EES/Teams/Teams';
 import Mashal from './Mashal/mashal';
 import MashalSponsor from './Mashal/components/Sponsors/Sponsors';
-import MashalLeaderboard from './Mashal/components/MashalLeaderboard/MashalLeaderboard';
+// import MashalLeaderboard from './Mashal/components/MashalLeaderboard/MashalLeaderboard';
 import MashalEvent from './Mashal/components/MashalEvent/mashalEvent';
 import Navbar from './EES/Navbar/Navbar';
 import Register from './EES/Register/Register';
@@ -24,6 +24,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComingSoon from './EES/ComingSoon/ComingSoon';
 import Gallery from './EES/Gallery/Gallery';
+import EventOver from './EES/EventOver/EventOver';
+import MashalAboutUs from './Mashal/components/MashalAboutUs/MashalAboutUs';
 
 function App() {
   return (
@@ -102,7 +104,10 @@ function App() {
             path="/mashal/leaderboard"
             element={
               <>
-                <MashalLeaderboard />
+                {/* <MashalLeaderboard /> */}
+                <div>
+                  <ComingSoon />
+                </div>
               </>
             }
           />
@@ -110,10 +115,10 @@ function App() {
             path="/mashal/aboutus"
             element={
               <>
-                {/* <MashalAboutUs /> */}
-                <div>
+                <MashalAboutUs />
+                {/* <div>
                   <ComingSoon />
-                </div>
+                </div> */}
               </>
             }
           />
@@ -224,6 +229,14 @@ function App() {
                 </div>
                 {/* <ComingSoon /> */}
                 <UdgamEvents />
+              </>
+            }
+          />
+          <Route
+            path="/udgam/events/eventover"
+            element={
+              <>
+                <EventOver />
               </>
             }
           />

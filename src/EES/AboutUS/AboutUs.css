@@ -143,7 +143,7 @@ body {
   width: 22vw;
   height: 21vw;
   transform: perspective(200px) rotateY(10deg) skew(5deg);
-  background-image: url('./images/AboutUs.png');
+  background-image: url('./images/AboutUS.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -240,11 +240,12 @@
   justify-content: center;
   height: 2vh;
 }
-.event-name a {
+.event-name-item {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
-.event-name a::after {
+.event-name-item::after {
   content: '';
   position: absolute;
   left: 0;
@@ -258,7 +259,7 @@
   transform-origin: left;
   transition: scale 0.25s;
 }
-.event-name a:hover::after {
+.event-name-item:hover::after {
   scale: 1;
 }
 

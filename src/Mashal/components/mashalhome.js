@@ -48,17 +48,17 @@ function Mhome() {
           </div>
         </div>
         <div className="fourth">
-          <a href="https://www.instagram.com/mashal_ees/">
+          <a href="https://www.instagram.com/mashal_ees/" target="_blank" rel="noreferrer">
             <img src={instax} className="pxet" alt="" />
           </a>
-          <a href="https://www.youtube.com/@EES_IITBHU ">
+          <a href="https://www.youtube.com/@EES_IITBHU " target="_blank" rel="noreferrer">
             {' '}
             <img src={twitterx} className="pxet" alt="" />
           </a>
-          <a href="https://www.facebook.com/ees.fiesta/">
+          <a href="https://www.facebook.com/ees.fiesta/" target="_blank" rel="noreferrer">
             <img src={fbx} className="pxet" alt="" />
           </a>
-          <a href="https://discord.gg/gNrEW8vp4G">
+          <a href="https://discord.gg/gNrEW8vp4G" target="_blank" rel="noreferrer">
             <img src={worldx} className="pxet" alt="" />
           </a>
           <a href="#">

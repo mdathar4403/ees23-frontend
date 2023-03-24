@@ -63,7 +63,7 @@ const Sponsors = () => {
         <Mashnav></Mashnav>
       </div>
       <div className="msponsers">
-        <h1>SPONSORS</h1>
+        <h1>PREVIOUS SPONSORS</h1>
         <div className="msponsorBox" id="sponserbox" onScroll={func}>
           <div className="msponser" id="msponser1">
             <div style={{ height: '0' }}>
