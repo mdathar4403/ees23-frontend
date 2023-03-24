@@ -80,10 +80,18 @@
 .aboutUS-paragraph {
   display: flex;
   text-align: justify;
+  align-items: center;
   margin: 1vh 2vw;
   /* font-size: 1.5rem; */
   color: white;
   font-family: 'Outfit';
+  overflow: scroll;
+}
+.aboutUS-paragraph-details{
+  display: flex;
+  text-align: justify;
+  margin: auto 0;
+  max-height: fit-content;
   overflow: scroll;
 }
 .social-icons {
