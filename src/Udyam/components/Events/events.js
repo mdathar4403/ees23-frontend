@@ -21,7 +21,7 @@ const data = [
   {
     title: 'DIGISIM',
     description: 'Gain mastery of digital system designing and computer architecture by designing optimized digital systems and simulating them on Proteus. Grab this chance to put to test your debugging and logic-building skills.',
-    psLink: 'https://drive.google.com/file/d/1m4meRoE6gra8m01SoERahFN-7qBNdFnB/view?usp=share_link',
+    psLink: 'https://drive.google.com/drive/folders/1bv6mtmN-XnYF2IDhuXUcypiGLi6vIHXS?usp=share_link',
     submissionLink: ''
   },
   {
