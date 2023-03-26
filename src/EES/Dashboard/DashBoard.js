@@ -54,7 +54,7 @@ const DashBoard = () => {
     setUser(newUser);
     setToken(newUser.token);
     axios
-      .get('https://udyam.pythonanywhere.com/api/events/')
+      .get('https://ees23.pythonanywhere.com/api/events/')
       .then((res) => {
         console.log(res);
         setEventsData(res.data);
@@ -63,7 +63,7 @@ const DashBoard = () => {
       .catch((error) => console.log(error));
 
     axios
-      .get('https://udyam.pythonanywhere.com/api/teams/user/', { headers: { Authorization: 'Token ' + newUser.token } })
+      .get('https://ees23.pythonanywhere.com/api/teams/user/', { headers: { Authorization: 'Token ' + newUser.token } })
       .then((res) => {
         console.log(res);
         setTeamData(res.data);
@@ -111,7 +111,7 @@ const DashBoard = () => {
       member2: data.member2
     };
     axios
-      .post('https://udyam.pythonanywhere.com/api/team/create/', senddata, {
+      .post('https://ees23.pythonanywhere.com/api/team/create/', senddata, {
         // headers: {
         //   Authorization: `Basic ${token}`
         // }
@@ -151,7 +151,7 @@ const DashBoard = () => {
     };
     // console.log(senddata);
     axios
-      .patch('https://udyam.pythonanywhere.com/api/team/' + editing.id + '/', senddata, {
+      .patch('https://ees23.pythonanywhere.com/api/team/' + editing.id + '/', senddata, {
         headers: { Authorization: `Token ${token}` }
       })
       .then(() => {
@@ -182,7 +182,7 @@ const DashBoard = () => {
   const deleteTeam = (id) => {
     setDelete(0);
     axios
-      .delete('https://udyam.pythonanywhere.com/api/team/' + id + '/', {
+      .delete('https://ees23.pythonanywhere.com/api/team/' + id + '/', {
         headers: { Authorization: `Token ${token}` }
       })
       .then(() => {

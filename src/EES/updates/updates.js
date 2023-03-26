@@ -12,7 +12,7 @@ function Updates() {
   const [udgamarr, setudgam] = useState([]);
   async function fetchData1() {
     try {
-      const response = await axios.get('https://udyam.pythonanywhere.com/api/updates/Udyam?format=json');
+      const response = await axios.get('https://ees23.pythonanywhere.com/api/updates/Udyam?format=json');
       // setArr(response.data);
       emptarr = [];
       for (let i = 0; i < response.data.length; i++) {
@@ -31,7 +31,7 @@ function Updates() {
   }, []);
   async function fetchData2() {
     try {
-      const response = await axios.get('https://udyam.pythonanywhere.com/api/updates/Udgam?format=json');
+      const response = await axios.get('https://ees23.pythonanywhere.com/api/updates/Udgam?format=json');
       // setArr(response.data);
       emptarr = [];
       for (let i = 0; i < response.data.length; i++) {
@@ -51,7 +51,7 @@ function Updates() {
 
   async function fetchData3() {
     try {
-      const response = await axios.get('https://udyam.pythonanywhere.com/api/updates/Mashal?format=json');
+      const response = await axios.get('https://ees23.pythonanywhere.com/api/updates/Mashal?format=json');
       // setArr(response.data);
       emptarr = [];
       for (let i = 0; i < response.data.length; i++) {

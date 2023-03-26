@@ -48,11 +48,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 100px; */
-  /* height: 0%; */
-  /* padding: 100px; */
   height: 100%;
-  /* overflow: scroll; */
+
 }
 
 @font-face {
@@ -174,6 +171,16 @@
   color: inherit;
 }
 
+.apply-button{
+  display: flex;
+  color: white;
+  width: 100px;
+}
+
+.hidden{
+  display: none;
+}
+
 @media (max-width: 800px) {
   .udyam-events-main {
     left: 0;
@@ -192,6 +199,7 @@
   .udyam-event-body {
     margin: 0;
     padding: 0;
+    height: 80%;
   }
 
   .udyam-event-img {
@@ -213,9 +221,9 @@
 
   .udyam-event-arrows {
     display: flex;
-    margin: 3vh 0vw;
+    /* margin: 3vh 0vw; */
     position: fixed;
-    bottom: 20px;
+    bottom: 15px;
   }
 
   #left {

@@ -21,7 +21,7 @@ const data = [
   {
     title: 'DIGISIM',
     description: 'Gain mastery of digital system designing and computer architecture by designing optimized digital systems and simulating them on Proteus. Grab this chance to put to test your debugging and logic-building skills.',
-    psLink: 'https://drive.google.com/file/d/1m4meRoE6gra8m01SoERahFN-7qBNdFnB/view?usp=share_link',
+    psLink: 'https://drive.google.com/drive/folders/1bv6mtmN-XnYF2IDhuXUcypiGLi6vIHXS?usp=share_link',
     submissionLink: ''
   },
   {
@@ -57,7 +57,7 @@ const data = [
   {
     title: 'MOSAIC',
     description: 'Get the opportunity to decipher canonical problems based on the intriguing subject of Machine Learning and Computer Vision. Know about deep learning and image processing inside out and acquire expertise in machine learning.',
-    psLink: 'https://drive.google.com/file/d/1IgzULOh1dQkfOVA9FQqoxO_9lvTPe0cT/view?usp=share_link',
+    psLink: 'https://drive.google.com/drive/folders/1cR8pelM4daqMg530qPYvZqKcMk8fOx88?usp=share_link',
     submissionLink: ''
   },
   {
@@ -74,14 +74,23 @@ function Events() {
   const [eventData, setEventData] = useState(data[0]);
   const [eventtable, setEventtable] = useState(true);
   const [checkDevbits, setDevbits] = useState(0);
+  const [devfolioClass, setDevfolio] = useState('hidden');
 
   // const [eventnav, setEventnav] = useState(false);
-  var isDevbits = 0;
+  // var isDevbits = 0;
   const eventName = (event) => {
     var element = event.target.classList[0];
     setDevbits(element);
-    console.log(isDevbits);
+    // console.log(isDevbits);
     setEventData(data[element]);
+    console.log('element: ', element);
+    if (element == 2) {
+      console.log('hi');
+      setDevfolio('');
+    } else {
+      console.log('a');
+      setDevfolio('hidden');
+    }
     // setEventtable(false);
     console.log(element);
   };
@@ -89,6 +98,8 @@ function Events() {
   const [width, setWidth] = useState(window.innerWidth);
 
   function checkNav() {
+    console.log(checkDevbits);
+    console.log('Hello');
     if (width > 800) {
       return;
     } else {
@@ -210,7 +221,10 @@ function Events() {
           </div>
           <div className="udyam-event-title">{eventData.title}</div>
           <div className="udyam-event-desc">{eventData.description}</div>
-          <div> {checkDevbits == 2 && <div className="apply-button" data-hackathon-slug="devbits-web-development-hackathon" data-button-theme="dark" style={{ height: '44px', width: '312px' }}></div>}</div>
+          <div className={devfolioClass}>
+            <div className="apply-button" data-hackathon-slug="devbits-web-development-hackathon" data-button-theme="dark-inverted" style={{ height: '44px', width: '312px' }}></div>
+            {/* HELLO */}
+          </div>
           <div className="udyam-event-buttons">
             <div className="ps-link">
               {eventData.psLink ? (
