@@ -70,7 +70,7 @@ const Nav = (props) => {
           <div className="layer"></div>
         </div>
       </div>
-      {(udyamName || true) && width < 800 && <Profile />}
+      {(udyamName || true) && width < 800 && <Profile title="UDYAM"/>}
       {(slideNav || width > 800) && (
         <div className="udyam-nav udyam_side_nav">
           <div className="udyam-img">
