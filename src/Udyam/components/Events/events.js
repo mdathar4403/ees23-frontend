@@ -45,7 +45,7 @@ const data = [
   {
     title: 'X-IOT-A',
     description: 'Propose and implement a solution to a real-world problem with the help of the booming technology of the Internet of Things involving circuit designing and the incorporation of hardware and software.',
-    psLink: 'https://drive.google.com/file/d/1d3UkJB_tNFYfI2HBMR_T_DhQsF07eDfw/view?usp=share_link',
+    psLink: 'https://drive.google.com/drive/folders/1zIsHDTuZ4gG8T5lJGv3NKnMyTCKchsra?usp=sharing',
     submissionLink: 'https://docs.google.com/forms/d/e/1FAIpQLSf0igPnY4bjQiIgp7EVZYhWiiQbkyBFxICFL5Kvz267avGwNQ/viewform'
   },
   {
