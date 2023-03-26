@@ -125,7 +125,8 @@
 .window .header ul.menu li.menu-item:nth-child(7) {
   transition-delay: 0.07s;
 }
-.window .header ul.menu li.menu-item a, .mobnavevents {
+.window .header ul.menu li.menu-item a,
+.mobnavevents {
   display: block;
   position: relative;
   color: #fff;
@@ -141,7 +142,27 @@
   width: 100%;
   height: 12vh;
 }
-.mobnavevents{
+.mobnavevents {
+  cursor: pointer;
+}
+.window .header ul.menu li.menu-item a,
+.mobnavupdates {
+  display: block;
+  position: relative;
+  color: #fff;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  line-height: 2.35;
+  font-weight: 200;
+  width: 100%;
+  height: 12vh;
+}
+.mobnavupdates {
   cursor: pointer;
 }
 .window .header.menu-opened {
@@ -274,15 +295,30 @@ nav {
   width: 80%;
 }
 
-.nav-links li a, .navevents {
+.nav-links li a,
+.navevents {
   text-decoration: none;
   font-size: 1.2rem;
   color: #fff;
 }
-.nav-links li a:hover, .navevents:hover {
+.nav-links li a:hover,
+.navevents:hover {
   border-bottom: 3px solid #fff;
   cursor: pointer;
 }
+
+.nav-links li a,
+.navupdates {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.nav-links li a:hover,
+.navupdates:hover {
+  border-bottom: 3px solid #fff;
+  cursor: pointer;
+}
+
 .menu-bar {
   position: absolute;
   right: 8%;
@@ -318,7 +354,7 @@ nav {
   display: flex;
   position: absolute;
   width: 7%;
-  left: 35vw;
+  left: 27vw;
   top: 53px;
   flex-direction: column;
   padding: 1.2rem;
@@ -336,6 +372,32 @@ nav {
   font-family: 'Poppins', sans-serif;
 }
 .dropmenu a:hover {
+  color: rgb(170, 164, 164);
+}
+
+.updatesdropmenu {
+  display: flex;
+  position: absolute;
+  width: 7%;
+  left: 38vw;
+  top: 53px;
+  flex-direction: column;
+  padding: 1.2rem;
+  gap: 3px;
+  z-index: 50;
+  background-color: #120b2c90;
+  box-shadow: 4px 5px 18px #6767677c;
+}
+
+.updatesdropmenu a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.updatesdropmenu a:hover {
   color: rgb(170, 164, 164);
 }
 
@@ -376,7 +438,8 @@ nav {
   }
 }
 @media screen and (max-width: 800px) and (min-width: 600px) {
-  .nav-links li a, .navevents {
+  .nav-links li a,
+  .navevents {
     font-size: 1.1rem;
   }
   .menu-text {

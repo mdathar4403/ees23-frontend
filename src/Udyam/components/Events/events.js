@@ -24,6 +24,8 @@ const data = [
     psLink: 'https://drive.google.com/file/d/1m4meRoE6gra8m01SoERahFN-7qBNdFnB/view?usp=share_link',
     submissionLink: '',
     registerLink: 'https://eesiitbhu.in/dashboard#events-register'
+    psLink: 'https://drive.google.com/drive/folders/1bv6mtmN-XnYF2IDhuXUcypiGLi6vIHXS?usp=share_link',
+    submissionLink: ''
   },
   {
     title: 'I-CHIP',
@@ -31,6 +33,8 @@ const data = [
     psLink: 'https://drive.google.com/file/d/1jY_QC-TCy0vt5McbIQuAXCQ8ww2ONiQ1/view?usp=share_link',
     submissionLink: '',
     registerLink: 'https://eesiitbhu.in/dashboard#events-register'
+    psLink: 'https://drive.google.com/drive/folders/11WpKRmmQI4oQ740BSnWZ864BZIViU02v?usp=sharing',
+    submissionLink: ''
   },
   {
     title: 'DEVBITS',
@@ -38,6 +42,8 @@ const data = [
     psLink: '',
     submissionLink: '',
     registerLink: 'https://eesiitbhu.in/dashboard#events-register'
+    psLink: 'https://devbits-web-development-hackathon.devfolio.co/',
+    submissionLink: ''
   },
   {
     title: 'COMMNET',
@@ -52,6 +58,8 @@ const data = [
     psLink: 'https://drive.google.com/file/d/1d3UkJB_tNFYfI2HBMR_T_DhQsF07eDfw/view?usp=share_link',
     submissionLink: 'https://docs.google.com/forms/d/e/1FAIpQLSf0igPnY4bjQiIgp7EVZYhWiiQbkyBFxICFL5Kvz267avGwNQ/viewform',
     registerLink: 'https://eesiitbhu.in/dashboard#events-register'
+    psLink: 'https://drive.google.com/drive/folders/1zIsHDTuZ4gG8T5lJGv3NKnMyTCKchsra?usp=sharing',
+    submissionLink: 'https://docs.google.com/forms/d/e/1FAIpQLSf0igPnY4bjQiIgp7EVZYhWiiQbkyBFxICFL5Kvz267avGwNQ/viewform'
   },
   {
     title: 'CASSANDRA',
@@ -66,6 +74,8 @@ const data = [
     psLink: 'https://drive.google.com/file/d/1IgzULOh1dQkfOVA9FQqoxO_9lvTPe0cT/view?usp=share_link',
     submissionLink: '',
     registerLink: 'https://eesiitbhu.in/dashboard#events-register'
+    psLink: 'https://drive.google.com/drive/folders/1cR8pelM4daqMg530qPYvZqKcMk8fOx88?usp=share_link',
+    submissionLink: ''
   },
   {
     title: 'FUNCKIT',
@@ -82,14 +92,23 @@ function Events() {
   const [eventData, setEventData] = useState(data[0]);
   const [eventtable, setEventtable] = useState(true);
   const [checkDevbits, setDevbits] = useState(0);
+  const [devfolioClass, setDevfolio] = useState('hidden');
 
   // const [eventnav, setEventnav] = useState(false);
-  var isDevbits = 0;
+  // var isDevbits = 0;
   const eventName = (event) => {
     var element = event.target.classList[0];
     setDevbits(element);
-    console.log(isDevbits);
+    // console.log(isDevbits);
     setEventData(data[element]);
+    console.log('element: ', element);
+    if (element == 2) {
+      console.log('hi');
+      setDevfolio('');
+    } else {
+      console.log('a');
+      setDevfolio('hidden');
+    }
     // setEventtable(false);
     console.log(element);
   };
@@ -97,6 +116,8 @@ function Events() {
   const [width, setWidth] = useState(window.innerWidth);
 
   function checkNav() {
+    console.log(checkDevbits);
+    console.log('Hello');
     if (width > 800) {
       return;
     } else {
@@ -218,7 +239,10 @@ function Events() {
           </div>
           <div className="udyam-event-title">{eventData.title}</div>
           <div className="udyam-event-desc">{eventData.description}</div>
-          <div> {checkDevbits == 2 && <div className="apply-button" data-hackathon-slug="devbits-web-development-hackathon" data-button-theme="dark" style={{ height: '44px', width: '312px' }}></div>}</div>
+          <div className={devfolioClass}>
+            <div className="apply-button" data-hackathon-slug="devbits-web-development-hackathon" data-button-theme="dark-inverted" style={{ height: '44px', width: '312px' }}></div>
+            {/* HELLO */}
+          </div>
           <div className="udyam-event-buttons">
             <div className="ps-link">
               {eventData.psLink ? (
