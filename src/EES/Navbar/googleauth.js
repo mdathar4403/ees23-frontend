@@ -11,7 +11,7 @@ const GoogleLoginBTN = (props) => {
     onSuccess: (res) => {
       // console.log('SUCCESS!!! Current User: ', res);
       axios({
-        url: 'https://udyam.pythonanywhere.com/auth/google-login/',
+        url: 'https://ees23.pythonanywhere.com/auth/google-login/',
         method: 'post',
         headers: { Authorization: res.code }
       })
