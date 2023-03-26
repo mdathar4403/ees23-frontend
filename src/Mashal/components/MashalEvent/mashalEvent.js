@@ -24,6 +24,7 @@ import { BsTwitter } from 'react-icons/bs';
 import { BsGlobe } from 'react-icons/bs';
 import lg from './images/mashalLogo.svg';
 import Mashnav from '../Mashnav/mashnav';
+import InstagramEmbed from 'react-instagram-embed';
 
 const MashalEvent = () => {
   return (
@@ -31,6 +32,7 @@ const MashalEvent = () => {
       <div className="mashnavxxx">
         <Mashnav></Mashnav>
       </div>
+      <InstagramEmbed url="https://instagr.am/p/Zw9o4/" maxWidth={500} hideCaption={true} containerTagName="div" protocol="" injectScript onLoading={() => {}} onSuccess={() => {}} onAfterRender={() => {}} onFailure={() => {}} />
       <div className="event-section">
         <div className="heading-mashal">
           <h1>EVENTS</h1>

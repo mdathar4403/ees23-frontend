@@ -144,7 +144,7 @@
 }
 .mobnavevents {
   cursor: pointer;
-
+}
 .window .header ul.menu li.menu-item a,
 .mobnavupdates {
   display: block;
@@ -313,9 +313,8 @@ nav {
   font-size: 1.2rem;
   color: #fff;
 }
-.nav-links li a:hover,
 
-.navevents:hover {
+.navevents:hover,
 .navupdates:hover {
   border-bottom: 3px solid #fff;
   cursor: pointer;
