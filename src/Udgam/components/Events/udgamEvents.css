@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* .bg {
   background: url(./background.png) no-repeat;
   background-size: cover;
@@ -119,7 +120,7 @@
   color: #6f6f6f;
   margin: 20px;
 }
-
+/* .event-title */
 .active {
   color: white;
   text-decoration: underline;
@@ -148,7 +149,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   width: 80%;
-  font-family: eventHeadingfont;
+  font-family: 'poppins';
   font-size: 70px;
   color: #dadada;
 }
@@ -211,7 +212,7 @@
 .event-title {
   display: flex;
   justify-content: flex-start;
-  font-family: eventHeadingFont;
+  font-family: "poppins";
   font-size: 40px;
   width: 70%;
   color: white;
