@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import { MdArrowForwardIos } from 'react-icons/md';
 import { IoIosArrowBack } from 'react-icons/io';
 import './../Nav/Nav.css';
+import { GoogleLoginBTN } from '../../../EES/Navbar/googleauth';
+import { Link } from 'react-router-dom';
 
 const eventitem = new Map([
   ['DIGISIM', 0],
@@ -42,7 +44,7 @@ const data = [
   {
     title: 'COMMNET',
     description: 'Become proficient in Network Architecture and MATLAB implementation of coding theory, compression algorithms, signal processing, modulation and demodulation techniques, designing and simulating analog circuits & filters to perform computations using CAD tools.',
-    registerLink: 'https://eesiitbhu.in/dashboard#events-register', 
+    registerLink: 'https://eesiitbhu.in/dashboard#events-register',
     psLink: 'https://drive.google.com/drive/folders/1w4W_C978jSe5LVkBmOMJRTSrvyIUgduN?usp=sharing',
     submissionLink: ''
   },
@@ -70,7 +72,7 @@ const data = [
   {
     title: 'FUNCKIT',
     description: 'Test your problem-solving abilities through low-level programming and building gate-level circuitry to optimize the logic and hardware and decrease execution time.',
-     registerLink: 'https://eesiitbhu.in/dashboard#events-register',
+    registerLink: 'https://eesiitbhu.in/dashboard#events-register',
     psLink: 'https://drive.google.com/drive/folders/1oo2LwNIK90RXok_s3CWPbhfIBXjopUmm?usp=sharing',
     submissionLink: ''
   }
@@ -243,7 +245,22 @@ function Events() {
                 <>PROBLEM STATEMENT</>
               )}
             </div>
-            <div className="register-link">{eventData.registerLink ? <a href={eventData.registerLink}>REGISTER</a> : <>REGISTER</>}</div>
+            {/* {window.sessionStorage.getItem('registered_email') == null ? */}
+            {/* <div className="register-link">{window.sessionStorage.getItem('registered_email') == null ? <>REGISTER {<script>function showalert(){alert(`Kindly Login first !`)} </script>}</> : <a href={eventData.registerLink}>REGISTER</a>}</div> */}
+            {window.sessionStorage.getItem('registered_email') == null ? (
+              <GoogleLoginBTN>
+                <Link to="#" className="register-link" style={{ textDecoration: 'none' }}>
+                  {/* <BiQrScan className="info" /> */}
+                  <p>REGISTER</p>
+                </Link>
+              </GoogleLoginBTN>
+            ) : (
+              <a href={eventData.registerLink} className="register-link" style={{ textDecoration: 'none' }}>
+                {/* <BiQrScan className="info" /> */}
+                <p>REGISTER</p>
+              </a>
+            )}
+            ;
             <div className="udyam-event-submit">
               {eventData.submissionLink ? (
                 <a href={eventData.submissionLink} target="_blank" rel="noreferrer">
