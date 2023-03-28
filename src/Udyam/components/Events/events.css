@@ -173,13 +173,13 @@
   color: inherit;
 }
 
-.apply-button{
+.apply-button {
   display: flex;
   color: white;
   width: 100px;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 

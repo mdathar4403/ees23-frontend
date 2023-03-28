@@ -50,22 +50,42 @@ const DashBoard = () => {
   });
   // const [token, setToken] = useState('');
   useEffect(() => {
+    // var newUser = { name: 'Ankur Agrawal', email: 'ankur.agrawal.ece20@itbhu.ac.in', college: 'IIT BHU', year: 'Part III', phone: '1234567890', referral: 'default#EES-10000', radianite_points: 0, token: 'd221d7afdf288fc097ff321d77154de4b3b6a24e' };
+    // window.sessionStorage.setItem('profileData', newUser);
+
     var newUser = JSON.parse(window.sessionStorage.getItem('profileData'));
     setUser(newUser);
     setToken(newUser.token);
-    axios
-      .get('https://ees23.pythonanywhere.com/api/events/')
-      .then((res) => {
-        console.log(res);
-        setEventsData(res.data);
-        // console.log(eventsData);
-      })
-      .catch((error) => console.log(error));
     axios
       .get('https://ees23.pythonanywhere.com/api/teams/user/', { headers: { Authorization: 'Token ' + newUser.token } })
       .then((res) => {
         console.log(res);
         setTeamData(res.data);
+        axios
+          .get('https://ees23.pythonanywhere.com/api/events/')
+          .then((res) => {
+            console.log(res);
+            let arr = [];
+            for (let i = 0; i < res.data.length; i++) {
+              // for (!teamData.includes(res.data[i])) {
+              // }
+              let mark = 0;
+              for (let j = 0; j < teamData.length; j++) {
+                if (teamData[j].event == res.data[i].event) {
+                  mark = 1;
+                }
+              }
+              if (mark == 0) {
+                arr.push(res.data[i]);
+              }
+            }
+            console.log(arr);
+            setEventsData(arr);
+
+            // console.log(eventsData);
+          })
+          .catch((error) => console.log(error));
+
         // console.log(teamData);
       })
       .catch((error) => console.log(error));
