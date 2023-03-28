@@ -63,7 +63,7 @@ const data = [
   {
     title: 'FUNCKIT',
     description: 'Test your problem-solving abilities through low-level programming and building gate-level circuitry to optimize the logic and hardware and decrease execution time.',
-    psLink: 'https://drive.google.com/file/d/1PAd6g6Qw9HTc3o9usjeKzlSbVzTqbZ0P/view?usp=share_link',
+    psLink: 'https://drive.google.com/drive/folders/1oo2LwNIK90RXok_s3CWPbhfIBXjopUmm?usp=sharing',
     submissionLink: ''
   }
 ];
