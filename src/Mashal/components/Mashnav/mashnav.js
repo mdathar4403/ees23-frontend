@@ -16,7 +16,7 @@ import { TfiMenu } from 'react-icons/tfi';
 // import { IoIosArrowBack } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 // import { GoogleLogin } from 'react-google-login';
-import Profile from '../../../Udyam/components/Profile/Profile1';
+import Profile from '../../../Udyam/components/Profile/Profile';
 // import AOS from 'aos';
 // import 'aos/dist/aos.css'; // You can also use <link> for styles
 // // ..
@@ -225,7 +225,7 @@ const UdgamNav = (props) => {
           <div className="layer"></div> */}
         {/* </div> */}
       </div>
-      {(udyamName || true) && width < 800 && <Profile />}
+      {(udyamName || true) && width < 800 && <Profile title="MASHAL" />}
       {(slideNav || width > 800) && (
         <div className="udyam-nav">
           <div className="udyam-img">
