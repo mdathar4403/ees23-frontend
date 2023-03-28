@@ -55,7 +55,7 @@ const LeaderBoard = () => {
   };
 
   const fetchUsers = async () => {
-    const response = await fetch('https://udyam.pythonanywhere.com/auth/leaderboard');
+    const response = await fetch('https://ees23.pythonanywhere.com/auth/leaderboard');
     const newUser = await response.json();
     console.log(newUser);
     setUsers(newUser.array);

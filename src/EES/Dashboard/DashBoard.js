@@ -54,7 +54,7 @@ const DashBoard = () => {
     setUser(newUser);
     setToken(newUser.token);
     axios
-      .get('https://udyam.pythonanywhere.com/api/events/')
+      .get('https://ees23.pythonanywhere.com/api/events/')
       .then((res) => {
         console.log(res);
         setEventsData(res.data);
@@ -63,7 +63,7 @@ const DashBoard = () => {
       .catch((error) => console.log(error));
 
     axios
-      .get('https://udyam.pythonanywhere.com/api/teams/user/', { headers: { Authorization: 'Token ' + newUser.token } })
+      .get('https://ees23.pythonanywhere.com/api/teams/user/', { headers: { Authorization: 'Token ' + newUser.token } })
       .then((res) => {
         console.log(res);
         setTeamData(res.data);
@@ -111,7 +111,7 @@ const DashBoard = () => {
       member2: data.member2
     };
     axios
-      .post('https://udyam.pythonanywhere.com/api/team/create/', senddata, {
+      .post('https://ees23.pythonanywhere.com/api/team/create/', senddata, {
         // headers: {
         //   Authorization: `Basic ${token}`
         // }
@@ -151,7 +151,7 @@ const DashBoard = () => {
     };
     // console.log(senddata);
     axios
-      .patch('https://udyam.pythonanywhere.com/api/team/' + editing.id + '/', senddata, {
+      .patch('https://ees23.pythonanywhere.com/api/team/' + editing.id + '/', senddata, {
         headers: { Authorization: `Token ${token}` }
       })
       .then(() => {
@@ -182,7 +182,7 @@ const DashBoard = () => {
   const deleteTeam = (id) => {
     setDelete(0);
     axios
-      .delete('https://udyam.pythonanywhere.com/api/team/' + id + '/', {
+      .delete('https://ees23.pythonanywhere.com/api/team/' + id + '/', {
         headers: { Authorization: `Token ${token}` }
       })
       .then(() => {
@@ -268,9 +268,11 @@ const DashBoard = () => {
                       <img src={'/assets/events/' + e.event.toUpperCase() + '.png'} alt="img" />
                     </div>
                     <div className="team-info">
-                      <h2>{e.event}</h2>
-                      <h2>{e.teamname}</h2>
-                      <h2>{user.name.split(' ').slice(0, 2).join(' ')}</h2>
+                      <h1 className="team-info-event-name">{e.event}</h1>
+                      <h2 className="team-info-team-name">{e.teamname}</h2>
+                      <h4 className="team-info-teammember-name">{e.leader}</h4>
+                      <h4 className="team-info-teammember-name">{e.member1}</h4>
+                      <h4 className="team-info-teammember-name">{e.member2}</h4>
                     </div>
                     <div className="team-btns">
                       <FaEdit
@@ -334,7 +336,7 @@ const DashBoard = () => {
                   <div className="logo-event">
                     <img src={'/assets/events/' + e.event.toUpperCase() + '.png'}></img>
                   </div>
-                  <h3>{e.event}</h3>
+                  <h3 className="eventInfoEventName">{e.event}</h3>
                   <button className="register-btn" onClick={() => registerHandler(e.event)}>
                     Register
                   </button>
@@ -342,7 +344,6 @@ const DashBoard = () => {
               </div>
             ))}
           </div>
-
           {showForm && (
             <div id="team-register-form" className="form-dashboard-container">
               <h1 className="form-heading">Team Registeration</h1>
@@ -371,18 +372,18 @@ const DashBoard = () => {
             <div id="team-register-form" className="form-dashboard-container">
               <h1 className="form-heading">Team Update</h1>
               <form onSubmit={(e) => postEdit(e)}>
-                <input id="teamname" type="text" onChange={(e) => handle1(e)} placeholder="Enter Team Name" required></input>
+                <input id="teamname" type="text" onChange={(e) => handle1(e)} value={editing.teamname} placeholder="Enter Team Name" required></input>
                 <input id="event" type="text" value={editing.event} readOnly></input>
                 {editing.event === 'Mosaic' || editing.event === 'Cassandra' || editing.event === 'Devbits' ? (
                   <>
                     <input id="leader" type="text" value={editing.leader} placeholder="Team Leader" readOnly></input>
-                    <input id="member1" type="text" onChange={(e) => handle1(e)} placeholder="Team Member"></input>
-                    <input id="member2" type="text" onChange={(e) => handle1(e)} placeholder="Team Member"></input>
+                    <input id="member1" type="text" onChange={(e) => handle1(e)} value={editing.member1} placeholder="Team Member"></input>
+                    <input id="member2" type="text" onChange={(e) => handle1(e)} value={editing.member2} placeholder="Team Member"></input>
                   </>
                 ) : (
                   <>
                     <input id="leader" type="text" value={editing.leader} placeholder="Team Leader" readOnly></input>
-                    <input id="member1" type="text" onChange={(e) => handle1(e)} placeholder="Team Member"></input>
+                    <input id="member1" type="text" onChange={(e) => handle1(e)} value={editing.member1} placeholder="Team Member"></input>
                   </>
                 )}
                 <button type="submit" className="form-dashboard-submit">
