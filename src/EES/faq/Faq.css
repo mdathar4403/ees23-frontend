@@ -41,12 +41,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: -7vh;
 }
 
 .left {
   width: 42vw;
   margin: 0vw 2vw;
-  margin-top: -16vh;
+  margin-top: -10vh;
   padding-bottom: 10vh;
 }
 
@@ -98,7 +99,7 @@
 }
 
 .right {
-  padding-top: 20px;
+  padding-top: 0vh;
   width: 45vw;
   height: 58vh;
   margin-top: 2em;
@@ -159,10 +160,10 @@
   align-items: center;
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 600;
   overflow: auto;
   opacity: 1;
-  max-height: 160px;
+  max-height: 200px;
   position: relative;
   -webkit-transition: max-height 0.5s linear;
   -moz-transition: max-height 0.5s linear;
@@ -173,7 +174,7 @@
   color: rgba(229, 229, 236, 0.85);
   margin: 10px 1vw;
   margin-top: -5px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.7px;
   /* top: 0; */
 }
 
@@ -224,10 +225,9 @@
   }
 
   .left {
-    margin-top: -25px;
+    margin-top: -20px;
     height: auto;
     align-items: center;
-    /* line-height: 1px; */
     width: 90vw;
   }
 
@@ -243,7 +243,9 @@
     background: none;
     overflow-y: auto;
     padding-bottom: 15vh;
-    margin-bottom: 10vh;
+    margin-top: -3vh;
+    margin-bottom: 5vh;
+
   }
 
   .ques {
@@ -253,10 +255,10 @@
 
   .ansshow {
     font-size: 1.8vh;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     margin: 0 15px;
     color: rgba(229, 229, 236, 0.85);
-    max-height: 250px;
+    max-height: 370px;
     position: relative;
     -webkit-transition: max-height 0.5s linear;
     -moz-transition: max-height 0.5s linear;
