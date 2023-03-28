@@ -41,7 +41,7 @@ const Register = () => {
       return;
     }
     axios({
-      url: 'https://udyam.pythonanywhere.com/auth/google-login/',
+      url: 'https://ees23.pythonanywhere.com/auth/google-login/',
       method: 'post',
       headers: { Authorization: window.sessionStorage.getItem('tokenId') },
       data: profdata
@@ -85,7 +85,7 @@ const Register = () => {
   //     Authorization: res.tokenId
   //   };
   //   axios({
-  //     url: 'https://udyam.pythonanywhere.com/auth/google-login/',
+  //     url: 'https://ees23.pythonanywhere.com/auth/google-login/',
   //     method: 'post',
   //     headers: { Authorization: window.sessionStorage.getItem('tokenId') },
   //     data: {

@@ -49,7 +49,7 @@
   justify-content: center;
   align-items: center;
   /* margin: 100px; */
-  /* height: 0%; */
+  height: auto;
   padding: 100px;
   overflow: scroll;
 }
@@ -148,7 +148,8 @@
 }
 
 .ps-link,
-.udyam-event-submit {
+.udyam-event-submit,
+.register-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,9 +167,20 @@
 }
 
 .ps-link a,
-.udyam-event-submit a {
+.udyam-event-submit a,
+.register-link a {
   text-decoration: none;
   color: inherit;
+}
+
+.apply-button{
+  display: flex;
+  color: white;
+  width: 100px;
+}
+
+.hidden{
+  display: none;
 }
 
 @media (max-width: 800px) {
@@ -189,6 +201,7 @@
   .udyam-event-body {
     margin: 0;
     padding: 0;
+    height: 80%;
   }
 
   .udyam-event-img {
@@ -210,9 +223,9 @@
 
   .udyam-event-arrows {
     display: flex;
-    margin: 3vh 0vw;
+    /* margin: 3vh 0vw; */
     position: fixed;
-    bottom: 20px;
+    bottom: 15px;
   }
 
   #left {
@@ -222,12 +235,14 @@
   #right {
     margin-left: 35vw;
   }
+
   .udyam-event-buttons {
     display: block;
   }
+
   .udyam-event-buttons div {
     width: 100%;
     margin-bottom: 10px;
-    padding: 7px;
+    padding: 7px 0px;
   }
 }

@@ -2,8 +2,8 @@ import React from 'react';
 import './Profile.css';
 import { Link } from 'react-router-dom';
 import default_img from './default_img.png';
-const Profile = () => {
-  var userName = 'UDYAM';
+const Profile = (props) => {
+  let userName = props.title;
   var img_url = default_img;
   if (window.sessionStorage.getItem('profileData') != null) {
     console.log(window.sessionStorage.getItem('profileData'));

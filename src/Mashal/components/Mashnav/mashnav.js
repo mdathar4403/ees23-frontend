@@ -37,7 +37,7 @@ const UdgamNav = (props) => {
   //   window.sessionStorage.setItem('imageUrl', res.profileObj.imageUrl);
   //   // console.log('res.profileObj: ', res);
   //   axios({
-  //     url: 'https://udyam.pythonanywhere.com/auth/google-login/',
+  //     url: 'https://ees23.pythonanywhere.com/auth/google-login/',
   //     method: 'post',
   //     headers: { Authorization: res.tokenId },
   //     data: {
@@ -188,6 +188,30 @@ const UdgamNav = (props) => {
     setNav(false);
     setUdyamName(true);
   }
+  // close nav when clicked outside
+  useEffect(() => {
+    document.addEventListener('click', (e) => {
+      console.log(e.target.className);
+      if (
+        e.target.className == 'mmobbg' ||
+        e.target.className == 'title-udgam' ||
+        e.target.className == 'emma' ||
+        e.target.className == 'mcontent' ||
+        // className including logo-container
+        e.target.className.includes('mdetails') ||
+        e.target.className.includes('msponsorBox') ||
+        e.target.className.includes('msponsers') ||
+        e.target.className === '' ||
+        e.target.className.includes('event-section') ||
+        e.target.className.includes('card__snippet') ||
+        e.target.className.includes('card__title') ||
+        e.target.className.includes('mashal-card') ||
+        e.target.className.includes('teams') ||
+        e.target.className.includes('leaderboard')
+      )
+        helloNav();
+    });
+  }, []);
 
   return (
     <>
