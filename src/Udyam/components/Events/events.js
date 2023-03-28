@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import { MdArrowForwardIos } from 'react-icons/md';
 import { IoIosArrowBack } from 'react-icons/io';
 import './../Nav/Nav.css';
+import { GoogleLoginBTN } from '../../../EES/Navbar/googleauth';
+import { Link } from 'react-router-dom';
 
 const eventitem = new Map([
   ['DIGISIM', 0],
@@ -21,30 +23,35 @@ const data = [
   {
     title: 'DIGISIM',
     description: 'Gain mastery of digital system designing and computer architecture by designing optimized digital systems and simulating them on Proteus. Grab this chance to put to test your debugging and logic-building skills.',
+    registerLink: 'https://eesiitbhu.in/dashboard#events-register',
     psLink: 'https://drive.google.com/drive/folders/1bv6mtmN-XnYF2IDhuXUcypiGLi6vIHXS?usp=share_link',
     submissionLink: ''
   },
   {
     title: 'I-CHIP',
     description: 'Design, simulate, validate, and debug digital systems, from flip-flops to microprocessors. Work with Verilog HDL and get your hands on FPGA Boards through this Verilog-based event.',
+    registerLink: 'https://eesiitbhu.in/dashboard#events-register',
     psLink: 'https://drive.google.com/drive/folders/11WpKRmmQI4oQ740BSnWZ864BZIViU02v?usp=sharing',
     submissionLink: ''
   },
   {
     title: 'DEVBITS',
     description: 'Get the hang of two of the most sought-after verticals under the programming umbrella. Test your critical thinking abilities with a competitive-programming round. Work on creating highly functional web applications built using industry-sought tech stacks.',
+    registerLink: 'https://eesiitbhu.in/dashboard#events-register',
     psLink: 'https://devbits-web-development-hackathon.devfolio.co/',
     submissionLink: ''
   },
   {
     title: 'COMMNET',
     description: 'Become proficient in Network Architecture and MATLAB implementation of coding theory, compression algorithms, signal processing, modulation and demodulation techniques, designing and simulating analog circuits & filters to perform computations using CAD tools.',
+    registerLink: 'https://eesiitbhu.in/dashboard#events-register',
     psLink: 'https://drive.google.com/drive/folders/1w4W_C978jSe5LVkBmOMJRTSrvyIUgduN?usp=sharing',
     submissionLink: ''
   },
   {
     title: 'X-IOT-A',
     description: 'Propose and implement a solution to a real-world problem with the help of the booming technology of the Internet of Things involving circuit designing and the incorporation of hardware and software.',
+    registerLink: 'https://eesiitbhu.in/dashboard#events-register',
     psLink: 'https://drive.google.com/drive/folders/1zIsHDTuZ4gG8T5lJGv3NKnMyTCKchsra?usp=sharing',
     submissionLink: 'https://docs.google.com/forms/d/e/1FAIpQLSf0igPnY4bjQiIgp7EVZYhWiiQbkyBFxICFL5Kvz267avGwNQ/viewform'
   },
@@ -52,17 +59,20 @@ const data = [
     title: 'CASSANDRA',
     description: 'Prove yourself a good data analyst by designing a model that learns and optimizes the dataset provided, implementing Machine Learning algorithms in industrial problems and gain exposure to the ABCs of data science.',
     psLink: '',
-    submissionLink: ''
+    submissionLink: '',
+    registerLink: 'https://eesiitbhu.in/dashboard#events-register'
   },
   {
     title: 'MOSAIC',
     description: 'Get the opportunity to decipher canonical problems based on the intriguing subject of Machine Learning and Computer Vision. Know about deep learning and image processing inside out and acquire expertise in machine learning.',
+    registerLink: 'https://eesiitbhu.in/dashboard#events-register',
     psLink: 'https://drive.google.com/drive/folders/1cR8pelM4daqMg530qPYvZqKcMk8fOx88?usp=share_link',
     submissionLink: ''
   },
   {
     title: 'FUNCKIT',
     description: 'Test your problem-solving abilities through low-level programming and building gate-level circuitry to optimize the logic and hardware and decrease execution time.',
+    registerLink: 'https://eesiitbhu.in/dashboard#events-register',
     psLink: 'https://drive.google.com/drive/folders/1oo2LwNIK90RXok_s3CWPbhfIBXjopUmm?usp=sharing',
     submissionLink: ''
   }
@@ -235,6 +245,22 @@ function Events() {
                 <>PROBLEM STATEMENT</>
               )}
             </div>
+            {/* {window.sessionStorage.getItem('registered_email') == null ? */}
+            {/* <div className="register-link">{window.sessionStorage.getItem('registered_email') == null ? <>REGISTER {<script>function showalert(){alert(`Kindly Login first !`)} </script>}</> : <a href={eventData.registerLink}>REGISTER</a>}</div> */}
+            {window.sessionStorage.getItem('registered_email') == null ? (
+              <GoogleLoginBTN>
+                <Link to="#" className="register-link" style={{ textDecoration: 'none' }}>
+                  {/* <BiQrScan className="info" /> */}
+                  <p>REGISTER</p>
+                </Link>
+              </GoogleLoginBTN>
+            ) : (
+              <a href={eventData.registerLink} className="register-link" style={{ textDecoration: 'none' }}>
+                {/* <BiQrScan className="info" /> */}
+                <p>REGISTER</p>
+              </a>
+            )}
+            ;
             <div className="udyam-event-submit">
               {eventData.submissionLink ? (
                 <a href={eventData.submissionLink} target="_blank" rel="noreferrer">

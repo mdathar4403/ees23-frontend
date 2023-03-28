@@ -148,7 +148,8 @@
 }
 
 .ps-link,
-.udyam-event-submit {
+.udyam-event-submit,
+.register-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,7 +167,8 @@
 }
 
 .ps-link a,
-.udyam-event-submit a {
+.udyam-event-submit a,
+.register-link a {
   text-decoration: none;
   color: inherit;
 }
@@ -233,12 +235,14 @@
   #right {
     margin-left: 35vw;
   }
+
   .udyam-event-buttons {
     display: block;
   }
+
   .udyam-event-buttons div {
     width: 100%;
     margin-bottom: 10px;
-    padding: 7px;
+    padding: 7px 0px;
   }
 }
