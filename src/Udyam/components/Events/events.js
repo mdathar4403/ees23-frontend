@@ -245,22 +245,21 @@ function Events() {
                 <>PROBLEM STATEMENT</>
               )}
             </div>
-            {/* {window.sessionStorage.getItem('registered_email') == null ? */}
-            {/* <div className="register-link">{window.sessionStorage.getItem('registered_email') == null ? <>REGISTER {<script>function showalert(){alert(`Kindly Login first !`)} </script>}</> : <a href={eventData.registerLink}>REGISTER</a>}</div> */}
-            {window.sessionStorage.getItem('registered_email') == null ? (
-              <GoogleLoginBTN>
-                <Link to="#" className="register-link" style={{ textDecoration: 'none' }}>
+            <div className="register-link">
+              {window.sessionStorage.getItem('registered_email') == null ? (
+                <GoogleLoginBTN>
+                  <Link to="#" className="" style={{ textDecoration: 'none' }}>
+                    {/* <BiQrScan className="info" /> */}
+                    <p>REGISTER</p>
+                  </Link>
+                </GoogleLoginBTN>
+              ) : (
+                <a href={eventData.registerLink} className="" style={{ textDecoration: 'none' }}>
                   {/* <BiQrScan className="info" /> */}
                   <p>REGISTER</p>
-                </Link>
-              </GoogleLoginBTN>
-            ) : (
-              <a href={eventData.registerLink} className="register-link" style={{ textDecoration: 'none' }}>
-                {/* <BiQrScan className="info" /> */}
-                <p>REGISTER</p>
-              </a>
-            )}
-            ;
+                </a>
+              )}
+            </div>
             <div className="udyam-event-submit">
               {eventData.submissionLink ? (
                 <a href={eventData.submissionLink} target="_blank" rel="noreferrer">

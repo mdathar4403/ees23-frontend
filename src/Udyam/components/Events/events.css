@@ -154,7 +154,7 @@
   justify-content: center;
   align-items: center;
   width: 28%;
-  /* height: 50px; */
+  height: 6.2vh;
   color: white;
   background-color: #232323;
   border-radius: 50px;
@@ -166,6 +166,11 @@
   text-align: center;
 }
 
+/* 
+.register-link {
+  margin: 0 8%;
+} */
+
 .ps-link a,
 .udyam-event-submit a,
 .register-link a {
@@ -173,13 +178,13 @@
   color: inherit;
 }
 
-.apply-button{
+.apply-button {
   display: flex;
   color: white;
   width: 100px;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
@@ -244,5 +249,11 @@
     width: 100%;
     margin-bottom: 10px;
     padding: 7px 0px;
+  }
+
+  .ps-link,
+  .udyam-event-submit,
+  .register-link {
+    height: 3.8vh;
   }
 }
