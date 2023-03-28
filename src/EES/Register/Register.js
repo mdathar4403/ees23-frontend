@@ -8,7 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import RegisterLogo from './RegisterLogo';
 
-const Register = () => {
+const Register = (props) => {
+  console.log(props.userEditing);
   const navigate = useNavigate();
   const {
     register,
@@ -41,8 +42,8 @@ const Register = () => {
       return;
     }
     axios({
-      url: 'https://ees23.pythonanywhere.com/auth/google-login/',
-      method: 'post',
+      url: props.userEditing === true ? 'https://ees23.pythonanywhere.com/auth/user-update/' + JSON.parse(profileData).id : 'https://ees23.pythonanywhere.com/auth/google-login/',
+      method: props.userEditing === true ? 'patch' : 'post',
       headers: { Authorization: window.sessionStorage.getItem('tokenId') },
       data: profdata
     })
@@ -50,7 +51,7 @@ const Register = () => {
         console.log(res);
 
         setTimeout(() => {
-          toast.success('Registered Successfully', {
+          toast.success(props.userEditing === true ? 'Updated Successfully' : 'Registered Successfully', {
             theme: 'dark',
             position: window.innerWidth < 600 ? toast.POSITION.BOTTOM_CENTER : toast.POSITION.BOTTOM_RIGHT,
             autoClose: 1200
@@ -126,28 +127,52 @@ const Register = () => {
       <div className="form-container">
         <div className="form"></div>
 
-        <form action=" " onSubmit={handleSubmit((data) => postData(data))}>
-          <h1>SIGN UP!</h1>
-          <input type="text" {...register('name')} value={JSON.parse(profileData).givenName} placeholder={JSON.parse(profileData).givenName} readOnly />
-          <input type="text" {...register('email')} value={JSON.parse(profileData).email} placeholder={JSON.parse(profileData).email} readOnly />
-          <input type="text" {...register('phone_number', { valueAsNumber: true })} placeholder="Whatsapp Number" pattern="^[6-9]\d{9}$" title="A valid number is required" required />
-          <input type="text" list="all_colleges" {...register('college_name')} placeholder="College/Institute" name="college_name" required />
-          <Collegelist id="all_colleges" />
-          <select id="years" className="givebgcolor" {...register('year')} required>
-            <option id="select-heading" value="Choose Year" disabled selected hidden>
-              Year
-            </option>
-            <option value="FIRST">First</option>
-            <option value="SECOND">Second</option>
-            <option value="THIRD">Third</option>
-            <option value="FOURTH">Fourth</option>
-            <option value="FIFTH">Fifth</option>
-          </select>
-          <input type="text" {...register('referral')} placeholder="Referral" />
-          <button type="submit" className="form-submit">
-            <span>SIGN UP</span>
-          </button>
-        </form>
+        {props.userEditing === true ? (
+          <form action=" " onSubmit={handleSubmit((data) => postData(data))}>
+            <h1>Update User!</h1>
+            <input type="text" {...register('name')} value={JSON.parse(profileData).name} placeholder={JSON.parse(profileData).name} readOnly />
+            <input type="text" {...register('email')} value={JSON.parse(profileData).email} placeholder={JSON.parse(profileData).email} readOnly />
+            <input type="text" {...register('phone_number', { valueAsNumber: true })} placeholder={JSON.parse(profileData).phone} pattern="^[6-9]\d{9}$" title="A valid number is required" required />
+            <input type="text" list="all_colleges" {...register('college_name')} placeholder={JSON.parse(profileData).college} required />
+            <Collegelist id="all_colleges" />
+            <select id="years" className="givebgcolor" {...register('year')} required>
+              <option id="select-heading" value="Choose Year" disabled selected hidden>
+                Year
+              </option>
+              <option value="FIRST">First</option>
+              <option value="SECOND">Second</option>
+              <option value="THIRD">Third</option>
+              <option value="FOURTH">Fourth</option>
+              <option value="FIFTH">Fifth</option>
+            </select>
+            <button type="submit" className="form-submit">
+              <span>Update</span>
+            </button>
+          </form>
+        ) : (
+          <form action=" " onSubmit={handleSubmit((data) => postData(data))}>
+            <h1>Sign Up!</h1>
+            <input type="text" {...register('name')} value={JSON.parse(profileData).givenName} placeholder={JSON.parse(profileData).givenName} readOnly />
+            <input type="text" {...register('email')} value={JSON.parse(profileData).email} placeholder={JSON.parse(profileData).email} readOnly />
+            <input type="text" {...register('phone_number', { valueAsNumber: true })} placeholder="Whatsapp Number" pattern="^[6-9]\d{9}$" title="A valid number is required" required />
+            <input type="text" list="all_colleges" {...register('college_name')} placeholder="College/Institute" name="college_name" required />
+            <Collegelist id="all_colleges" />
+            <select id="years" className="givebgcolor" {...register('year')} required>
+              <option id="select-heading" value="Choose Year" disabled selected hidden>
+                Year
+              </option>
+              <option value="FIRST">First</option>
+              <option value="SECOND">Second</option>
+              <option value="THIRD">Third</option>
+              <option value="FOURTH">Fourth</option>
+              <option value="FIFTH">Fifth</option>
+            </select>
+            <input type="text" {...register('referral')} placeholder="Referral" />
+            <button type="submit" className="form-submit">
+              <span>SIGN UP</span>
+            </button>
+          </form>
+        )}
       </div>
       {window.innerWidth > 600 && (
         <div className="register_logo_cont">

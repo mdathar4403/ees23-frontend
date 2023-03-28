@@ -39,6 +39,7 @@ const DashBoard = () => {
   const [showForm, setShowForm] = useState(0);
   const [token, setToken] = useState('');
   const [edit, setEdit] = useState(0);
+  const [updateuser, setUpdatesuser] = useState(false);
   const [delete1, setDelete] = useState(0);
   const [editing, setEditing] = useState({
     id: null,
@@ -70,7 +71,7 @@ const DashBoard = () => {
       })
       .catch((error) => console.log(error));
     console.log('uuse');
-  }, [teamData]);
+  }, []);
 
   const [event, setEvent] = useState('Mosaic');
   const registerHandler = (i) => {
@@ -216,8 +217,8 @@ const DashBoard = () => {
   };
   return (
     <>
-      {user.college == null ? (
-        <Register />
+      {user.college == null || updateuser === true ? (
+        <Register userEditing={updateuser} />
       ) : (
         <div className="dashboard-main">
           <div className="db-main-container">
@@ -250,6 +251,14 @@ const DashBoard = () => {
                 <div className="userRefferal padding-between">
                   <div className="textSmall">Referral Code</div>
                   <div className="textLarge">{user.referral}</div>
+                </div>
+                <div className="userDetailsEditButton">
+                  <FaEdit
+                    className="team-btn"
+                    onClick={() => {
+                      setUpdatesuser(true);
+                    }}
+                  />
                 </div>
               </div>
             </div>
