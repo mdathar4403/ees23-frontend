@@ -17,7 +17,7 @@ const Profile = () => {
         <h1 className="emma">{displayName1}</h1>
         <Link to="/udyam">
           <div className="profile">
-            <img src={img_url} alt="G" />
+            <img src={img_url ? img_url : default_img} alt="G" />
           </div>
         </Link>
       </div>
