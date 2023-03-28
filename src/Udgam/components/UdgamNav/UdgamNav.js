@@ -37,7 +37,7 @@ const UdgamNav = (props) => {
   //   window.sessionStorage.setItem('imageUrl', res.profileObj.imageUrl);
   //   // console.log('res.profileObj: ', res);
   //   axios({
-  //     url: 'https://udyam.pythonanywhere.com/auth/google-login/',
+  //     url: 'https://ees23.pythonanywhere.com/auth/google-login/',
   //     method: 'post',
   //     headers: { Authorization: res.tokenId },
   //     data: {
@@ -188,6 +188,33 @@ const UdgamNav = (props) => {
     setNav(false);
     setUdyamName(true);
   }
+  // close when clicked outside
+  // useEffect(
+  //   () => {
+  //     function handleOutsideClick(event) {
+  //       if (event.target.closest('.udyam-nav')) return;
+  //       setNav(false);
+  //       setUdyamName(true);
+  //     }
+  //     document.addEventListener('click', handleOutsideClick);
+  //     return () => document.removeEventListener('click', handleOutsideClick);
+  //   },
+  // )
+  useEffect(() => {
+    document.addEventListener('click', (e) => {
+      console.log(e.target.className);
+      if (
+        e.target.className == 'moving' ||
+        e.target.className == 'title-udgam' ||
+        e.target.className == 'emma' ||
+        e.target.className == 'sponsorContainer' ||
+        // className including logo-container
+        e.target.className.includes('logo-container') ||
+        e.target.className == ''
+      )
+        helloNav();
+    });
+  }, []);
 
   return (
     <>

@@ -33,6 +33,8 @@
 .udy {
   word-wrap: break-word;
   color: white;
+   -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 .aboutx {
   margin-left: 6%;

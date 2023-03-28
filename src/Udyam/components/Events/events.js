@@ -21,13 +21,13 @@ const data = [
   {
     title: 'DIGISIM',
     description: 'Gain mastery of digital system designing and computer architecture by designing optimized digital systems and simulating them on Proteus. Grab this chance to put to test your debugging and logic-building skills.',
-    psLink: 'https://drive.google.com/file/d/1m4meRoE6gra8m01SoERahFN-7qBNdFnB/view?usp=share_link',
+    psLink: 'https://drive.google.com/drive/folders/1bv6mtmN-XnYF2IDhuXUcypiGLi6vIHXS?usp=share_link',
     submissionLink: ''
   },
   {
     title: 'I-CHIP',
     description: 'Design, simulate, validate, and debug digital systems, from flip-flops to microprocessors. Work with Verilog HDL and get your hands on FPGA Boards through this Verilog-based event.',
-    psLink: 'https://drive.google.com/file/d/1jY_QC-TCy0vt5McbIQuAXCQ8ww2ONiQ1/view?usp=share_link',
+    psLink: 'https://drive.google.com/drive/folders/11WpKRmmQI4oQ740BSnWZ864BZIViU02v?usp=sharing',
     submissionLink: ''
   },
   {
@@ -39,13 +39,13 @@ const data = [
   {
     title: 'COMMNET',
     description: 'Become proficient in Network Architecture and MATLAB implementation of coding theory, compression algorithms, signal processing, modulation and demodulation techniques, designing and simulating analog circuits & filters to perform computations using CAD tools.',
-    psLink: 'https://drive.google.com/file/d/1F_l-Xc7C3sYEp7azpT2bQWIU9-_JhH2O/view?usp=share_link',
+    psLink: 'https://drive.google.com/drive/folders/1w4W_C978jSe5LVkBmOMJRTSrvyIUgduN?usp=sharing',
     submissionLink: ''
   },
   {
     title: 'X-IOT-A',
     description: 'Propose and implement a solution to a real-world problem with the help of the booming technology of the Internet of Things involving circuit designing and the incorporation of hardware and software.',
-    psLink: 'https://drive.google.com/file/d/1d3UkJB_tNFYfI2HBMR_T_DhQsF07eDfw/view?usp=share_link',
+    psLink: 'https://drive.google.com/drive/folders/1zIsHDTuZ4gG8T5lJGv3NKnMyTCKchsra?usp=sharing',
     submissionLink: 'https://docs.google.com/forms/d/e/1FAIpQLSf0igPnY4bjQiIgp7EVZYhWiiQbkyBFxICFL5Kvz267avGwNQ/viewform'
   },
   {
@@ -57,7 +57,7 @@ const data = [
   {
     title: 'MOSAIC',
     description: 'Get the opportunity to decipher canonical problems based on the intriguing subject of Machine Learning and Computer Vision. Know about deep learning and image processing inside out and acquire expertise in machine learning.',
-    psLink: 'https://drive.google.com/file/d/1IgzULOh1dQkfOVA9FQqoxO_9lvTPe0cT/view?usp=share_link',
+    psLink: 'https://drive.google.com/drive/folders/1cR8pelM4daqMg530qPYvZqKcMk8fOx88?usp=share_link',
     submissionLink: ''
   },
   {
@@ -74,14 +74,23 @@ function Events() {
   const [eventData, setEventData] = useState(data[0]);
   const [eventtable, setEventtable] = useState(true);
   const [checkDevbits, setDevbits] = useState(0);
+  const [devfolioClass, setDevfolio] = useState('hidden');
 
   // const [eventnav, setEventnav] = useState(false);
-  var isDevbits = 0;
+  // var isDevbits = 0;
   const eventName = (event) => {
     var element = event.target.classList[0];
     setDevbits(element);
-    console.log(isDevbits);
+    // console.log(isDevbits);
     setEventData(data[element]);
+    console.log('element: ', element);
+    if (element == 2) {
+      console.log('hi');
+      setDevfolio('');
+    } else {
+      console.log('a');
+      setDevfolio('hidden');
+    }
     // setEventtable(false);
     console.log(element);
   };
@@ -89,6 +98,8 @@ function Events() {
   const [width, setWidth] = useState(window.innerWidth);
 
   function checkNav() {
+    console.log(checkDevbits);
+    console.log('Hello');
     if (width > 800) {
       return;
     } else {
@@ -210,7 +221,10 @@ function Events() {
           </div>
           <div className="udyam-event-title">{eventData.title}</div>
           <div className="udyam-event-desc">{eventData.description}</div>
-          <div> {checkDevbits == 2 && <div className="apply-button" data-hackathon-slug="devbits-web-development-hackathon" data-button-theme="dark" style={{ height: '44px', width: '312px' }}></div>}</div>
+          <div className={devfolioClass}>
+            <div className="apply-button" data-hackathon-slug="devbits-web-development-hackathon" data-button-theme="dark-inverted" style={{ height: '44px', width: '312px' }}></div>
+            {/* HELLO */}
+          </div>
           <div className="udyam-event-buttons">
             <div className="ps-link">
               {eventData.psLink ? (
