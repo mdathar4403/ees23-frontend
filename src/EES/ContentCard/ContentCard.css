@@ -30,7 +30,8 @@
   height: 48vh;
   overflow-y: scroll !important;
   margin: 20px;
-  display: flex;
+  display: flex;   -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .description {
@@ -41,6 +42,7 @@
   color: white;
   text-align: justify;
   font-family: Poppins;
+
 }
 
 @media screen and (max-width: 600px) {
