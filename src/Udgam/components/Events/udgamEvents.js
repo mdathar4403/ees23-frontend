@@ -64,6 +64,8 @@ function UdgamEvents() {
   const [eventDesc, setEventDesc] = useState(events[0].desc);
   const [circleOne, setCircleOne] = useState(events[0].subEventsImg[1]);
   const [circleTwo, setCircleTwo] = useState(events[0].subEventsImg[1]);
+  // const [circleOneText, setCircleOneText] = useState(events[0].subEvents[1]);
+  // const [circleTwoText, setCircleTwoText] = useState(events[0].subEvents[1]);
   const [clickct, setClickct] = useState(0);
   const eventName = (event) => {
     var element = event.target;
@@ -135,7 +137,6 @@ function UdgamEvents() {
     setCircleTwo(obj.subEventsImg[(clickct + 1) % l]);
     setEventTitle(obj.subEvents[clickct]);
     setsubEventLink(obj.registerLink[clickct]);
-    console.log(clickct);
   };
   const circleTwoClicked = () => {
     let obj = events.find((o) => o.genre === whichEvent);
@@ -151,7 +152,6 @@ function UdgamEvents() {
     setCircleTwo(obj.subEventsImg[(clickct + 1) % l]);
     setCircleOne(obj.subEventsImg[(clickct - 1 + l) % l]);
     setsubEventLink(obj.registerLink[clickct]);
-    console.log(clickct);
   };
   let obj = events.find((o) => o.genre === whichEvent);
   return (
@@ -221,8 +221,26 @@ function UdgamEvents() {
         </div>
       </div>
       <div className="event-img-pc">
-        {obj.subEvents.length > 1 && <img className="circle-one" src={'/assets/udgam-events/images/' + circleOne + '.jpg'} onClick={circleOneClicked} />}
-        {obj.subEvents.length > 1 && <img className="circle-two" onClick={circleTwoClicked} src={'/assets/udgam-events/images/' + circleTwo + '.jpg'} />}
+        {obj.subEvents.length > 1 && (
+          <div onClick={circleOneClicked}>
+            <img className="circle-one" src={'/assets/udgam-events/images/' + circleOne + '.jpg'} onClick={circleOneClicked} />
+            <div className="circleOneTextContainer">
+              <div className="circleOneText">
+                <IoIosArrowBack size={60} />
+              </div>
+            </div>
+          </div>
+        )}
+        {obj.subEvents.length > 1 && (
+          <div onClick={circleTwoClicked}>
+            <img className="circle-two" onClick={circleTwoClicked} src={'/assets/udgam-events/images/' + circleTwo + '.jpg'} />
+            <div className="circleTwoTextContainer">
+              <div className="circleTwoText">
+                <IoIosArrowForward size={60} />
+              </div>
+            </div>
+          </div>
+        )}
         <img className="main-img" src={'/assets/udgam-events/images/' + subEventImg + '.jpg'} />
         {/* <div className="circle-one" onClick={circleOneClicked}>
           <img src={bg1} />
