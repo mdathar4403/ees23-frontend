@@ -209,6 +209,7 @@ const UdgamNav = (props) => {
         e.target.className.includes('mashal') ||
         e.target.className.includes('teams') ||
         e.target.className.includes('sponsor') ||
+        e.target.className.includes('about') ||
         e.target.className.includes('container') ||
         e.target.className.includes('leaderboard')
       )

@@ -187,7 +187,8 @@ const Navbar = () => {
           style={{
             position: 'relative',
             zIndex: '1'
-          }}>
+          }}
+        >
           <nav>
             <ul className="nav-links">
               <li>
