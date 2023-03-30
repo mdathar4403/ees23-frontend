@@ -10,15 +10,10 @@
 .container1 {
   flex-wrap: wrap;
   height: auto;
-
-  /* margin-top: 5rem; */
-
-  margin-top: 1.6rem;
-
   justify-content: center;
   width: auto;
   align-items: center;
-  padding: 6rem;
+  padding: 3rem;
   margin-left: 5vw;
 }
 
