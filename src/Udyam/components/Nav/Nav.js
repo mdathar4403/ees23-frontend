@@ -55,7 +55,26 @@ const Nav = (props) => {
   useEffect(() => {
     document.addEventListener('click', (e) => {
       console.log(e.target.className);
-      if (e.target.className == 'main-container' || e.target.className == 'background' || e.target.className == 'bag' || e.target.className == 'star-field' || e.target.className == 'layer' || e.target.className == 'heading' || e.target.className == 'tag-line' || e.target.className == 'globe' || e.target.className == 'emma') helloNav();
+      if (
+        e.target.className == 'main-container' || 
+        e.target.className == 'background' || 
+        e.target.className == 'bag' || 
+        e.target.className == 'star-field' || 
+        e.target.className == 'layer' || 
+        e.target.className == 'heading' || 
+        e.target.className == 'tag-line' || 
+        e.target.className == 'globe' || 
+        e.target.className == 'emma' ||
+        e.target.className == 'udy' ||
+        e.target.className == 'hdx' ||
+        e.target.className == 'udx' ||
+        e.target.className == '' ||
+        e.target.className.includes('event') ||
+        e.target.className.includes('sp') ||
+        e.target.className.includes('leaderboard') ||
+        e.target.className.includes('team') 
+
+        ) helloNav();
     });
   }, []);
 
@@ -83,8 +102,7 @@ const Nav = (props) => {
               className="name hovered"
               // ind="#name"
               onClick={names}
-              id={props.active === '#name' ? 'active' : ''}
-            >
+              id={props.active === '#name' ? 'active' : ''}>
               {window.sessionStorage.getItem('registered_email') == null ? (
                 <GoogleLoginBTN>
                   <Link to="#" className="game-changer" style={{ textDecoration: 'none' }}>
@@ -104,8 +122,7 @@ const Nav = (props) => {
               className="about hovered"
               // ind="#about"
               onClick={abouts}
-              id={props.active === '#about' ? 'active' : ''}
-            >
+              id={props.active === '#about' ? 'active' : ''}>
               <Link to="/udyam/about" className="game-changer" style={{ textDecoration: 'none' }}>
                 {' '}
                 <AiOutlineInfoCircle className="info" />
@@ -122,8 +139,7 @@ const Nav = (props) => {
               className="sposors hovered"
               // ind="#sponsors"
               onClick={sponsors}
-              id={props.active === '#sponsors' ? 'active' : ''}
-            >
+              id={props.active === '#sponsors' ? 'active' : ''}>
               <Link to="/udyam/sponsors" className="game-changer" style={{ textDecoration: 'none' }}>
                 <BiDollarCircle className="info" />
                 <p>Sponsors</p>
