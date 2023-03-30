@@ -32,13 +32,13 @@
 }
 
 .about-content > p {
-  padding-left: 5%;
-  padding-right: 5%;
-  /* margin-top: ; */
+  padding: 5%;
+
+  margin-top: 5%;
   /* margin-bottom: 5%; */
   margin: auto;
-  font-size: 1.4rem;
-  /* height: 80%; */
+  font-size: 2rem;
+  height: 80%;
   line-height: 1.25;
   font-family: Comfortaa;
 }
@@ -60,11 +60,11 @@
 
 .about-image {
   position: absolute;
-  top: 35%;
+  top: 38%;
   right: 5vw;
   width: 20vw;
-  height: 60vh;
-  background-color: #7d7ddc;
+  height: 50vh;
+  /* background-color: #7d7ddc; */
   border-radius: 50px;
 }
 
@@ -75,7 +75,7 @@
     left: 10%;
   }
   .about-content > p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: auto 10px;
     height: 70%;
   }
@@ -94,7 +94,7 @@
   }
   .about-image {
     width: 35vw;
-    height: 25vh;
+    height: 22vh;
     top: 13vh;
     left: 30%;
   }
