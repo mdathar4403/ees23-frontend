@@ -233,6 +233,7 @@
 }
 .event-name a {
   color: #fff;
+  font-size: 18px;
   text-decoration: none;
 }
 .event-name a::after {

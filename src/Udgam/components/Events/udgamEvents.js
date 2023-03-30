@@ -163,7 +163,7 @@ function UdgamEvents() {
               <IoIosArrowBack />
             </div>
           )}
-          <div className="token-event" onClick={eventName}>
+          <div className="token-event" onClick={eventName} style={{ top: '12%' }}>
             <div className="event-name" onClick={checkNav}>
               <div className="event-name-item">Photography</div>
             </div>
