@@ -196,6 +196,7 @@ const UdgamNav = (props) => {
         e.target.className == 'mmobbg' ||
         e.target.className == 'title-udgam' ||
         e.target.className == 'emma' ||
+        e.target.className == '' ||
         e.target.className == 'mcontent' ||
         // className including logo-container
         e.target.className.includes('mdetails') ||
@@ -204,9 +205,11 @@ const UdgamNav = (props) => {
         e.target.className === '' ||
         e.target.className.includes('event-section') ||
         e.target.className.includes('card__snippet') ||
-        e.target.className.includes('card__title') ||
-        e.target.className.includes('mashal-card') ||
+        e.target.className.includes('card') ||
+        e.target.className.includes('mashal') ||
         e.target.className.includes('teams') ||
+        e.target.className.includes('sponsor') ||
+        e.target.className.includes('container') ||
         e.target.className.includes('leaderboard')
       )
         helloNav();
