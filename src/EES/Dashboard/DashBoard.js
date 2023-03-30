@@ -39,6 +39,7 @@ const DashBoard = () => {
   const [showForm, setShowForm] = useState(0);
   const [token, setToken] = useState('');
   const [edit, setEdit] = useState(0);
+  const [updateuser, setUpdatesuser] = useState(false);
   const [delete1, setDelete] = useState(0);
   const [editing, setEditing] = useState({
     id: null,
@@ -50,10 +51,11 @@ const DashBoard = () => {
   });
   // const [token, setToken] = useState('');
   useEffect(() => {
-    // var newUser = { name: 'Ankur Agrawal', email: 'ankur.agrawal.ece20@itbhu.ac.in', college: 'IIT BHU', year: 'Part III', phone: '1234567890', referral: 'default#EES-10000', radianite_points: 0, token: 'd221d7afdf288fc097ff321d77154de4b3b6a24e' };
+    // var newUser = { id: 6, name: 'Ankur Agrawal', email: 'ankur.agrawal.ece20@itbhu.ac.in', college: 'IIT BHU', year: 'SECOND', phone: '1234567890', referral: 'default#EES-10000', radianite_points: 0, token: 'd221d7afdf288fc097ff321d77154de4b3b6a24e' };
     // window.sessionStorage.setItem('profileData', newUser);
 
     var newUser = JSON.parse(window.sessionStorage.getItem('profileData'));
+    // window.sessionStorage.setItem('profileData', JSON.stringify(newUser));
     setUser(newUser);
     setToken(newUser.token);
     axios
@@ -90,7 +92,7 @@ const DashBoard = () => {
       })
       .catch((error) => console.log(error));
     console.log('uuse');
-  }, [teamData]);
+  }, []);
 
   const [event, setEvent] = useState('Mosaic');
   const registerHandler = (i) => {
@@ -236,8 +238,8 @@ const DashBoard = () => {
   };
   return (
     <>
-      {user.college == null ? (
-        <Register />
+      {user.college == null || updateuser === true ? (
+        <Register userEditing={updateuser} />
       ) : (
         <div className="dashboard-main">
           <div className="db-main-container">
@@ -270,6 +272,14 @@ const DashBoard = () => {
                 <div className="userRefferal padding-between">
                   <div className="textSmall">Referral Code</div>
                   <div className="textLarge">{user.referral}</div>
+                </div>
+                <div className="userDetailsEditButton">
+                  <FaEdit
+                    className="team-btn"
+                    onClick={() => {
+                      setUpdatesuser(true);
+                    }}
+                  />
                 </div>
               </div>
             </div>
