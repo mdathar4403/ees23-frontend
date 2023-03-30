@@ -198,7 +198,6 @@ const UdgamNav = (props) => {
         e.target.className == 'circular-btns' ||
         e.target.className == 'circle-two-mob' ||
         e.target.className == 'top-bar' ||
-
         // e.target.className == 'sponsorContainer' ||
         // className including logo-container
         e.target.className.includes('logo-container') ||
