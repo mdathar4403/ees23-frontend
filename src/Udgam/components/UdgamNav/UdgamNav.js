@@ -192,24 +192,21 @@ const UdgamNav = (props) => {
     document.addEventListener('click', (e) => {
       console.log(e.target.className);
       if (
-        e.target.className == 'main-container' ||
-        e.target.className == 'leaderboard-container' ||
-        e.target.className == 'mashal-card' ||
-        e.target.className == 'first-team.teams' ||
-        e.target.className == 'about-container' ||
-        e.target.className == 'about-content' ||
-        e.target.className == 'about-image' ||
+        e.target.className == 'title-udgam' ||
+        e.target.className == 'emma' ||
         e.target.className == 'mainDiv' ||
-        e.target.className == 'sponsor' ||
-        e.target.className == 'sponsorContainer' ||
-        e.target.className == 'background' ||
-        e.target.className == 'bag' ||
-        e.target.className == 'star-field' ||
-        e.target.className == 'layer' ||
-        e.target.className == 'heading' ||
-        e.target.className == 'tag-line' ||
-        e.target.className == 'globe' ||
-        e.target.className == 'emma'
+        e.target.className == 'circular-btns' ||
+        e.target.className == 'circle-two-mob' ||
+        e.target.className == 'top-bar' ||
+        // e.target.className == 'sponsorContainer' ||
+        // className including logo-container
+        e.target.className.includes('logo-container') ||
+        e.target.className.includes('sponsor') ||
+        e.target.className.includes('moving') ||
+        e.target.className.includes('event') ||
+        e.target.className.includes('about') ||
+        e.target.className.includes('leaderboard') ||
+        e.target.className == ''
       )
         helloNav();
     });

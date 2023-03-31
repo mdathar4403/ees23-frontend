@@ -182,7 +182,12 @@ const Navbar = () => {
         </div>
       )}
       {width > 800 && (
-        <div className="container">
+        <div
+          className="container"
+          style={{
+            position: 'relative',
+            zIndex: '1'
+          }}>
           <nav>
             <ul className="nav-links">
               <li>

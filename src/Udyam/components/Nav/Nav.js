@@ -55,7 +55,26 @@ const Nav = (props) => {
   useEffect(() => {
     document.addEventListener('click', (e) => {
       console.log(e.target.className);
-      if (e.target.className == 'main-container' || e.target.className == 'background' || e.target.className == 'bag' || e.target.className == 'star-field' || e.target.className == 'layer' || e.target.className == 'heading' || e.target.className == 'tag-line' || e.target.className == 'globe' || e.target.className == 'emma') helloNav();
+      if (
+        e.target.className == 'main-container' ||
+        e.target.className == 'background' ||
+        e.target.className == 'bag' ||
+        e.target.className == 'star-field' ||
+        e.target.className == 'layer' ||
+        e.target.className == 'heading' ||
+        e.target.className == 'tag-line' ||
+        e.target.className == 'globe' ||
+        e.target.className == 'emma' ||
+        e.target.className == 'udy' ||
+        e.target.className == 'hdx' ||
+        e.target.className == 'udx' ||
+        e.target.className == '' ||
+        e.target.className.includes('event') ||
+        e.target.className.includes('sp') ||
+        e.target.className.includes('leaderboard') ||
+        e.target.className.includes('team')
+      )
+        helloNav();
     });
   }, []);
 
