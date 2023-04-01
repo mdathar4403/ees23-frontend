@@ -26,6 +26,7 @@ import ComingSoon from './EES/ComingSoon/ComingSoon';
 import Gallery from './EES/Gallery/Gallery';
 import EventOver from './EES/EventOver/EventOver';
 import MashalAboutUs from './Mashal/components/MashalAboutUs/MashalAboutUs';
+import UdgamLeaderboard from './Udgam/components/UdgamLeaderboard/UdgamLeaderboard';
 
 function App() {
   return (
@@ -245,7 +246,7 @@ function App() {
                   {/* <Navbar /> */}
                   <UdgamNav />
                 </div>
-                <ComingSoon />
+                <UdgamLeaderboard />
               </>
             }
           />
