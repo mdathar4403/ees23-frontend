@@ -23,12 +23,16 @@ const UdgamLeaderboard = () => {
 
   const eventName = (event) => {
     var element = event.target;
-    if (element.innerText === 'Photography') setContentIndex(0);
-    if (element.innerText === 'Dance') setContentIndex(1);
-    if (element.innerText === 'Art') setContentIndex(2);
-    if (element.innerText === 'Music') setContentIndex(3);
-    if (element.innerText === 'Literature') setContentIndex(4);
-    if (element.innerText === 'Treasure Hunt') setContentIndex(5);
+    if (element.innerText === 'Campus in Pixels') setContentIndex(0);
+    if (element.innerText === 'Life in Kashi') setContentIndex(1);
+    if (element.innerText === 'Ignite') setContentIndex(2);
+    if (element.innerText === 'India in 2050') setContentIndex(3);
+    if (element.innerText === 'Face Painting') setContentIndex(4);
+    if (element.innerText === 'Character Designing') setContentIndex(5);
+    if (element.innerText === 'Ridham') setContentIndex(6);
+    if (element.innerText === 'Open Mic Stand') setContentIndex(7);
+    if (element.innerText === 'Creative Writing') setContentIndex(8);
+    if (element.innerText === 'Treasure Hunt') setContentIndex(9);
     setEventtable(false);
   };
 
@@ -151,22 +155,34 @@ const UdgamLeaderboard = () => {
             </div>
           )}
           <div className="token-event" onClick={eventName}>
-            <div className="event-name" onClick={checkNav}>
-              <div className="event-name-item">Photography</div>
+            <div className="udg-leaderboard-event-name" onClick={checkNav}>
+              <div className="event-name-item">Campus in Pixels</div>
             </div>
-            <div className="event-name" onClick={checkNav}>
-              <div className="event-name-item">Dance</div>
+            <div className="udg-leaderboard-event-name" onClick={checkNav}>
+              <div className="event-name-item">Life in Kashi</div>
             </div>
-            <div className="event-name" onClick={checkNav}>
-              <div className="event-name-item">Art</div>
+            <div className="udg-leaderboard-event-name" onClick={checkNav}>
+              <div className="event-name-item">Ignite</div>
             </div>
-            <div className="event-name" onClick={checkNav}>
-              <div className="event-name-item">Music</div>
+            <div className="udg-leaderboard-event-name" onClick={checkNav}>
+              <div className="event-name-item">India in 2050</div>
             </div>
-            <div className="event-name" onClick={checkNav}>
-              <div className="event-name-item">Literature</div>
+            <div className="udg-leaderboard-event-name" onClick={checkNav}>
+              <div className="event-name-item">Face Painting</div>
             </div>
-            <div className="event-name" onClick={checkNav}>
+            <div className="udg-leaderboard-event-name" onClick={checkNav}>
+              <div className="event-name-item">Character Designing</div>
+            </div>
+            <div className="udg-leaderboard-event-name" onClick={checkNav}>
+              <div className="event-name-item">Ridham</div>
+            </div>
+            <div className="udg-leaderboard-event-name" onClick={checkNav}>
+              <div className="event-name-item">Open Mic Stand</div>
+            </div>
+            <div className="udg-leaderboard-event-name" onClick={checkNav}>
+              <div className="event-name-item">Creative Writing</div>
+            </div>
+            <div className="udg-leaderboard-event-name" onClick={checkNav}>
               <div className="event-name-item">Treasure Hunt</div>
             </div>
           </div>

@@ -99,6 +99,14 @@
 /* Leaderboards-navbar */
 
 /* Leaderboard-main */
+.udg-leaderboard-event-name {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 1.7rem 0;
+  justify-content: center;
+  height: 2vh;
+}
 .udg-leader {
   top: 0;
 }
