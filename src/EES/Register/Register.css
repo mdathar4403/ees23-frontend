@@ -99,7 +99,10 @@ select {
   .form-container > form {
     width: 100vw;
   }
-  .form-container h1 {
+  .signUpText {
     font-size: 1.2rem;
+  }
+  .updateUserText {
+    font-size: 3rem;
   }
 }

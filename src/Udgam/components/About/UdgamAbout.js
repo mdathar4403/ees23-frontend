@@ -10,8 +10,8 @@ const UdgamAbout = () => {
           Udgam is back again, bigger and brighter, and awaiting to witness the vigour its participants would bring to the stage. Get ready to manifest your artistry and let your creative self sparkle!
         </p>
       </div>
-      <div className="about-image-shadow"></div>
-      <img className="about-image" src="/assets/about.png" alt="" />
+      {/* <div className="about-image-shadow"></div> */}
+      <img className="about-image" src="/assets/udgamlogo.png" alt="" />
     </div>
   );
 };

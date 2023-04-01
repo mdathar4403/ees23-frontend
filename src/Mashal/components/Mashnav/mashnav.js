@@ -16,7 +16,7 @@ import { TfiMenu } from 'react-icons/tfi';
 // import { IoIosArrowBack } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 // import { GoogleLogin } from 'react-google-login';
-import Profile from '../../../Udyam/components/Profile/Profile1';
+import Profile from '../../../Udyam/components/Profile/Profile';
 // import AOS from 'aos';
 // import 'aos/dist/aos.css'; // You can also use <link> for styles
 // // ..
@@ -196,6 +196,7 @@ const UdgamNav = (props) => {
         e.target.className == 'mmobbg' ||
         e.target.className == 'title-udgam' ||
         e.target.className == 'emma' ||
+        e.target.className == '' ||
         e.target.className == 'mcontent' ||
         // className including logo-container
         e.target.className.includes('mdetails') ||
@@ -204,9 +205,12 @@ const UdgamNav = (props) => {
         e.target.className === '' ||
         e.target.className.includes('event-section') ||
         e.target.className.includes('card__snippet') ||
-        e.target.className.includes('card__title') ||
-        e.target.className.includes('mashal-card') ||
+        e.target.className.includes('card') ||
+        e.target.className.includes('mashal') ||
         e.target.className.includes('teams') ||
+        e.target.className.includes('sponsor') ||
+        e.target.className.includes('about') ||
+        e.target.className.includes('container') ||
         e.target.className.includes('leaderboard')
       )
         helloNav();
@@ -225,7 +229,7 @@ const UdgamNav = (props) => {
           <div className="layer"></div> */}
         {/* </div> */}
       </div>
-      {(udyamName || true) && width < 800 && <Profile />}
+      {(udyamName || true) && width < 800 && <Profile title="MASHAL" />}
       {(slideNav || width > 800) && (
         <div className="udyam-nav">
           <div className="udyam-img">

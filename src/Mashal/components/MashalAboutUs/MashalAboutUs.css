@@ -87,7 +87,7 @@
   font-family: 'Outfit';
   overflow: scroll;
 }
-.aboutUS-paragraph-details{
+.aboutUS-paragraph-details {
   display: flex;
   text-align: justify;
   margin: auto 0;

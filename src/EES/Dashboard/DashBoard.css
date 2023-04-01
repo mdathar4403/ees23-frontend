@@ -25,6 +25,10 @@
   padding: 2%;
   border-radius: 5%;
 }
+.userDetailsEditButton {
+  display: flex;
+  justify-content: right;
+}
 .qr-and-name {
   height: auto;
   display: flex;
@@ -108,7 +112,6 @@
 }
 /* Teams */
 .Teams {
-  margin-left: 10%;
   margin-top: 4%;
   /* height: 50vh; */
   color: #fff;
@@ -118,6 +121,7 @@
   color: #fff;
   font-family: 'Iceland';
   font-size: 3rem;
+  margin-left: 10%;
 }
 .add-team-heading {
   margin-left: 10%;
@@ -410,6 +414,7 @@ select {
   align-items: center;
   text-align: center;
   color: #5b2ed3;
+  margin-left: 10%;
 }
 @media (max-width: 468px) {
   .dashboard-main {

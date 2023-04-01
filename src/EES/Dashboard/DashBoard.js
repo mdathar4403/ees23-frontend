@@ -39,6 +39,7 @@ const DashBoard = () => {
   const [showForm, setShowForm] = useState(0);
   const [token, setToken] = useState('');
   const [edit, setEdit] = useState(0);
+  const [updateuser, setUpdatesuser] = useState(false);
   const [delete1, setDelete] = useState(0);
   const [editing, setEditing] = useState({
     id: null,
@@ -50,26 +51,47 @@ const DashBoard = () => {
   });
   // const [token, setToken] = useState('');
   useEffect(() => {
+    // var newUser = { id: 6, name: 'Ankur Agrawal', email: 'ankur.agrawal.ece20@itbhu.ac.in', college: 'IIT BHU', year: 'SECOND', phone: '1234567890', referral: 'default#EES-10000', radianite_points: 0, token: 'd221d7afdf288fc097ff321d77154de4b3b6a24e' };
+    // window.sessionStorage.setItem('profileData', newUser);
+
     var newUser = JSON.parse(window.sessionStorage.getItem('profileData'));
+    // window.sessionStorage.setItem('profileData', JSON.stringify(newUser));
     setUser(newUser);
     setToken(newUser.token);
-    axios
-      .get('https://ees23.pythonanywhere.com/api/events/')
-      .then((res) => {
-        console.log(res);
-        setEventsData(res.data);
-        // console.log(eventsData);
-      })
-      .catch((error) => console.log(error));
-
     axios
       .get('https://ees23.pythonanywhere.com/api/teams/user/', { headers: { Authorization: 'Token ' + newUser.token } })
       .then((res) => {
         console.log(res);
         setTeamData(res.data);
+        axios
+          .get('https://ees23.pythonanywhere.com/api/events/')
+          .then((res) => {
+            console.log(res);
+            let arr = [];
+            for (let i = 0; i < res.data.length; i++) {
+              // for (!teamData.includes(res.data[i])) {
+              // }
+              let mark = 0;
+              for (let j = 0; j < teamData.length; j++) {
+                if (teamData[j].event == res.data[i].event) {
+                  mark = 1;
+                }
+              }
+              if (mark == 0) {
+                arr.push(res.data[i]);
+              }
+            }
+            console.log(arr);
+            setEventsData(arr);
+
+            // console.log(eventsData);
+          })
+          .catch((error) => console.log(error));
+
         // console.log(teamData);
       })
       .catch((error) => console.log(error));
+    console.log('uuse');
   }, []);
 
   const [event, setEvent] = useState('Mosaic');
@@ -175,6 +197,14 @@ const DashBoard = () => {
           });
         });
       });
+    axios
+      .get('https://ees23.pythonanywhere.com/api/teams/user/', { headers: { Authorization: 'Token ' + user.token } })
+      .then((res) => {
+        console.log(res);
+        setTeamData(res.data);
+        // console.log(teamData);
+      })
+      .catch((error) => console.log(error));
   };
   const deleteConfirm = () => {
     setDelete(1);
@@ -208,8 +238,8 @@ const DashBoard = () => {
   };
   return (
     <>
-      {user.college == null ? (
-        <Register />
+      {user.college == null || updateuser === true ? (
+        <Register userEditing={updateuser} />
       ) : (
         <div className="dashboard-main">
           <div className="db-main-container">
@@ -243,6 +273,14 @@ const DashBoard = () => {
                   <div className="textSmall">Referral Code</div>
                   <div className="textLarge">{user.referral}</div>
                 </div>
+                <div className="userDetailsEditButton">
+                  <FaEdit
+                    className="team-btn"
+                    onClick={() => {
+                      setUpdatesuser(true);
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="db-radianite">
@@ -260,7 +298,7 @@ const DashBoard = () => {
           {/* teams section */}
           <div className="Teams">
             <h1 className="team-heading">Teams</h1>
-            <div className="teams-row">
+            <div className="row">
               {teamData.map((e) => (
                 <div key={e.id} className="teams-column">
                   <div className="teamcard" key={e.id}>
@@ -270,9 +308,11 @@ const DashBoard = () => {
                     <div className="team-info">
                       <h1 className="team-info-event-name">{e.event}</h1>
                       <h2 className="team-info-team-name">{e.teamname}</h2>
-                      <h4 className="team-info-teammember-name">{e.leader}</h4>
-                      <h4 className="team-info-teammember-name">{e.member1}</h4>
-                      <h4 className="team-info-teammember-name">{e.member2}</h4>
+                      <div style={{ overflow: 'scroll' }}>
+                        <h4 className="team-info-teammember-name">{e.leader}</h4>
+                        <h4 className="team-info-teammember-name">{e.member1}</h4>
+                        <h4 className="team-info-teammember-name">{e.member2}</h4>
+                      </div>
                     </div>
                     <div className="team-btns">
                       <FaEdit
@@ -321,7 +361,7 @@ const DashBoard = () => {
           </div>
           {/* add team */}
           <h2 className="add-Teams">+ Add Teams</h2>
-          <div className="row">
+          <div className="row" id="events-register">
             {eventsData.map((e) => (
               // <div key={e.id} className="column">
               //   <div className="card">
@@ -347,6 +387,7 @@ const DashBoard = () => {
           {showForm && (
             <div id="team-register-form" className="form-dashboard-container">
               <h1 className="form-heading">Team Registeration</h1>
+
               <form onSubmit={(e) => postData(e)}>
                 <input id="teamname" type="text" onChange={(e) => handle(e)} placeholder="Enter Team Name" required></input>
                 <input id="event" type="text" value={event} readOnly></input>

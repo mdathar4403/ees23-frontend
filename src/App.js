@@ -19,7 +19,7 @@ import MashalSponsor from './Mashal/components/Sponsors/Sponsors';
 // import MashalLeaderboard from './Mashal/components/MashalLeaderboard/MashalLeaderboard';
 import MashalEvent from './Mashal/components/MashalEvent/mashalEvent';
 import Navbar from './EES/Navbar/Navbar';
-import Register from './EES/Register/Register';
+// import Register from './EES/Register/Register';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComingSoon from './EES/ComingSoon/ComingSoon';
@@ -32,9 +32,6 @@ function App() {
     <div className="App">
       <ToastContainer />
       <Router>
-        <Routes>
-          <Route path="/register" element={<Register />} />
-        </Routes>
         <Routes>
           <Route
             path="/"
