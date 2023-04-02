@@ -143,7 +143,13 @@
 .udg-leaderboards-main-container h1 {
   font-weight: bold;
   font-size: 10vh;
-  padding: 3% 5%;
+  padding: 0% 5%;
+  padding-top: 3%;
+}
+.udg-leaderboards-main-container h2 {
+  /* font-weight: bold; */
+  font-size: 5vh;
+  padding: 0% 5%;
 }
 
 .udg-podium-main-container {

@@ -33,6 +33,7 @@ const UdgamLeaderboard = () => {
     if (element.innerText === 'Open Mic Stand') setContentIndex(7);
     if (element.innerText === 'Creative Writing') setContentIndex(8);
     if (element.innerText === 'Treasure Hunt') setContentIndex(9);
+    document.getElementById('eventName').innerText = element.innerText;
     setEventtable(false);
   };
 
@@ -195,8 +196,9 @@ const UdgamLeaderboard = () => {
       {/* <div className="udg-lb-coming-soon">COMING SOON</div> */}
       <div className="udg-leaderboards-main-container" onClick={slidemobile}>
         <h1>LEADERBOARDS</h1>
+        <h2 id="eventName">Campus in Pixels</h2>
         {teamName[contentIndex].first === 'Not Released' ? (
-          <h1>Not Released</h1>
+          <h1 style={{ color: 'GrayText' }}>&#9888; Not Released</h1>
         ) : (
           <div className="udg-lb-container">
             <div className="udg-podium-main-container">
