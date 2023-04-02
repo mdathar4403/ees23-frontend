@@ -156,34 +156,34 @@ const UdgamLeaderboard = () => {
           )}
           <div className="token-event" onClick={eventName}>
             <div className="udg-leaderboard-event-name" onClick={checkNav}>
-              <div className="event-name-item">Campus in Pixels</div>
+              <div className="udg-event-name-item">Campus in Pixels</div>
             </div>
             <div className="udg-leaderboard-event-name" onClick={checkNav}>
-              <div className="event-name-item">Life in Kashi</div>
+              <div className="udg-event-name-item">Life in Kashi</div>
             </div>
             <div className="udg-leaderboard-event-name" onClick={checkNav}>
-              <div className="event-name-item">Ignite</div>
+              <div className="udg-event-name-item">Ignite</div>
             </div>
             <div className="udg-leaderboard-event-name" onClick={checkNav}>
-              <div className="event-name-item">India in 2050</div>
+              <div className="udg-event-name-item">India in 2050</div>
             </div>
             <div className="udg-leaderboard-event-name" onClick={checkNav}>
-              <div className="event-name-item">Face Painting</div>
+              <div className="udg-event-name-item">Face Painting</div>
             </div>
             <div className="udg-leaderboard-event-name" onClick={checkNav}>
-              <div className="event-name-item">Character Designing</div>
+              <div className="udg-event-name-item">Character Designing</div>
             </div>
             <div className="udg-leaderboard-event-name" onClick={checkNav}>
-              <div className="event-name-item">Ridham</div>
+              <div className="udg-event-name-item">Ridham</div>
             </div>
             <div className="udg-leaderboard-event-name" onClick={checkNav}>
-              <div className="event-name-item">Open Mic Stand</div>
+              <div className="udg-event-name-item">Open Mic Stand</div>
             </div>
             <div className="udg-leaderboard-event-name" onClick={checkNav}>
-              <div className="event-name-item">Creative Writing</div>
+              <div className="udg-event-name-item">Creative Writing</div>
             </div>
             <div className="udg-leaderboard-event-name" onClick={checkNav}>
-              <div className="event-name-item">Treasure Hunt</div>
+              <div className="udg-event-name-item">Treasure Hunt</div>
             </div>
           </div>
         </div>
@@ -195,49 +195,52 @@ const UdgamLeaderboard = () => {
       {/* <div className="udg-lb-coming-soon">COMING SOON</div> */}
       <div className="udg-leaderboards-main-container" onClick={slidemobile}>
         <h1>LEADERBOARDS</h1>
-        <div className="udg-lb-container">
-          <div className="udg-podium-main-container">
-            <div className="udg-mobile-first-position">
-              <div className="udg-img-and-score">
-                <img src="/assets/medals/gold.png" alt="" />
-                <div className="udg-team-score" style={{ height: '10vh' }}>
-                  {teamScore[contentIndex].first}
+        {teamName[contentIndex].first === 'Not Released' ? (
+          <h1>Not Released</h1>
+        ) : (
+          <div className="udg-lb-container">
+            <div className="udg-podium-main-container">
+              <div className="udg-mobile-first-position">
+                <div className="udg-img-and-score">
+                  <img src="/assets/medals/gold.png" alt="" />
+                  <div className="udg-team-score" style={{ height: '10vh' }}>
+                    {teamScore[contentIndex].first}
+                  </div>
                 </div>
+                <div className="udg-team-name">{teamName[contentIndex].first}</div>
               </div>
-              <div className="udg-team-name">{teamName[contentIndex].first}</div>
-            </div>
-            <div className="udg-second-position">
-              <div className="udg-img-and-score">
-                <img src="/assets/medals/silver.png" alt="" />
-                <div className="udg-team-score" style={{ height: '11vh' }}>
-                  {teamScore[contentIndex].second}
+              <div className="udg-second-position">
+                <div className="udg-img-and-score">
+                  <img src="/assets/medals/silver.png" alt="" />
+                  <div className="udg-team-score" style={{ height: '11vh' }}>
+                    {teamScore[contentIndex].second}
+                  </div>
                 </div>
+                {/* <div className="udg-middle-glow"></div> */}
+                <div className="udg-team-name">{teamName[contentIndex].second}</div>
               </div>
-              {/* <div className="udg-middle-glow"></div> */}
-              <div className="udg-team-name">{teamName[contentIndex].second}</div>
-            </div>
-            <div className="udg-first-position">
-              <div className="udg-img-and-score">
-                <img src="/assets/medals/gold.png" alt="" />
-                <div className="udg-team-score" style={{ height: '11vh' }}>
-                  {teamScore[contentIndex].first}
+              <div className="udg-first-position">
+                <div className="udg-img-and-score">
+                  <img src="/assets/medals/gold.png" alt="" />
+                  <div className="udg-team-score" style={{ height: '11vh' }}>
+                    {teamScore[contentIndex].first}
+                  </div>
                 </div>
+                {/* <div className="udg-middle-glow"></div> */}
+                <div className="udg-team-name">{teamName[contentIndex].first}</div>
               </div>
-              {/* <div className="udg-middle-glow"></div> */}
-              <div className="udg-team-name">{teamName[contentIndex].first}</div>
-            </div>
-            <div className="udg-third-position">
-              <div className="udg-img-and-score">
-                <img src="/assets/medals/bronze.png" alt="" />
-                <div className="udg-team-score" style={{ height: '11vh' }}>
-                  {teamScore[contentIndex].third}
+              <div className="udg-third-position">
+                <div className="udg-img-and-score">
+                  <img src="/assets/medals/bronze.png" alt="" />
+                  <div className="udg-team-score" style={{ height: '11vh' }}>
+                    {teamScore[contentIndex].third}
+                  </div>
                 </div>
+                {/* <div className="udg-middle-glow"></div> */}
+                <div className="udg-team-name">{teamName[contentIndex].third}</div>
               </div>
-              {/* <div className="udg-middle-glow"></div> */}
-              <div className="udg-team-name">{teamName[contentIndex].third}</div>
             </div>
-          </div>
-          {/* <div className="udg-remaining-leaderboard">
+            {/* <div className="udg-remaining-leaderboard">
             <div className="udg-leaderboard-box">
               <div className="udg-leaderboard-position" style={{ width: '15%' }}>
                 4th
@@ -261,7 +264,8 @@ const UdgamLeaderboard = () => {
               </div>
             </div>
           </div> */}
-        </div>
+          </div>
+        )}
       </div>
       <div className="open-nav" onClick={showEvents}>
         <IoIosArrowForward />

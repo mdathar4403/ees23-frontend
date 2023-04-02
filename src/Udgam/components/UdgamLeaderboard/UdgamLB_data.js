@@ -72,74 +72,74 @@ const teamName = [
 ];
 const teamScore = [
   {
-    first: '100',
-    second: '90',
-    third: '80',
-    fourth: '70',
-    fifth: '60'
+    first: '1st',
+    second: '2nd',
+    third: '3rd',
+    fourth: '4th',
+    fifth: '5th'
   },
   {
-    first: '100',
-    second: '90',
-    third: '80',
-    fourth: '70',
-    fifth: '60'
+    first: '1st',
+    second: '2nd',
+    third: '3rd',
+    fourth: '4th',
+    fifth: '5th'
   },
   {
-    first: '100',
-    second: '90',
-    third: '80',
-    fourth: '70',
-    fifth: '60'
+    first: '1st',
+    second: '2nd',
+    third: '3rd',
+    fourth: '4th',
+    fifth: '5th'
   },
   {
-    first: '100',
-    second: '90',
-    third: '80',
-    fourth: '70',
-    fifth: '60'
+    first: '1st',
+    second: '2nd',
+    third: '3rd',
+    fourth: '4th',
+    fifth: '5th'
   },
   {
-    first: '100',
-    second: '90',
-    third: '80',
-    fourth: '70',
-    fifth: '60'
+    first: '1st',
+    second: '2nd',
+    third: '3rd',
+    fourth: '4th',
+    fifth: '5th'
   },
   {
-    first: '100',
-    second: '90',
-    third: '80',
-    fourth: '70',
-    fifth: '60'
+    first: '1st',
+    second: '2nd',
+    third: '3rd',
+    fourth: '4th',
+    fifth: '5th'
   },
   {
-    first: '100',
-    second: '90',
-    third: '80',
-    fourth: '70',
-    fifth: '60'
+    first: '1st',
+    second: '2nd',
+    third: '3rd',
+    fourth: '4th',
+    fifth: '5th'
   },
   {
-    first: '100',
-    second: '90',
-    third: '80',
-    fourth: '70',
-    fifth: '60'
+    first: '1st',
+    second: '2nd',
+    third: '3rd',
+    fourth: '4th',
+    fifth: '5th'
   },
   {
-    first: '100',
-    second: '90',
-    third: '80',
-    fourth: '70',
-    fifth: '60'
+    first: '1st',
+    second: '2nd',
+    third: '3rd',
+    fourth: '4th',
+    fifth: '5th'
   },
   {
-    first: '100',
-    second: '90',
-    third: '80',
-    fourth: '70',
-    fifth: '60'
+    first: '1st',
+    second: '2nd',
+    third: '3rd',
+    fourth: '4th',
+    fifth: '5th'
   }
 ];
 
