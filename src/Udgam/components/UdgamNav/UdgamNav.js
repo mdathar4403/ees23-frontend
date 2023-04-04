@@ -188,28 +188,24 @@ const UdgamNav = (props) => {
     setNav(false);
     setUdyamName(true);
   }
-  // close when clicked outside
-  // useEffect(
-  //   () => {
-  //     function handleOutsideClick(event) {
-  //       if (event.target.closest('.udyam-nav')) return;
-  //       setNav(false);
-  //       setUdyamName(true);
-  //     }
-  //     document.addEventListener('click', handleOutsideClick);
-  //     return () => document.removeEventListener('click', handleOutsideClick);
-  //   },
-  // )
   useEffect(() => {
     document.addEventListener('click', (e) => {
       console.log(e.target.className);
       if (
-        e.target.className == 'moving' ||
         e.target.className == 'title-udgam' ||
         e.target.className == 'emma' ||
-        e.target.className == 'sponsorContainer' ||
+        e.target.className == 'mainDiv' ||
+        e.target.className == 'circular-btns' ||
+        e.target.className == 'circle-two-mob' ||
+        e.target.className == 'top-bar' ||
+        // e.target.className == 'sponsorContainer' ||
         // className including logo-container
         e.target.className.includes('logo-container') ||
+        e.target.className.includes('sponsor') ||
+        e.target.className.includes('moving') ||
+        e.target.className.includes('event') ||
+        e.target.className.includes('about') ||
+        e.target.className.includes('leaderboard') ||
         e.target.className == ''
       )
         helloNav();
@@ -229,7 +225,7 @@ const UdgamNav = (props) => {
           <div className="layer"></div>
         </div>
       </div>
-      {(udyamName || true) && width < 800 && <Profile />}
+      {(udyamName || true) && width < 800 && <Profile title="UDGAM" />}
       {(slideNav || width > 800) && (
         <div className="udyam-nav">
           <div className="udyam-img">

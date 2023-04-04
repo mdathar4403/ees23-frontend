@@ -48,10 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 100px; */
-  height: auto;
-  padding: 100px;
-  overflow: scroll;
+  height: 100%;
 }
 
 @font-face {
@@ -138,8 +135,10 @@
 .udyam-event-buttons {
   display: flex;
   justify-content: space-evenly;
-  width: 70%;
-  height: 45px;
+  /* justify-content: center; */
+  margin-right: 10px;
+  width: 55%;
+  height: 50px;
   margin-top: 10px;
 }
 
@@ -148,16 +147,20 @@
 }
 
 .ps-link,
-.udyam-event-submit {
+.udyam-event-submit,
+.register-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 28%;
   /* height: 50px; */
+
+  width: 28%;
+  height: 6.2vh;
+
   color: white;
   background-color: #232323;
   border-radius: 50px;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
   box-shadow: 0px 0px 5px white;
@@ -165,8 +168,14 @@
   text-align: center;
 }
 
+/* 
+.register-link {
+  margin: 0 8%;
+} */
+
 .ps-link a,
-.udyam-event-submit a {
+.udyam-event-submit a,
+.register-link a {
   text-decoration: none;
   color: inherit;
 }
@@ -233,12 +242,20 @@
   #right {
     margin-left: 35vw;
   }
+
   .udyam-event-buttons {
     display: block;
   }
+
   .udyam-event-buttons div {
     width: 100%;
     margin-bottom: 10px;
-    padding: 7px;
+    padding: 7px 0px;
+  }
+
+  .ps-link,
+  .udyam-event-submit,
+  .register-link {
+    height: 3.8vh;
   }
 }

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* .bg {
   background: url(./background.png) no-repeat;
   background-size: cover;
@@ -119,7 +120,7 @@
   color: #6f6f6f;
   margin: 20px;
 }
-
+/* .event-title */
 .active {
   color: white;
   text-decoration: underline;
@@ -148,7 +149,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   width: 80%;
-  font-family: eventHeadingfont;
+  font-family: 'poppins';
   font-size: 70px;
   color: #dadada;
 }
@@ -185,9 +186,44 @@
   pointer-events: all;
   border-radius: 50%;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.272);
+  filter: brightness(0.5);
+}
+
+.circle-one:hover,
+.circle-two:hover {
+  cursor: pointer;
+}
+
+.circleOneTextContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 48%;
+  left: 5%;
+  pointer-events: all;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.2s;
+}
+.circleTwoTextContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 48%;
+  right: 5%;
+  bottom: 0%;
+  pointer-events: all;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.2s;
 }
 
 .circle-two {
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   right: 5%;
@@ -195,6 +231,19 @@
   pointer-events: all;
   border-radius: 50%;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.397);
+  filter: brightness(0.5);
+}
+
+.circleOneText {
+  color: white;
+  font-size: 2rem;
+  font-family: 'poppins';
+}
+
+.circleTwoText {
+  color: white;
+  font-size: 2rem;
+  font-family: 'poppins';
 }
 
 .main-img {
@@ -211,7 +260,7 @@
 .event-title {
   display: flex;
   justify-content: flex-start;
-  font-family: eventHeadingFont;
+  font-family: 'poppins';
   font-size: 40px;
   width: 70%;
   color: white;

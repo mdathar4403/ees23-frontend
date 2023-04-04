@@ -272,13 +272,15 @@ html {
   width: 100vw;
   height: 10vh;
   display: flex;
-  background: #02000900;
+  background: #02000927;
   font-family: 'Poppins', sans-serif;
   z-index: 160;
 }
 nav {
   width: 100%;
   display: flex;
+  z-index: 200;
+  background-color: #001432;
   justify-content: center;
 }
 .nav-links li {
@@ -292,7 +294,7 @@ nav {
   list-style: none;
   justify-content: space-around;
   align-self: center;
-  width: 80%;
+  width: 88%;
 }
 
 .nav-links li a,
@@ -313,13 +315,15 @@ nav {
   font-size: 1.2rem;
   color: #fff;
 }
-.nav-links li a:hover,
+
+.navevents:hover,
 .navupdates:hover {
   border-bottom: 3px solid #fff;
   cursor: pointer;
 }
 
 .menu-bar {
+  /* display: none; */
   position: absolute;
   right: 8%;
   background-color: #120b2c;
@@ -344,7 +348,9 @@ nav {
   height: 4vh;
   text-align: center;
   position: relative;
-  top: 28%;
+  top: 30%;
+  /* display: flex; */
+  /* justify-content: center; */
   right: -32%;
   z-index: 5;
   cursor: pointer;
@@ -433,9 +439,9 @@ nav {
   }
 }
 @media screen and (max-width: 800px) {
-  .dropmenu {
+  /* .dropmenu {
     display: none;
-  }
+  } */
 }
 @media screen and (max-width: 800px) and (min-width: 600px) {
   .nav-links li a,

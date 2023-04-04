@@ -19,22 +19,20 @@ import MashalSponsor from './Mashal/components/Sponsors/Sponsors';
 // import MashalLeaderboard from './Mashal/components/MashalLeaderboard/MashalLeaderboard';
 import MashalEvent from './Mashal/components/MashalEvent/mashalEvent';
 import Navbar from './EES/Navbar/Navbar';
-import Register from './EES/Register/Register';
+// import Register from './EES/Register/Register';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComingSoon from './EES/ComingSoon/ComingSoon';
 import Gallery from './EES/Gallery/Gallery';
 import EventOver from './EES/EventOver/EventOver';
 import MashalAboutUs from './Mashal/components/MashalAboutUs/MashalAboutUs';
+import UdgamLeaderboard from './Udgam/components/UdgamLeaderboard/UdgamLeaderboard';
 
 function App() {
   return (
     <div className="App">
       <ToastContainer />
       <Router>
-        <Routes>
-          <Route path="/register" element={<Register />} />
-        </Routes>
         <Routes>
           <Route
             path="/"
@@ -248,7 +246,7 @@ function App() {
                   {/* <Navbar /> */}
                   <UdgamNav />
                 </div>
-                <ComingSoon />
+                <UdgamLeaderboard />
               </>
             }
           />

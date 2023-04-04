@@ -11,20 +11,16 @@ import { GoogleLoginBTN, GoogleLogoutBTN } from './googleauth';
 const Navbar = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [eventLink, setEventLink] = useState(false);
+  const [click, setclick] = useState(false);
   const [updatesLink, setUpdatesLink] = useState(false);
-  const [click, setclick] = useState(true);
+
   const [slideUdyam, setSlideUdyam] = useState(false);
   const [slideUpdates, setSlideUpdates] = useState(false);
   function expand() {
-    if (click) {
-      document.querySelector('.nav-links').style.display = 'flex';
-      document.querySelector('.menu-text').style.display = 'none';
-    } else {
-      document.querySelector('.nav-links').style.display = 'none';
-      document.querySelector('.menu-text').style.display = 'flex';
-    }
+    document.querySelector('.nav-links').style.display = 'flex';
+    // document.querySelector('.menu-text').style.display = 'none';
     setclick(!click);
-    setEventLink(false);
+    setEventLink(true);
   }
   function showEvents() {
     setEventLink(!eventLink);
@@ -79,22 +75,6 @@ const Navbar = () => {
               </li>
               <li className="menu-item">
                 {window.sessionStorage.getItem('registered_email') == null ? (
-                  // <GoogleLogin
-                  //   theme="dark"
-                  //   accessType="online"
-                  //   disabled={false}
-                  //   client_id={clientId} // your Google app client ID
-                  //   buttonText="Sign in with Google"
-                  //   onSuccess={onGoogleLoginSuccess} // perform your user logic here
-                  //   onFailure={onGoogleLoginFailure} // handle errors here
-                  //   cookiePolicy={'single-host-origin'}
-                  //   scope={scope}
-                  //   render={(renderProps) => (
-                  //     <Link to="#" onClick={renderProps.onClick}>
-                  //       <a href="#">SignIn</a>
-                  //     </Link>
-                  //   )}
-                  // />
                   <GoogleLoginBTN>
                     <Link to="#">
                       <a href="#">SignIn</a>
@@ -202,30 +182,19 @@ const Navbar = () => {
         </div>
       )}
       {width > 800 && (
-        <div className="container">
+        <div
+          className="container"
+          style={{
+            position: 'relative',
+            zIndex: '1'
+          }}>
           <nav>
-            <ul className="nav-links" style={{ display: 'none' }}>
+            <ul className="nav-links">
               <li>
                 <Link to="/">Home</Link>
               </li>
               <li>
                 {window.sessionStorage.getItem('registered_email') == null ? (
-                  // <GoogleLogin
-                  //   theme="dark"
-                  //   accessType="online"
-                  //   disabled={false}
-                  //   client_id={clientId} // your Google app client ID
-                  //   buttonText="Sign in with Google"
-                  //   onSuccess={onGoogleLoginSuccess} // perform your user logic here
-                  //   onFailure={onGoogleLoginFailure} // handle errors here
-                  //   cookiePolicy={'single-host-origin'}
-                  //   scope={scope}
-                  //   render={(renderProps) => (
-                  //     <Link to="#" onClick={renderProps.onClick}>
-                  //       <a href="#">SignIn</a>
-                  //     </Link>
-                  //   )}
-                  // />
                   <GoogleLoginBTN>
                     <Link to="#">
                       <a href="#">SignIn</a>
@@ -284,7 +253,7 @@ const Navbar = () => {
               </GoogleLogoutBTN>
             )}
             ;
-            <button className="menu-bar" onClick={expand}>
+            <button className="menu-bar" onClick={expand} style={{ display: 'none' }}>
               <i className={click ? 'fa-solid fa-bars' : 'fa-solid fa-xmark'}></i>
             </button>
           </nav>
