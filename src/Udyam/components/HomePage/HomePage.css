@@ -1,9 +1,9 @@
 @font-face {
-  font-family: homePageHeadingFont;
-  src: url('../Events/Poppins-Regular.otf');
+  font-family: udyamhomePageHeadingFont;
+  src: url('../Events/RussoOne-Regular.ttf');
 }
 
-.main-container {
+.main-container-udyam-home {
   height: 100vh;
   width: 93vw;
   float: right;
@@ -13,17 +13,86 @@
   word-wrap: break-word;
   color: white;
   font-size: 35px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .globegif {
-  height: 100vh;
-  width: 100vw;
+  height: 40rem;
+  top: -16rem;
+  position: absolute;
+  /* right: 5vw; */
+  z-index: 1;
+  transition: transform 5s linear;
+}
+
+.reciever {
+  position: relative;
+}
+
+.reciever-wrapper {
+  position: absolute;
+  right: 50vw;
+  bottom: 23rem;
+}
+
+.orbits-container-1 {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 41rem;
+  width: 66rem;
+  right: -9vw;
+  position: absolute;
+  /* clip-path: ellipse(40rem 10rem); */
+  transform: rotate(-0.1turn);
+  top: 12vh;
+  z-index: 2;
+}
+.orbits-container-2 {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 88rem;
+  width: 140rem;
+  right: -30vw;
+  position: absolute;
+  /* clip-path: ellipse(40rem 10rem); */
+  transform: rotate(-0.15turn);
+  top: -15vh;
+}
+
+.satellite {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  /* background-color: white; */
+  z-index: 10000;
+
+  /* pointer-events: none; */
+  transform: translate3d(0, -50%, 0);
+  /* position: fixed; */
+  transition: all 1s linear;
+  top: 50%;
+  /* transform: translateY(-50%); */
+}
+
+/* .orbits-container-1:hover {
+  background-color: green;
+}
+.orbits-container-2:hover {
+  background-color: red;
+} */
+.tower-stand {
+  height: 20rem;
+  position: absolute;
+  top: 4rem;
+  left: 18rem;
 }
 
 .heading {
-  font-family: homePageHeadingFont;
+  font-family: udyamhomePageHeadingFont;
   position: absolute;
-  left: 15vw;
+  left: 9vw;
   font-size: 3em;
   background: -webkit-linear-gradient(white, black);
   background-clip: text;
@@ -42,67 +111,187 @@
 }
 
 @media screen and (max-width: 1500px) {
-  .main-container {
+  .main-container-udyam-home {
     font-size: 31px;
   }
 }
 
-@media screen and (max-width: 1150px) {
-  .main-container {
+@media screen and (max-width: 1300px) {
+  .main-container-udyam-home {
     font-size: 27px;
   }
-  #globe {
-    margin-left: 450px;
+  .orbits-container-1 {
+    right: -20vw;
+  }
+  .orbits-container-2 {
+    width: 115rem;
+  }
+  .heading {
+    left: 5vw;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .main-container-udyam-home {
+    font-size: 27px;
+  }
+  .orbits-container-1 {
+    right: -32vw;
+    height: 50rem;
+    width: 70rem;
+    top: 12vh;
+  }
+  .orbits-container-2 {
+    width: 133rem;
+    height: 73rem;
+    right: -45vw;
+    top: 8vh;
+  }
+  .satellite {
+    left: 26px;
+  }
+  .heading {
+    left: 5vw;
+    font-size: 2.5em;
   }
 }
 
 @media screen and (max-width: 950px) {
-  .main-container {
+  .main-container-udyam-home {
     font-size: 24px;
   }
-  #globe {
-    margin-left: 400px;
-    /* width: 600px !important;
-      height: 350px !important; */
+  .orbits-container-1 {
+    right: -36vw;
+    height: 48rem;
+    width: 63rem;
+    top: 23vh;
+  }
+  .orbits-container-2 {
+    width: 110rem;
+  }
+  .globegif {
+    top: -8rem;
+    height: 32rem;
+    left: 0rem;
+  }
+  .tower-stand {
+    left: 12rem;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .main-container {
+  .main-container-udyam-home {
     width: 100vw;
     font-size: 22px;
     flex-direction: column;
     align-items: center;
+    height: 90vh;
   }
-
   .heading {
     position: inherit;
-    margin: 15vh;
+    margin: 15vh 0;
     width: 100%;
+    left: 0;
+    font-size: 3.5em;
   }
   .heading {
     text-align: center;
   }
-  #globe {
-    /* width: 600px !important;
-    height: 350px !important; */
-    margin-left: 0;
+  .tower-stand {
+    height: 16rem;
+    /* right: 8vw; */
+    /* top: 57vh; */
+    left: 11rem;
   }
-  #globe-div {
-    overflow-x: hidden;
-    overflow-y: hidden;
+  .globegif {
+    height: 26rem;
+    top: -6rem;
+  }
+  .orbits-container-1 {
+    right: -42vw;
+    height: 41rem;
+    width: 53rem;
+    top: 25vh;
+  }
+  .satellite {
+    visibility: hidden;
+  }
+  .orbits-container-2 {
+    width: 106rem;
+    height: 66rem;
+    right: -58vw;
+    top: 7vh;
+  }
+  .reciever-wrapper {
+    bottom: 20rem;
   }
 }
-
+@media screen and (max-width: 650px) {
+  .reciever-wrapper {
+    right: 65vw;
+  }
+}
 @media screen and (max-width: 600px) {
-  .main-container {
+  .main-container-udyam-home {
     font-size: 20px;
+  }
+  .orbits-container-1 {
+    right: -36vw;
+    height: 41rem;
+    width: 45rem;
+    top: 28vh;
+  }
+  .orbits-container-2 {
+    width: 96rem;
+    height: 72rem;
+    right: -84vw;
+    top: 7vh;
   }
 }
 
 @media screen and (max-width: 488px) {
-  #globe {
-    width: 100vw !important;
-    height: 700px !important;
+  .globegif {
+    height: 21rem;
+    /* top: 45vh; */
+  }
+  .orbits-container-1 {
+    right: -88vw;
+    height: 39rem;
+    width: 51rem;
+    top: 30vh;
+  }
+  .orbits-container-2 {
+    width: 96rem;
+    height: 82rem;
+    right: -151vw;
+    top: 1vh;
+  }
+  .tower-stand {
+    height: 13rem;
+    left: 8rem;
+  }
+  .reciever-wrapper {
+    bottom: 16rem;
   }
 }
+@media screen and (max-width: 410px) {
+  .reciever-wrapper {
+    right: 74vw;
+  }
+  .orbits-container-2 {
+    width: 78rem;
+    height: 74rem;
+  }
+}
+/* @media screen and (max-width: 600px) and (max-height: 800px) {
+  .reciever {
+    bottom: -56vh;
+  }
+}
+@media screen and (max-width: 600px) and (max-height: 900px) {
+  .reciever {
+    bottom: -60vh;
+  }
+  .globegif {
+    top: -9vh;
+  }
+} */
