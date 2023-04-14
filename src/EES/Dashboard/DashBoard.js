@@ -61,12 +61,12 @@ const DashBoard = () => {
     axios
       .get('https://ees23.pythonanywhere.com/api/teams/user/', { headers: { Authorization: 'Token ' + newUser.token } })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setTeamData(res.data);
         axios
           .get('https://ees23.pythonanywhere.com/api/events/')
           .then((res) => {
-            console.log(res);
+            // console.log(res);
             let arr = [];
             for (let i = 0; i < res.data.length; i++) {
               // for (!teamData.includes(res.data[i])) {
@@ -236,6 +236,25 @@ const DashBoard = () => {
         });
       });
   };
+  const handleDownloadCertificates = () => {
+    axios.get('https://ees23.pythonanywhere.com/api/certificates/user', { headers: { Authorization: 'Token ' + user.token } }, { responseType: 'arraybuffer' }).then((res) => {
+      const url = window.URL.createObjectURL(new Blob([res.data], { type: 'application/zip' }));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'certificates.zip');
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode.removeChild(link);
+    });
+  };
+  const [width, setWidth] = useState(window.innerWidth);
+  const updateWidth = () => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
   return (
     <>
       {user.college == null || updateuser === true ? (
@@ -250,8 +269,30 @@ const DashBoard = () => {
                 </div>
                 <div className="userName">
                   <h1>{user.name.split(' ').slice(0, 2).join(' ')}</h1>
+                  {width > 1123 ? (
+                    <>
+                      <button className="button-82-pushable" role="button" onClick={handleDownloadCertificates}>
+                        <span className="button-82-shadow"></span>
+                        <span className="button-82-edge"></span>
+                        <span className="button-82-front text">Download Certificates</span>
+                      </button>
+                    </>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </div>
+              {width <= 1123 ? (
+                <>
+                  <button className="button-82-pushable" role="button" onClick={handleDownloadCertificates}>
+                    <span className="button-82-shadow"></span>
+                    <span className="button-82-edge"></span>
+                    <span className="button-82-front text">Download Certificates</span>
+                  </button>
+                </>
+              ) : (
+                <></>
+              )}
               <div className="userDetails">
                 <div className="userEmail padding-between">
                   <div className="textSmall">Email</div>
