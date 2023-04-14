@@ -238,13 +238,13 @@
   box-shadow: 20px 0px 50px 20px #2c3b02;
 } */
 
-@media only screen and (max-width:1150px) {
+@media only screen and (max-width: 1150px) {
   .udg-team-score {
     padding-left: 19vh;
   }
 }
 
-@media only screen and (max-width:980px) {
+@media only screen and (max-width: 980px) {
   .udg-team-score {
     padding-left: 15vh;
   }
@@ -253,13 +253,13 @@
   }
 }
 
-@media only screen and (max-width:1100px) {
+@media only screen and (max-width: 1100px) {
   .udg-leaderboards-main-container {
     left: 25vw;
   }
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width: 900px) {
   .udg-leaderboards-main-container {
     left: 21vw;
   }

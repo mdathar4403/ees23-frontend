@@ -237,15 +237,42 @@ const DashBoard = () => {
       });
   };
   const handleDownloadCertificates = () => {
-    axios.get('https://ees23.pythonanywhere.com/api/certificates/user', { headers: { Authorization: 'Token ' + user.token } }, { responseType: 'arraybuffer' }).then((res) => {
-      const url = window.URL.createObjectURL(new Blob([res.data], { type: 'application/zip' }));
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', 'certificates.zip');
-      document.body.appendChild(link);
-      link.click();
-      link.parentNode.removeChild(link);
+    toast.error('This feature is temporarily blocked!', {
+      theme: 'dark',
+      position: window.innerWidth < 600 ? toast.POSITION.BOTTOM_CENTER : toast.POSITION.BOTTOM_RIGHT,
+      autoClose: 2000
     });
+    // toast.info('Please wait while we are processing your request!', {
+    //   theme: 'dark',
+    //   position: window.innerWidth < 600 ? toast.POSITION.BOTTOM_CENTER : toast.POSITION.BOTTOM_RIGHT,
+    //   autoClose: 2000
+    // });
+    // axios({
+    //   url: 'https://ees23.pythonanywhere.com/api/certificates/user',
+    //   method: 'GET',
+    //   headers: { Authorization: 'Token ' + user.token },
+    //   responseType: 'blob'
+    // })
+    //   .then((res) => {
+    //     const url = window.URL.createObjectURL(res.data);
+    //     const link = document.createElement('a');
+    //     link.href = url;
+    //     link.setAttribute('download', 'certificates.zip');
+    //     document.body.appendChild(link);
+    //     link.click();
+    //     link.parentNode.removeChild(link);
+    //     window.URL.revokeObjectURL(url);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err.response.data);
+    //     Object.keys(err.response.data).forEach(function (key) {
+    //       toast.error(key.charAt(0).toUpperCase() + key.slice(1) + ' : ' + err.response.data[key], {
+    //         theme: 'dark',
+    //         position: window.innerWidth < 600 ? toast.POSITION.BOTTOM_CENTER : toast.POSITION.TOP_RIGHT,
+    //         autoClose: 2000
+    //       });
+    //     });
+    //   });
   };
   const [width, setWidth] = useState(window.innerWidth);
   const updateWidth = () => {
