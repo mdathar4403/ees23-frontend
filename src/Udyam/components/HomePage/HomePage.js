@@ -134,8 +134,7 @@ function HomePage() {
         // console.log(positionRef.current.div);
         // div.current = positionRef.current.div;
         setDiv(e.target.className);
-      }}
-    >
+      }}>
       <h1 className="heading">UDYAM</h1>
       <div
         className="orbits-container-1"
@@ -145,8 +144,7 @@ function HomePage() {
           // console.log(e);
           // div.current = positionRef.current.div;
           setDiv(e.target.className);
-        }}
-      ></div>
+        }}></div>
       <img className="satellite" src={satellite2} ref={secondaryCursor} />
       <div
         className="orbits-container-2"
@@ -156,8 +154,7 @@ function HomePage() {
           // console.log(e);
           // div.current = positionRef.current.div;
           setDiv(e.target.className);
-        }}
-      ></div>
+        }}></div>
       <div className="reciever-wrapper">
         <div className="reciever">
           <img className="globegif" id="dish" src={globe} />
